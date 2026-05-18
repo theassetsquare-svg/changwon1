@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="창원 룰루랄라 나이트 - 웨이터 짱구">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#FCD34D"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="180" height="180" rx="38" fill="url(#bg)"/>
+  <text x="90" y="118" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif" font-size="110" font-weight="900" text-anchor="middle" fill="url(#gold)">짱</text>
+  <text x="90" y="156" font-family="'Apple SD Gothic Neo', 'Noto Sans KR', system-ui, sans-serif" font-size="18" font-weight="700" letter-spacing="2" text-anchor="middle" fill="#FCD34D" opacity="0.85">LULULALA</text>
+</svg>

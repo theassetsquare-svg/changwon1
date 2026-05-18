@@ -1,11 +1,12 @@
 {
-  "name": "out",
+  "name": "changwon-lululalala",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "check:seo": "node scripts/check-keyword-stuffing.mjs"
   },
   "dependencies": {
     "next": "16.2.4",

@@ -1,0 +1,29 @@
+{
+  "name": "창원 룰루랄라 나이트 - 웨이터 짱구",
+  "short_name": "룰루랄라 짱구",
+  "description": "창원 룰루랄라 나이트 공식 사이트. 짱구 담당(웨이터) 직통 010-3854-6887. 19세 이상 합법 영업장.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#FCD34D",
+  "lang": "ko-KR",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/icon-maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    }
+  ]
+}
