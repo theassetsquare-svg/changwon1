@@ -7,8 +7,8 @@ export default function Jjanggu() {
   return (
     <>
       <SeoHead
-        title="짱구 담당 (웨이터) · 창원 룰루랄라 나이트 직통 010-3854-6887"
-        description="창원 룰루랄라 나이트의 웨이터 짱구입니다. 전화 한 통이면 자리·인원·도착 시간까지 정리해 드립니다. 만 19세 이상."
+        title="짱구 담당 웨이터 · 창원 룰루랄라 나이트 자리·예약 안내"
+        description="창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터 짱구. 전화 한 통이면 자리·인원·도착 시간까지 한 사람이 끝까지 챙깁니다. 만 19세 이상."
         path="/jjanggu/"
       />
       <Jsonld
@@ -127,6 +127,43 @@ export default function Jjanggu() {
 
       <section className="section">
         <div className="container">
+          <span className="eyebrow">짱구가 하루 동안 챙기는 일</span>
+          <h2>저녁 한 타임 동안 이런 흐름이 돌아갑니다.</h2>
+          <p className="lead" style={{ marginTop: 14 }}>
+            업장 한 곳에서 손님 응대 담당을 본다는 게 어떤 흐름인지 궁금해하시는
+            분들이 많습니다. 솔직히 보여드릴 수 있는 만큼은 정리해 드릴게요.
+            그날 그날 다르지만 평일 기준 큰 그림은 비슷합니다.
+          </p>
+          <ul className="bullets" style={{ marginTop: 22 }}>
+            <li>
+              <strong>오픈 한 시간 전 (오후 6시쯤)</strong> — 그날 자리 배치 확인,
+              미리 예약된 인원 체크. 단체석이 있는 날이면 그 자리부터 동선을 잡아 둡니다.
+            </li>
+            <li>
+              <strong>오픈~밤 11시 (7시~11시)</strong> — 첫 손님 응대. 이 시간대는
+              통화도 빠르게 받을 수 있는 구간이에요. 처음 거시는 분들 응대도 보통
+              이때 많습니다.
+            </li>
+            <li>
+              <strong>피크 (자정~새벽 2시)</strong> — 자리 회전이 가장 빠른 시간.
+              통화·문자·입구 응대가 동시에 돌아가요. 답이 살짝 늦어질 수 있는
+              구간이라, 이 시간대 예약은 미리 잡아 두시는 게 안전합니다.
+            </li>
+            <li>
+              <strong>후반 (새벽 2시~5시)</strong> — 새벽 2시 이후 자리 회전이
+              다시 풀리는 시간. 짧게 들렀다 가시려는 분들 응대가 이때 늘어납니다.
+              새벽 5시 마감 직전까지 영업.
+            </li>
+            <li>
+              <strong>마감 후 정리</strong> — 그날 단골·신규 손님 메모 정리. 다음에
+              오실 때 같은 흐름으로 잡으려고 짱구가 따로 챙기는 부분입니다.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
           <span className="eyebrow">현장에서 자주 생기는 일</span>
           <h2>이럴 땐 이렇게.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
@@ -163,7 +200,66 @@ export default function Jjanggu() {
                 어색하게 이리저리 안 다니셔도 됩니다.
               </p>
             </article>
+            <article className="card">
+              <h3>자리만 옮기고 싶을 때</h3>
+              <p style={{ marginTop: 10 }}>
+                옆 자리가 너무 시끄럽거나, 일행이 합류하면서 자리가 좁아지는 경우.
+                그 자리에서 짱구한테 말씀하시면 됩니다. 가능한 자리 보고 옮겨드려요.
+              </p>
+            </article>
+            <article className="card">
+              <h3>계산 분리·합산</h3>
+              <p style={{ marginTop: 10 }}>
+                일행끼리 나눠 계산하실 거면 미리 말씀만 주세요. 마감 직전에 갑자기
+                얘기하시면 회전이 밀려요. 인원별·항목별 분리, 어느 쪽이든 가능합니다.
+              </p>
+            </article>
           </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
+        <div className="container">
+          <span className="eyebrow">자주 받는 질문</span>
+          <h2>통화 전에 미리 답드릴 수 있는 것들.</h2>
+          <ul className="bullets" style={{ marginTop: 22 }}>
+            <li>
+              <strong>“짱구만 따로 부를 수 있어요?”</strong> — 네, 그래서 담당제로
+              운영합니다. 들어오실 때 같은 멘트만 말씀하시면 바로 연결됩니다.
+            </li>
+            <li>
+              <strong>“혼자 가도 어색하지 않아요?”</strong> — 가능합니다. 다만
+              자리 배치상 일행과 함께 오시는 게 일반적이라, 혼자 오실 거면 도착
+              전에 한 통 주시면 그날 상황에 맞게 짱구가 잡아 둡니다.
+            </li>
+            <li>
+              <strong>“여자분만 일행인데 괜찮나요?”</strong> — 그렇게 오시는 일행도
+              많습니다. 자리 배치·동선만 그에 맞게 다르게 잡습니다. 미리 알려주시면
+              훨씬 매끄럽게 흘러가요.
+            </li>
+            <li>
+              <strong>“가격이 어느 정도예요?”</strong> — 시간대·자리·인원에 따라
+              달라지는 부분이라, 통화로 알려드리는 게 정확합니다. 사이트에 추정치를
+              올려두는 건 책임 못 질 정보라 일부러 비워뒀어요.
+            </li>
+            <li>
+              <strong>“카드 결제 되나요?”</strong> — 정상적인 사업장이라 카드 결제,
+              현금 영수증 정상 처리됩니다. 세금계산서 필요하시면 미리 말씀 주세요.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <span className="eyebrow">처음 거시는 분께</span>
+          <h2>한 줄로 시작하면 됩니다.</h2>
+          <p className="lead" style={{ marginTop: 14 }}>
+            전화 거실 때 무슨 말부터 해야 할지 막막하시면, 이렇게만 떼시면 됩니다.
+            “창원 룰루랄라 나이트 짱구 담당이신가요?” 또는 그냥 “짱구 담당
+            부탁드립니다.” 둘 중 어느 쪽이든 똑같이 연결됩니다. 통화 자체는
+            평소 가게 예약 거시는 것과 다르지 않아요.
+          </p>
         </div>
       </section>
 
