@@ -96,7 +96,7 @@ export default function About() {
             </li>
             <li>
               <strong>전화 응대 우선</strong> — 텍스트로 길게 설명하는 것보다, 전화로
-              한 번에 정리하는 게 빠릅니다. 010-3854-6887.
+              한 번에 정리하는 게 빠릅니다. .
             </li>
           </ul>
         </div>
