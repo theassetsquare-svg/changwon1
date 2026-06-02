@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
-import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
+import { Jsonld, buildBreadcrumb, buildPlace } from "@/components/Jsonld";
 import { SITE } from "@/components/site";
 
 export default function Location() {
@@ -18,6 +18,7 @@ export default function Location() {
           { name: "위치", path: "/location/" },
         ])}
       />
+      <Jsonld data={buildPlace()} />
 
       <section className="hero">
         <div className="container">

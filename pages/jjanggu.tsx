@@ -1,6 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
-import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
+import { Jsonld, buildBreadcrumb, buildPerson, buildProfilePage } from "@/components/Jsonld";
 import { SITE } from "@/components/site";
 
 export default function Jjanggu() {
@@ -18,6 +18,7 @@ export default function Jjanggu() {
           { name: "짱구 담당", path: "/jjanggu/" },
         ])}
       />
+      <Jsonld data={buildProfilePage(buildPerson())} />
 
       <section className="hero">
         <div className="container">

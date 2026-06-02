@@ -1,0 +1,77 @@
+name: GSC Weekly Report
+
+# 매주 월요일 09:00 KST(일 00:00 UTC) Google Search Console 실데이터를 조회해
+# 검색어·순위·페이지 성과·카니발리제이션을 theassetsquare@gmail.com 으로 발송.
+#
+# 필요한 저장소 시크릿(Settings > Secrets and variables > Actions):
+#   GSC_CREDENTIALS = theasset-gsc 서비스계정 JSON 전체(한 줄로 붙여넣기 가능)
+#   MAIL_USERNAME   = theassetsquare@gmail.com
+#   MAIL_PASSWORD   = Gmail 앱 비밀번호
+#   ALERT_TO        = (선택) 수신 주소
+
+on:
+  schedule:
+    - cron: '0 0 * * 1'   # 매주 월요일 00:00 UTC = 09:00 KST
+  workflow_dispatch:
+    inputs:
+      days:
+        description: '조회 기간(일)'
+        default: '28'
+
+permissions:
+  contents: read
+
+jobs:
+  report:
+    name: GSC Search Analytics Report
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Guard — credentials present
+        run: |
+          if [ -z "${{ secrets.GSC_CREDENTIALS }}" ]; then
+            echo "::error::GSC_CREDENTIALS 시크릿이 없습니다. 서비스계정 JSON을 추가하세요."
+            exit 1
+          fi
+
+      - name: Run GSC report
+        env:
+          GSC_CREDENTIALS: ${{ secrets.GSC_CREDENTIALS }}
+        run: |
+          DAYS="${{ github.event.inputs.days || '28' }}"
+          node scripts/gsc-report.mjs --days "$DAYS" | tee gsc-report.txt
+
+      - name: Upload report artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gsc-report-${{ github.run_number }}
+          path: gsc-report.txt
+          retention-days: 90
+
+      - name: Email report
+        if: ${{ always() && secrets.MAIL_PASSWORD != '' }}
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: 창원 룰루랄라 SEO 리포트 <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
+          subject: "📈 [changwon1] GSC 주간 검색 성과 리포트"
+          body: |
+            창원 룰루랄라 나이트 — Google Search Console 주간 리포트입니다.
+            (검색어 순위 / 페이지 성과 / 카니발리제이션 자동 분석)
+
+            전체 리포트는 첨부파일을 확인하세요.
+          attachments: gsc-report.txt

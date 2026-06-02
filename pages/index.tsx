@@ -54,7 +54,7 @@ export default function Home() {
         <div className="container">
           <span className="badge badge--gold">창원시 · 합법 영업장 · 만 19세 이상</span>
           <h1 style={{ marginTop: 18 }}>
-            창원에서 자리 잡는 가장 빠른 방법.<br />
+            창원 룰루랄라 나이트, 자리 잡는 가장 빠른 방법.<br />
             <span className="accent">짱구 담당</span> 전화 한 통.
           </h1>
           <p className="hero__sub">

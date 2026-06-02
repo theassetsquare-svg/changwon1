@@ -14,7 +14,7 @@ export default function SeoHead({
   title,
   description,
   path = "/",
-  ogImage = "/og-default.svg",
+  ogImage = "/og-cover.png",
   keywords,
   noindex = false,
 }: Props) {
@@ -71,16 +71,21 @@ export default function SeoHead({
       <meta property="og:url" content={url} />
       <meta property="og:image" content={`${SITE.url}${ogImage}`} />
       <meta property="og:image:secure_url" content={`${SITE.url}${ogImage}`} />
-      <meta property="og:image:type" content="image/svg+xml" />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${SITE.name} · ${SITE.callLabel} ${SITE.phone}`} />
+      {/* 정사각 보조 이미지 (카카오톡·일부 메신저 대응) */}
+      <meta property="og:image" content={`${SITE.url}/og-default.png`} />
+      <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
-      <meta property="og:image:alt" content={SITE.name} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${SITE.url}${ogImage}`} />
-      <meta name="twitter:image:alt" content={SITE.name} />
+      <meta name="twitter:image:alt" content={`${SITE.name} · ${SITE.callLabel} ${SITE.phone}`} />
     </Head>
   );
 }

@@ -1,7 +1,13 @@
 name: SEO Auto Monitor (24h)
 
 # 24시간 자동화: 6시간마다 빌드 → 키워드 스터핑 검사 → 라이브 사이트 헬스체크
-# 실패 시 자동으로 GitHub Issue 생성
+# 실패 시 → ① GitHub Issue 생성  ② theassetsquare@gmail.com 이메일 알림(시크릿 설정 시)
+#
+# 이메일 알림 활성화에 필요한 저장소 시크릿(Settings > Secrets and variables > Actions):
+#   MAIL_USERNAME = theassetsquare@gmail.com
+#   MAIL_PASSWORD = Gmail 앱 비밀번호 (16자리, 일반 비번 아님)
+#                   https://myaccount.google.com/apppasswords 에서 발급
+#   ALERT_TO      = (선택) 수신 주소. 미설정 시 theassetsquare@gmail.com
 
 on:
   schedule:
@@ -23,9 +29,21 @@ jobs:
   build-and-audit:
     name: Build + Keyword Stuffing Audit
     runs-on: ubuntu-latest
+    outputs:
+      mail_enabled: ${{ steps.mailcfg.outputs.enabled }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Check mail config
+        id: mailcfg
+        run: |
+          if [ -n "${{ secrets.MAIL_PASSWORD }}" ]; then
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::MAIL_PASSWORD 시크릿 미설정 — 이메일 알림은 건너뜁니다(이슈는 생성됨)."
+          fi
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -82,6 +100,29 @@ jobs:
               labels: ['seo', 'automated'],
             });
 
+      - name: Email alert on failure
+        if: ${{ failure() && steps.mailcfg.outputs.enabled == 'true' }}
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: 창원 룰루랄라 SEO 모니터 <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
+          subject: "🚨 [changwon1] SEO 빌드/검사 실패 — run #${{ github.run_number }}"
+          body: |
+            창원 룰루랄라 나이트 사이트 자동검사(빌드+키워드)에서 문제가 감지됐습니다.
+
+            트리거: ${{ github.event_name }}
+            커밋: ${{ github.sha }}
+            실행 로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            첨부/아티팩트의 seo-report.txt 를 확인하세요.
+            (이 메일은 자동 발송입니다. 자동 복구 루틴이 동작 중이면 곧 후속 메일이 옵니다.)
+
   live-healthcheck:
     name: Live Site Health Check
     runs-on: ubuntu-latest
@@ -92,7 +133,7 @@ jobs:
         run: |
           set -e
           BASE="https://changwon1.pages.dev"
-          PAGES=("/" "/about/" "/jjanggu/" "/location/" "/contact/" "/sitemap.xml" "/robots.txt" "/llms.txt")
+          PAGES=("/" "/about/" "/jjanggu/" "/location/" "/contact/" "/sitemap.xml" "/robots.txt" "/llms.txt" "/og-cover.png" "/og-default.png")
           FAIL=0
           REPORT=""
           for p in "${PAGES[@]}"; do
@@ -155,3 +196,22 @@ jobs:
               body,
               labels: ['site-down', 'automated'],
             });
+
+      - name: Email alert on live failure
+        if: ${{ failure() && needs.build-and-audit.outputs.mail_enabled == 'true' }}
+        continue-on-error: true
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USERNAME }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          from: 창원 룰루랄라 SEO 모니터 <${{ secrets.MAIL_USERNAME }}>
+          to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
+          subject: "🚨 [changwon1] 라이브 사이트 응답 이상 — run #${{ github.run_number }}"
+          body: |
+            라이브 사이트(https://changwon1.pages.dev) 헬스체크에서 비정상 응답이 감지됐습니다.
+
+            실행 로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+            아티팩트의 live-report.txt 에서 각 페이지 응답 코드를 확인하세요.
