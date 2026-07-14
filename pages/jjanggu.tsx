@@ -1,40 +1,44 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
-import { Jsonld, buildBreadcrumb, buildPerson, buildProfilePage } from "@/components/Jsonld";
+import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
 import { SITE } from "@/components/site";
 
 export default function Jjanggu() {
   return (
     <>
       <SeoHead
-        title="짱구입니다. 한 통이면 끝납니다 · 직통 010-3854-6887"
-        description="창원 룰루랄라 나이트 응대 담당 웨이터 짱구. 처음이든 단골이든 같은 흐름, 같은 사람. 통화 30초면 자리·인원·도착 시간 정리됩니다. 번호부터 저장해 두세요."
-        keywords="짱구 담당, 짱구 웨이터, 룰루랄라 짱구, 창원 짱구, 010-3854-6887, 창원 나이트 담당, 짱구 직통"
+        title="담당 웨이터 · 창원 룰루랄라 나이트 손님 응대 담당"
+        description="창원 룰루랄라 나이트 손님 응대 담당 웨이터. 처음이든 단골이든 같은 흐름, 같은 사람. 카톡 besta12 한 번이면 자리·인원·도착 시간 정리됩니다."
+        keywords="창원 룰루랄라 나이트 담당, 창원 나이트 예약, 룰루랄라 담당 웨이터"
         path="/jjanggu/"
       />
       <Jsonld
         data={buildBreadcrumb([
           { name: "홈", path: "/" },
-          { name: "짱구 담당", path: "/jjanggu/" },
+          { name: "담당", path: "/jjanggu/" },
         ])}
       />
-      <Jsonld data={buildProfilePage(buildPerson())} />
 
       <section className="hero">
         <div className="container">
           <span className="badge badge--gold">웨이터(담당)</span>
           <h1 style={{ marginTop: 18 }}>
-            저장해 두면 편한 번호.<br />
-            <span className="accent">짱구</span>입니다.
+            저장해 두면 편한 카톡.<br />
+            <span className="accent">담당</span>입니다.
           </h1>
           <p className="hero__sub">
-            창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터 짱구입니다.
-            처음 오신 분도, 자주 오시는 분도, 도착 전에 한 통이면 자리부터 안내까지
-            제가 직접 챙깁니다.
+            창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터입니다.
+            처음 오신 분도, 자주 오시는 분도, 도착 전에 한 번이면 자리부터 안내까지
+            직접 챙깁니다.
           </p>
           <div className="hero__actions">
-            <a className="btn btn--primary btn--lg tel" href={SITE.phoneHref}>
-              📞 {SITE.phone} 바로 전화
+            <a
+              className="btn btn--primary btn--lg"
+              href={SITE.kakaoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 카톡 besta12 바로 문의
             </a>
             <Link className="btn btn--ghost btn--lg" href="/contact/">문의 방법 보기</Link>
           </div>
@@ -45,10 +49,6 @@ export default function Jjanggu() {
         <div className="container">
           <div className="card">
             <dl className="kv">
-              <dt>이름</dt>
-              <dd>짱구</dd>
-            </dl>
-            <dl className="kv">
               <dt>역할</dt>
               <dd>웨이터(담당) — 손님 응대·자리 안내·예약 조율</dd>
             </dl>
@@ -57,10 +57,15 @@ export default function Jjanggu() {
               <dd>창원 룰루랄라 나이트</dd>
             </dl>
             <dl className="kv">
-              <dt>직통 전화</dt>
+              <dt>카톡 문의</dt>
               <dd>
-                <a className="tel" href={SITE.phoneHref} style={{ color: "var(--gold)", fontWeight: 700 }}>
-                  {SITE.phone}
+                <a
+                  href={SITE.kakaoHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "var(--gold)", fontWeight: 700 }}
+                >
+                  besta12
                 </a>
               </dd>
             </dl>
@@ -77,21 +82,21 @@ export default function Jjanggu() {
           <span className="eyebrow">왜 한 사람이 챙기는 게 다른가</span>
           <h2>담당이 정해져 있으면 흐름이 안 끊깁니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
-            전화 받은 사람, 자리 잡은 사람, 입장 안내한 사람이 다 다르면
+            연락 받은 사람, 자리 잡은 사람, 입장 안내한 사람이 다 다르면
             중간에 말이 꼬입니다. 담당이 한 명이면 그럴 일이 없습니다.
           </p>
           <div className="grid grid-3" style={{ marginTop: 28 }}>
             <article className="card">
-              <h3>전화 → 자리</h3>
+              <h3>연락 → 자리</h3>
               <p style={{ marginTop: 10 }}>
                 받은 즉시 인원수·시간 보고 자리 정리. 인원이 늘거나 시간이
-                늦어져도 다시 한 통이면 됩니다.
+                늦어져도 다시 한 번이면 됩니다.
               </p>
             </article>
             <article className="card">
               <h3>입장 → 안내</h3>
               <p style={{ marginTop: 10 }}>
-                입구에서 “짱구 담당”이라고만 말씀하시면 됩니다. 신분증 확인 후
+                입구에서 "담당"이라고만 말씀하시면 됩니다. 신분증 확인 후
                 바로 자리로 모십니다.
               </p>
             </article>
@@ -108,20 +113,20 @@ export default function Jjanggu() {
 
       <section className="section" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
         <div className="container">
-          <span className="eyebrow">통화 가이드</span>
-          <h2>전화할 때 이렇게만 말씀하시면 됩니다.</h2>
+          <span className="eyebrow">문의 가이드</span>
+          <h2>카톡할 때 이렇게만 보내시면 됩니다.</h2>
           <ol className="steps" style={{ marginTop: 28 }}>
             <li>
-              <strong>“짱구 담당 부탁드립니다.”</strong>
-              가장 빠른 연결 방식입니다. 처음 거시는 분도 똑같이 말씀하시면 됩니다.
+              <strong>"룰루랄라 나이트 문의입니다."</strong>
+              가장 빠른 연결 방식입니다. 처음 연락하시는 분도 똑같이 보내시면 됩니다.
             </li>
             <li>
               <strong>이름·인원·도착 예정 시간</strong>
-              세 가지면 충분합니다. 자세한 건 통화하면서 자연스럽게 정리됩니다.
+              세 가지면 충분합니다. 자세한 건 카톡하면서 자연스럽게 정리됩니다.
             </li>
             <li>
-              <strong>변경이 생기면 다시 전화</strong>
-              인원이 늘거나, 시간이 미뤄지면 다시 한 통. 자리 다시 잡아 둡니다.
+              <strong>변경이 생기면 다시 카톡</strong>
+              인원이 늘거나, 시간이 미뤄지면 다시 한 번. 자리 다시 잡아 둡니다.
             </li>
           </ol>
         </div>
@@ -129,7 +134,7 @@ export default function Jjanggu() {
 
       <section className="section">
         <div className="container">
-          <span className="eyebrow">짱구가 하루 동안 챙기는 일</span>
+          <span className="eyebrow">담당이 하루 동안 챙기는 일</span>
           <h2>저녁 한 타임 동안 이런 흐름이 돌아갑니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
             업장 한 곳에서 손님 응대 담당을 본다는 게 어떤 흐름인지 궁금해하시는
@@ -143,12 +148,12 @@ export default function Jjanggu() {
             </li>
             <li>
               <strong>오픈~밤 11시 (7시~11시)</strong> — 첫 손님 응대. 이 시간대는
-              통화도 빠르게 받을 수 있는 구간이에요. 처음 거시는 분들 응대도 보통
+              카톡도 빠르게 받을 수 있는 구간이에요. 처음 연락하시는 분들 응대도 보통
               이때 많습니다.
             </li>
             <li>
               <strong>피크 (자정~새벽 2시)</strong> — 자리 회전이 가장 빠른 시간.
-              통화·문자·입구 응대가 동시에 돌아가요. 답이 살짝 늦어질 수 있는
+              카톡·문자·입구 응대가 동시에 돌아가요. 답이 살짝 늦어질 수 있는
               구간이라, 이 시간대 예약은 미리 잡아 두시는 게 안전합니다.
             </li>
             <li>
@@ -158,7 +163,7 @@ export default function Jjanggu() {
             </li>
             <li>
               <strong>마감 후 정리</strong> — 그날 단골·신규 손님 메모 정리. 다음에
-              오실 때 같은 흐름으로 잡으려고 짱구가 따로 챙기는 부분입니다.
+              오실 때 같은 흐름으로 잡으려고 담당이 따로 챙기는 부분입니다.
             </li>
           </ul>
         </div>
@@ -177,7 +182,7 @@ export default function Jjanggu() {
             <article className="card">
               <h3>도착이 30분 이상 늦어질 때</h3>
               <p style={{ marginTop: 10 }}>
-                예정 시간 안 맞으면 그 시점에 한 통만 더 주세요. 자리 상황 다시
+                예정 시간 안 맞으면 그 시점에 카톡만 더 보내주세요. 자리 상황 다시
                 보고, 가능한 한 잡아 둡니다. 연락 없이 길어지면 자리가 빠질 수 있어요.
               </p>
             </article>
@@ -191,7 +196,7 @@ export default function Jjanggu() {
             <article className="card">
               <h3>먼저 도착한 분이 있을 때</h3>
               <p style={{ marginTop: 10 }}>
-                일행 도착 전이라도 입장 가능합니다. 입구에서 “짱구 담당”이라고
+                일행 도착 전이라도 입장 가능합니다. 입구에서 "담당"이라고
                 말씀하시고, 자리에서 편하게 기다리세요. 나머지 도착하면 합석시켜 드립니다.
               </p>
             </article>
@@ -206,7 +211,7 @@ export default function Jjanggu() {
               <h3>자리만 옮기고 싶을 때</h3>
               <p style={{ marginTop: 10 }}>
                 옆 자리가 너무 시끄럽거나, 일행이 합류하면서 자리가 좁아지는 경우.
-                그 자리에서 짱구한테 말씀하시면 됩니다. 가능한 자리 보고 옮겨드려요.
+                그 자리에서 담당한테 말씀하시면 됩니다. 가능한 자리 보고 옮겨드려요.
               </p>
             </article>
             <article className="card">
@@ -223,29 +228,29 @@ export default function Jjanggu() {
       <section className="section" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
         <div className="container">
           <span className="eyebrow">자주 받는 질문</span>
-          <h2>통화 전에 미리 답드릴 수 있는 것들.</h2>
+          <h2>문의 전에 미리 답드릴 수 있는 것들.</h2>
           <ul className="bullets" style={{ marginTop: 22 }}>
             <li>
-              <strong>“짱구만 따로 부를 수 있어요?”</strong> — 네, 그래서 담당제로
+              <strong>"담당만 따로 부를 수 있어요?"</strong> — 네, 그래서 담당제로
               운영합니다. 들어오실 때 같은 멘트만 말씀하시면 바로 연결됩니다.
             </li>
             <li>
-              <strong>“혼자 가도 어색하지 않아요?”</strong> — 가능합니다. 다만
+              <strong>"혼자 가도 어색하지 않아요?"</strong> — 가능합니다. 다만
               자리 배치상 일행과 함께 오시는 게 일반적이라, 혼자 오실 거면 도착
-              전에 한 통 주시면 그날 상황에 맞게 짱구가 잡아 둡니다.
+              전에 연락 주시면 그날 상황에 맞게 담당이 잡아 둡니다.
             </li>
             <li>
-              <strong>“여자분만 일행인데 괜찮나요?”</strong> — 그렇게 오시는 일행도
+              <strong>"여자분만 일행인데 괜찮나요?"</strong> — 그렇게 오시는 일행도
               많습니다. 자리 배치·동선만 그에 맞게 다르게 잡습니다. 미리 알려주시면
               훨씬 매끄럽게 흘러가요.
             </li>
             <li>
-              <strong>“가격이 어느 정도예요?”</strong> — 시간대·자리·인원에 따라
-              달라지는 부분이라, 통화로 알려드리는 게 정확합니다. 사이트에 추정치를
+              <strong>"가격이 어느 정도예요?"</strong> — 시간대·자리·인원에 따라
+              달라지는 부분이라, 카톡으로 알려드리는 게 정확합니다. 사이트에 추정치를
               올려두는 건 책임 못 질 정보라 일부러 비워뒀어요.
             </li>
             <li>
-              <strong>“카드 결제 되나요?”</strong> — 정상적인 사업장이라 카드 결제,
+              <strong>"카드 결제 되나요?"</strong> — 정상적인 사업장이라 카드 결제,
               현금 영수증 정상 처리됩니다. 세금계산서 필요하시면 미리 말씀 주세요.
             </li>
           </ul>
@@ -254,13 +259,12 @@ export default function Jjanggu() {
 
       <section className="section">
         <div className="container">
-          <span className="eyebrow">처음 거시는 분께</span>
+          <span className="eyebrow">처음 연락하시는 분께</span>
           <h2>한 줄로 시작하면 됩니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
-            전화 거실 때 무슨 말부터 해야 할지 막막하시면, 이렇게만 떼시면 됩니다.
-            “창원 룰루랄라 나이트 짱구 담당이신가요?” 또는 그냥 “짱구 담당
-            부탁드립니다.” 둘 중 어느 쪽이든 똑같이 연결됩니다. 통화 자체는
-            평소 가게 예약 거시는 것과 다르지 않아요.
+            카톡 보낼 때 무슨 말부터 해야 할지 막막하시면, 이렇게만 보내시면 됩니다.
+            "창원 룰루랄라 나이트 문의입니다." 그 한 줄이면 바로 연결됩니다.
+            문의 자체는 평소 가게 예약하는 것과 다르지 않아요.
           </p>
         </div>
       </section>
@@ -268,8 +272,8 @@ export default function Jjanggu() {
       <section className="section--tight">
         <div className="container">
           <div className="notice">
-            짱구의 실제 사진·경력 등 상세 정보는, 본인 확인된 자료만 올린다는 원칙
-            때문에 추후 사장님 자료를 받는 대로 추가됩니다. 그 사이에는 전화로
+            담당 웨이터의 상세 정보는, 본인 확인된 자료만 올린다는 원칙 때문에
+            추후 사장님 자료를 받는 대로 추가됩니다. 그 사이에는 카톡으로
             직접 말씀 나누시는 게 가장 정확합니다.
           </div>
         </div>

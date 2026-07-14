@@ -3,13 +3,15 @@ import { SITE } from "./site";
 
 export default function StickyCTA() {
   return (
-    <div className="sticky-cta" role="region" aria-label="빠른 연결">
+    <div className="sticky-cta" role="region" aria-label="광고 문의">
       <a
         className="btn btn--primary"
-        href={SITE.phoneHref}
-        aria-label={`${SITE.callLabel} 직통 전화 ${SITE.phone}`}
+        href={SITE.kakaoHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="광고 문의 카카오톡 besta12"
       >
-        📞 {SITE.callLabel} {SITE.phone}
+        💬 광고문의 카톡 besta12
       </a>
       <Link
         className="btn btn--ghost"

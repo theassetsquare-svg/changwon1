@@ -19,8 +19,7 @@ export function buildLocalBusiness() {
     name: SITE.name,
     alternateName: ["룰루랄라 나이트", "창원 룰루랄라", "창원 나이트 룰루랄라"],
     url: SITE.url,
-    telephone: SITE.phoneTel,
-    description: `${SITE.name}. 웨이터 ${SITE.waiter}(${SITE.callLabel}) 직통 ${SITE.phone}. 만 ${SITE.ageLimit}세 이상만 출입 가능한 합법 영업장.`,
+    description: `${SITE.name}. 만 ${SITE.ageLimit}세 이상만 출입 가능한 합법 영업장.`,
     image: `${SITE.url}/og-default.svg`,
     logo: `${SITE.url}/favicon.svg`,
     priceRange: "₩₩~₩₩₩",
@@ -33,29 +32,6 @@ export function buildLocalBusiness() {
     areaServed: [
       { "@type": "City", name: "창원시" },
       { "@type": "AdministrativeArea", name: "경상남도" },
-    ],
-    employee: {
-      "@type": "Person",
-      name: SITE.waiter,
-      jobTitle: SITE.role,
-      worksFor: { "@type": "NightClub", name: SITE.name },
-      telephone: SITE.phoneTel,
-    },
-    contactPoint: [
-      {
-        "@type": "ContactPoint",
-        telephone: SITE.phoneTel,
-        contactType: "reservations",
-        areaServed: "KR",
-        availableLanguage: ["Korean"],
-      },
-      {
-        "@type": "ContactPoint",
-        telephone: SITE.phoneTel,
-        contactType: "customer service",
-        areaServed: "KR",
-        availableLanguage: ["Korean"],
-      },
     ],
     paymentAccepted: "현금, 카드",
     currenciesAccepted: "KRW",
@@ -96,35 +72,6 @@ export function buildBreadcrumb(items: { name: string; path: string }[]) {
   };
 }
 
-export function buildPerson() {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": `${SITE.url}/jjanggu/#person`,
-    name: SITE.waiter,
-    alternateName: ["짱구 담당", "웨이터 짱구"],
-    jobTitle: SITE.role,
-    description: `${SITE.name}에서 손님 응대·자리 안내·예약 조율을 맡고 있는 웨이터 ${SITE.waiter}. 직통 ${SITE.phone}.`,
-    telephone: SITE.phoneTel,
-    knowsLanguage: "ko-KR",
-    worksFor: {
-      "@type": "NightClub",
-      "@id": `${SITE.url}/#business`,
-      name: SITE.name,
-      telephone: SITE.phoneTel,
-    },
-    url: `${SITE.url}/jjanggu/`,
-  };
-}
-
-export function buildProfilePage(person: Record<string, unknown>) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "ProfilePage",
-    mainEntity: person,
-  };
-}
-
 export function buildPlace() {
   return {
     "@context": "https://schema.org",
@@ -149,7 +96,6 @@ export function buildPlace() {
       opens: SITE.hours.open,
       closes: SITE.hours.close,
     },
-    telephone: SITE.phoneTel,
     isAccessibleForFree: false,
   };
 }

@@ -10,11 +10,16 @@ export default function Footer() {
           <div>
             <h4>{SITE.name}</h4>
             <p>
-              창원에서 한 통이면 끝. <strong style={{ color: "var(--text)" }}>{SITE.callLabel}</strong>으로 바로 연결.
+              광고 문의는 카카오톡으로 바로 연결됩니다.
             </p>
             <p style={{ marginTop: 10 }}>
-              <a className="tel" href={SITE.phoneHref} style={{ color: "var(--gold)", fontWeight: 700 }}>
-                📞 {SITE.phone}
+              <a
+                href={SITE.kakaoHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: "var(--gold)", fontWeight: 700 }}
+              >
+                💬 카톡 besta12
               </a>
             </p>
           </div>

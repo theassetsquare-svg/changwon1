@@ -7,7 +7,7 @@ export default function NotFound() {
     <>
       <SeoHead
         title="404 · 여긴 비어 있는 자리입니다 · 창원 룰루랄라 나이트"
-        description="찾으시는 페이지가 없거나 주소가 바뀌었습니다. 가장 빠른 길은 짱구 담당 010-3854-6887로 한 통. 홈으로 돌아가거나 자주 찾는 페이지로 바로 이동하세요."
+        description="찾으시는 페이지가 없거나 주소가 바뀌었습니다. 가장 빠른 길은 카톡 besta12로 문의. 홈으로 돌아가거나 자주 찾는 페이지로 바로 이동하세요."
         path="/404/"
         noindex
       />
@@ -17,12 +17,16 @@ export default function NotFound() {
           <h1 style={{ marginTop: 18 }}>여긴 비어 있는 자리입니다.</h1>
           <p className="hero__sub" style={{ margin: "12px auto 22px" }}>
             찾으시는 페이지가 없거나, 주소가 바뀌었을 수 있습니다.
-            가장 빠른 길은 역시 한 통 거는 겁니다. 아래에서 바로 가실 수
-            있는 페이지를 골라 주세요.
+            아래에서 바로 가실 수 있는 페이지를 골라 주세요.
           </p>
           <div className="hero__actions" style={{ justifyContent: "center" }}>
-            <a className="btn btn--primary btn--lg tel" href={SITE.phoneHref}>
-              📞 {SITE.phone}
+            <a
+              className="btn btn--primary btn--lg"
+              href={SITE.kakaoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 카톡 besta12 문의
             </a>
             <Link className="btn btn--ghost btn--lg" href="/">홈으로</Link>
           </div>
@@ -34,9 +38,9 @@ export default function NotFound() {
           <div className="grid grid-3">
             <Link className="card card--link" href="/jjanggu/">
               <span className="eyebrow">담당</span>
-              <h3 style={{ marginTop: 6 }}>짱구 담당 보기</h3>
+              <h3 style={{ marginTop: 6 }}>담당 보기</h3>
               <p style={{ marginTop: 10 }}>
-                통화 가이드와 자주 받는 질문을 한 번에 확인할 수 있습니다.
+                문의 가이드와 자주 받는 질문을 한 번에 확인할 수 있습니다.
               </p>
             </Link>
             <Link className="card card--link" href="/location/">
@@ -50,7 +54,7 @@ export default function NotFound() {
               <span className="eyebrow">예약·문의</span>
               <h3 style={{ marginTop: 6 }}>예약 가이드</h3>
               <p style={{ marginTop: 10 }}>
-                통화·문자 응대 흐름과 단체석 예약 가이드까지 모두 있습니다.
+                카톡 응대 흐름과 단체석 예약 가이드까지 모두 있습니다.
               </p>
             </Link>
           </div>

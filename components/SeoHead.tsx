@@ -29,7 +29,7 @@ export default function SeoHead({
       <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
       <meta name="theme-color" content="#FCD34D" media="(prefers-color-scheme: light)" />
       <meta name="color-scheme" content="dark light" />
-      <meta name="format-detection" content="telephone=yes" />
+      <meta name="format-detection" content="telephone=no" />
       <meta name="author" content={SITE.name} />
       <meta name="publisher" content={SITE.name} />
       <meta name="geo.region" content="KR-48" />
@@ -74,7 +74,7 @@ export default function SeoHead({
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${SITE.name} · ${SITE.callLabel} ${SITE.phone}`} />
+      <meta property="og:image:alt" content={`${SITE.name} · 창원시 합법 영업장`} />
       {/* 정사각 보조 이미지 (카카오톡·일부 메신저 대응) */}
       <meta property="og:image" content={`${SITE.url}/og-default.png`} />
       <meta property="og:image:type" content="image/png" />
@@ -85,7 +85,7 @@ export default function SeoHead({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${SITE.url}${ogImage}`} />
-      <meta name="twitter:image:alt" content={`${SITE.name} · ${SITE.callLabel} ${SITE.phone}`} />
+      <meta name="twitter:image:alt" content={`${SITE.name} · 창원시 합법 영업장`} />
     </Head>
   );
 }

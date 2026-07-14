@@ -32,8 +32,13 @@ export default function About() {
             끊지 않고 챙기는 가게예요.
           </p>
           <div className="hero__actions">
-            <a className="btn btn--primary btn--lg tel" href={SITE.phoneHref}>
-              📞 {SITE.phone} 짱구 담당
+            <a
+              className="btn btn--primary btn--lg"
+              href={SITE.kakaoHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 카톡 besta12 문의
             </a>
             <Link className="btn btn--ghost btn--lg" href="/jjanggu/">담당자 소개 보기</Link>
           </div>
@@ -48,7 +53,7 @@ export default function About() {
               <h2 style={{ fontSize: "1.4rem", marginTop: 6 }}>창원에서 영업하는 나이트입니다.</h2>
               <p style={{ marginTop: 12 }}>
                 창원 시내에서 운영되는 일반 나이트 영업장입니다. 자세한 위치 안내는
-                전화로 직접 드리고 있어, 처음 오시는 분도 헷갈리지 않게 잡힙니다.
+                카톡으로 직접 드리고 있어, 처음 오시는 분도 헷갈리지 않게 잡힙니다.
               </p>
               <p style={{ marginTop: 12 }}>
                 <Link href="/location/" style={{ color: "var(--gold)", fontWeight: 700 }}>
@@ -60,7 +65,7 @@ export default function About() {
               <span className="eyebrow">누가 챙기나</span>
               <h2 style={{ fontSize: "1.4rem", marginTop: 6 }}>웨이터 한 사람이 담당입니다.</h2>
               <p style={{ marginTop: 12 }}>
-                전화·문자 받고, 자리 잡고, 입장 안내까지. 한 사람이 끊지 않고
+                카톡·문자 받고, 자리 잡고, 입장 안내까지. 한 사람이 끊지 않고
                 챙기는 게 그의 일입니다. 그래서 손님은 시간만 즐기면 됩니다.
               </p>
               <p style={{ marginTop: 12 }}>
@@ -91,12 +96,12 @@ export default function About() {
               운영합니다. 손님과 가게 모두에게 안전한 방식이 결국 길게 갑니다.
             </li>
             <li>
-              <strong>담당제 안내</strong> — 한 사람이 처음 통화부터 마지막 인사까지
+              <strong>담당제 안내</strong> — 한 사람이 처음 연락부터 마지막 인사까지
               책임지고 챙깁니다. 사람 바뀌면서 말이 꼬이는 일이 없도록.
             </li>
             <li>
-              <strong>전화 응대 우선</strong> — 텍스트로 길게 설명하는 것보다, 전화로
-              한 번에 정리하는 게 빠릅니다. 010-3854-6887.
+              <strong>카톡 응대 우선</strong> — 텍스트로 길게 설명하는 것보다, 카톡으로
+              한 번에 정리하는 게 빠릅니다. besta12.
             </li>
           </ul>
         </div>
@@ -115,14 +120,14 @@ export default function About() {
           <h2>한 사람이 끝까지 챙기는 게 결국 빠릅니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
             나이트 영업장은 사람이 많고, 흐름이 빠르고, 그날의 상황이 매번 다릅니다.
-            전화 받은 사람, 자리 안내한 사람, 주문 받은 사람이 다 다르면 손님 입장에서
+            연락 받은 사람, 자리 안내한 사람, 주문 받은 사람이 다 다르면 손님 입장에서
             매번 같은 설명을 반복해야 하죠. 담당제는 그 반복을 없앱니다.
           </p>
           <div className="grid grid-2" style={{ marginTop: 28 }}>
             <article className="card">
               <h3>설명을 한 번만</h3>
               <p style={{ marginTop: 10 }}>
-                처음 통화 때 인원·시간·일행 분위기를 한 번만 말씀하시면 그 흐름이
+                처음 연락 때 인원·시간·일행 분위기를 한 번만 말씀하시면 그 흐름이
                 도착·자리·주문까지 그대로 이어집니다. 손님이 같은 말을 두 번 할 필요가
                 없습니다.
               </p>
@@ -130,7 +135,7 @@ export default function About() {
             <article className="card">
               <h3>변경에 강합니다</h3>
               <p style={{ marginTop: 10 }}>
-                인원이 늘거나, 도착이 늦거나, 자리만 옮기고 싶을 때. 처음 통화한
+                인원이 늘거나, 도착이 늦거나, 자리만 옮기고 싶을 때. 처음 연락한
                 담당이 같은 라인에서 받으니, 다시 설명할 필요 없이 변경이 정리됩니다.
               </p>
             </article>
@@ -144,7 +149,7 @@ export default function About() {
             <article className="card">
               <h3>익명성이 보호됩니다</h3>
               <p style={{ marginTop: 10 }}>
-                같은 담당과 통화하니, 매번 새로운 직원한테 일행 구성·인원을
+                같은 담당과 연락하니, 매번 새로운 직원한테 일행 구성·인원을
                 설명할 일이 없습니다. 야간 업장 특성상 익명성을 챙기는 손님께
                 의외로 중요한 차이입니다.
               </p>
@@ -156,9 +161,9 @@ export default function About() {
       <section className="section">
         <div className="container">
           <span className="eyebrow">합법 영업장이 의미하는 것</span>
-          <h2>“합법”이 손님한테 주는 실질적 차이.</h2>
+          <h2>"합법"이 손님한테 주는 실질적 차이.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
-            “합법 영업장”이라는 말이 사이트에 박혀 있는 가게는 많습니다. 근데
+            "합법 영업장"이라는 말이 사이트에 박혀 있는 가게는 많습니다. 근데
             그게 손님 입장에서 어떤 실질적인 차이를 만드는지 정리해 드릴게요.
             결론부터 말하면, 길게 다니실 거면 합법 운영하는 곳이 결국 본인한테 안전합니다.
           </p>
@@ -195,7 +200,7 @@ export default function About() {
             <article className="card">
               <h3>입구에서</h3>
               <p style={{ marginTop: 10 }}>
-                줄에서 두리번거리지 않습니다. “짱구 담당”이라고만 말씀하시면,
+                줄에서 두리번거리지 않습니다. "담당"이라고만 말씀하시면,
                 신분증 확인 후 곧장 자리로. 처음이라고 어색해할 시간이 없습니다.
               </p>
             </article>
@@ -238,7 +243,7 @@ export default function About() {
           <p className="lead" style={{ marginTop: 14 }}>
             서울이나 부산 도심처럼 업장이 빽빽한 동네가 아니다 보니, 창원은
             상대적으로 단골 비중이 높고 동선이 짧습니다. 그게 손님 응대에도 영향을 줘요.
-            “한 번 와 본 사람”이 다시 오기 쉬운 구조라, 응대 한 번을 가볍게 못 하는 거죠.
+            "한 번 와 본 사람"이 다시 오기 쉬운 구조라, 응대 한 번을 가볍게 못 하는 거죠.
           </p>
           <div className="grid grid-3" style={{ marginTop: 28 }}>
             <article className="card">
