@@ -403,11 +403,7 @@ p { margin: 0; color: var(--text-muted); }
   flex: 0 0 auto;
   min-width: 84px;
 }
-@media (min-width: 820px) {
-  .sticky-cta { display: none; }
-}
 body.has-sticky { padding-bottom: calc(80px + var(--safe-bottom)); }
-@media (min-width: 820px) { body.has-sticky { padding-bottom: 0; } }
 
 .footer {
   border-top: 1px solid var(--border);
