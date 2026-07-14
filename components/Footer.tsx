@@ -9,19 +9,7 @@ export default function Footer() {
         <div className="footer__grid">
           <div>
             <h4>{SITE.name}</h4>
-            <p>
-              광고 문의는 카카오톡으로 바로 연결됩니다.
-            </p>
-            <p style={{ marginTop: 10 }}>
-              <a
-                href={SITE.kakaoHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: "var(--gold)", fontWeight: 700 }}
-              >
-                💬 카톡 besta12
-              </a>
-            </p>
+            <p>창원시 · 합법 영업장 · 만 {SITE.ageLimit}세 이상</p>
           </div>
           <div>
             <h4>둘러보기</h4>

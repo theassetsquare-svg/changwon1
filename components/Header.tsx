@@ -15,15 +15,6 @@ export default function Header() {
             <Link key={item.href} href={item.href}>{item.label}</Link>
           ))}
         </nav>
-        <a
-          className="btn btn--primary header__cta"
-          href={SITE.kakaoHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="광고 문의 카카오톡 besta12"
-        >
-          💬 광고문의
-        </a>
       </div>
     </header>
   );
