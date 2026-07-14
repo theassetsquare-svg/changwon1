@@ -1,13 +1,12 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
-import { SITE } from "@/components/site";
 
 export default function NotFound() {
   return (
     <>
       <SeoHead
         title="404 · 여긴 비어 있는 자리입니다 · 창원 룰루랄라 나이트"
-        description="찾으시는 페이지가 없거나 주소가 바뀌었습니다. 가장 빠른 길은 카톡 besta12로 문의. 홈으로 돌아가거나 자주 찾는 페이지로 바로 이동하세요."
+        description="찾으시는 페이지가 없거나 주소가 바뀌었습니다. 홈으로 돌아가거나 자주 찾는 페이지로 바로 이동하세요."
         path="/404/"
         noindex
       />
@@ -20,15 +19,8 @@ export default function NotFound() {
             아래에서 바로 가실 수 있는 페이지를 골라 주세요.
           </p>
           <div className="hero__actions" style={{ justifyContent: "center" }}>
-            <a
-              className="btn btn--primary btn--lg"
-              href={SITE.kakaoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 카톡 besta12 문의
-            </a>
-            <Link className="btn btn--ghost btn--lg" href="/">홈으로</Link>
+            <Link className="btn btn--primary btn--lg" href="/">홈으로</Link>
+            <Link className="btn btn--ghost btn--lg" href="/contact/">문의하기</Link>
           </div>
         </div>
       </section>
@@ -54,7 +46,7 @@ export default function NotFound() {
               <span className="eyebrow">예약·문의</span>
               <h3 style={{ marginTop: 6 }}>예약 가이드</h3>
               <p style={{ marginTop: 10 }}>
-                카톡 응대 흐름과 단체석 예약 가이드까지 모두 있습니다.
+                응대 흐름과 단체석 예약 가이드까지 모두 있습니다.
               </p>
             </Link>
           </div>

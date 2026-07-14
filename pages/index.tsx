@@ -1,12 +1,11 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
 import { Jsonld, buildBreadcrumb, buildFaq } from "@/components/Jsonld";
-import { SITE } from "@/components/site";
 
 const FAQ = [
   {
     q: "처음 가는데 어떻게 해야 해요?",
-    a: "카톡으로 문의주시면 됩니다. 카카오톡 besta12로 인원과 도착 예정 시간만 알려주세요. 자리 잡는 것부터 안내까지 담당이 직접 챙깁니다.",
+    a: "문의 페이지에서 안내받으시면 됩니다. 인원과 도착 예정 시간만 알려주세요. 자리 잡는 것부터 안내까지 담당이 직접 챙깁니다.",
   },
   {
     q: "예약은 필수인가요?",
@@ -18,7 +17,7 @@ const FAQ = [
   },
   {
     q: "가격이 어떻게 되나요?",
-    a: "가격·테이블·주대 안내는 시간대와 자리에 따라 달라집니다. 정확한 안내는 담당이 카톡으로 바로 알려드립니다.",
+    a: "가격·테이블·주대 안내는 시간대와 자리에 따라 달라집니다. 정확한 안내는 담당이 직접 알려드립니다.",
   },
   {
     q: "혼자 가도 되나요?",
@@ -30,11 +29,11 @@ const FAQ = [
   },
   {
     q: "영업 시간이 어떻게 되나요?",
-    a: "오후 7시에 오픈해서 다음날 새벽 5시까지 영업합니다. 매일 운영하며, 자리 회전 피크는 보통 자정~새벽 2시 무렵이에요. 그날 그 시간 자리 상황은 카톡으로 확인하시는 게 가장 정확합니다.",
+    a: "오후 7시에 오픈해서 다음날 새벽 5시까지 영업합니다. 매일 운영하며, 자리 회전 피크는 보통 자정~새벽 2시 무렵이에요.",
   },
   {
     q: "복장 규정이 있나요?",
-    a: "지나치게 캐주얼한 슬리퍼·트레이닝 차림은 입구에서 제한될 수 있습니다. 무난한 외출 복장이면 충분합니다. 헷갈리면 카톡으로 짧게 물어봐 주세요.",
+    a: "지나치게 캐주얼한 슬리퍼·트레이닝 차림은 입구에서 제한될 수 있습니다. 무난한 외출 복장이면 충분합니다.",
   },
 ];
 
@@ -62,16 +61,11 @@ export default function Home() {
             담당이 직접 챙깁니다. 어색하게 입구에서 두리번거릴 일 없습니다.
           </p>
           <div className="hero__actions">
-            <a
-              className="btn btn--primary btn--lg"
-              href={SITE.kakaoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 카톡 besta12 문의
-            </a>
-            <Link className="btn btn--ghost btn--lg" href="/contact/">
-              문의 방법 보기
+            <Link className="btn btn--primary btn--lg" href="/contact/">
+              문의하기
+            </Link>
+            <Link className="btn btn--ghost btn--lg" href="/about/">
+              가게 소개
             </Link>
           </div>
           <div className="hero__meta">
@@ -95,21 +89,8 @@ export default function Home() {
               <dd>한 통이면 자리부터 안내까지 정리됩니다.</dd>
             </dl>
             <dl className="kv">
-              <dt>카톡 문의</dt>
-              <dd>
-                <a
-                  href={SITE.kakaoHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: "var(--gold)", fontWeight: 700 }}
-                >
-                  besta12
-                </a>
-              </dd>
-            </dl>
-            <dl className="kv">
               <dt>위치</dt>
-              <dd>경상남도 창원시 (정확한 위치 안내는 카톡으로)</dd>
+              <dd>경상남도 창원시</dd>
             </dl>
             <dl className="kv">
               <dt>영업시간</dt>
@@ -136,7 +117,7 @@ export default function Home() {
             <article className="card">
               <h3>응대가 빠릅니다</h3>
               <p style={{ marginTop: 10 }}>
-                연락 받으면 자리부터 잡습니다. 카톡·문자 둘 다 가능하고, 도착 전에
+                연락 받으면 자리부터 잡습니다. 도착 전에
                 인원·시간만 공유해 주시면 정리해 둡니다.
               </p>
             </article>
@@ -168,11 +149,11 @@ export default function Home() {
       >
         <div className="container">
           <span className="eyebrow">처음이라도 어렵지 않게</span>
-          <h2>카톡 → 자리 → 입장. 3단계면 끝.</h2>
+          <h2>문의 → 자리 → 입장. 3단계면 끝.</h2>
           <ol className="steps" style={{ marginTop: 28 }}>
             <li>
-              <strong>카톡 문의</strong>
-              카카오톡 besta12로 이름·인원·도착 예정 시간만 보내주세요. 길게 설명 안
+              <strong>문의</strong>
+              이름·인원·도착 예정 시간만 알려주세요. 길게 설명 안
               해도 담당이 알아서 정리합니다.
             </li>
             <li>
@@ -181,7 +162,7 @@ export default function Home() {
             </li>
             <li>
               <strong>도착 후 입장</strong>
-              입구에서 "담당"이라고만 말씀하세요. 신분증 확인 후 바로 자리로 안내드립니다.
+              입구에서 담당이라고만 말씀하세요. 신분증 확인 후 바로 자리로 안내드립니다.
             </li>
           </ol>
         </div>
@@ -190,16 +171,16 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <span className="eyebrow">처음 오시는 분께</span>
-          <h2>카톡 문의가 이렇게 흘러갑니다.</h2>
+          <h2>문의가 이렇게 흘러갑니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
             처음 연락하는 사람은 무슨 말을 어떻게 시작해야 할지부터 막막합니다.
-            그럴 필요 없어요. 아래 흐름 한 번만 보고 카톡 보내시면 됩니다.
+            그럴 필요 없어요. 아래 흐름 한 번만 보고 연락 주시면 됩니다.
           </p>
           <div className="grid grid-2" style={{ marginTop: 26 }}>
             <article className="card">
-              <h3>처음 메시지</h3>
+              <h3>처음 연락</h3>
               <p style={{ marginTop: 10 }}>
-                카카오톡 besta12로 "룰루랄라 나이트 문의입니다"라고만 보내시면
+                "룰루랄라 나이트 문의입니다"라고만 보내시면
                 바로 연결됩니다. 길게 설명하실 필요가 없습니다.
               </p>
             </article>
@@ -215,7 +196,7 @@ export default function Home() {
               <h3>변경 사항이 생기면</h3>
               <p style={{ marginTop: 10 }}>
                 인원이 늘거나, 시간이 늦어지거나, 일행 한 명이 빠지거나. 어느 쪽이든
-                같은 카톡으로 다시 한 번이면 충분합니다. 자리 다시 배치해 둡니다.
+                다시 한 번이면 충분합니다. 자리 다시 배치해 둡니다.
               </p>
             </article>
             <article className="card">
@@ -244,8 +225,7 @@ export default function Home() {
           <p className="lead" style={{ marginTop: 14 }}>
             창원 룰루랄라 나이트는 오후 7시에 오픈해 다음날 새벽 5시까지 영업합니다.
             한 가게 안에서도 시간대별로 자리 회전·분위기·응답 속도가 확연히
-            달라져요. 본인 일정에 맞춰 어느 무렵에 오는 게 좋을지 감 잡으시는 데
-            도움이 되실 겁니다.
+            달라져요.
           </p>
           <div className="grid grid-3" style={{ marginTop: 28 }}>
             <article className="card">
@@ -267,15 +247,10 @@ export default function Home() {
               <h3>마감 즈음 (새벽 2시~5시)</h3>
               <p style={{ marginTop: 10 }}>
                 새벽 2시 이후 자리 회전이 다시 풀리는 시간대입니다. 짧게 한두 시간만
-                놀다 가실 분께 의외로 잘 맞는 구간이에요. 미리 말씀해
-                두시면 자리 잡힙니다.
+                놀다 가실 분께 의외로 잘 맞는 구간이에요.
               </p>
             </article>
           </div>
-          <p className="lead" style={{ marginTop: 22 }}>
-            ※ 위 시간대 구분은 일반적인 흐름이며, 실제 그날의 혼잡도는 카톡으로
-            담당한테 직접 확인하시는 게 가장 정확합니다.
-          </p>
         </div>
       </section>
 
@@ -285,7 +260,7 @@ export default function Home() {
           <h2>한 번 잡으면 다음부터가 빠릅니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
             창원에서 나이트 다니는 분들이 굳이 담당한테 연락하는 이유는 단순합니다.
-            한 번 통한 사람은 다음부터 "나 누구입니다" 한마디로 끝나거든요.
+            한 번 통한 사람은 다음부터 이름 한마디로 끝나거든요.
             매번 처음부터 설명할 필요가 없어요.
           </p>
           <ul className="bullets" style={{ marginTop: 22 }}>
@@ -326,36 +301,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section--tight" aria-label="광고 문의">
+      <section className="section--tight">
         <div className="container">
-          <div
-            className="card"
-            style={{
-              textAlign: "center",
-              padding: "32px 24px",
-              background:
-                "linear-gradient(180deg, rgba(252,211,77,0.05), rgba(217,119,6,0.06))",
-              borderColor: "rgba(252,211,77,0.35)",
-            }}
-          >
-            <span className="eyebrow">광고 문의</span>
-            <h2 style={{ marginTop: 6 }}>광고 문의는 카톡으로 바로.</h2>
-            <p className="lead" style={{ margin: "12px auto 22px" }}>
-              광고·제휴·업무 협의는 카카오톡 besta12로 연락주시면 바로 답드립니다.
-            </p>
-            <a
-              className="btn btn--primary btn--lg"
-              href={SITE.kakaoHref}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              💬 광고문의 카톡 besta12
-            </a>
-            <div className="notice" style={{ marginTop: 22, textAlign: "left" }}>
-              본 사이트는 창원 룰루랄라 나이트의 공식 안내 페이지입니다. 만 19세 이상만
-              출입 가능하며, 입장 시 신분증 확인이 원칙입니다. 합법 영업장에서 운영되며,
-              불법·미성년 출입은 일체 금지됩니다.
-            </div>
+          <div className="notice">
+            본 사이트는 창원 룰루랄라 나이트의 공식 안내 페이지입니다. 만 19세 이상만
+            출입 가능하며, 입장 시 신분증 확인이 원칙입니다. 합법 영업장에서 운영되며,
+            불법·미성년 출입은 일체 금지됩니다.
           </div>
         </div>
       </section>
