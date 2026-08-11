@@ -7,7 +7,7 @@ export const SITE = {
   phoneHref: "tel:+821075284936",
   url: "https://changwon1.pages.dev",
   region: "경상남도 창원시",
-  ageLimit: 19,
+  ageLimit: 27,
   hours: {
     open: "19:00",
     close: "05:00",

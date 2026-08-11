@@ -23,9 +23,14 @@ const urls = PAGES.map((p) => {
   const img = p.image
     ? `
     <image:image>
+      <image:loc>${BASE}/og-default.png</image:loc>
+      <image:title>창원 룰루랄라 나이트 · 로또 010-7528-4936</image:title>
+      <image:caption>창원 시내 만 27세 이상 합법 영업장. 예약·문의는 웨이터 로또 010-7528-4936 전화.</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>${BASE}/og-cover.png</image:loc>
-      <image:title>창원 룰루랄라 나이트 · 짱구 담당 010-3854-6887</image:title>
-      <image:caption>창원 시내 만 19세 이상 합법 영업장. 웨이터 짱구 직통 안내.</image:caption>
+      <image:title>창원 룰루랄라 나이트 전화 예약 · 로또 010-7528-4936</image:title>
+      <image:caption>창원 룰루랄라 나이트 전화 예약 안내 이미지.</image:caption>
     </image:image>`
     : "";
   return `  <url>

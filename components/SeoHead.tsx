@@ -37,7 +37,7 @@ export default function SeoHead({
       <meta name="geo.position" content="35.2280;128.6817" />
       <meta name="ICBM" content="35.2280, 128.6817" />
       <meta name="rating" content="adult" />
-      <meta name="age" content="19+" />
+      <meta name="age" content={`${SITE.ageLimit}+`} />
       {noindex && <meta name="robots" content="noindex,nofollow" />}
       {!noindex && (
         <>
@@ -69,17 +69,22 @@ export default function SeoHead({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={`${SITE.url}${ogImage}`} />
-      <meta property="og:image:secure_url" content={`${SITE.url}${ogImage}`} />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={`${SITE.name} · 창원시 합법 영업장`} />
-      {/* 정사각 보조 이미지 (카카오톡·일부 메신저 대응) */}
+      {/* 1:1 정사각 — 네이버 검색 썸네일 기준 이미지 */}
       <meta property="og:image" content={`${SITE.url}/og-default.png`} />
+      <meta property="og:image:secure_url" content={`${SITE.url}/og-default.png`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
+      <meta
+        property="og:image:alt"
+        content={`${SITE.name} · ${SITE.contactName} ${SITE.phone} · 만 ${SITE.ageLimit}세 이상`}
+      />
+      {/* 와이드 보조 이미지 (링크 미리보기 표준 1200×630) */}
+      <meta property="og:image" content={`${SITE.url}${ogImage}`} />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <link rel="image_src" href={`${SITE.url}/og-default.png`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />

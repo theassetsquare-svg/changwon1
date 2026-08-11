@@ -22,7 +22,7 @@
 |---|---|
 | `scripts/gsc-report.mjs` | GSC 검색 성과 + 카니발리제이션 분석 (실데이터) |
 | `scripts/check-keyword-stuffing.mjs` | 키워드 스터핑/메타 품질 검사 (`npm run check:seo`) |
-| `scripts/gen-og.mjs` | OG 이미지(PNG) 생성 — 카카오톡/트위터/페북 미리보기용 |
+| `scripts/gen-og.mjs` | OG 이미지(PNG) 생성 — 네이버 검색 썸네일(1:1)·링크 미리보기용 |
 | `scripts/gen-sitemap.mjs` | sitemap.xml 생성(lastmod 자동) |
 
 ## 필요한 저장소 시크릿 (한 번만 설정)

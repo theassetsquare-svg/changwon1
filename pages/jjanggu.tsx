@@ -1,14 +1,15 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
 
 export default function Jjanggu() {
   return (
     <>
       <SeoHead
-        title="담당 웨이터 · 창원 룰루랄라 나이트 손님 응대 담당"
-        description="창원 룰루랄라 나이트 손님 응대 담당 웨이터. 처음이든 단골이든 같은 흐름, 같은 사람. 한 번이면 자리·인원·도착 시간 정리됩니다."
-        keywords="창원 룰루랄라 나이트 담당, 창원 나이트 예약, 룰루랄라 담당 웨이터"
+        title="담당 웨이터 로또 010-7528-4936 · 창원 룰루랄라 나이트"
+        description="창원 룰루랄라 나이트 손님 응대 담당 웨이터 로또. 예약·문의는 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 27세 이상 출입."
+        keywords="창원 룰루랄라 나이트 담당, 창원 나이트 예약, 창원 나이트 전화번호, 룰루랄라 담당 웨이터 로또"
         path="/jjanggu/"
       />
       <Jsonld
@@ -20,19 +21,21 @@ export default function Jjanggu() {
 
       <section className="hero">
         <div className="container">
-          <span className="badge badge--gold">웨이터(담당)</span>
+          <span className="badge badge--gold">웨이터(담당) · {SITE.contactName}</span>
           <h1 style={{ marginTop: 18 }}>
             저장해 두면 편한 번호.<br />
-            <span className="accent">담당</span>입니다.
+            <span className="accent">{SITE.contactName} {SITE.phone}</span>
           </h1>
           <p className="hero__sub">
             창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터입니다.
-            처음 오신 분도, 자주 오시는 분도, 도착 전에 한 번이면 자리부터 안내까지
-            직접 챙깁니다.
+            처음 오신 분도, 자주 오시는 분도, 도착 전에 전화 한 통이면 자리부터 안내까지
+            직접 챙깁니다. 예약·문의는 전화로만 받습니다.
           </p>
           <div className="hero__actions">
-            <Link className="btn btn--primary btn--lg" href="/contact/">문의하기</Link>
-            <Link className="btn btn--ghost btn--lg" href="/contact/">문의 방법 보기</Link>
+            <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
+              📞 {SITE.contactName} {SITE.phone} 전화
+            </a>
+            <Link className="btn btn--ghost btn--lg" href="/contact/">예약 안내 보기</Link>
           </div>
         </div>
       </section>
@@ -41,8 +44,21 @@ export default function Jjanggu() {
         <div className="container">
           <div className="card">
             <dl className="kv">
+              <dt>닉네임</dt>
+              <dd>{SITE.contactName}</dd>
+            </dl>
+            <dl className="kv">
               <dt>역할</dt>
               <dd>웨이터(담당) — 손님 응대·자리 안내·예약 조율</dd>
+            </dl>
+            <dl className="kv">
+              <dt>예약·문의</dt>
+              <dd>
+                <a href={SITE.phoneHref} style={{ color: "var(--gold)", fontWeight: 800 }}>
+                  {SITE.phone}
+                </a>{" "}
+                (전화 문의)
+              </dd>
             </dl>
             <dl className="kv">
               <dt>소속</dt>
@@ -92,20 +108,20 @@ export default function Jjanggu() {
 
       <section className="section" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
         <div className="container">
-          <span className="eyebrow">문의 가이드</span>
+          <span className="eyebrow">전화 문의 가이드</span>
           <h2>이렇게만 말씀하시면 됩니다.</h2>
           <ol className="steps" style={{ marginTop: 28 }}>
             <li>
-              <strong>"룰루랄라 나이트 문의입니다."</strong>
-              가장 빠른 연결 방식입니다. 처음 연락하시는 분도 똑같이 말씀하시면 됩니다.
+              <strong>{SITE.phone}으로 전화 → "룰루랄라 나이트 예약 문의입니다."</strong>
+              가장 빠른 연결 방식입니다. 처음 전화하시는 분도 똑같이 말씀하시면 됩니다.
             </li>
             <li>
               <strong>이름·인원·도착 예정 시간</strong>
               세 가지면 충분합니다. 자세한 건 통화하면서 자연스럽게 정리됩니다.
             </li>
             <li>
-              <strong>변경이 생기면 다시 연락</strong>
-              인원이 늘거나, 시간이 미뤄지면 다시 한 번. 자리 다시 잡아 둡니다.
+              <strong>변경이 생기면 다시 전화</strong>
+              인원이 늘거나, 시간이 미뤄지면 다시 한 통. 자리 다시 잡아 둡니다.
             </li>
           </ol>
         </div>
@@ -147,7 +163,7 @@ export default function Jjanggu() {
             </li>
             <li>
               <strong>"혼자 가도 어색하지 않아요?"</strong> — 가능합니다. 혼자 오실 거면 도착
-              전에 한 번 연락 주시면 그날 상황에 맞게 담당이 잡아 둡니다.
+              전에 한 통 주시면 그날 상황에 맞게 담당이 잡아 둡니다.
             </li>
             <li>
               <strong>"가격이 어느 정도예요?"</strong> — 시간대·자리·인원에 따라
@@ -163,7 +179,8 @@ export default function Jjanggu() {
       <section className="section--tight">
         <div className="container">
           <div className="notice">
-            담당 웨이터의 상세 정보는 추후 사장님 자료를 받는 대로 추가됩니다.
+            예약·문의는 {SITE.contactName} {SITE.phone} 전화로만 받습니다.
+            만 {SITE.ageLimit}세 이상 출입 · 입장 시 신분증 확인.
           </div>
         </div>
       </section>
