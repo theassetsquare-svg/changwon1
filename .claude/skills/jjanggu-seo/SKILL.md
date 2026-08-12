@@ -116,12 +116,12 @@ description: 창원 룰루랄라 나이트 짱구 담당(웨이터) 010-3854-688
     "addressRegion": "경상남도",
     "addressCountry": "KR"
   },
-  "telephone": "+82-10-3854-6887",
+  "telephone": "010-7528-4936",
   "url": "https://changwon1.pages.dev",
   "openingHours": "[실제 영업시간]",
   "employee": {
     "@type": "Person",
-    "name": "짱구",
+    "name": "로또",
     "jobTitle": "웨이터"
   }
 }

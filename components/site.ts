@@ -4,7 +4,7 @@ export const SITE = {
   role: "웨이터",
   contactName: "로또",
   phone: "010-7528-4936",
-  phoneHref: "tel:+821075284936",
+  phoneHref: "tel:01075284936",
   url: "https://changwon1.pages.dev",
   region: "경상남도 창원시",
   ageLimit: 27,
