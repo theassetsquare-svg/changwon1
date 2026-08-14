@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { NAV, SITE } from "./site";
+import { BULGWANG } from "./bulgwang";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -17,6 +18,11 @@ export default function Footer() {
               {NAV.map((n) => (
                 <li key={n.href}><Link href={n.href}>{n.label}</Link></li>
               ))}
+              {/* 다른 지역 업소 안내. 상단 메뉴가 아니라 푸터에 두어
+                  창원 관련 내부 링크 흐름을 흐리지 않게 한다. */}
+              <li>
+                <Link href={BULGWANG.path}>{BULGWANG.name}</Link>
+              </li>
             </ul>
           </div>
           <div>

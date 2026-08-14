@@ -17,6 +17,8 @@ const PAGES = [
   { path: "/contacta/", priority: "0.85", changefreq: "monthly" },
   { path: "/location/", priority: "0.8", changefreq: "monthly" },
   { path: "/about/", priority: "0.7", changefreq: "monthly" },
+  // 다른 지역 업소(불광동호박나이트) 안내 페이지
+  { path: "/bulgwang-hobak/", priority: "0.9", changefreq: "weekly" },
 ];
 
 const urls = PAGES.map((p) => {

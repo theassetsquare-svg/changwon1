@@ -398,10 +398,26 @@ p { margin: 0; color: var(--text-muted); }
   gap: 8px;
   box-shadow: 0 -10px 30px rgba(0,0,0,0.4);
 }
-.sticky-cta .btn { flex: 1; }
+.sticky-cta {
+  align-items: center;
+  justify-content: center;
+}
+.sticky-cta__label {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+.sticky-cta__label strong { color: var(--gold-soft); }
+.sticky-cta .btn { flex: 0 0 auto; }
 .sticky-cta .btn--ghost {
   flex: 0 0 auto;
   min-width: 84px;
+}
+@media (max-width: 640px) {
+  /* 좁은 화면에서는 설명을 접고 전화 버튼이 가로를 다 쓰게 한다.
+     바 자체는 모바일·PC 어디서도 숨기지 않는다. */
+  .sticky-cta__label { display: none; }
+  .sticky-cta .btn { flex: 1; }
 }
 body.has-sticky { padding-bottom: calc(80px + var(--safe-bottom)); }
 
