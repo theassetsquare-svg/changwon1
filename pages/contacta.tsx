@@ -34,7 +34,7 @@ export default function Contact() {
             <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
               📞 {SITE.contactName} {SITE.phone} 전화
             </a>
-            <Link className="btn btn--ghost btn--lg" href="/jjanggu/">담당 보기</Link>
+            <Link className="btn btn--ghost btn--lg" href="/jjanggua/">담당 보기</Link>
           </div>
         </div>
       </section>

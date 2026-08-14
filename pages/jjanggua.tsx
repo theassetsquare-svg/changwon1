@@ -10,12 +10,12 @@ export default function Jjanggu() {
         title="담당 웨이터 로또 010-7528-4936 · 창원 룰루랄라 나이트"
         description="창원 룰루랄라 나이트 손님 응대 담당 웨이터 로또. 예약·문의는 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 27세 이상 출입."
         keywords="창원 룰루랄라 나이트 담당, 창원 나이트 예약, 창원 나이트 전화번호, 룰루랄라 담당 웨이터 로또"
-        path="/jjanggu/"
+        path="/jjanggua/"
       />
       <Jsonld
         data={buildBreadcrumb([
           { name: "홈", path: "/" },
-          { name: "담당", path: "/jjanggu/" },
+          { name: "담당", path: "/jjanggua/" },
         ])}
       />
 

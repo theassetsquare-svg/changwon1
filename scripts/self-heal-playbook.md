@@ -20,7 +20,7 @@ claude "scripts/self-heal-playbook.md 절차대로 changwon1 사이트를 점검
    - 쿼리 예: `subject:[changwon1] newer_than:7d`
    - ⚠️ `[놀쿨]`, `[ilsan*]` 등 **다른 프로젝트 메일은 절대 건드리지 말 것.**
 3. **라이브 헬스체크** — 아래 페이지 200 응답 + 핵심 콘텐츠 확인:
-   `/ /about/ /jjanggu/ /location/ /contacta/ /sitemap.xml /robots.txt /llms.txt /og-cover.png`
+   `/ /about/ /jjanggua/ /location/ /contacta/ /sitemap.xml /robots.txt /llms.txt /og-cover.png`
 
 ## 2. 진단
 - 빌드 재현: `npm ci && npm run build && npm run check:seo`

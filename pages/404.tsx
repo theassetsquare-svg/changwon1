@@ -31,7 +31,7 @@ export default function NotFound() {
       <section className="section--tight">
         <div className="container">
           <div className="grid grid-3">
-            <Link className="card card--link" href="/jjanggu/">
+            <Link className="card card--link" href="/jjanggua/">
               <span className="eyebrow">담당</span>
               <h3 style={{ marginTop: 6 }}>담당 보기</h3>
               <p style={{ marginTop: 10 }}>

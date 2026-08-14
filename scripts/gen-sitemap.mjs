@@ -13,7 +13,7 @@ const today = new Date().toISOString().slice(0, 10);
 
 const PAGES = [
   { path: "/", priority: "1.0", changefreq: "weekly", image: true },
-  { path: "/jjanggu/", priority: "0.95", changefreq: "weekly" },
+  { path: "/jjanggua/", priority: "0.95", changefreq: "weekly" },
   { path: "/contacta/", priority: "0.85", changefreq: "monthly" },
   { path: "/location/", priority: "0.8", changefreq: "monthly" },
   { path: "/about/", priority: "0.7", changefreq: "monthly" },

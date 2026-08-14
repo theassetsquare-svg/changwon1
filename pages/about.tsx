@@ -35,7 +35,7 @@ export default function About() {
             <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
               📞 {SITE.contactName} {SITE.phone} 전화
             </a>
-            <Link className="btn btn--ghost btn--lg" href="/jjanggu/">담당자 소개 보기</Link>
+            <Link className="btn btn--ghost btn--lg" href="/jjanggua/">담당자 소개 보기</Link>
           </div>
         </div>
       </section>
@@ -64,7 +64,7 @@ export default function About() {
                 챙기는 게 그의 일입니다. 그래서 손님은 시간만 즐기면 됩니다.
               </p>
               <p style={{ marginTop: 12 }}>
-                <Link href="/jjanggu/" style={{ color: "var(--gold)", fontWeight: 700 }}>
+                <Link href="/jjanggua/" style={{ color: "var(--gold)", fontWeight: 700 }}>
                   → 담당자 더 보기
                 </Link>
               </p>

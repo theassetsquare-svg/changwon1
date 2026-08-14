@@ -19,7 +19,7 @@ export const SITE = {
 export const NAV = [
   { href: "/", label: "홈" },
   { href: "/about/", label: "소개" },
-  { href: "/jjanggu/", label: "담당" },
+  { href: "/jjanggua/", label: "담당" },
   { href: "/location/", label: "위치" },
   { href: "/contacta/", label: "문의" },
 ] as const;
