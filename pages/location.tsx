@@ -7,8 +7,8 @@ export default function Location() {
   return (
     <>
       <SeoHead
-        title="찾아오는 길 · 창원 시내 출발지별 동선 + 도착 5분 전 체크리스트"
-        description="내비만 믿고 골목에서 돌지 마세요. 의창·성산·마산·진해 어디서 오시든 가장 빠른 길, 신분증·인원·입구 멘트까지 담당이 도착 직전 전화로 안내해 드립니다. 로또 010-7528-4936 · 만 27세 이상."
+        title="찾아오는 길 · 창원 성산구 마디미로43번길 10 지하3층"
+        description="창원 룰루랄라나이트클럽 주소는 경남 창원시 성산구 마디미로43번길 10 지하3층입니다. 의창·성산·마산·진해 어디서 오시든 가장 빠른 동선과 입구 안내는 로또 010-7528-4936으로 전화 주시면 도착 직전에 정리해 드립니다. 만 27세 이상."
         path="/location/"
       />
       <Jsonld
@@ -43,12 +43,18 @@ export default function Location() {
         <div className="container">
           <div className="card">
             <dl className="kv">
-              <dt>지역</dt>
-              <dd>경상남도 창원시</dd>
+              <dt>상호</dt>
+              <dd>{SITE.legalName}</dd>
             </dl>
             <dl className="kv">
-              <dt>상세 위치</dt>
-              <dd>전화 안내 (오시기 직전에 여쭤보시는 게 가장 정확합니다)</dd>
+              <dt>주소</dt>
+              <dd>{SITE.address.full}</dd>
+            </dl>
+            <dl className="kv">
+              <dt>찾아오실 때</dt>
+              <dd>
+                건물 지하 3층입니다. 입구가 헷갈리시면 도착 직전에 전화 주세요.
+              </dd>
             </dl>
             <dl className="kv">
               <dt>예약·문의</dt>

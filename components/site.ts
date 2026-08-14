@@ -7,6 +7,15 @@ export const SITE = {
   phoneHref: "tel:01075284936",
   url: "https://changwon1.pages.dev",
   region: "경상남도 창원시",
+  // 사업장 정식 상호 — 지도·검색에 등록된 이름과 맞춘다.
+  legalName: "창원 룰루랄라나이트클럽",
+  address: {
+    street: "마디미로43번길 10 지하3층",
+    district: "성산구",
+    locality: "창원시",
+    region: "경상남도",
+    full: "경상남도 창원시 성산구 마디미로43번길 10 지하3층",
+  },
   ageLimit: 27,
   hours: {
     open: "19:00",

@@ -17,7 +17,14 @@ export function buildLocalBusiness() {
     "@type": ["NightClub", "LocalBusiness"],
     "@id": `${SITE.url}/#business`,
     name: SITE.name,
-    alternateName: ["룰루랄라 나이트", "창원 룰루랄라", "창원 나이트 룰루랄라"],
+    legalName: SITE.legalName,
+    alternateName: [
+      SITE.legalName,
+      "룰루랄라 나이트",
+      "창원 룰루랄라",
+      "창원 나이트 룰루랄라",
+      "룰루랄라나이트클럽",
+    ],
     url: SITE.url,
     description: `${SITE.name}. 만 ${SITE.ageLimit}세 이상만 출입 가능한 합법 영업장. 예약·문의는 ${SITE.contactName} ${SITE.phone} 전화.`,
     image: [`${SITE.url}/og-default.png`, `${SITE.url}/og-cover.png`],
@@ -39,8 +46,9 @@ export function buildLocalBusiness() {
     priceRange: "₩₩~₩₩₩",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "창원시",
-      addressRegion: "경상남도",
+      streetAddress: SITE.address.street,
+      addressLocality: `${SITE.address.locality} ${SITE.address.district}`,
+      addressRegion: SITE.address.region,
       addressCountry: "KR",
     },
     areaServed: [
@@ -93,16 +101,14 @@ export function buildPlace() {
     name: SITE.name,
     address: {
       "@type": "PostalAddress",
-      addressLocality: "창원시",
-      addressRegion: "경상남도",
+      streetAddress: SITE.address.street,
+      addressLocality: `${SITE.address.locality} ${SITE.address.district}`,
+      addressRegion: SITE.address.region,
       addressCountry: "KR",
     },
-    geo: {
-      "@type": "GeoCoordinates",
-      latitude: 35.2280,
-      longitude: 128.6817,
-    },
-    hasMap: "https://map.naver.com/p/search/창원%20룰루랄라%20나이트",
+    // 좌표는 별도 확인 전까지 넣지 않는다. 주소가 정확하면 검색엔진이 직접
+    // 지오코딩하며, 어긋난 좌표를 주면 지도 핀이 엉뚱한 곳에 찍힌다.
+    hasMap: `https://map.naver.com/p/search/${encodeURIComponent(SITE.legalName)}`,
     openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
