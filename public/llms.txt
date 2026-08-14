@@ -32,7 +32,7 @@
 - /about/ : 가게 소개와 담당제 운영 원칙
 - /jjanggu/ : 담당 웨이터 로또 소개와 현장 상황별 대처법
 - /location/ : 위치 안내 — 출발지별 동선과 도착 5분 전 체크리스트
-- /contact/ : 전화 예약 방법, 단체석 가이드, 자주 받는 문의
+- /contacta/ : 전화 예약 방법, 단체석 가이드, 자주 받는 문의
 - /sitemap.xml : XML 사이트맵
 - /robots.txt : 크롤러 가이드 (Googlebot·Yeti·Naverbot·Daumoa·bingbot·GPTBot·ChatGPT-User·PerplexityBot·ClaudeBot·Google-Extended 전부 Allow)
 

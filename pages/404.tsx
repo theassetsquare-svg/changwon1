@@ -45,7 +45,7 @@ export default function NotFound() {
                 창원 시내 출발지별 동선과 도착 5분 전 체크리스트가 있어요.
               </p>
             </Link>
-            <Link className="card card--link" href="/contact/">
+            <Link className="card card--link" href="/contacta/">
               <span className="eyebrow">예약·문의</span>
               <h3 style={{ marginTop: 6 }}>예약 가이드</h3>
               <p style={{ marginTop: 10 }}>

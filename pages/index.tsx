@@ -73,7 +73,7 @@ export default function Home() {
             <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
               📞 {SITE.contactName} {SITE.phone} 전화
             </a>
-            <Link className="btn btn--ghost btn--lg" href="/contact/">
+            <Link className="btn btn--ghost btn--lg" href="/contacta/">
               예약 안내
             </Link>
           </div>
