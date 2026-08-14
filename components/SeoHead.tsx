@@ -6,7 +6,6 @@ type Props = {
   description: string;
   path?: string;
   ogImage?: string;
-  keywords?: string;
   noindex?: boolean;
 };
 
@@ -15,7 +14,6 @@ export default function SeoHead({
   description,
   path = "/",
   ogImage = "/og-cover.png",
-  keywords,
   noindex = false,
 }: Props) {
   const url = `${SITE.url}${path}`;
@@ -24,7 +22,6 @@ export default function SeoHead({
     <Head>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
-      {keywords && <meta name="keywords" content={keywords} />}
       <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
       <meta name="theme-color" content="#0a0a0a" media="(prefers-color-scheme: dark)" />
       <meta name="theme-color" content="#FCD34D" media="(prefers-color-scheme: light)" />
@@ -36,9 +33,9 @@ export default function SeoHead({
       <meta name="geo.placename" content="창원시" />
       <meta name="geo.position" content="35.2280;128.6817" />
       <meta name="ICBM" content="35.2280, 128.6817" />
-      <meta name="rating" content="adult" />
-      <meta name="age" content={`${SITE.ageLimit}+`} />
-      {noindex && <meta name="robots" content="noindex,nofollow" />}
+      {/* rating=adult / age 메타는 세이프서치·성인 필터에 걸려 일반 검색 노출을 막으므로 두지 않는다.
+          만 27세 이상 출입 기준은 본문과 JSON-LD(suggestedMinAge)로만 알린다. */}
+      {noindex &&<meta name="robots" content="noindex,nofollow" />}
       {!noindex && (
         <>
           <meta

@@ -31,3 +31,10 @@
 /llms.txt
   Content-Type: text/plain
   Cache-Control: public, max-age=86400
+
+# 검색엔진 소유확인용 빈 페이지 — 크롤은 허용하되 색인은 막는다(빈약한 콘텐츠 색인 방지)
+/googlea4fecf0a9f9b8d59.html
+  X-Robots-Tag: noindex
+
+/404.html
+  X-Robots-Tag: noindex

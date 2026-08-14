@@ -58,7 +58,6 @@ export function buildLocalBusiness() {
       opens: SITE.hours.open,
       closes: SITE.hours.close,
     },
-    sameAs: [],
   };
 }
 

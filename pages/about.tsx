@@ -9,7 +9,6 @@ export default function About() {
       <SeoHead
         title="가게 소개 · 창원 시내 27세 이상 합법 영업장 · 담당제 운영 이유"
         description="왜 한 사람이 끝까지 챙기는 가게가 결국 손님한테 편한지. 룰루랄라 나이트가 담당제로 가는 이유와 만 27세 이상 합법 영업장으로 길게 가는 원칙을 정리했습니다. 예약·문의는 로또 010-7528-4936 전화."
-        keywords="창원 룰루랄라 소개, 창원 나이트 합법, 27세 이상 합법 영업장, 담당제 운영, 창원 야간 업소"
         path="/about/"
       />
       <Jsonld
@@ -84,7 +83,9 @@ export default function About() {
             </li>
             <li>
               <strong>합법 영업</strong> — 등록된 사업장에서 정상적인 영업 시간 안에
-              운영합니다.
+              운영합니다. 영업 시간은 {SITE.hours.label}이고, 매일 문을 엽니다.
+              자리 회전이 가장 빠른 시간대는 보통 자정에서 새벽 2시 사이라,
+              이 시간에 맞춰 오실 거면 미리 전화 주시는 편이 안전합니다.
             </li>
             <li>
               <strong>담당제 안내</strong> — 한 사람이 첫 통화부터 마지막 인사까지
@@ -145,8 +146,10 @@ export default function About() {
       <section className="section--tight">
         <div className="container">
           <div className="notice">
-            가격표·영업 시간·내부 사진 등 페이지에 비어 있는 항목은,
-            확인된 정보만 올린다는 원칙 때문에 임시로 두지 않고 비워둡니다.
+            가격표·내부 사진처럼 이 페이지에서 비어 있는 항목은, 확인된 정보만
+            올린다는 원칙 때문에 임시로 채우지 않고 비워둡니다. 가격·테이블
+            안내는 시간대와 자리에 따라 달라져서, 전화로 그날 기준을 직접
+            알려드리는 쪽이 정확합니다.
           </div>
         </div>
       </section>
