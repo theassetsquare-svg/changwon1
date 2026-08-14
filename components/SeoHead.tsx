@@ -6,6 +6,15 @@ type Props = {
   description: string;
   path?: string;
   ogImage?: string;
+  /** 1:1 정사각 썸네일 — 네이버 검색 썸네일 기준 이미지 */
+  ogSquare?: string;
+  /**
+   * 이 페이지가 대표하는 업소 이름. 다른 지역 업소를 소개하는 페이지에서
+   * 창원 브랜드가 제목·썸네일에 섞여 들어가지 않도록 갈아끼운다.
+   */
+  brand?: string;
+  /** 지역 메타. 다른 지역 업소 페이지에서는 그 지역 값으로 갈아끼운다. */
+  geo?: { region: string; place: string; position?: string };
   noindex?: boolean;
 };
 
@@ -14,10 +23,13 @@ export default function SeoHead({
   description,
   path = "/",
   ogImage = "/og-cover.png",
+  ogSquare = "/og-default.png",
+  brand = SITE.name,
+  geo = { region: "KR-48", place: "창원시", position: "35.2280;128.6817" },
   noindex = false,
 }: Props) {
   const url = `${SITE.url}${path}`;
-  const fullTitle = title.includes(SITE.name) ? title : `${title} | ${SITE.name}`;
+  const fullTitle = title.includes(brand) ? title : `${title} | ${brand}`;
   return (
     <Head>
       <title>{fullTitle}</title>
@@ -27,12 +39,16 @@ export default function SeoHead({
       <meta name="theme-color" content="#FCD34D" media="(prefers-color-scheme: light)" />
       <meta name="color-scheme" content="dark light" />
       <meta name="format-detection" content="telephone=no" />
-      <meta name="author" content={SITE.name} />
-      <meta name="publisher" content={SITE.name} />
-      <meta name="geo.region" content="KR-48" />
-      <meta name="geo.placename" content="창원시" />
-      <meta name="geo.position" content="35.2280;128.6817" />
-      <meta name="ICBM" content="35.2280, 128.6817" />
+      <meta name="author" content={brand} />
+      <meta name="publisher" content={brand} />
+      <meta name="geo.region" content={geo.region} />
+      <meta name="geo.placename" content={geo.place} />
+      {geo.position && (
+        <>
+          <meta name="geo.position" content={geo.position} />
+          <meta name="ICBM" content={geo.position.replace(";", ", ")} />
+        </>
+      )}
       {/* rating=adult / age 메타는 세이프서치·성인 필터에 걸려 일반 검색 노출을 막으므로 두지 않는다.
           만 27세 이상 출입 기준은 본문과 JSON-LD(suggestedMinAge)로만 알린다. */}
       {noindex &&<meta name="robots" content="noindex,nofollow" />}
@@ -62,32 +78,32 @@ export default function SeoHead({
 
       <meta property="og:type" content="website" />
       <meta property="og:locale" content="ko_KR" />
-      <meta property="og:site_name" content={SITE.name} />
+      <meta property="og:site_name" content={brand} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
       {/* 1:1 정사각 — 네이버 검색 썸네일 기준 이미지 */}
-      <meta property="og:image" content={`${SITE.url}/og-default.png`} />
-      <meta property="og:image:secure_url" content={`${SITE.url}/og-default.png`} />
+      <meta property="og:image" content={`${SITE.url}${ogSquare}`} />
+      <meta property="og:image:secure_url" content={`${SITE.url}${ogSquare}`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
       <meta
         property="og:image:alt"
-        content={`${SITE.name} · ${SITE.contactName} ${SITE.phone} · 만 ${SITE.ageLimit}세 이상`}
+        content={brand}
       />
       {/* 와이드 보조 이미지 (링크 미리보기 표준 1200×630) */}
       <meta property="og:image" content={`${SITE.url}${ogImage}`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <link rel="image_src" href={`${SITE.url}/og-default.png`} />
+      <link rel="image_src" href={`${SITE.url}${ogSquare}`} />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={`${SITE.url}${ogImage}`} />
-      <meta name="twitter:image:alt" content={`${SITE.name} · 창원시 합법 영업장`} />
+      <meta name="twitter:image:alt" content={brand} />
     </Head>
   );
 }

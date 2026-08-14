@@ -51,9 +51,14 @@ export default function BulgwangHobak() {
   return (
     <>
       <SeoHead
-        title={`${B.name} · ${B.address.full} · 불광역 도보 1분 · 예약 ${B.contactName} ${B.phone}`}
+        title={`${B.name} · ${B.station.name} 도보 1분 · 예약 ${B.contactName} ${B.phone}`}
         description={`불광동호박나이트(${B.legalName}) 안내. ${B.address.full}, ${B.station.name} ${B.station.walk}. 영업시간 ${B.hours.label}, 만 ${B.ageLimit}세 이상. 예약·문의는 ${B.role} ${B.contactName} ${B.phone} 전화 한 통이면 자리·인원·도착 시간까지 정리됩니다.`}
         path={B.path}
+        // 다른 지역 업소라 제목·썸네일·지역 메타에 창원 브랜드가 섞이면 안 된다.
+        brand={B.name}
+        ogSquare="/og-bulgwang.png"
+        ogImage="/og-bulgwang-wide.png"
+        geo={{ region: "KR-11", place: "서울특별시 은평구 불광동" }}
       />
       <Jsonld
         data={buildBreadcrumb([
