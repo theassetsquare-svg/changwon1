@@ -53,7 +53,7 @@ export default function Location() {
             <dl className="kv">
               <dt>찾아오실 때</dt>
               <dd>
-                건물 지하 3층입니다. 입구가 헷갈리시면 도착 직전에 전화 주세요.
+                건물 지하 3층입니다. 입구가 헷갈리시면 근처에서 전화 주세요.
               </dd>
             </dl>
             <dl className="kv">
@@ -83,7 +83,7 @@ export default function Location() {
           <h2>지도보다 사람이 빠릅니다.</h2>
           <p className="lead" style={{ marginTop: 14 }}>
             처음 가는 골목, 야간 조명, 모르는 일방통행. 지도만 믿고 들어오면
-            돌아가는 분들이 꽤 있습니다. 도착 직전에 담당한테 물어보시면,
+            돌아가는 분들이 꽤 있습니다. 근처까지 오셔서 담당한테 물어보시면,
             지금 어디 있는지 보고 가장 가까운 동선으로 정리해 드립니다.
           </p>
           <div className="grid grid-2" style={{ marginTop: 28 }}>
@@ -134,7 +134,7 @@ export default function Location() {
             <article className="card">
               <h3>외지에서 오시는 분</h3>
               <p style={{ marginTop: 10 }}>
-                창원IC·창원역 도착 후 택시 잡으시는 게 보통입니다. 기사님께 어떻게
+                창원IC·창원역에서 내려 택시 잡으시는 게 보통입니다. 기사님께 어떻게
                 말씀해야 빠른지, 그 멘트도 안내드립니다.
               </p>
             </article>
@@ -167,9 +167,10 @@ export default function Location() {
       <section className="section--tight">
         <div className="container">
           <div className="notice">
-            정확한 도로명 주소·지도 좌표는 사장님 확인 후 추가됩니다. 지금은 잘못된
-            주소를 띄워서 손님이 헛걸음하지 않도록, 일부러 표시하지 않고 있습니다.
-            담당({SITE.contactName} {SITE.phone})한테 전화로 안내 받으시는 게 가장 빠르고 정확합니다.
+            지도 좌표와 내부 사진은 확인된 값만 올린다는 원칙 때문에 아직 넣지
+            않았습니다. 주소는 위에 그대로 적어 두었으니 내비에 넣으시면 되고,
+            건물에 들어와서 헷갈리시면 담당({SITE.contactName} {SITE.phone})한테
+            전화 주시는 게 가장 빠릅니다.
           </div>
         </div>
       </section>
