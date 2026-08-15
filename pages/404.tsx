@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <SeoHead
-        title="404 · 여긴 비어 있는 자리입니다 · 창원 룰루랄라 나이트"
+        title="창원룰루랄라나이트 404 · 여긴 비어 있는 자리입니다"
         description="찾으시는 페이지가 없거나 주소가 바뀌었습니다. 홈으로 돌아가거나 자주 찾는 페이지로 바로 이동하세요."
         path="/404/"
         noindex

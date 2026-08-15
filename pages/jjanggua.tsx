@@ -7,7 +7,7 @@ export default function Jjanggu() {
   return (
     <>
       <SeoHead
-        title="담당 웨이터 로또 010-7528-4936 · 창원 룰루랄라 나이트"
+        title="창원룰루랄라나이트 담당 웨이터 로또 010-7528-4936"
         description="창원 룰루랄라 나이트 손님 응대 담당 웨이터 로또. 예약·문의는 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 27세 이상 출입."
         path="/jjanggua/"
       />

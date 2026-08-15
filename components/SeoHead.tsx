@@ -29,7 +29,11 @@ export default function SeoHead({
   noindex = false,
 }: Props) {
   const url = `${SITE.url}${path}`;
-  const fullTitle = title.includes(brand) ? title : `${title} | ${brand}`;
+  // 제목에 이미 상호가 들어갔는지 볼 때 띄어쓰기는 무시한다.
+  // "창원룰루랄라나이트"(검색어 표기)로 시작하는 제목 뒤에
+  // "| 창원 룰루랄라 나이트"가 또 붙어 길어지는 걸 막는다.
+  const squash = (s: string) => s.replace(/\s+/g, "");
+  const fullTitle = squash(title).includes(squash(brand)) ? title : `${title} | ${brand}`;
   return (
     <Head>
       <title>{fullTitle}</title>
