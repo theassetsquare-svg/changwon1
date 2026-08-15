@@ -2,6 +2,7 @@ import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb, buildFaq } from "@/components/Jsonld";
+import { VENUES } from "@/components/night/venues";
 
 const FAQ = [
   {
@@ -346,6 +347,25 @@ export default function Home() {
             출입 가능하며, 입장 시 신분증 확인이 원칙입니다. 합법 영업장에서 운영되며,
             불법·미성년 출입은 일체 금지됩니다.
           </div>
+        </div>
+      </section>
+
+      {/* ── 지역별 나이트 정보 안내 (append) ───────────────────────────────
+          창원 룰루랄라와 별개인 다른 지역 업소 정보 페이지 목록. */}
+      <section className="section--tight" id="night">
+        <div className="container">
+          <h2 style={{ fontSize: "1.3rem" }}>지역별 나이트 정보</h2>
+          <p style={{ color: "var(--text-dim)" }}>
+            아래는 창원 룰루랄라 나이트와 운영 주체가 다른 별개 업소들의 지역·교통 정보 페이지입니다.
+          </p>
+          <ul style={{ columns: 2, columnGap: 24, paddingLeft: 18, margin: 0 }}>
+            {VENUES.map((v) => (
+              <li key={v.slug} style={{ margin: "6px 0", breakInside: "avoid" }}>
+                <Link href={`/night/${v.slug}/`}>{v.name}</Link>{" "}
+                <span style={{ color: "var(--text-dim)", fontSize: ".9rem" }}>· {v.region}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>

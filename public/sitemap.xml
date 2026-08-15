@@ -5,7 +5,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://changwon1.pages.dev/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/" />
@@ -22,37 +22,128 @@
   </url>
   <url>
     <loc>https://changwon1.pages.dev/jjanggua/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/jjanggua/" />
   </url>
   <url>
     <loc>https://changwon1.pages.dev/contacta/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/contacta/" />
   </url>
   <url>
     <loc>https://changwon1.pages.dev/location/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/location/" />
   </url>
   <url>
     <loc>https://changwon1.pages.dev/about/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/about/" />
   </url>
   <url>
     <loc>https://changwon1.pages.dev/bulgwang-hobak/</loc>
-    <lastmod>2026-08-14</lastmod>
+    <lastmod>2026-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/bulgwang-hobak/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/bulgwang-hobak-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/bulgwang-hobak-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/changwon-lululala-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/changwon-lululala-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/ulsan-champion-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/ulsan-champion-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/cheongdam-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/cheongdam-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/daejeon-one-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/daejeon-one-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/sillim-grandprix-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/sillim-grandprix-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/sangbong-hangukgwan-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/sangbong-hangukgwan-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/suyu-shampoo-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/suyu-shampoo-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/busan-asiad-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/busan-asiad-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/suwon-chance-dome-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/suwon-chance-dome-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/ansan-hit-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/ansan-hit-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/daejeon-seven-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/daejeon-seven-night/" />
+  </url>
+  <url>
+    <loc>https://changwon1.pages.dev/night/ilsan-shampoo-night/</loc>
+    <lastmod>2026-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwon1.pages.dev/night/ilsan-shampoo-night/" />
   </url>
 </urlset>

@@ -48,3 +48,10 @@ Allow: /
 
 Sitemap: https://changwon1.pages.dev/sitemap.xml
 Host: https://changwon1.pages.dev
+
+# /night/ 지역별 업소 정보 페이지 (2026-08-15 추가)
+User-agent: Yeti
+Allow: /night/
+
+User-agent: Googlebot
+Allow: /night/

@@ -19,6 +19,20 @@ const PAGES = [
   { path: "/about/", priority: "0.7", changefreq: "monthly" },
   // 다른 지역 업소(불광동호박나이트) 안내 페이지
   { path: "/bulgwang-hobak/", priority: "0.9", changefreq: "weekly" },
+  // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
+  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/ulsan-champion-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/cheongdam-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/sillim-grandprix-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/sangbong-hangukgwan-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/suyu-shampoo-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/busan-asiad-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/suwon-chance-dome-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/ansan-hit-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/daejeon-seven-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/ilsan-shampoo-night/", priority: "0.8", changefreq: "weekly" },
 ];
 
 const urls = PAGES.map((p) => {
