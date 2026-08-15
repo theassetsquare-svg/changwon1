@@ -5,7 +5,7 @@ import { SITE } from "../site";
 import { NIGHT_BASE, VENUE_BY_SLUG, type NightVenue } from "./venues";
 
 /**
- * /night/{slug}/ 업소 정보 페이지.
+ * /night/{slug}/ 업소 안내 페이지.
  *
  * 고정 전화바(.callbar)는 position:fixed 로만 붙인다. sticky·스크롤 이벤트를 쓰지 않는다.
  * 서버 렌더 HTML에는 React 트리 안에 들어가지만(크롤러가 봐야 하므로), 브라우저에서는
@@ -46,13 +46,21 @@ body.has-sticky{ padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
 .answer-box{background:#171922;border:1px solid #2c303c;border-left:5px solid #ffd400;
   border-radius:10px;padding:16px 18px;margin:14px 0 26px;}
 .answer-box p{margin:0;font-size:1.05rem;line-height:1.75;}
-.night-facts{border:1px solid #2c303c;border-radius:10px;padding:8px 18px;margin:0 0 26px;}
-.night-facts dl{margin:0;}
-.night-facts dt{font-size:.85rem;color:#9aa0ab;margin-top:12px;}
-.night-facts dd{margin:2px 0 12px;font-weight:700;}
+.night-facts{margin:0 0 26px;}
+.night-facts table{width:100%;border-collapse:collapse;border:1px solid #2c303c;border-radius:10px;}
+.night-facts caption{text-align:left;font-size:.85rem;color:#9aa0ab;padding:0 0 8px;}
+.night-facts th{text-align:left;font-size:.9rem;color:#9aa0ab;font-weight:600;
+  padding:10px 14px;width:34%;border-bottom:1px solid #2c303c;vertical-align:top;}
+.night-facts td{padding:10px 14px;font-weight:700;border-bottom:1px solid #2c303c;}
+.night-facts tr:last-child th,.night-facts tr:last-child td{border-bottom:0;}
 .night-wrap h2{font-size:1.3rem;line-height:1.45;margin:34px 0 10px;}
 .night-wrap p{margin:0 0 14px;}
-.night-related{border-top:1px solid #2c303c;margin-top:40px;padding-top:22px;}
+.night-sum{background:#171922;border:1px solid #2c303c;border-radius:10px;
+  padding:14px 18px;margin:34px 0 0;}
+.night-sum h2{font-size:1.05rem;margin:0 0 8px;}
+.night-sum ul{margin:0;padding-left:18px;}
+.night-sum li{margin:4px 0;}
+.night-related{border-top:1px solid #2c303c;margin-top:34px;padding-top:22px;}
 .night-related h2{font-size:1.1rem;margin-top:0;}
 .night-related ul{margin:0;padding-left:18px;}
 .night-related li{margin:6px 0;}
@@ -88,7 +96,6 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
   const path = `${NIGHT_BASE}/${venue.slug}/`;
   const url = `${SITE.url}${path}`;
   const ogImage = `${SITE.url}/og/${venue.slug}-og.png`;
-  const faq = venue.sections.slice(0, 5);
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -103,25 +110,22 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
       addressLocality: venue.addressLocality,
       addressRegion: venue.addressRegion,
       addressCountry: "KR",
-      // 확인된 주소가 있는 업소만 상세 주소를 넣는다.
-      ...(venue.slug === "bulgwang-hobak-night"
-        ? { streetAddress: "통일로 730 지하1층" }
-        : venue.slug === "changwon-lululala-night"
-          ? { streetAddress: "마디미로43번길 10 지하3층" }
-          : {}),
+      ...(venue.streetAddress ? { streetAddress: venue.streetAddress } : {}),
     },
     ...(venue.contact ? { telephone: venue.contact.phone } : {}),
-    ...(venue.minAge ? { typicalAgeRange: `${venue.minAge}+` } : {}),
+    ...(venue.openingHours ? { openingHours: venue.openingHours } : {}),
+    // 연령 표기는 언제나 완전문으로만 넣는다. "27+" 같은 축약은 쓰지 않는다.
+    ...(venue.ageLabel ? { typicalAgeRange: venue.ageLabel } : {}),
   };
 
   const faqPage = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${url}#faq`,
-    mainEntity: faq.map((s) => ({
+    mainEntity: venue.faq.map((f) => ({
       "@type": "Question",
-      name: s.h2,
-      acceptedAnswer: { "@type": "Answer", text: s.body[0] },
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   };
 
@@ -181,24 +185,30 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
         </p>
 
         <h1>{venue.name}</h1>
-        {venue.minAge ? (
-          <span className="night-badge">만 {venue.minAge}세 이상 출입</span>
+        {venue.ageLabel ? (
+          <span className="night-badge">{venue.ageLabel} 출입 가능</span>
         ) : null}
 
         <div className="answer-box">
-          <p>{venue.lead}</p>
+          <p>
+            <strong>{venue.name}</strong>은 {venue.region}에 있는 나이트클럽입니다.{" "}
+            {venue.answer.second}
+          </p>
         </div>
 
         {venue.facts ? (
           <div className="night-facts">
-            <dl>
-              {venue.facts.map((f) => (
-                <div key={f.label}>
-                  <dt>{f.label}</dt>
-                  <dd>{f.value}</dd>
-                </div>
-              ))}
-            </dl>
+            <table>
+              <caption>{venue.name} 확인된 기본 정보</caption>
+              <tbody>
+                {venue.facts.map((f) => (
+                  <tr key={f.label}>
+                    <th scope="row">{f.label}</th>
+                    <td>{f.value}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         ) : null}
 
@@ -211,29 +221,37 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
           </section>
         ))}
 
-        <nav className="night-related">
-          <h2>같이 보면 좋은 지역 안내</h2>
+        <section className="night-sum">
+          <h2>{venue.name} 요약</h2>
           <ul>
-            {venue.related.map((slug) => {
-              const r = VENUE_BY_SLUG[slug];
-              return (
-                <li key={slug}>
-                  <Link href={`${NIGHT_BASE}/${slug}/`}>
-                    {r.name} — {r.region}
-                  </Link>
-                </li>
-              );
-            })}
+            {venue.summary.map((s, i) => (
+              <li key={i}>{s}</li>
+            ))}
           </ul>
-        </nav>
+        </section>
       </article>
+
+      <aside className="night-wrap night-related" aria-label="같이 보면 좋은 업소">
+        <h2>같이 보면 좋은 업소 안내</h2>
+        <ul>
+          {venue.related.map((slug) => {
+            const r = VENUE_BY_SLUG[slug];
+            return (
+              <li key={slug}>
+                <Link href={`${NIGHT_BASE}/${slug}/`}>{r.name}</Link> — {r.region}
+              </li>
+            );
+          })}
+        </ul>
+      </aside>
 
       <footer className="site-footer">
         <div className="ad-inquiry">
           광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
         </div>
         <p className="footer-note">
-          본 페이지는 업소 정보 제공 페이지입니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
+          본 페이지는 업소 안내 페이지입니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
+          최종 갱신 <time dateTime="2026-08-15">2026년 8월 15일</time>.
         </p>
       </footer>
 
