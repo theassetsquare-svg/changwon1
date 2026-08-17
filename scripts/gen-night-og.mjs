@@ -5,7 +5,8 @@
 // A그룹(광고주 있음) — 하단 40%를 검은 띠로 깔고 담당자 닉네임과 전화번호를 크게 넣는다.
 //   전화번호는 이미지에서 두 번째로 큰 글자이며, 실제 렌더 픽셀을 측정해
 //   글자 높이 100px 이상 · 좌우 잘림 없음을 확인한 뒤 저장한다.
-// B그룹(광고주 없음) — 업소명 + 지역명 + 사이트 브랜드명만. 전화번호·besta12 없음.
+// B그룹(광고주 없음) — 업소명 + 지역명 + 그 업소의 "지역+업종" 표기만. 전화번호·besta12 없음.
+//   다른 업소 카드에는 창원 룰루랄라 브랜드를 절대 넣지 않는다. 남의 가게 썸네일이다.
 //
 // 한글 렌더에는 ~/.fonts 의 Pretendard 를 쓴다. 폰트가 없으면 글자가 □로 깨지므로
 // 생성 뒤 measure() 가 픽셀을 세어 렌더 여부까지 같이 검증한다.
@@ -24,13 +25,12 @@ const FF = "'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif";
 const SIZE = 1200;
 const NAME_MARGIN = 100; // 업소명 좌우 최소 여백
 const PHONE_MARGIN = 40; // 전화번호 좌우 최소 여백
-const BRAND = "창원 룰루랄라 나이트";
 const BAND_TOP = 720; // 1200 * 0.60
 
 const raw = execSync(
   `node --experimental-strip-types -e ` +
     `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
-    `m.VENUES.map(v=>({slug:v.slug,name:v.name,og:v.og,alt:v.ogAlt,group:v.group,contact:v.contact})))))"`,
+    `m.VENUES.map(v=>({slug:v.slug,name:v.name,cityKeyword:v.cityKeyword,og:v.og,alt:v.ogAlt,group:v.group,contact:v.contact})))))"`,
   { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
 );
 const VENUES = JSON.parse(raw);
@@ -96,6 +96,18 @@ async function fitPhone(text, maxWidth, minGlyphHeight) {
   return { size, ...m };
 }
 
+/** 주어진 크기에서 시작해 폭 한도 안으로 들어올 때까지 줄인다. */
+async function fitText(text, startSize, maxWidth, weight = 800) {
+  let size = startSize;
+  for (let i = 0; i < 40; i++) {
+    const m = await measure(text, size, weight);
+    if (m.width === 0) return { size, width: 0 };
+    if (m.width <= maxWidth) return { size, width: m.width };
+    size -= 3;
+  }
+  return { size, width: maxWidth };
+}
+
 function nameBlock(lines, maxWidth) {
   const out = lines.slice(0, 2);
   const longest = Math.max(...out.map((l) => l.length));
@@ -150,9 +162,11 @@ for (const v of VENUES) {
   <text x="600" y="1105" text-anchor="middle" font-family="${FF}" font-size="${phoneInfo.size}" font-weight="900" fill="#FFFFFF">${esc(phone)}</text>`;
     phoneInfo.nickHeight = nick.height;
   } else {
+    // 광고주가 없는 업소 카드다. 그 업소의 지역+업종 표기만 넣고 다른 상호는 넣지 않는다.
+    const kw = await fitText(v.cityKeyword, 52, SIZE - 200, 700);
     bodySvg = `<text x="600" y="770" text-anchor="middle" font-family="${FF}" font-size="62" font-weight="800" fill="${accent}">${esc(region)}</text>
   <line x1="300" y1="880" x2="900" y2="880" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
-  <text x="600" y="985" text-anchor="middle" font-family="${FF}" font-size="52" font-weight="700" fill="#FFFFFF">${esc(BRAND)}</text>
+  <text x="600" y="985" text-anchor="middle" font-family="${FF}" font-size="${kw.size}" font-weight="700" fill="#FFFFFF">${esc(v.cityKeyword)}</text>
   <text x="600" y="1070" text-anchor="middle" font-family="${FF}" font-size="34" font-weight="500" fill="#FFFFFF" fill-opacity="0.7">업소 안내 페이지</text>`;
   }
 
@@ -164,6 +178,12 @@ for (const v of VENUES) {
   ${nameSvg}
   ${bodySvg}
 </svg>`;
+
+  // 남의 가게 카드에 우리 상호가 새어 들어가지 않았는지 소스에서 직접 확인한다.
+  if (/창원|룰루랄라/.test(svg) && !/^창원/.test(v.name)) {
+    console.log(`⚠︎ 다른 업소 카드에 창원 브랜드 혼입: ${v.slug}`);
+    fail++;
+  }
 
   const file = join(OUT, `${v.slug}-og.png`);
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(file);

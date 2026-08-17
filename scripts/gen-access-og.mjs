@@ -4,7 +4,8 @@
 //
 // 카드 내용 규칙은 scripts/gen-night-og.mjs 와 같다. 페이지 주제만 "가는 길"로 바뀐다.
 //   A그룹(광고주 있음) — 하단 40%를 검은 띠로 깔고 담당 닉네임과 전화번호를 크게.
-//   B그룹(광고주 없음) — 업소명 + 지역명 + 사이트 브랜드명만. 전화번호·besta12 없음.
+//   B그룹(광고주 없음) — 업소명 + 지역명 + 그 업소의 "지역+업종" 표기만. 전화번호·besta12 없음.
+//   다른 업소 카드에는 창원 룰루랄라 브랜드를 절대 넣지 않는다. 남의 가게 썸네일이다.
 //
 // 배경색은 40장이 전부 다르고, 흰 글자와 명도대비 4.5:1 이상인 값만 쓴다.
 // 글자는 실제 렌더 픽셀을 재서 폭 초과·미렌더(□)를 확인한 뒤 저장한다.
@@ -23,7 +24,6 @@ const FF = "'Pretendard', 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif";
 const SIZE = 1200;
 const NAME_MARGIN = 100;
 const PHONE_MARGIN = 40;
-const BRAND = "창원 룰루랄라 나이트";
 const BAND_TOP = 720;
 const MAX_BYTES = 300 * 1024;
 
@@ -199,10 +199,12 @@ for (let i = 0; i < VENUES.length; i++) {
   <text x="600" y="1105" text-anchor="middle" font-family="${FF}" font-size="${phoneInfo.size}" font-weight="900" fill="#FFFFFF">${esc(phone)}</text>`;
     phoneInfo.nickHeight = nick.height;
   } else {
+    // 광고주가 없는 업소 카드다. 그 업소의 지역+업종 표기만 넣고 다른 상호는 넣지 않는다.
     const reg = await fitText(v.region, 62, SIZE - 160, 800);
+    const kw = await fitText(v.cityKeyword, 52, SIZE - 200, 700);
     bodySvg = `<text x="600" y="770" text-anchor="middle" font-family="${FF}" font-size="${reg.size}" font-weight="800" fill="${accent}">${esc(v.region)}</text>
   <line x1="300" y1="880" x2="900" y2="880" stroke="#FFFFFF" stroke-opacity="0.25" stroke-width="2"/>
-  <text x="600" y="985" text-anchor="middle" font-family="${FF}" font-size="52" font-weight="700" fill="#FFFFFF">${esc(BRAND)}</text>
+  <text x="600" y="985" text-anchor="middle" font-family="${FF}" font-size="${kw.size}" font-weight="700" fill="#FFFFFF">${esc(v.cityKeyword)}</text>
   <text x="600" y="1070" text-anchor="middle" font-family="${FF}" font-size="34" font-weight="500" fill="#FFFFFF" fill-opacity="0.7">가는 길 안내 페이지</text>`;
   }
 
@@ -214,6 +216,12 @@ for (let i = 0; i < VENUES.length; i++) {
   ${nameSvg}
   ${bodySvg}
 </svg>`;
+
+  // 남의 가게 카드에 우리 상호가 새어 들어가지 않았는지 소스에서 직접 확인한다.
+  if (/창원|룰루랄라/.test(svg) && !/^창원/.test(v.name)) {
+    console.log(`⚠︎ 다른 업소 카드에 창원 브랜드 혼입: ${v.slug}`);
+    fail++;
+  }
 
   const file = join(OUT, `access-${v.slug}-og.png`);
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(file);
