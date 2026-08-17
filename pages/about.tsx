@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
 
@@ -10,6 +11,8 @@ export default function About() {
         title="창원룰루랄라나이트 가게 소개 · 27세 이상 합법 영업장 · 담당제 운영 이유"
         description="왜 한 사람이 끝까지 챙기는 가게가 결국 손님한테 편한지. 룰루랄라 나이트가 담당제로 가는 이유와 만 27세 이상 합법 영업장으로 길게 가는 원칙을 정리했습니다. 예약·문의는 로또 010-7528-4936 전화."
         path="/about/"
+        ogSquare="/og/page-about-og.png"
+        ogAlt="창원 룰루랄라 나이트 가게 소개"
       />
       <Jsonld
         data={buildBreadcrumb([
@@ -25,6 +28,7 @@ export default function About() {
             창원에서 노는 밤,<br />
             <span className="accent">덜 어색하게.</span>
           </h1>
+          <PageThumb src="/og/page-about-og.png" alt="창원 룰루랄라 나이트 가게 소개" />
           <p className="hero__sub">
             창원 룰루랄라 나이트는 만 {SITE.ageLimit}세 이상 손님을 받는 합법 영업장입니다.
             처음 오는 분이 어색하지 않게, 자리부터 동선까지 담당 한 사람이

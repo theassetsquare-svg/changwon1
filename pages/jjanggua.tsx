@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
 
@@ -10,6 +11,8 @@ export default function Jjanggu() {
         title="창원룰루랄라나이트 담당 웨이터 로또 010-7528-4936"
         description="창원 룰루랄라 나이트 손님 응대 담당 웨이터 로또. 예약·문의는 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 27세 이상 출입."
         path="/jjanggua/"
+        ogSquare="/og/page-jjanggua-og.png"
+        ogAlt="창원 룰루랄라 나이트 담당 웨이터 로또 전화 안내"
       />
       <Jsonld
         data={buildBreadcrumb([
@@ -25,6 +28,7 @@ export default function Jjanggu() {
             저장해 두면 편한 번호.<br />
             <span className="accent">{SITE.contactName} {SITE.phone}</span>
           </h1>
+          <PageThumb src="/og/page-jjanggua-og.png" alt="창원 룰루랄라 나이트 담당 웨이터 로또 전화 안내" />
           <p className="hero__sub">
             창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터입니다.
             처음 오신 분도, 자주 오시는 분도, 도착 전에 전화 한 통이면 자리부터 안내까지

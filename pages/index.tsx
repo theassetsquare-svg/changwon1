@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb, buildFaq } from "@/components/Jsonld";
 import { VENUES } from "@/components/night/venues";
@@ -54,6 +55,7 @@ export default function Home() {
         title="창원룰루랄라나이트 · 전화 예약 로또 010-7528-4936 · 만 27세 이상"
         description="창원 룰루랄라 나이트 예약·문의는 전화 한 통. 웨이터 로또 010-7528-4936으로 전화 주시면 자리·인원·도착 시간까지 정리됩니다. 만 27세 이상 출입 · 신분증 확인 · 합법 영업장."
         path="/"
+        ogAlt="창원 룰루랄라 나이트 전화 예약 안내 · 웨이터 로또 010-7528-4936"
       />
       <Jsonld data={buildBreadcrumb([{ name: "홈", path: "/" }])} />
       <Jsonld data={buildFaq(FAQ)} />
@@ -65,6 +67,7 @@ export default function Home() {
             창원 룰루랄라 나이트, 자리 잡는 가장 빠른 방법.<br />
             <span className="accent">전화 한 통</span>이면 끝.
           </h1>
+          <PageThumb src="/og-default.png" alt="창원 룰루랄라 나이트 전화 예약 안내 · 웨이터 로또 010-7528-4936" />
           <p className="hero__sub">
             예약·문의는 전화로만 받습니다. 도착 전에 한 통 주시면 자리·시간·인원까지
             담당이 직접 챙깁니다. 어색하게 입구에서 두리번거릴 일 없습니다.

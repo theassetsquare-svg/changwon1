@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "@/components/site";
+import PageThumb from "@/components/PageThumb";
 import { ACCESS_CSS, RouteLine } from "@/components/access/AccessVenuePage";
 import { ACCESS_GROUPS, ACCESS_VENUES } from "@/components/access/venues";
 
@@ -48,6 +49,9 @@ export default function AccessHub() {
 
   const path = "/access/";
   const url = `${SITE.url}${path}`;
+  const thumbPath = "/og/page-access-og.png";
+  const ogImage = `${SITE.url}${thumbPath}`;
+  const ogAlt = "창원 룰루랄라 나이트 · 전국 나이트 가는 길 40";
   const title = "전국 나이트 가는 길 40 — 역·도보·주차·새벽 귀가 정리";
   const description =
     "전국 나이트클럽 40곳의 가는 길을 역 도보, 버스, 주차, 새벽 귀가 순으로 정리했습니다. 도보 시간과 출구는 확인된 것만 적고 나머지는 확인 불가로 남겼습니다.";
@@ -95,7 +99,20 @@ export default function AccessHub() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={`${SITE.url}/og-default.png`} />
+        <meta property="og:image" content={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:image:alt" content={ogAlt} />
+        <link rel="image_src" href={ogImage} />
+        {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
+        <meta name="thumbnail" content={ogImage} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={ogAlt} />
         <style dangerouslySetInnerHTML={{ __html: ACCESS_CSS + HUB_CSS }} />
       </Head>
 
@@ -109,6 +126,8 @@ export default function AccessHub() {
 
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
         <h1>전국 나이트 가는 길 40</h1>
+
+        <PageThumb src={thumbPath} alt={ogAlt} />
 
         <div className="acc-intro">
           <p>

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
 
@@ -10,6 +11,8 @@ export default function Contact() {
         title="창원룰루랄라나이트 전화 예약·문의 · 로또 010-7528-4936"
         description="창원 룰루랄라 나이트 예약·문의는 전화로만 받습니다. 로또 010-7528-4936으로 인원과 도착 시간만 말씀하시면 담당이 자리부터 입장까지 정리해 드립니다. 만 27세 이상 · 6명 이상 단체석 가이드 포함."
         path="/contacta/"
+        ogSquare="/og/page-contacta-og.png"
+        ogAlt="창원 룰루랄라 나이트 전화 예약·문의 안내"
       />
       <Jsonld
         data={buildBreadcrumb([
@@ -25,6 +28,7 @@ export default function Contact() {
             예약·문의는<br />
             <span className="accent">전화</span>로 받습니다.
           </h1>
+          <PageThumb src="/og/page-contacta-og.png" alt="창원 룰루랄라 나이트 전화 예약·문의 안내" />
           <p className="hero__sub">
             {SITE.contactName} {SITE.phone}. 인원·시간만 말씀하시면 그 자리에서
             정리됩니다. 만 {SITE.ageLimit}세 이상 출입.

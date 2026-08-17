@@ -1,4 +1,5 @@
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb, buildFaq } from "@/components/Jsonld";
 import {
@@ -57,7 +58,7 @@ export default function BulgwangHobak() {
         // 다른 지역 업소라 제목·썸네일·지역 메타에 창원 브랜드가 섞이면 안 된다.
         brand={B.name}
         ogSquare="/og-bulgwang.png"
-        ogImage="/og-bulgwang-wide.png"
+        ogAlt={`${B.name} ${B.station.name} 도보 1분 안내`}
         geo={{ region: "KR-11", place: "서울특별시 은평구 불광동" }}
       />
       <Jsonld
@@ -80,6 +81,10 @@ export default function BulgwangHobak() {
             <br />
             전화 한 통이면 자리까지.
           </h1>
+          <PageThumb
+            src="/og-bulgwang.png"
+            alt={`${B.name} ${B.station.name} 도보 1분 안내`}
+          />
           <p className="hero__sub">
             {B.address.full}. 정식 상호는 {B.legalName}이고, 예약·문의는{" "}
             {B.role} {B.contactName}이 직접 받습니다. 인원과 도착 시간만

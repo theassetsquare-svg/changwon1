@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
+import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
 import { Jsonld, buildBreadcrumb, buildPlace } from "@/components/Jsonld";
 
@@ -10,6 +11,8 @@ export default function Location() {
         title="창원룰루랄라나이트 찾아오는 길 · 창원 성산구 마디미로43번길 10 지하3층"
         description="창원 룰루랄라나이트클럽 주소는 경남 창원시 성산구 마디미로43번길 10 지하3층입니다. 의창·성산·마산·진해 어디서 오시든 가장 빠른 동선과 입구 안내는 로또 010-7528-4936으로 전화 주시면 도착 직전에 정리해 드립니다. 만 27세 이상."
         path="/location/"
+        ogSquare="/og/page-location-og.png"
+        ogAlt="창원 룰루랄라 나이트 찾아오는 길"
       />
       <Jsonld
         data={buildBreadcrumb([
@@ -26,6 +29,7 @@ export default function Location() {
             경상남도 <span className="accent">창원시</span>.<br />
             정확한 위치는 통화 한 번이면 끝.
           </h1>
+          <PageThumb src="/og/page-location-og.png" alt="창원 룰루랄라 나이트 찾아오는 길" />
           <p className="hero__sub">
             지도만 보고 헤매는 게 시간 아깝습니다. 도착 직전에 담당한테
             한 통만 주세요. 가장 빠른 동선으로 잡아 드립니다.

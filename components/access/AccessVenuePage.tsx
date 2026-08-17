@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "../site";
+import PageThumb from "../PageThumb";
 import { ACCESS_BASE, type AccessVenue } from "./types";
 import { VENUE_BY_SLUG } from "./venues";
 
@@ -64,6 +65,9 @@ export const ACCESS_CSS = `
 .acc-answer h2{font-size:.95rem;margin:0 0 10px;color:var(--acc-leaf);}
 .acc-answer ul{margin:0;padding-left:18px;}
 .acc-answer li{margin:6px 0;line-height:1.75;color:var(--acc-warm);}
+
+/* 본문 대표 이미지 — og:image·thumbnail 과 같은 파일 */
+.acc-wrap>img{display:block;border-radius:12px;margin:0 0 26px;}
 
 /* 사실 표 */
 .acc-facts{margin:0 0 28px;}
@@ -168,7 +172,10 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
 
   const path = `${ACCESS_BASE}/${venue.slug}/`;
   const url = `${SITE.url}${path}`;
-  const ogImage = `${SITE.url}/og-default.png`;
+  // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
+  const thumbPath = `/og/access-${venue.slug}-og.png`;
+  const ogImage = `${SITE.url}${thumbPath}`;
+  const ogAlt = `${venue.nameSpaced} 가는 길·귀가 안내`;
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -177,6 +184,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
     name: venue.name,
     ...(venue.altNames ? { alternateName: venue.altNames } : {}),
     url,
+    image: ogImage,
     description: venue.description,
     address: {
       "@type": "PostalAddress",
@@ -230,9 +238,19 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         <meta property="og:description" content={venue.description} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:image:alt" content={ogAlt} />
+        <link rel="image_src" href={ogImage} />
+        {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
+        <meta name="thumbnail" content={ogImage} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={venue.title} />
         <meta name="twitter:description" content={venue.description} />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:image:alt" content={ogAlt} />
         <style dangerouslySetInnerHTML={{ __html: ACCESS_CSS }} />
       </Head>
 
@@ -276,6 +294,8 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             ))}
           </ul>
         </div>
+
+        <PageThumb src={thumbPath} alt={ogAlt} />
 
         <div className="acc-facts">
           <table>

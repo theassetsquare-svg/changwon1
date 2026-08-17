@@ -23,6 +23,10 @@
 | `scripts/gsc-report.mjs` | GSC 검색 성과 + 카니발리제이션 분석 (실데이터) |
 | `scripts/check-keyword-stuffing.mjs` | 키워드 스터핑/메타 품질 검사 (`npm run check:seo`) |
 | `scripts/gen-og.mjs` | OG 이미지(PNG) 생성 — 네이버 검색 썸네일(1:1)·링크 미리보기용 |
+| `scripts/gen-access-og.mjs` | /access/ 40페이지 썸네일 생성 (`npm run gen:og-access`) — 카드 규칙은 gen-night-og.mjs 와 동일, 주제만 "가는 길" |
+| `scripts/gen-page-og.mjs` | 고정 페이지(소개·담당·위치·문의·가는 길 허브) 썸네일 생성 (`npm run gen:og-page`) |
+| `scripts/thumb-gate.mjs` | 썸네일 노출 게이트 G9+ (`npm run gate:thumb`, 빌드 후 실행). 본문 img·메타 9종·1200×1200·300KB·alt 상호 포함을 전 페이지 실측 |
+| `scripts/thumb-live-check.mjs` | 배포된 사이트에서 썸네일 실측 (`npm run check:thumb-live`) — /og/ 응답 200·image/png·PNG 시그니처 + 전 페이지 본문 img·메타 9종 |
 | `scripts/gen-sitemap.mjs` | sitemap.xml 생성(lastmod 자동) — /access/ 슬러그는 데이터 파일에서 자동 수집 |
 | `scripts/access-gate.mjs` | /access/ 40페이지 게이트 G01~G11 실측 (`npm run gate:access`, 빌드 후 실행) |
 | `scripts/gen-llms-access.mjs` | llms.txt 의 /access/ 블록 재생성 (`npm run gen:access-llms`) |

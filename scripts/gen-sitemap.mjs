@@ -12,29 +12,29 @@ const BASE = "https://changwon1.pages.dev";
 const today = new Date().toISOString().slice(0, 10);
 
 const PAGES = [
-  { path: "/", priority: "1.0", changefreq: "weekly", image: true },
-  { path: "/jjanggua/", priority: "0.95", changefreq: "weekly" },
-  { path: "/contacta/", priority: "0.85", changefreq: "monthly" },
-  { path: "/location/", priority: "0.8", changefreq: "monthly" },
-  { path: "/about/", priority: "0.7", changefreq: "monthly" },
+  { path: "/", priority: "1.0", changefreq: "weekly", image: true, thumb: "/og-default.png" },
+  { path: "/jjanggua/", priority: "0.95", changefreq: "weekly", thumb: "/og/page-jjanggua-og.png" },
+  { path: "/contacta/", priority: "0.85", changefreq: "monthly", thumb: "/og/page-contacta-og.png" },
+  { path: "/location/", priority: "0.8", changefreq: "monthly", thumb: "/og/page-location-og.png" },
+  { path: "/about/", priority: "0.7", changefreq: "monthly", thumb: "/og/page-about-og.png" },
   // 다른 지역 업소(불광동호박나이트) 안내 페이지
-  { path: "/bulgwang-hobak/", priority: "0.9", changefreq: "weekly" },
+  { path: "/bulgwang-hobak/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
-  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/ulsan-champion-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/cheongdam-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/sillim-grandprix-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/sangbong-hangukgwan-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/suyu-shampoo-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/busan-asiad-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/suwon-chance-dome-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/ansan-hit-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/daejeon-seven-night/", priority: "0.8", changefreq: "weekly" },
-  { path: "/night/ilsan-shampoo-night/", priority: "0.8", changefreq: "weekly" },
+  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-night-og.png" },
+  { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-og.png" },
+  { path: "/night/ulsan-champion-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-night-og.png" },
+  { path: "/night/cheongdam-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-night-og.png" },
+  { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
+  { path: "/night/sillim-grandprix-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-night-og.png" },
+  { path: "/night/sangbong-hangukgwan-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-night-og.png" },
+  { path: "/night/suyu-shampoo-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/suyu-shampoo-night-og.png" },
+  { path: "/night/busan-asiad-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/busan-asiad-night-og.png" },
+  { path: "/night/suwon-chance-dome-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/suwon-chance-dome-night-og.png" },
+  { path: "/night/ansan-hit-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-night-og.png" },
+  { path: "/night/daejeon-seven-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-night-og.png" },
+  { path: "/night/ilsan-shampoo-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-night-og.png" },
   // /access/ 허브 — 전국 나이트 가는 길 40
-  { path: "/access/", priority: "0.9", changefreq: "weekly" },
+  { path: "/access/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
 ];
 
 // /access/{slug}/ 40개는 데이터 파일에서 슬러그를 읽어 자동으로 붙인다.
@@ -43,11 +43,24 @@ const ACCESS_DIR = join(ROOT, "components", "access");
 for (const file of (await readdir(ACCESS_DIR)).filter((f) => f.startsWith("data-")).sort()) {
   const src = await readFile(join(ACCESS_DIR, file), "utf8");
   for (const m of src.matchAll(/^\s{4}slug: "([a-z0-9-]+)",$/gm)) {
-    PAGES.push({ path: `/access/${m[1]}/`, priority: "0.8", changefreq: "weekly" });
+    PAGES.push({
+      path: `/access/${m[1]}/`,
+      priority: "0.8",
+      changefreq: "weekly",
+      thumb: `/og/access-${m[1]}-og.png`,
+    });
   }
 }
 
 const urls = PAGES.map((p) => {
+  // 페이지마다 자기 1:1 썸네일을 이미지 사이트맵으로도 같이 알린다.
+  // og:image·본문 <img> 와 같은 파일이어야 한다.
+  const own = p.thumb
+    ? `
+    <image:image>
+      <image:loc>${BASE}${p.thumb}</image:loc>
+    </image:image>`
+    : "";
   const img = p.image
     ? `
     <image:image>
@@ -66,7 +79,7 @@ const urls = PAGES.map((p) => {
     <lastmod>${today}</lastmod>
     <changefreq>${p.changefreq}</changefreq>
     <priority>${p.priority}</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="${BASE}${p.path}" />${img}
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="${BASE}${p.path}" />${p.image ? img : own}
   </url>`;
 }).join("\n");
 

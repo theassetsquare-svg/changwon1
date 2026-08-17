@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "../site";
+import PageThumb from "../PageThumb";
 import { NIGHT_BASE, VENUE_BY_SLUG, type NightVenue } from "./venues";
 
 /**
@@ -46,6 +47,8 @@ body.has-sticky{ padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
 .answer-box{background:#171922;border:1px solid #2c303c;border-left:5px solid #ffd400;
   border-radius:10px;padding:16px 18px;margin:14px 0 26px;}
 .answer-box p{margin:0;font-size:1.05rem;line-height:1.75;}
+/* 본문 대표 이미지 — og:image·thumbnail 과 같은 파일 */
+.night-wrap>img{display:block;border-radius:12px;margin:0 0 26px;}
 .night-facts{margin:0 0 26px;}
 .night-facts table{width:100%;border-collapse:collapse;border:1px solid #2c303c;border-radius:10px;}
 .night-facts caption{text-align:left;font-size:.85rem;color:#9aa0ab;padding:0 0 8px;}
@@ -164,9 +167,14 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
         <meta property="og:description" content={venue.description} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={ogImage} />
+        <meta property="og:image:secure_url" content={ogImage} />
+        <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="1200" />
         <meta property="og:image:alt" content={venue.ogAlt} />
+        <link rel="image_src" href={ogImage} />
+        {/* 네이버 수집기가 따로 보는 썸네일 지정 메타. 본문 <img> 와 같은 파일이어야 한다. */}
+        <meta name="thumbnail" content={ogImage} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={venue.title} />
         <meta name="twitter:description" content={venue.description} />
@@ -195,6 +203,8 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
             {venue.answer.second}
           </p>
         </div>
+
+        <PageThumb src={`/og/${venue.slug}-og.png`} alt={venue.ogAlt} />
 
         {venue.facts ? (
           <div className="night-facts">

@@ -9,7 +9,11 @@
     "check:seo": "node scripts/check-keyword-stuffing.mjs",
     "gate:access": "node scripts/access-gate.mjs",
     "gen:access-llms": "node scripts/gen-llms-access.mjs",
-    "indexnow": "node scripts/indexnow-submit.mjs"
+    "indexnow": "node scripts/indexnow-submit.mjs",
+    "gen:og-access": "node scripts/gen-access-og.mjs",
+    "gen:og-page": "node scripts/gen-page-og.mjs",
+    "gate:thumb": "node scripts/thumb-gate.mjs",
+    "check:thumb-live": "node scripts/thumb-live-check.mjs"
   },
   "dependencies": {
     "next": "16.2.4",

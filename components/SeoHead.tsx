@@ -5,9 +5,10 @@ type Props = {
   title: string;
   description: string;
   path?: string;
-  ogImage?: string;
   /** 1:1 정사각 썸네일 — 네이버 검색 썸네일 기준 이미지 */
   ogSquare?: string;
+  /** 썸네일 대체 텍스트. 가게 이름 + 페이지 주제로 쓴다. */
+  ogAlt?: string;
   /**
    * 이 페이지가 대표하는 업소 이름. 다른 지역 업소를 소개하는 페이지에서
    * 창원 브랜드가 제목·썸네일에 섞여 들어가지 않도록 갈아끼운다.
@@ -22,8 +23,8 @@ export default function SeoHead({
   title,
   description,
   path = "/",
-  ogImage = "/og-cover.png",
   ogSquare = "/og-default.png",
+  ogAlt,
   brand = SITE.name,
   geo = { region: "KR-48", place: "창원시", position: "35.2280;128.6817" },
   noindex = false,
@@ -34,6 +35,8 @@ export default function SeoHead({
   // "| 창원 룰루랄라 나이트"가 또 붙어 길어지는 걸 막는다.
   const squash = (s: string) => s.replace(/\s+/g, "");
   const fullTitle = squash(title).includes(squash(brand)) ? title : `${title} | ${brand}`;
+  // 썸네일 alt 는 언제나 가게 이름으로 시작한다. 따로 안 넘기면 제목을 그대로 쓴다.
+  const alt = ogAlt ?? (squash(fullTitle).includes(squash(brand)) ? fullTitle : `${brand} ${fullTitle}`);
   return (
     <Head>
       <title>{fullTitle}</title>
@@ -86,28 +89,23 @@ export default function SeoHead({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      {/* 1:1 정사각 — 네이버 검색 썸네일 기준 이미지 */}
+      {/* 1:1 정사각 한 장만 내보낸다. 와이드(1200×630)를 두 번째 og:image 로 같이 걸면
+          수집기마다 다른 장을 골라 가서 검색 썸네일이 정사각으로 고정되지 않는다. */}
       <meta property="og:image" content={`${SITE.url}${ogSquare}`} />
       <meta property="og:image:secure_url" content={`${SITE.url}${ogSquare}`} />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="1200" />
-      <meta
-        property="og:image:alt"
-        content={brand}
-      />
-      {/* 와이드 보조 이미지 (링크 미리보기 표준 1200×630) */}
-      <meta property="og:image" content={`${SITE.url}${ogImage}`} />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={alt} />
       <link rel="image_src" href={`${SITE.url}${ogSquare}`} />
+      {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
+      <meta name="thumbnail" content={`${SITE.url}${ogSquare}`} />
 
-      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${SITE.url}${ogImage}`} />
-      <meta name="twitter:image:alt" content={brand} />
+      <meta name="twitter:image" content={`${SITE.url}${ogSquare}`} />
+      <meta name="twitter:image:alt" content={alt} />
     </Head>
   );
 }
