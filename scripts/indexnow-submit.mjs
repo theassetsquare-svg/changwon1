@@ -3,8 +3,10 @@
 //
 //  - 키 파일은 public/{key}.txt 에 있고, 배포 후 https://changwon1.pages.dev/{key}.txt 로
 //    접근돼야 요청이 받아들여진다. 그래서 반드시 "푸시 → 배포 완료 확인" 다음에 실행한다.
-//  - IndexNow를 받는 곳은 Bing·Yandex·Seznam 계열이다. 네이버·구글은 IndexNow를 쓰지 않으므로
-//    이 스크립트로 네이버 노출이 앞당겨지지는 않는다. (네이버는 서치어드바이저, 구글은 GSC 사이트맵)
+//  - 제출처는 두 곳이다.
+//      api.indexnow.org            → Bing·Yandex·Seznam 계열로 전파
+//      searchadvisor.naver.com     → 네이버. 2023년 7월부터 IndexNow 프로토콜을 지원한다.
+//    구글은 IndexNow를 쓰지 않으므로 GSC 사이트맵 쪽을 따로 봐야 한다.
 //
 // 사용법:
 //   node scripts/indexnow-submit.mjs            # /access/ 41개(허브+40) 제출
@@ -47,13 +49,28 @@ if (!keyRes.ok || keyBody !== key) {
 console.log(`✓ 키 파일 확인: ${keyUrl}`);
 
 const body = { host: HOST, key, keyLocation: keyUrl, urlList };
-const res = await fetch("https://api.indexnow.org/indexnow", {
-  method: "POST",
-  headers: { "Content-Type": "application/json; charset=utf-8" },
-  body: JSON.stringify(body),
-});
+const ENDPOINTS = [
+  ["IndexNow(Bing·Yandex 계열)", "https://api.indexnow.org/indexnow"],
+  ["네이버 서치어드바이저", "https://searchadvisor.naver.com/indexnow"],
+];
 
-console.log(`IndexNow 응답: ${res.status} ${res.statusText}`);
+let allOk = true;
+for (const [label, endpoint] of ENDPOINTS) {
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body: JSON.stringify(body),
+    });
+    // 200 = 접수, 202 = 접수(키 검증 대기). 그 외는 실패로 본다.
+    const ok = res.status === 200 || res.status === 202;
+    console.log(`${ok ? "✓" : "✗"} ${label}: ${res.status} ${res.statusText}`);
+    if (!ok) allOk = false;
+  } catch (err) {
+    console.log(`✗ ${label}: 요청 실패 (${err.message})`);
+    allOk = false;
+  }
+}
+
 console.log(`제출 URL ${urlList.length}개`);
-// 200 = 접수, 202 = 접수(키 검증 대기). 그 외는 실패로 본다.
-process.exit(res.status === 200 || res.status === 202 ? 0 : 1);
+process.exit(allOk ? 0 : 1);
