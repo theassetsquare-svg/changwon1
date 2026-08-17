@@ -71,7 +71,7 @@ export default function Home() {
           </p>
           <div className="hero__actions">
             <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
-              📞 {SITE.contactName} {SITE.phone} 전화
+              📞 창원룰루랄라나이트 {SITE.contactName} {SITE.phone}
             </a>
             <Link className="btn btn--ghost btn--lg" href="/contacta/">
               예약 안내
@@ -84,6 +84,50 @@ export default function Home() {
             <span className="badge">합법 영업</span>
             <span className="badge">창원시</span>
           </div>
+        </div>
+      </section>
+
+      <section className="section" id="from-outside">
+        <div className="container">
+          <span className="eyebrow" style={{ color: "#74C69D" }}>창원 밖에서 오는 법</span>
+          <h2>부산에서도, 김해에서도, 결국 상남동입니다.</h2>
+          <p className="lead" style={{ marginTop: 14, marginBottom: 26 }}>
+            창원 룰루랄라 나이트는 성산구 상남동, 마디미로43번길 10 지하3층입니다. 창원에는 도시철도가 없어서
+            시내 이동은 시내버스와 택시로 갈립니다. 그래서 밖에서 오는 사람이 실제로 고민하는 건 &quot;창원까지&quot;가
+            아니라 &quot;창원 안에서 상남동까지&quot;입니다.
+          </p>
+          <div className="grid grid-3">
+            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
+              <h3>부산·김해 방면</h3>
+              <p style={{ marginTop: 10 }}>
+                시외버스와 광역 노선이 창원으로 들어옵니다. 도착 지점에서 상남동까지는 다시 시내 이동이 붙습니다.
+                노선 번호와 소요 시간은 확인 불가라 적지 않았습니다. 지도 앱에 마디미로43번길 10을 넣으면 그때
+                상황에 맞는 경로가 나옵니다.
+              </p>
+            </article>
+            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
+              <h3>수도권·타 지역</h3>
+              <p style={{ marginTop: 10 }}>
+                철도로 오면 창원역이나 창원중앙역이, 버스로 오면 터미널이 도착 지점이 됩니다. 어느 쪽이든 상남동까지
+                한 번 더 움직여야 합니다. 역·터미널에서 상남동까지의 도보 시간은 확인 불가입니다.
+              </p>
+            </article>
+            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
+              <h3>새벽에 돌아갈 때</h3>
+              <p style={{ marginTop: 10 }}>
+                영업은 오후 7시부터 다음날 새벽 5시까지입니다. 그 시간대에는 시내버스가 끊겨 택시가 기본이 됩니다.
+                타 지역으로 나갈 계획이면 첫차 시각을 미리 확인해 두시는 편이 안전합니다.
+              </p>
+            </article>
+          </div>
+          <p style={{ marginTop: 22 }}>
+            도착 직전에 웨이터 {SITE.contactName} {SITE.phone}으로 한 통 주시면 입구에서 헤매는 구간이
+            없어집니다. 다른 지역 나이트의 가는 길이 궁금하시면{" "}
+            <Link href="/access/" style={{ color: "#74C69D", fontWeight: 800 }}>
+              전국 나이트 가는 길 40
+            </Link>
+            에 역·도보·주차·새벽 귀가 순으로 정리해 두었습니다.
+          </p>
         </div>
       </section>
 

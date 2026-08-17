@@ -3,7 +3,7 @@
 // 자동화에서 매 배포 시 실행하면 lastmod가 항상 최신으로 유지됩니다.
 // 사용법: node scripts/gen-sitemap.mjs
 
-import { writeFile } from "node:fs/promises";
+import { readFile, readdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 
@@ -33,7 +33,19 @@ const PAGES = [
   { path: "/night/ansan-hit-night/", priority: "0.8", changefreq: "weekly" },
   { path: "/night/daejeon-seven-night/", priority: "0.8", changefreq: "weekly" },
   { path: "/night/ilsan-shampoo-night/", priority: "0.8", changefreq: "weekly" },
+  // /access/ 허브 — 전국 나이트 가는 길 40
+  { path: "/access/", priority: "0.9", changefreq: "weekly" },
 ];
+
+// /access/{slug}/ 40개는 데이터 파일에서 슬러그를 읽어 자동으로 붙인다.
+// 업소를 추가·삭제해도 사이트맵이 따라간다.
+const ACCESS_DIR = join(ROOT, "components", "access");
+for (const file of (await readdir(ACCESS_DIR)).filter((f) => f.startsWith("data-")).sort()) {
+  const src = await readFile(join(ACCESS_DIR, file), "utf8");
+  for (const m of src.matchAll(/^\s{4}slug: "([a-z0-9-]+)",$/gm)) {
+    PAGES.push({ path: `/access/${m[1]}/`, priority: "0.8", changefreq: "weekly" });
+  }
+}
 
 const urls = PAGES.map((p) => {
   const img = p.image

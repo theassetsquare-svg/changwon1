@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "check:seo": "node scripts/check-keyword-stuffing.mjs"
+    "check:seo": "node scripts/check-keyword-stuffing.mjs",
+    "gate:access": "node scripts/access-gate.mjs",
+    "gen:access-llms": "node scripts/gen-llms-access.mjs",
+    "indexnow": "node scripts/indexnow-submit.mjs"
   },
   "dependencies": {
     "next": "16.2.4",

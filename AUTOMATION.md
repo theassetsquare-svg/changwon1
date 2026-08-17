@@ -23,7 +23,10 @@
 | `scripts/gsc-report.mjs` | GSC 검색 성과 + 카니발리제이션 분석 (실데이터) |
 | `scripts/check-keyword-stuffing.mjs` | 키워드 스터핑/메타 품질 검사 (`npm run check:seo`) |
 | `scripts/gen-og.mjs` | OG 이미지(PNG) 생성 — 네이버 검색 썸네일(1:1)·링크 미리보기용 |
-| `scripts/gen-sitemap.mjs` | sitemap.xml 생성(lastmod 자동) |
+| `scripts/gen-sitemap.mjs` | sitemap.xml 생성(lastmod 자동) — /access/ 슬러그는 데이터 파일에서 자동 수집 |
+| `scripts/access-gate.mjs` | /access/ 40페이지 게이트 G01~G11 실측 (`npm run gate:access`, 빌드 후 실행) |
+| `scripts/gen-llms-access.mjs` | llms.txt 의 /access/ 블록 재생성 (`npm run gen:access-llms`) |
+| `scripts/indexnow-submit.mjs` | IndexNow 색인 요청 (`npm run indexnow`). **배포 완료 후** 실행해야 키 검증을 통과한다. Bing·Yandex 계열만 수신하며 네이버·구글은 대상이 아니다 |
 
 ## 필요한 저장소 시크릿 (한 번만 설정)
 

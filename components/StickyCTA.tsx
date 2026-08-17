@@ -18,6 +18,10 @@ export default function StickyCTA() {
   const name = onBulgwang ? BULGWANG.contactName : SITE.contactName;
   const phone = onBulgwang ? BULGWANG.phone : SITE.phone;
   const href = onBulgwang ? BULGWANG.phoneHref : SITE.phoneHref;
+  // 홈 전화바는 업소명까지 붙인 한 문장으로 고정한다.
+  // "📞 창원룰루랄라나이트 로또 010-7528-4936"
+  const isHome = pathname === "/";
+  const btnText = isHome ? `📞 창원룰루랄라나이트 ${name} ${phone}` : `📞 ${name} ${phone}`;
 
   return (
     <div className="sticky-cta" role="region" aria-label="전화 문의">
@@ -29,7 +33,7 @@ export default function StickyCTA() {
         href={href}
         aria-label={`${name} 전화 ${phone}`}
       >
-        📞 {name} {phone}
+        {btnText}
       </a>
     </div>
   );

@@ -55,3 +55,16 @@ Allow: /night/
 
 User-agent: Googlebot
 Allow: /night/
+
+# /access/ 전국 나이트 가는 길 40 (2026-08-17 추가)
+User-agent: Yeti
+Allow: /access/
+
+User-agent: Googlebot
+Allow: /access/
+
+User-agent: Naverbot
+Allow: /access/
+
+User-agent: Daumoa
+Allow: /access/
