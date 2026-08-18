@@ -112,7 +112,7 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           from: 창원 룰루랄라 SEO 모니터 <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
-          subject: "🚨 [changwon1] SEO 빌드/검사 실패 — run #${{ github.run_number }}"
+          subject: "🚨 [changwond] SEO 빌드/검사 실패 — run #${{ github.run_number }}"
           body: |
             창원 룰루랄라 나이트 사이트 자동검사(빌드+키워드)에서 문제가 감지됐습니다.
 
@@ -132,13 +132,13 @@ jobs:
         id: probe
         run: |
           set -e
-          BASE="https://changwon1.pages.dev"
-          PAGES=("/" "/about/" "/jjanggu/" "/location/" "/contact/" "/sitemap.xml" "/robots.txt" "/llms.txt" "/og-cover.png" "/og-default.png")
+          BASE="https://changwond.pages.dev"
+          PAGES=("/" "/about/" "/jjanggua/" "/location/" "/contacta/" "/sitemap.xml" "/robots.txt" "/llms.txt" "/og-cover.png" "/og-default.png")
           FAIL=0
           REPORT=""
           for p in "${PAGES[@]}"; do
             URL="$BASE$p"
-            CODE=$(curl -L -o /tmp/body -s -w "%{http_code}" -A "Mozilla/5.0 (SEO-Monitor changwon1)" --max-time 30 "$URL")
+            CODE=$(curl -L -o /tmp/body -s -w "%{http_code}" -A "Mozilla/5.0 (SEO-Monitor changwond)" --max-time 30 "$URL")
             SIZE=$(wc -c < /tmp/body | tr -d ' ')
             LINE="$CODE  ${SIZE}B  $URL"
             echo "$LINE"
@@ -147,8 +147,9 @@ jobs:
               FAIL=1
             fi
             # 핵심 페이지 내용 검증
-            if [ "$p" = "/" ] || [ "$p" = "/jjanggu/" ]; then
-              if ! grep -q "010-3854-6887\|01038546887" /tmp/body; then
+            # 홈(/)은 전화 안내가 없는 단독 글 페이지라 번호 검사 대상에서 뺀다.
+            if [ "$p" = "/jjanggua/" ]; then
+              if ! grep -q "010-7528-4936\|01075284936" /tmp/body; then
                 echo "::warning::Phone number missing on $URL"
                 FAIL=1
               fi
@@ -179,7 +180,7 @@ jobs:
             try { report = fs.readFileSync('live-report.txt', 'utf8'); } catch (e) {}
             const title = `🚨 라이브 사이트 헬스체크 실패 — run #${context.runNumber}`;
             const body = [
-              `라이브 사이트(https://changwon1.pages.dev) 응답에 문제가 있습니다.`,
+              `라이브 사이트(https://changwond.pages.dev) 응답에 문제가 있습니다.`,
               ``,
               `- 트리거: \`${context.eventName}\``,
               `- 실행: ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`,
@@ -209,9 +210,9 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           from: 창원 룰루랄라 SEO 모니터 <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
-          subject: "🚨 [changwon1] 라이브 사이트 응답 이상 — run #${{ github.run_number }}"
+          subject: "🚨 [changwond] 라이브 사이트 응답 이상 — run #${{ github.run_number }}"
           body: |
-            라이브 사이트(https://changwon1.pages.dev) 헬스체크에서 비정상 응답이 감지됐습니다.
+            라이브 사이트(https://changwond.pages.dev) 헬스체크에서 비정상 응답이 감지됐습니다.
 
             실행 로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
             아티팩트의 live-report.txt 에서 각 페이지 응답 코드를 확인하세요.

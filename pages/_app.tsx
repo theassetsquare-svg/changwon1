@@ -12,6 +12,10 @@ export default function App({ Component, pageProps }: AppProps) {
   // 뒤섞어 읽어서 양쪽 다 손해를 본다. 그래서 그 경로에서만 빼 둔다.
   const isBulgwang = pathname === BULGWANG.path.replace(/\/$/, "");
 
+  // 홈(/)은 헤더·푸터·고정 전화바 없이 글만 나가는 단독 페이지다.
+  // 공용 레이아웃과 업소 JSON-LD를 모두 태우지 않는다.
+  if (pathname === "/") return <Component {...pageProps} />;
+
   return (
     <>
       {!isBulgwang && <Jsonld data={buildLocalBusiness()} />}

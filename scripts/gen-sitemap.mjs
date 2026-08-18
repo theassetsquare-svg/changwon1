@@ -8,11 +8,12 @@ import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const BASE = "https://changwon1.pages.dev";
+const BASE = "https://changwond.pages.dev";
 const today = new Date().toISOString().slice(0, 10);
 
 const PAGES = [
-  { path: "/", priority: "1.0", changefreq: "weekly", image: true, thumb: "/og-default.png" },
+  // 홈(/)은 단독 글 페이지 — 썸네일 없음
+  { path: "/", priority: "1.0", changefreq: "weekly" },
   { path: "/jjanggua/", priority: "0.95", changefreq: "weekly", thumb: "/og/page-jjanggua-og.png" },
   { path: "/contacta/", priority: "0.85", changefreq: "monthly", thumb: "/og/page-contacta-og.png" },
   { path: "/location/", priority: "0.8", changefreq: "monthly", thumb: "/og/page-location-og.png" },

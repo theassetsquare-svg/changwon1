@@ -566,3 +566,94 @@ body.has-sticky { padding-bottom: calc(80px + var(--safe-bottom)); }
 @media (prefers-color-scheme: light) {
   :root { color-scheme: dark; }
 }
+
+/* ── 홈(/) 단독 글 페이지 ────────────────────────────────────────────────
+   헤더·푸터·고정 전화바 없이 글만 놓이는 화면이라, 읽기에 필요한 것만 둔다.
+   본문 폭은 한 줄에 40자 안팎(38ch)으로 잡는다. 한글은 이 폭에서 눈이 줄을
+   놓치지 않는다. */
+.story {
+  padding: clamp(48px, 9vw, 104px) 20px clamp(64px, 12vw, 140px);
+}
+.story__body {
+  max-width: 40rem;
+  margin: 0 auto;
+}
+.story__eyebrow {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+.story__title {
+  font-size: clamp(1.9rem, 6.2vw, 3rem);
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+  margin-bottom: 26px;
+}
+.story__lead {
+  font-size: clamp(1.06rem, 2.9vw, 1.22rem);
+  line-height: 1.85;
+  color: var(--text);
+}
+.story__rule {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: clamp(34px, 6vw, 52px) 0;
+}
+.story h2 {
+  font-size: clamp(1.32rem, 4.2vw, 1.72rem);
+  line-height: 1.35;
+  margin: clamp(44px, 7vw, 68px) 0 20px;
+}
+.story p {
+  font-size: clamp(1.02rem, 2.7vw, 1.1rem);
+  line-height: 1.95;
+  color: var(--text-muted);
+  margin: 0 0 22px;
+}
+.story strong { color: var(--text); font-weight: 700; }
+.story em { color: var(--gold-soft); font-style: normal; font-weight: 600; }
+
+.story__quote {
+  margin: clamp(34px, 6vw, 50px) 0;
+  padding: 22px 0 22px 22px;
+  border-left: 3px solid var(--gold);
+  font-size: clamp(1.12rem, 3.4vw, 1.4rem);
+  font-weight: 700;
+  line-height: 1.72;
+  letter-spacing: -0.015em;
+  color: var(--text);
+}
+.story__quote--final {
+  border-left-color: var(--gold-deep);
+  color: var(--gold-soft);
+}
+
+.story__list {
+  margin: 0 0 22px;
+  padding-left: 22px;
+  display: grid;
+  gap: 20px;
+}
+.story__list li {
+  font-size: clamp(1.02rem, 2.7vw, 1.1rem);
+  line-height: 1.95;
+  color: var(--text-muted);
+  padding-left: 6px;
+}
+.story__list li::marker { color: var(--gold); font-weight: 800; }
+
+.story__close {
+  margin-top: clamp(30px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--text) !important;
+}
+.story__note {
+  margin-top: clamp(40px, 7vw, 64px);
+  padding-top: 22px;
+  border-top: 1px solid var(--border);
+  font-size: 0.9rem !important;
+  line-height: 1.8;
+  color: var(--text-dim) !important;
+}

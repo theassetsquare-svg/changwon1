@@ -214,7 +214,7 @@ const titleRows = VENUES.map((v) => ({ slug: v.slug, title: v.title, len: v.titl
   for (const [name, html] of [...VENUES.map((v) => [v.slug, pages[v.slug]]), ["access-hub", hub]]) {
     const hrefs = [...html.matchAll(/<a [^>]*href="([^"]+)"/g)].map((m) => m[1]);
     for (const href of hrefs) {
-      if (/^https?:\/\//.test(href) && !href.startsWith("https://changwon1.pages.dev")) ext.push(`${name}:${href}`);
+      if (/^https?:\/\//.test(href) && !href.startsWith("https://changwond.pages.dev")) ext.push(`${name}:${href}`);
       const m = href.match(/^\/access\/([^/]+)\//);
       if (m && !slugs.has(m[1])) broken.push(`${name}→${href}`);
     }

@@ -13,7 +13,7 @@ import { execSync } from "node:child_process";
 import { loadAccessVenues } from "./access-data.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const BASE = "https://changwon1.pages.dev";
+const BASE = "https://changwond.pages.dev";
 
 const NIGHT = JSON.parse(
   execSync(
@@ -26,7 +26,7 @@ const NIGHT = JSON.parse(
 const ACCESS = loadAccessVenues();
 
 const PAGES = [
-  ["/", "/og-default.png"],
+  // 홈(/)은 썸네일 없는 단독 글 페이지 — 제외
   ["/about/", "/og/page-about-og.png"],
   ["/jjanggua/", "/og/page-jjanggua-og.png"],
   ["/location/", "/og/page-location-og.png"],

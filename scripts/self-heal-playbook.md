@@ -10,7 +10,7 @@ claude "scripts/self-heal-playbook.md 절차대로 changwon1 사이트를 점검
 
 ## 0. 컨텍스트
 - 저장소: changwon1 (Next.js 16 static export → Cloudflare Pages, main 푸시 시 자동 배포)
-- 라이브: https://changwon1.pages.dev
+- 라이브: https://changwond.pages.dev
 - GSC 키: `/home/user/.config/gsc/theasset-gsc.json` (저장소 밖, 커밋 금지)
 - 알림 수신: theassetsquare@gmail.com
 

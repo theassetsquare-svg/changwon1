@@ -71,7 +71,7 @@ const square = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" 
   <text x="600" y="898" text-anchor="middle" font-family="${FF}" font-size="118" font-weight="900" fill="#0a0a0a">${PHONE}</text>
 
   <text x="600" y="1068" text-anchor="middle" font-family="${FF}" font-size="46" font-weight="800" fill="#FCD34D">${AGE} 출입 · 신분증 확인</text>
-  <text x="600" y="1128" text-anchor="middle" font-family="${FF}" font-size="30" font-weight="500" fill="#8b909b">changwon1.pages.dev</text>
+  <text x="600" y="1128" text-anchor="middle" font-family="${FF}" font-size="30" font-weight="500" fill="#8b909b">changwond.pages.dev</text>
 </svg>`;
 
 // 와이드 1200×630 (링크 미리보기 표준)
@@ -89,7 +89,7 @@ const cover = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" ro
   <text x="172" y="368" font-family="${FF}" font-size="44" font-weight="800" fill="#0a0a0a">전화 예약·문의 · 웨이터 ${NICK}</text>
   <text x="600" y="512" text-anchor="middle" font-family="${FF}" font-size="112" font-weight="900" fill="#0a0a0a">${PHONE}</text>
 
-  <text x="80" y="600" font-family="${FF}" font-size="26" font-weight="500" fill="#8b909b">changwon1.pages.dev · 신분증 확인</text>
+  <text x="80" y="600" font-family="${FF}" font-size="26" font-weight="500" fill="#8b909b">changwond.pages.dev · 신분증 확인</text>
 </svg>`;
 
 async function render(svg, w, h, out) {

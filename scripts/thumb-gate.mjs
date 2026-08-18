@@ -24,7 +24,7 @@ import { execSync } from "node:child_process";
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const OUT = join(ROOT, "out");
 const PUB = join(ROOT, "public");
-const BASE = "https://changwon1.pages.dev";
+const BASE = "https://changwond.pages.dev";
 const MAX_BYTES = 300 * 1024;
 
 const NIGHT = JSON.parse(
@@ -39,7 +39,7 @@ const ACCESS = loadAccessVenues();
 
 /** 검사 대상: [경로, out 안의 html, 기대 썸네일, 상호(alt 포함 여부 확인용)] */
 const PAGES = [
-  ["/", "index.html", "/og-default.png", "창원 룰루랄라 나이트"],
+  // 홈(/)은 헤더·푸터·썸네일 없이 글만 나가는 단독 페이지라 검사 대상이 아니다.
   ["/about/", "about/index.html", "/og/page-about-og.png", "창원 룰루랄라 나이트"],
   ["/jjanggua/", "jjanggua/index.html", "/og/page-jjanggua-og.png", "창원 룰루랄라 나이트"],
   ["/location/", "location/index.html", "/og/page-location-og.png", "창원 룰루랄라 나이트"],

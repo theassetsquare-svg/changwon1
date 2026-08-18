@@ -1,420 +1,226 @@
-import Link from "next/link";
-import SeoHead from "@/components/SeoHead";
-import PageThumb from "@/components/PageThumb";
+import Head from "next/head";
 import { SITE } from "@/components/site";
-import { Jsonld, buildBreadcrumb, buildFaq } from "@/components/Jsonld";
-import { VENUES } from "@/components/night/venues";
 
-const FAQ = [
-  {
-    q: "처음 가는데 어떻게 해야 해요?",
-    a: `${SITE.contactName} ${SITE.phone}로 전화 주시면 됩니다. 인원과 도착 예정 시간만 말씀해 주세요. 자리 잡는 것부터 안내까지 담당이 직접 챙깁니다.`,
-  },
-  {
-    q: "예약은 어떻게 하나요?",
-    a: `예약·문의는 전화로만 받습니다. ${SITE.contactName} ${SITE.phone}으로 전화 주시면 그 자리에서 자리 상황 확인하고 잡아 드립니다.`,
-  },
-  {
-    q: "예약은 필수인가요?",
-    a: "필수는 아니지만, 주말이나 늦은 시간엔 미리 전화 주시는 게 안전합니다. 자리 상황·인원수에 맞춰 담당이 조율해 드립니다.",
-  },
-  {
-    q: "몇 살부터 출입할 수 있나요?",
-    a: "만 27세 이상부터 출입 가능합니다. 입장 시 신분증 확인이 원칙이며, 기준에 맞지 않으면 입장이 제한됩니다.",
-  },
-  {
-    q: "신분증을 꼭 챙겨야 하나요?",
-    a: "네. 만 27세 이상만 출입 가능한 합법 영업장이라, 입장 시 신분증 확인이 원칙입니다. 미성년자 출입은 일체 받지 않습니다.",
-  },
-  {
-    q: "가격이 어떻게 되나요?",
-    a: "가격·테이블·주대 안내는 시간대와 자리에 따라 달라집니다. 정확한 안내는 담당이 직접 알려드립니다.",
-  },
-  {
-    q: "혼자 가도 되나요?",
-    a: "가능합니다. 다만 자리 배치상 일행과 함께 오시는 게 일반적이라, 혼자 오실 거면 도착 전에 전화 주시면 그날 상황에 맞게 담당이 잡아드립니다.",
-  },
-  {
-    q: "단체로 가도 받아주나요?",
-    a: "받습니다. 인원이 6명 이상이면 자리 배치에 시간이 걸리니, 가능하면 두세 시간 전에는 미리 전화 주세요. 단체석 흐름은 담당이 따로 정리해 둡니다.",
-  },
-  {
-    q: "영업 시간이 어떻게 되나요?",
-    a: "오후 7시에 오픈해서 다음날 새벽 5시까지 영업합니다. 매일 운영하며, 자리 회전 피크는 보통 자정~새벽 2시 무렵이에요.",
-  },
-  {
-    q: "복장 규정이 있나요?",
-    a: "지나치게 캐주얼한 슬리퍼·트레이닝 차림은 입구에서 제한될 수 있습니다. 무난한 외출 복장이면 충분합니다.",
-  },
-];
+/**
+ * 홈(/) — 독립 성공스토리 단독 페이지.
+ *
+ * 이 페이지만 헤더·푸터·고정 전화바를 걷어내고 글만 남긴다(레이아웃 분기는 _app.tsx).
+ * 본문에서 다른 페이지로 나가는 링크도 두지 않는다. 읽는 사람이 글 한 편을
+ * 끝까지 읽는 것 말고 다른 선택지를 만들지 않기 위해서다.
+ */
+
+const TITLE = "무너진 자리에서 다시 시작한 사람의 기록";
+const DESC =
+  "바닥을 친 뒤 다시 올라온 사람의 이야기. 화려한 성공담이 아니라, 무너진 다음 날 아침에 무엇을 했는지에 대한 글입니다. 끝까지 읽고 나면 오늘 하루가 조금 달라집니다.";
 
 export default function Home() {
+  const url = `${SITE.url}/`;
   return (
     <>
-      <SeoHead
-        title="창원룰루랄라나이트 · 전화 예약 로또 010-7528-4936 · 만 27세 이상"
-        description="창원 룰루랄라 나이트 예약·문의는 전화 한 통. 웨이터 로또 010-7528-4936으로 전화 주시면 자리·인원·도착 시간까지 정리됩니다. 만 27세 이상 출입 · 신분증 확인 · 합법 영업장."
-        path="/"
-        ogAlt="창원 룰루랄라 나이트 전화 예약 안내 · 웨이터 로또 010-7528-4936"
-      />
-      <Jsonld data={buildBreadcrumb([{ name: "홈", path: "/" }])} />
-      <Jsonld data={buildFaq(FAQ)} />
+      <Head>
+        <title>{TITLE}</title>
+        <meta name="description" content={DESC} />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="theme-color" content="#0a0a0a" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+        <meta name="googlebot" content="index,follow,max-snippet:-1,max-image-preview:large" />
+        <meta name="naver-bot" content="index,follow" />
+        <meta name="yeti" content="index,follow" />
+        <link rel="canonical" href={url} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="alternate" hrefLang="ko-KR" href={url} />
+        <link rel="alternate" hrefLang="x-default" href={url} />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:title" content={TITLE} />
+        <meta property="og:description" content={DESC} />
+        <meta property="og:url" content={url} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content={TITLE} />
+        <meta name="twitter:description" content={DESC} />
+      </Head>
 
-      <section className="hero">
-        <div className="container">
-          <span className="badge badge--gold">창원시 · 합법 영업장 · 만 {SITE.ageLimit}세 이상</span>
-          <h1 style={{ marginTop: 18 }}>
-            창원 룰루랄라 나이트, 자리 잡는 가장 빠른 방법.<br />
-            <span className="accent">전화 한 통</span>이면 끝.
+      <main className="story" id="main">
+        <article className="story__body">
+          <p className="story__eyebrow">읽는 데 7분</p>
+          <h1 className="story__title">
+            무너진 자리에서<br />다시 시작한 사람의 기록
           </h1>
-          <PageThumb src="/og-default.png" alt="창원 룰루랄라 나이트 전화 예약 안내 · 웨이터 로또 010-7528-4936" />
-          <p className="hero__sub">
-            예약·문의는 전화로만 받습니다. 도착 전에 한 통 주시면 자리·시간·인원까지
-            담당이 직접 챙깁니다. 어색하게 입구에서 두리번거릴 일 없습니다.
+          <p className="story__lead">
+            이건 화려한 성공담이 아닙니다. 무너진 다음 날 아침에 무엇을 했는지에 대한
+            이야기입니다. 지금 바닥에 서 있는 사람이라면, 끝까지 읽어보길 권합니다.
           </p>
-          <div className="hero__actions">
-            <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
-              📞 창원룰루랄라나이트 {SITE.contactName} {SITE.phone}
-            </a>
-            <Link className="btn btn--ghost btn--lg" href="/contacta/">
-              예약 안내
-            </Link>
-          </div>
-          <div className="hero__meta">
-            <span className="badge">만 {SITE.ageLimit}세 이상 출입</span>
-            <span className="badge">전화 예약</span>
-            <span className="badge">신분증 확인</span>
-            <span className="badge">합법 영업</span>
-            <span className="badge">창원시</span>
-          </div>
-        </div>
-      </section>
 
-      <section className="section" id="from-outside">
-        <div className="container">
-          <span className="eyebrow" style={{ color: "#74C69D" }}>창원 밖에서 오는 법</span>
-          <h2>부산에서도, 김해에서도, 결국 상남동입니다.</h2>
-          <p className="lead" style={{ marginTop: 14, marginBottom: 26 }}>
-            창원 룰루랄라 나이트는 성산구 상남동, 마디미로43번길 10 지하3층입니다. 창원에는 도시철도가 없어서
-            시내 이동은 시내버스와 택시로 갈립니다. 그래서 밖에서 오는 사람이 실제로 고민하는 건 &quot;창원까지&quot;가
-            아니라 &quot;창원 안에서 상남동까지&quot;입니다.
+          <hr className="story__rule" />
+
+          <h2>1. 무너지는 데는 하루면 충분했다</h2>
+          <p>
+            간판 불을 끄고 셔터를 내리는 데 걸린 시간은 3분이었습니다. 2년이 3분에
+            정리됐습니다. 그는 셔터 앞에 서서 한참을 그러고 있었다고 합니다. 울지도
+            않았고, 화도 나지 않았고, 그냥 아무 생각이 안 났다고요.
           </p>
-          <div className="grid grid-3">
-            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
-              <h3>부산·김해 방면</h3>
-              <p style={{ marginTop: 10 }}>
-                시외버스와 광역 노선이 창원으로 들어옵니다. 도착 지점에서 상남동까지는 다시 시내 이동이 붙습니다.
-                노선 번호와 소요 시간은 확인 불가라 적지 않았습니다. 지도 앱에 마디미로43번길 10을 넣으면 그때
-                상황에 맞는 경로가 나옵니다.
-              </p>
-            </article>
-            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
-              <h3>수도권·타 지역</h3>
-              <p style={{ marginTop: 10 }}>
-                철도로 오면 창원역이나 창원중앙역이, 버스로 오면 터미널이 도착 지점이 됩니다. 어느 쪽이든 상남동까지
-                한 번 더 움직여야 합니다. 역·터미널에서 상남동까지의 도보 시간은 확인 불가입니다.
-              </p>
-            </article>
-            <article className="card" style={{ borderLeft: "4px solid #2D6A4F" }}>
-              <h3>새벽에 돌아갈 때</h3>
-              <p style={{ marginTop: 10 }}>
-                영업은 오후 7시부터 다음날 새벽 5시까지입니다. 그 시간대에는 시내버스가 끊겨 택시가 기본이 됩니다.
-                타 지역으로 나갈 계획이면 첫차 시각을 미리 확인해 두시는 편이 안전합니다.
-              </p>
-            </article>
-          </div>
-          <p style={{ marginTop: 22 }}>
-            도착 직전에 웨이터 {SITE.contactName} {SITE.phone}으로 한 통 주시면 입구에서 헤매는 구간이
-            없어집니다. 다른 지역 나이트의 가는 길이 궁금하시면{" "}
-            <Link href="/access/" style={{ color: "#74C69D", fontWeight: 800 }}>
-              전국 나이트 가는 길 40
-            </Link>
-            에 역·도보·주차·새벽 귀가 순으로 정리해 두었습니다.
+          <p>
+            사람들은 실패가 극적일 거라고 생각합니다. 아닙니다. 실패는 조용합니다.
+            어느 날 갑자기 무너지는 게 아니라, 3개월쯤 전부터 이미 알고 있는데
+            인정하기 싫어서 버티다가, 더는 버틸 돈이 없어지는 날 끝이 납니다.
+            그날은 아무 일도 일어나지 않습니다. 그냥 문을 닫습니다.
           </p>
-        </div>
-      </section>
-
-      <section className="section--tight">
-        <div className="container">
-          <div className="card" style={{ display: "grid", gap: 14 }}>
-            <dl className="kv">
-              <dt>업소</dt>
-              <dd>창원 룰루랄라 나이트</dd>
-            </dl>
-            <dl className="kv">
-              <dt>웨이터(담당)</dt>
-              <dd>{SITE.contactName}</dd>
-            </dl>
-            <dl className="kv">
-              <dt>예약·문의</dt>
-              <dd>
-                <a href={SITE.phoneHref} style={{ color: "var(--gold)", fontWeight: 800 }}>
-                  {SITE.phone}
-                </a>{" "}
-                (전화 문의)
-              </dd>
-            </dl>
-            <dl className="kv">
-              <dt>위치</dt>
-              <dd>경상남도 창원시</dd>
-            </dl>
-            <dl className="kv">
-              <dt>영업시간</dt>
-              <dd>오후 7시 ~ 다음날 새벽 5시 (매일)</dd>
-            </dl>
-            <dl className="kv">
-              <dt>출입 기준</dt>
-              <dd>만 {SITE.ageLimit}세 이상 · 신분증 확인</dd>
-            </dl>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">왜 담당한테 전화하나</span>
-          <h2>그날 저녁이 매끄럽게 풀리니까.</h2>
-          <p className="lead" style={{ marginTop: 14, marginBottom: 28 }}>
-            나이트는 처음 가는 사람한테 진입 장벽이 의외로 큽니다. 어디로 들어가야 하는지,
-            자리는 어떻게 잡는지, 인원이 갑자기 늘면 어떻게 되는지. 그 모든 어색함을
-            줄이려고 담당이 있는 겁니다.
+          <p>
+            남은 건 통장의 십만 원대 잔액과, 매달 갚아야 할 숫자였습니다.
+            서른둘이었습니다.
           </p>
-          <div className="grid grid-3">
-            <article className="card">
-              <h3>통화 한 번이면 끝</h3>
-              <p style={{ marginTop: 10 }}>
-                전화 받으면 자리부터 잡습니다. 도착 전에
-                인원·시간만 말씀해 주시면 정리해 둡니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>자리·동선 정리</h3>
-              <p style={{ marginTop: 10 }}>
-                일행 규모에 맞춰 자리를 안내합니다. 입장부터 좌석, 주문 흐름까지
-                담당이 끊지 않고 챙기니까 본인은 시간만 즐기면 됩니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>합법, 그래서 깔끔</h3>
-              <p style={{ marginTop: 10 }}>
-                만 {SITE.ageLimit}세 이상 출입, 신분증 확인이 원칙인 합법 영업장입니다.
-                불필요한 문제 없이, 정상적인 영업 안에서 편하게 노세요.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
 
-      <section
-        className="section"
-        style={{
-          background: "var(--bg-elev)",
-          borderTop: "1px solid var(--border)",
-          borderBottom: "1px solid var(--border)",
-        }}
-      >
-        <div className="container">
-          <span className="eyebrow">처음이라도 어렵지 않게</span>
-          <h2>전화 → 자리 → 입장. 3단계면 끝.</h2>
-          <ol className="steps" style={{ marginTop: 28 }}>
+          <blockquote className="story__quote">
+            바닥의 진짜 문제는 돈이 없다는 게 아니라,<br />
+            내일 아침에 일어날 이유가 없다는 것이다.
+          </blockquote>
+
+          <h2>2. 아무도 박수 쳐주지 않는 90일</h2>
+          <p>
+            그는 다음 날 새벽 다섯 시에 일어났습니다. 할 일이 있어서가 아니었습니다.
+            누워 있으면 생각이 자기를 잡아먹을 것 같아서였습니다. 씻고, 옷을 입고,
+            갈 데가 없어서 동네를 한 시간 걸었습니다. 그게 전부였습니다.
+          </p>
+          <p>
+            그 한 시간이 90일 동안 이어졌습니다. 걷는 동안 그는 딱 하나만 정했다고
+            합니다. <strong>“오늘 내가 통제할 수 있는 일 한 가지만 제대로 하자.”</strong>{" "}
+            빚을 갚는 건 오늘 통제할 수 없습니다. 사람들의 시선도 통제할 수 없습니다.
+            하지만 다섯 시에 일어나는 건 통제할 수 있습니다. 이력서 한 장 고쳐 쓰는
+            것도, 전화 세 통 거는 것도 통제할 수 있습니다.
+          </p>
+          <p>
+            이 시기에 대해 그가 남긴 말이 있습니다. “그때 나는 성공하려고 한 게 아니라,
+            나를 미워하지 않으려고 움직였다.” 무너진 사람에게 가장 위험한 건 게으름이
+            아니라 자기혐오입니다. 자기혐오는 아무것도 하지 않을 때 자랍니다. 그래서
+            의미 없어 보이는 일이라도 매일 하나씩 해내야 합니다. 결과 때문이 아니라,
+            자기를 미워할 틈을 주지 않기 위해서.
+          </p>
+
+          <h2>3. 다시 올라온 사람들에게서 반복되던 세 장면</h2>
+          <p>
+            바닥을 치고 다시 올라온 사람들의 이야기를 모아 보면, 이상하리만치 같은
+            장면이 반복됩니다. 업종도 나이도 사는 곳도 다른데, 결정적인 순간의 모양은
+            거의 똑같습니다.
+          </p>
+          <ol className="story__list">
             <li>
-              <strong>전화 ({SITE.phone})</strong>
-              이름·인원·도착 예정 시간만 말씀해 주세요. 길게 설명 안
-              해도 담당이 알아서 정리합니다.
+              <strong>계획을 줄였다.</strong> 무너진 사람은 대개 더 큰 계획을 세웁니다.
+              한 방에 되돌리고 싶으니까요. 그런데 실제로 살아난 사람들은 반대로 갔습니다.
+              1년 계획을 접고 하루 계획으로 바꿨습니다. 큰 계획은 실패를 견디지 못하지만,
+              작은 계획은 오늘 한 번 실패해도 내일 다시 할 수 있습니다.
             </li>
             <li>
-              <strong>자리 확보</strong>
-              상황 보고 자리를 잡아 둡니다. 변경되면 다시 한 통이면 충분합니다.
+              <strong>혼자 있는 시간을 줄였다.</strong> 자존심 때문에 연락을 끊는 게
+              보통입니다. 잘 안 됐다는 걸 설명하기 싫으니까요. 그런데 다시 일어선
+              사람들은 창피를 무릅쓰고 사람을 만났습니다. 기회는 정보에서 오고, 정보는
+              거의 항상 사람 입에서 나옵니다. 방 안에는 아무 정보도 없습니다.
             </li>
             <li>
-              <strong>도착 후 입장</strong>
-              입구에서 담당이라고만 말씀하세요. 신분증 확인 후 바로 자리로 안내드립니다.
+              <strong>실패를 설명할 수 있게 됐다.</strong> 처음엔 다들 “운이 없었다”고
+              합니다. 6개월쯤 지나면 “내가 이걸 몰랐다”로 바뀝니다. 이 전환이 일어난
+              사람만 다음 판에서 같은 실수를 반복하지 않았습니다. 실패를 남 탓으로 두면
+              배울 게 하나도 남지 않습니다.
             </li>
           </ol>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">처음 오시는 분께</span>
-          <h2>전화 한 통이 이렇게 흘러갑니다.</h2>
-          <p className="lead" style={{ marginTop: 14 }}>
-            처음 전화하는 사람은 무슨 말을 어떻게 시작해야 할지부터 막막합니다.
-            그럴 필요 없어요. 아래 흐름 한 번만 보고 전화 주시면 됩니다.
+          <blockquote className="story__quote">
+            바닥은 끝이 아니라 바닥이다.<br />
+            더 내려갈 곳이 없다는 건, 밟고 설 게 생겼다는 뜻이다.
+          </blockquote>
+
+          <h2>4. 잘 되기 시작할 때가 진짜 고비였다</h2>
+          <p>
+            사람들이 잘 모르는 사실이 하나 있습니다. 두 번째 위기는 안 될 때가 아니라
+            될 때 옵니다. 여덟 달쯤 지나 그에게 처음으로 숨통이 트였을 때, 그는 곧바로
+            예전 습관으로 돌아갈 뻔했다고 합니다. 다섯 시 기상이 일곱 시가 되고,
+            일곱 시가 아홉 시가 되고, 통제할 수 있는 일 한 가지가 어느새 하나도
+            남지 않는 식으로요.
           </p>
-          <div className="grid grid-2" style={{ marginTop: 26 }}>
-            <article className="card">
-              <h3>첫 통화</h3>
-              <p style={{ marginTop: 10 }}>
-                {SITE.phone}으로 전화해서 "룰루랄라 나이트 예약 문의입니다"라고만
-                말씀하시면 바로 연결됩니다. 길게 설명하실 필요가 없습니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>그다음에 정리할 세 가지</h3>
-              <p style={{ marginTop: 10 }}>
-                이름, 일행 수, 도착 예정 시간. 셋만 말씀하시면 됩니다. 예를 들면
-                "김 아무개고요, 네 명이고, 11시쯤 도착할 것 같습니다." 정도면 자리를
-                잡아 둡니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>변경 사항이 생기면</h3>
-              <p style={{ marginTop: 10 }}>
-                인원이 늘거나, 시간이 늦어지거나, 일행 한 명이 빠지거나. 어느 쪽이든
-                다시 한 통이면 충분합니다. 자리 다시 배치해 둡니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>처음이라 어색하면</h3>
-              <p style={{ marginTop: 10 }}>
-                "처음 가는 사람입니다"라고 한마디만 더 붙여주세요.
-                그 한마디에 담당이 입구 동선·자리 배치·주문 흐름까지 조금 다르게
-                챙겨드립니다.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section
-        className="section"
-        style={{
-          background: "var(--bg-elev)",
-          borderTop: "1px solid var(--border)",
-          borderBottom: "1px solid var(--border)",
-        }}
-      >
-        <div className="container">
-          <span className="eyebrow">시간대별 흐름</span>
-          <h2>오후 7시와 새벽 2시는 분위기가 다릅니다.</h2>
-          <p className="lead" style={{ marginTop: 14 }}>
-            창원 룰루랄라 나이트는 오후 7시에 오픈해 다음날 새벽 5시까지 영업합니다.
-            한 가게 안에서도 시간대별로 자리 회전·분위기·응답 속도가 확연히
-            달라져요.
+          <p>
+            그를 붙잡은 건 대단한 각오가 아니라 기록이었습니다. 90일 동안 매일 한 줄씩
+            적어둔 수첩. 거기엔 잘한 일이 아니라 <em>그날 한 일</em>만 적혀 있었습니다.
+            “전화 세 통”, “이력서 수정”, “한 시간 걸음”. 잘 풀리기 시작한 날, 그는 그
+            수첩을 다시 펼쳐 봤습니다. 그리고 알았다고 합니다. 지금의 결과를 만든 건
+            어떤 결정적인 한 방이 아니라, 저 시시한 줄들의 누적이라는 걸.
           </p>
-          <div className="grid grid-3" style={{ marginTop: 28 }}>
-            <article className="card">
-              <h3>이른 시간 (오후 7시~밤 11시)</h3>
-              <p style={{ marginTop: 10 }}>
-                오픈 직후~밤 11시는 자리 여유가 가장 많은 구간입니다. 처음 오시는
-                분이나 조용한 분위기를 선호하시는 분께 추천. 담당 응대도
-                가장 빠른 시간대예요.
-              </p>
-            </article>
-            <article className="card">
-              <h3>피크 (자정~새벽 2시)</h3>
-              <p style={{ marginTop: 10 }}>
-                자리가 가장 빨리 회전하는 구간. 미리 예약 안 하면 입구에서 대기할
-                가능성이 있어요. 이 시간대에 오실 거면 최소 두 시간 전엔 미리 전화 주세요.
-              </p>
-            </article>
-            <article className="card">
-              <h3>마감 즈음 (새벽 2시~5시)</h3>
-              <p style={{ marginTop: 10 }}>
-                새벽 2시 이후 자리 회전이 다시 풀리는 시간대입니다. 짧게 한두 시간만
-                놀다 가실 분께 의외로 잘 맞는 구간이에요.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">단골이 굳이 담당을 찾는 이유</span>
-          <h2>한 번 잡으면 다음부터가 빠릅니다.</h2>
-          <p className="lead" style={{ marginTop: 14 }}>
-            창원에서 나이트 다니는 분들이 굳이 담당한테 전화하는 이유는 단순합니다.
-            한 번 통한 사람은 다음부터 이름 한마디로 끝나거든요.
-            매번 처음부터 설명할 필요가 없어요.
+          <p>
+            성과가 나기 시작하면 사람은 과정을 잊습니다. 결과만 기억하고, 결과를 만든
+            지루한 반복은 시시해 보이니까요. 그런데 결과를 유지시키는 건 언제나 그
+            시시한 반복 쪽입니다.
           </p>
-          <ul className="bullets" style={{ marginTop: 22 }}>
-            <li>
-              <strong>두 번째부터는 이름만</strong> — 한 번 자리 잡았던 분은 다음 통화
-              때 인원·시간만 말씀하시면 됩니다. 자주 가는 자리·주문 패턴도 담당이
-              기억해 두니까요.
-            </li>
-            <li>
-              <strong>일행 새 멤버가 와도 OK</strong> — 본인이 단골이면, 같이 가는
-              일행이 처음이라도 입구에서 본인 이름만 대면 동일하게 안내됩니다.
-            </li>
-            <li>
-              <strong>자리 우선권 같은 건 없습니다</strong> — 솔직히 말씀드리면, 단골이라고
-              없는 자리를 만들어 드리는 건 아니에요. 다만 같은 자리가 있을 때 잡기
-              쉬워지는 차이가 있을 뿐.
-            </li>
-            <li>
-              <strong>전화 한 통이면 흐름이 끊기지 않습니다</strong> — 처음 전화하든 열 번째 전화하든,
-              담당이 한 명이라 매번 같은 흐름으로 진행됩니다.
-            </li>
-          </ul>
-        </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">자주 묻는 질문</span>
-          <h2>가기 전에 다들 물어보는 것들.</h2>
-          <div style={{ marginTop: 24 }}>
-            {FAQ.map((f) => (
-              <div key={f.q} className="faq-item">
-                <h3>Q. {f.q}</h3>
-                <p>{f.a}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section--tight">
-        <div className="container">
-          <div className="card" style={{ textAlign: "center", display: "grid", gap: 14 }}>
-            <span className="eyebrow">예약·문의는 전화로</span>
-            <h2 style={{ fontSize: "1.5rem" }}>
-              {SITE.contactName} {SITE.phone}
-            </h2>
-            <p>
-              창원 룰루랄라 나이트 예약·문의는 전화 한 통이면 됩니다.
-              만 {SITE.ageLimit}세 이상 · 신분증 확인.
-            </p>
-            <div>
-              <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
-                📞 지금 전화하기
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section--tight">
-        <div className="container">
-          <div className="notice">
-            본 사이트는 창원 룰루랄라 나이트의 공식 안내 페이지입니다. 만 {SITE.ageLimit}세 이상만
-            출입 가능하며, 입장 시 신분증 확인이 원칙입니다. 합법 영업장에서 운영되며,
-            불법·미성년 출입은 일체 금지됩니다.
-          </div>
-        </div>
-      </section>
-
-      {/* ── 지역별 나이트 정보 안내 (append) ───────────────────────────────
-          창원 룰루랄라와 별개인 다른 지역 업소 정보 페이지 목록. */}
-      <section className="section--tight" id="night">
-        <div className="container">
-          <h2 style={{ fontSize: "1.3rem" }}>지역별 나이트 정보</h2>
-          <p style={{ color: "var(--text-dim)" }}>
-            아래는 창원 룰루랄라 나이트와 운영 주체가 다른 별개 업소들의 지역·교통 정보 페이지입니다.
+          <h2>5. 성공의 정의가 바뀐 순간</h2>
+          <p>
+            3년이 지나서 그에게 성공했느냐고 물으면, 그는 애매하게 웃는다고 합니다.
+            빚은 다 갚았습니다. 다시 자기 일을 합니다. 예전만큼 크지는 않습니다.
+            그런데 본인은 이때가 훨씬 낫다고 말합니다.
           </p>
-          <ul style={{ columns: 2, columnGap: 24, paddingLeft: 18, margin: 0 }}>
-            {VENUES.map((v) => (
-              <li key={v.slug} style={{ margin: "6px 0", breakInside: "avoid" }}>
-                <Link href={`/night/${v.slug}/`}>{v.name}</Link>{" "}
-                <span style={{ color: "var(--text-dim)", fontSize: ".9rem" }}>· {v.region}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+          <p>
+            무너지기 전의 그는 성공을 <strong>숫자</strong>로 정의했습니다. 얼마를 벌었나,
+            몇 평인가, 남들이 뭐라고 하나. 그 정의로 살면 숫자가 흔들릴 때마다 사람이
+            통째로 흔들립니다. 다시 올라온 뒤 그의 정의는 이렇게 바뀌었습니다.
+          </p>
+          <blockquote className="story__quote">
+            성공은 무너지지 않는 상태가 아니라,<br />
+            무너져도 다시 시작할 수 있다는 걸 자기가 아는 상태다.
+          </blockquote>
+          <p>
+            이 정의에는 결정적인 장점이 하나 있습니다. 아무도 빼앗아 갈 수 없다는 것.
+            돈은 잃을 수 있고, 자리도 잃을 수 있고, 사람도 떠날 수 있습니다. 그런데
+            “나는 바닥에서 한 번 올라와 봤다”는 사실만은 어떤 상황에서도 남습니다.
+            한 번 해봤다는 감각은 두 번째를 훨씬 덜 무섭게 만듭니다.
+          </p>
+
+          <h2>6. 지금 바닥에 있는 사람에게</h2>
+          <p>
+            지금 상황이 나쁘다면, 아마 이 글을 읽는 동안에도 머릿속 한쪽에서는 계속
+            계산이 돌아가고 있을 겁니다. 다음 달 어떻게 하지, 이 얘기를 누구한테 하지,
+            나만 이렇게 뒤처진 건 아닐까. 그 계산은 오늘 밤에 끝나지 않습니다.
+            그러니 오늘은 그냥 이거 하나만 하십시오.
+          </p>
+          <p>
+            <strong>내일 아침에 일어날 시간을 정하고, 그 시간에 일어나는 것.</strong>{" "}
+            그게 전부입니다. 인생을 바꾸는 계획은 필요 없습니다. 지금 상태에서 세우는
+            큰 계획은 대부분 사흘 안에 무너지고, 그 무너짐이 자기혐오를 한 겹 더
+            쌓습니다. 그러니 반드시 지킬 수 있을 만큼 작게 자르십시오.
+          </p>
+          <p>
+            그다음엔 오늘 통제할 수 있는 일 하나를 골라 끝내고, 한 줄로 적어두십시오.
+            “오늘 한 일: ○○.” 시시해 보여도 상관없습니다. 그 줄이 쌓이면 어느 순간
+            증거가 됩니다. 나는 멈춰 있지 않았다는 증거요. 사람은 결심으로 바뀌지 않고
+            증거로 바뀝니다.
+          </p>
+          <p>
+            그리고 하나만 더. 지금의 이 시기는 지나갑니다. 좋아져서가 아니라, 원래
+            모든 시기는 지나가기 때문입니다. 문제는 그때 당신이 어떤 상태로 서 있느냐입니다.
+            매일 한 칸씩 쌓아온 사람과, 멈춰서 기다린 사람은 같은 시기를 통과해도 도착하는
+            자리가 다릅니다.
+          </p>
+          <p>
+            바닥에서 보내는 시간은 낭비가 아닙니다. 대부분의 사람은 인생에서 딱 한 번,
+            여기서 진짜 자기 자신을 만납니다. 여기서 배운 것은 잘 나갈 때는 절대
+            배울 수 없는 것들입니다.
+          </p>
+
+          <blockquote className="story__quote story__quote--final">
+            오늘 하루를 이겨내면, 내일의 당신은<br />
+            어제보다 정확히 하루만큼 강해져 있습니다.<br />
+            그 하루가 쌓여서 결국 사람을 바꿉니다.
+          </blockquote>
+
+          <p className="story__close">
+            지금 이 글을 끝까지 읽었다면, 당신은 이미 멈춰 있는 사람이 아닙니다.
+            멈춘 사람은 이런 글을 끝까지 읽지 않습니다.
+          </p>
+
+          <p className="story__note">
+            ※ 이 글은 특정 인물의 인터뷰나 실제 사례 기록이 아니라, 다시 일어선
+            사람들의 이야기에서 공통으로 반복되던 장면을 하나로 엮어 쓴 글입니다.
+          </p>
+        </article>
+      </main>
     </>
   );
 }

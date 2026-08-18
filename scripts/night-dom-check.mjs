@@ -3,7 +3,7 @@
 //   + .callbar 조상 체인에 transform/filter/perspective/backdrop-filter/will-change/contain 유무
 // 라이브 URL 기준으로 돌리는 것이 원칙이다. 로컬 결과는 사전 점검용.
 //
-// 사용법: node scripts/night-dom-check.mjs https://changwon1.pages.dev
+// 사용법: node scripts/night-dom-check.mjs https://changwond.pages.dev
 //   CHROME_PATH 로 크롬 실행 파일 지정 가능.
 
 import { chromium } from "playwright";

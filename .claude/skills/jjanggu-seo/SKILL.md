@@ -9,7 +9,7 @@ description: 창원 룰루랄라 나이트 짱구 담당(웨이터) 010-3854-688
 
 1. ✅ 실제 정보만 표시 (가짜 X)
 2. ✅ 합법 SEO 방법만 사용
-3. ✅ 도메인 1개 (changwon1.pages.dev)
+3. ✅ 도메인 1개 (changwond.pages.dev)
 
 ## 0-1. 호칭 룰 (중요)
 
@@ -25,7 +25,7 @@ description: 창원 룰루랄라 나이트 짱구 담당(웨이터) 010-3854-688
 - 전화: 010-3854-6887
 - 위치: 창원시 (정확한 주소 = 배선욱 대표 입력 필요)
 - 19세 이상 합법 영업장
-- 도메인: changwon1.pages.dev (Cloudflare Pages 자동 배포)
+- 도메인: changwond.pages.dev (Cloudflare Pages 자동 배포)
 
 ## 2. 페이지 구조 (15 페이지)
 
@@ -117,7 +117,7 @@ description: 창원 룰루랄라 나이트 짱구 담당(웨이터) 010-3854-688
     "addressCountry": "KR"
   },
   "telephone": "010-7528-4936",
-  "url": "https://changwon1.pages.dev",
+  "url": "https://changwond.pages.dev",
   "openingHours": "[실제 영업시간]",
   "employee": {
     "@type": "Person",
@@ -138,7 +138,7 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
-Sitemap: https://changwon1.pages.dev/sitemap.xml
+Sitemap: https://changwond.pages.dev/sitemap.xml
 ```
 
 ### C. llms.txt
@@ -179,7 +179,7 @@ Sitemap: https://changwon1.pages.dev/sitemap.xml
 
 ```bash
 # 사이트 생성
-claude "jjanggu-seo skill v2.1 적용. changwon1.pages.dev 15 페이지 생성. 실제 정보 기반"
+claude "jjanggu-seo skill v2.1 적용. changwond.pages.dev 15 페이지 생성. 실제 정보 기반"
 
 # 썸네일 생성
 claude "jjanggu-seo skill 적용. 1:1 1200×1200 짱구 담당 썸네일 생성"

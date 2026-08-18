@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // IndexNow 색인 요청 — 새로 올린 URL을 검색엔진에 알린다.
 //
-//  - 키 파일은 public/{key}.txt 에 있고, 배포 후 https://changwon1.pages.dev/{key}.txt 로
+//  - 키 파일은 public/{key}.txt 에 있고, 배포 후 https://changwond.pages.dev/{key}.txt 로
 //    접근돼야 요청이 받아들여진다. 그래서 반드시 "푸시 → 배포 완료 확인" 다음에 실행한다.
 //  - 제출처는 두 곳이다.
 //      api.indexnow.org            → Bing·Yandex·Seznam 계열로 전파
@@ -17,7 +17,7 @@ import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const HOST = "changwon1.pages.dev";
+const HOST = "changwond.pages.dev";
 const BASE = `https://${HOST}`;
 
 // public/ 안의 32자리 hex 파일명이 IndexNow 키다.
