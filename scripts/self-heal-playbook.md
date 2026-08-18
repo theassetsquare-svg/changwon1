@@ -16,8 +16,8 @@ claude "scripts/self-heal-playbook.md 절차대로 changwon1 사이트를 점검
 
 ## 1. 문제 수집 (어디서 문제가 오는가)
 1. **GitHub Issues** — label `seo` / `site-down` / `automated` 의 open 이슈 확인.
-2. **Gmail** — 제목에 `[changwon1]` 이 들어간 메일(`🚨` 알림) 검색.
-   - 쿼리 예: `subject:[changwon1] newer_than:7d`
+2. **Gmail** — 제목에 `[changwond]` 이 들어간 메일(`🚨` 알림) 검색.
+   - 쿼리 예: `subject:[changwond] newer_than:7d`
    - ⚠️ `[놀쿨]`, `[ilsan*]` 등 **다른 프로젝트 메일은 절대 건드리지 말 것.**
 3. **라이브 헬스체크** — 아래 페이지 200 응답 + 핵심 콘텐츠 확인:
    `/ /about/ /jjanggua/ /location/ /contacta/ /sitemap.xml /robots.txt /llms.txt /og-cover.png`

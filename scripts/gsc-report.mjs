@@ -102,7 +102,10 @@ async function main() {
   // 2) 대상 속성 결정
   let site = arg("site");
   if (!site) {
+    // 도메인이 changwond 로 바뀌었다. 옛 속성(changwon1)이 아직 남아 있는 동안은
+    // 새 속성을 먼저 찾고, 없으면 옛 속성으로 떨어진다.
     site =
+      entries.find((e) => e.siteUrl.includes("changwond"))?.siteUrl ||
       entries.find((e) => e.siteUrl.includes("changwon1"))?.siteUrl ||
       entries[0].siteUrl;
   }

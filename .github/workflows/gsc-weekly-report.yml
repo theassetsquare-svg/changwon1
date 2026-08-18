@@ -68,7 +68,7 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           from: 창원 룰루랄라 SEO 리포트 <${{ secrets.MAIL_USERNAME }}>
           to: ${{ secrets.ALERT_TO || 'theassetsquare@gmail.com' }}
-          subject: "📈 [changwon1] GSC 주간 검색 성과 리포트"
+          subject: "📈 [changwond] GSC 주간 검색 성과 리포트"
           body: |
             창원 룰루랄라 나이트 — Google Search Console 주간 리포트입니다.
             (검색어 순위 / 페이지 성과 / 카니발리제이션 자동 분석)
