@@ -287,7 +287,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         </div>
 
         <div className="acc-answer">
-          <h2>{venue.name} 핵심 세 줄 — 확인된 것만</h2>
+          <h2>{`${venue.name} 핵심 세 줄 — 확인된 것만`}</h2>
           <ul>
             {venue.answer.map((a, i) => (
               <li key={i}>{a}</li>
@@ -371,7 +371,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
           광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
         </div>
         <p className="acc-note">
-          본 페이지는 {venue.name} 이동 동선 안내 페이지입니다. 도보 시간·버스·막차는 확인된 자료만 실었고,
+          {`본 페이지는 ${venue.name} 이동 동선 안내 페이지입니다.`}{" "} 도보 시간·버스·막차는 확인된 자료만 실었고,
           확인되지 않은 항목은 &quot;확인 불가&quot;로 남겼습니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
           최종 갱신 <time dateTime="2026-08-17">2026년 8월 17일</time>.
         </p>

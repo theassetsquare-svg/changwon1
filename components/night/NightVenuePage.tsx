@@ -242,7 +242,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
       </article>
 
       <aside className="night-wrap night-related" aria-label="같이 보면 좋은 업소">
-        <h2>{venue.name} 페이지와 같이 보면 좋은 업소 안내</h2>
+        <h2>{`${venue.name} 페이지와 같이 보면 좋은 업소 안내`}</h2>
         <ul>
           {venue.related.map((slug) => {
             const r = VENUE_BY_SLUG[slug];
@@ -260,7 +260,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
           광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
         </div>
         <p className="footer-note">
-          본 페이지는 {venue.name} 업소 안내 페이지입니다. 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
+          {`본 페이지는 ${venue.name} 업소 안내 페이지입니다.`}{" "} 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
           최종 갱신 <time dateTime="2026-08-15">2026년 8월 15일</time>.
         </p>
       </footer>
