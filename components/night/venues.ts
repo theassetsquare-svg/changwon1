@@ -167,7 +167,7 @@ export const VENUES: NightVenue[] = [
       "자정에서 새벽 두 시가 가장 두꺼운 구간이라 늦게 오면 선택지가 없습니다.",
       "불광역 앞 통일로 730 지하. 예약은 웨이터 손흥민 010-2221-1937.",
     ],
-    related: ["suyu-shampoo-night", "sangbong-hangukgwan-night", "ilsan-shampoo-night"],
+    related: ["suyu-shampoo-night-guide", "sangbong-hangukgwan-night-guide", "ilsan-shampoo-night-guide"],
     llms: "서울 은평구 불광동 통일로 730 지하. 불광역 도보 1분. 예약 문의 웨이터 손흥민 010-2221-1937.",
   },
 
@@ -411,7 +411,7 @@ export const VENUES: NightVenue[] = [
   // 4. 청담나이트 — 각도11 인원별 공략형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "cheongdam-night",
+    slug: "cheongdam-night-guide",
     name: "청담나이트",
     nameSpaced: "청담 나이트",
     cityKeyword: "청담동 나이트클럽",
@@ -519,7 +519,7 @@ export const VENUES: NightVenue[] = [
       "자리는 인원 수와 도착 시간 두 가지로 갈립니다. 홀수 인원은 배치가 한 번 더 필요합니다.",
       "영동대로 737 지하 1층. 단체 문의는 담당 펩시맨 010-5655-4866.",
     ],
-    related: ["sangbong-hangukgwan-night", "sillim-grandprix-night", "suyu-shampoo-night"],
+    related: ["sangbong-hangukgwan-night-guide", "sillim-grandprix-night", "suyu-shampoo-night-guide"],
     llms: "서울 강남구 청담동 영동대로 737 지하1층. 청담역 도보 3~5분. 홀과 룸 구성. 문의 담당 펩시맨 010-5655-4866.",
   },
 
@@ -634,7 +634,7 @@ export const VENUES: NightVenue[] = [
       "열 시 이전 도착이 자리를 고를 수 있는 마지막 시각입니다.",
       "인원과 남녀 구성을 미리 알리면 도착 전에 자리가 정리됩니다.",
     ],
-    related: ["daejeon-seven-night", "suwon-chance-dome-night", "ansan-hit-night"],
+    related: ["daejeon-seven-night", "suwon-chance-dome-night-guide", "ansan-hit-night"],
     llms: "대전광역시 동구 용전동, 대전복합터미널 인근. 만 38세 이상 출입 기준. 지역 안내 페이지.",
   },
 
@@ -748,7 +748,7 @@ export const VENUES: NightVenue[] = [
       "열 시 전 도착이 자리를 고를 수 있는 마지막 구간입니다.",
       "이름·인원·도착 시간을 말해 둔 테이블이 홀에서 먼저 움직입니다.",
     ],
-    related: ["cheongdam-night", "suyu-shampoo-night", "sangbong-hangukgwan-night"],
+    related: ["cheongdam-night-guide", "suyu-shampoo-night-guide", "sangbong-hangukgwan-night-guide"],
     llms: "서울 관악구 신림동 신림로 340. 신림역 인근 큰길가 상가. 지역 안내 페이지.",
   },
 
@@ -756,7 +756,7 @@ export const VENUES: NightVenue[] = [
   // 7. 상봉동한국관나이트 — 각도1 정면 소개형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "sangbong-hangukgwan-night",
+    slug: "sangbong-hangukgwan-night-guide",
     name: "상봉동한국관나이트",
     nameSpaced: "상봉동 한국관나이트",
     cityKeyword: "상봉동 나이트클럽",
@@ -864,7 +864,7 @@ export const VENUES: NightVenue[] = [
       "열 시 전후에 그날 자리가 정해지고, 자정에서 새벽 두 시가 가장 두껍습니다.",
       "부킹은 두 명이나 네 명 단위로 돕니다. 인원이 짝수일 때 움직임이 빠릅니다.",
     ],
-    related: ["suyu-shampoo-night", "bulgwang-hobak-night", "ilsan-shampoo-night"],
+    related: ["suyu-shampoo-night-guide", "bulgwang-hobak-night", "ilsan-shampoo-night-guide"],
     llms: "서울 중랑구 상봉동 망우로 326 2층. 상봉역 도보 3~5분. 오후 7시~다음날 오전 6시 영업. 지역 안내 페이지.",
   },
 
@@ -872,7 +872,7 @@ export const VENUES: NightVenue[] = [
   // 8. 수유샴푸나이트 — 각도2 질문 던지기형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "suyu-shampoo-night",
+    slug: "suyu-shampoo-night-guide",
     name: "수유샴푸나이트",
     nameSpaced: "수유 샴푸나이트",
     cityKeyword: "수유 나이트클럽",
@@ -980,7 +980,7 @@ export const VENUES: NightVenue[] = [
       "열 시 전에 들어가면 자리를 고르고, 그 뒤에는 남은 자리를 받게 됩니다.",
       "도봉로 308 지하. 첫 방문이라면 무대 측면 자리를 요청하세요.",
     ],
-    related: ["bulgwang-hobak-night", "sangbong-hangukgwan-night", "sillim-grandprix-night"],
+    related: ["bulgwang-hobak-night", "sangbong-hangukgwan-night-guide", "sillim-grandprix-night"],
     llms: "서울 강북구 도봉로 308 지하. 수유역 인근 대로변. 오후 7시~새벽 5시 영업. 지역 안내 페이지.",
   },
 
@@ -1102,7 +1102,7 @@ export const VENUES: NightVenue[] = [
   // 10. 수원찬스돔나이트 — 각도4 처음 가는 사람 시점
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "suwon-chance-dome-night",
+    slug: "suwon-chance-dome-night-guide",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "수원 나이트클럽",
@@ -1208,7 +1208,7 @@ export const VENUES: NightVenue[] = [
       "처음이라면 무대 측면 자리가 가장 부담이 적습니다.",
       "권선로 673 대로변. 도착 시간만 지키면 나머지는 어렵지 않습니다.",
     ],
-    related: ["ansan-hit-night", "ilsan-shampoo-night", "cheongdam-night"],
+    related: ["ansan-hit-night", "ilsan-shampoo-night-guide", "cheongdam-night-guide"],
     llms: "경기도 수원시 권선구 권선로 673. 권선동 대로변. 지역 안내 페이지.",
   },
 
@@ -1322,7 +1322,7 @@ export const VENUES: NightVenue[] = [
       "선곡 폭이 넓어 오는 사람의 나이대도 함께 넓어집니다.",
       "상록수로 34 아카데미타워 지층. 주말은 열한 시 전 도착이 기준입니다.",
     ],
-    related: ["suwon-chance-dome-night", "ilsan-shampoo-night", "daejeon-one-night"],
+    related: ["suwon-chance-dome-night-guide", "ilsan-shampoo-night-guide", "daejeon-one-night"],
     llms: "경기도 안산시 상록구 상록수로 34 아카데미타워 지층. 상록수역 인근. 지역 안내 페이지.",
   },
 
@@ -1444,7 +1444,7 @@ export const VENUES: NightVenue[] = [
   // 13. 일산샴푸나이트 — 각도7 문답형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "ilsan-shampoo-night",
+    slug: "ilsan-shampoo-night-guide",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "일산 나이트클럽",
@@ -1593,7 +1593,7 @@ export const VENUES: NightVenue[] = [
       "네 명이 가장 무난하고, 여섯 이상이면 도착 시간이 더 중요해집니다.",
       "열 시 전 도착이 자리를 고를 수 있는 마지막 구간입니다.",
     ],
-    related: ["suwon-chance-dome-night", "ansan-hit-night", "sangbong-hangukgwan-night"],
+    related: ["suwon-chance-dome-night-guide", "ansan-hit-night", "sangbong-hangukgwan-night-guide"],
     llms: "경기도 고양시 일산동구 마두동 805-1 오원빌딩(중앙로 1160). 마두역 8번 출구 도보 3분. 지역 안내 페이지.",
   },
 ];

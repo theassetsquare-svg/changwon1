@@ -16,7 +16,7 @@
   },
   {
     "slug": "sangbong-hangukgwan-night",
-    "file": "access-sangbong-hangukgwan-night-og.png",
+    "file": "access-sangbong-hangukgwan-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 44249,
@@ -31,7 +31,7 @@
   },
   {
     "slug": "suyu-shampoo-night",
-    "file": "access-suyu-shampoo-night-og.png",
+    "file": "access-suyu-shampoo-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 37161,
@@ -46,7 +46,7 @@
   },
   {
     "slug": "cheongdam-night",
-    "file": "access-cheongdam-night-og.png",
+    "file": "access-cheongdam-night-guide-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 48956,
@@ -166,7 +166,7 @@
   },
   {
     "slug": "suwon-chance-dome-night",
-    "file": "access-suwon-chance-dome-night-og.png",
+    "file": "access-suwon-chance-dome-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 40009,
@@ -196,7 +196,7 @@
   },
   {
     "slug": "ilsan-shampoo-night",
-    "file": "access-ilsan-shampoo-night-og.png",
+    "file": "access-ilsan-shampoo-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 39416,
@@ -211,7 +211,7 @@
   },
   {
     "slug": "paju-yadang-skydome-night",
-    "file": "access-paju-yadang-skydome-night-og.png",
+    "file": "access-paju-yadang-skydome-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 44242,
@@ -226,7 +226,7 @@
   },
   {
     "slug": "guri-hobak-night",
-    "file": "access-guri-hobak-night-og.png",
+    "file": "access-guri-hobak-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 32919,
@@ -586,7 +586,7 @@
   },
   {
     "slug": "jeju-do-night",
-    "file": "access-jeju-do-night-og.png",
+    "file": "access-jeju-do-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 35620,

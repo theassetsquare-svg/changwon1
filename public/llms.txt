@@ -128,16 +128,16 @@ A. 같은 곳입니다. 정식 상호가 호박성인나이트이고, 주소는 
 - https://changwond.pages.dev/night/bulgwang-hobak-night/ — 불광동호박나이트 — 서울 은평구 불광동 — 서울 은평구 불광동 통일로 730 지하. 불광역 도보 1분. 예약 문의 웨이터 손흥민 010-2221-1937.
 - https://changwond.pages.dev/night/changwon-lululala-night/ — 창원룰루랄라나이트 — 경상남도 창원시 성산구 상남동 — 경남 창원시 성산구 상남동 마디미로43번길 10 지하3층. 만 27세 이상 출입. 예약 문의 웨이터 로또 010-7528-4936.
 - https://changwond.pages.dev/night/ulsan-champion-night/ — 울산챔피언나이트 — 울산광역시 남구 삼산동 — 울산광역시 남구 삼산동 정동로 75. 삼산동 번화가 대형 홀. 문의 담당 춘자 010-5653-0069.
-- https://changwond.pages.dev/night/cheongdam-night/ — 청담나이트 — 서울 강남구 청담동 — 서울 강남구 청담동 영동대로 737 지하1층. 청담역 도보 3~5분. 홀과 룸 구성. 문의 담당 펩시맨 010-5655-4866.
+- https://changwond.pages.dev/night/cheongdam-night-guide/ — 청담나이트 — 서울 강남구 청담동 — 서울 강남구 청담동 영동대로 737 지하1층. 청담역 도보 3~5분. 홀과 룸 구성. 문의 담당 펩시맨 010-5655-4866.
 - https://changwond.pages.dev/night/daejeon-one-night/ — 대전원나이트 — 대전광역시 동구 용전동 — 대전광역시 동구 용전동, 대전복합터미널 인근. 만 38세 이상 출입 기준. 지역 안내 페이지.
 - https://changwond.pages.dev/night/sillim-grandprix-night/ — 신림그랑프리나이트 — 서울 관악구 신림동 — 서울 관악구 신림동 신림로 340. 신림역 인근 큰길가 상가. 지역 안내 페이지.
-- https://changwond.pages.dev/night/sangbong-hangukgwan-night/ — 상봉동한국관나이트 — 서울 중랑구 상봉동 — 서울 중랑구 상봉동 망우로 326 2층. 상봉역 도보 3~5분. 오후 7시~다음날 오전 6시 영업. 지역 안내 페이지.
-- https://changwond.pages.dev/night/suyu-shampoo-night/ — 수유샴푸나이트 — 서울 강북구 수유 — 서울 강북구 도봉로 308 지하. 수유역 인근 대로변. 오후 7시~새벽 5시 영업. 지역 안내 페이지.
+- https://changwond.pages.dev/night/sangbong-hangukgwan-night-guide/ — 상봉동한국관나이트 — 서울 중랑구 상봉동 — 서울 중랑구 상봉동 망우로 326 2층. 상봉역 도보 3~5분. 오후 7시~다음날 오전 6시 영업. 지역 안내 페이지.
+- https://changwond.pages.dev/night/suyu-shampoo-night-guide/ — 수유샴푸나이트 — 서울 강북구 수유 — 서울 강북구 도봉로 308 지하. 수유역 인근 대로변. 오후 7시~새벽 5시 영업. 지역 안내 페이지.
 - https://changwond.pages.dev/night/busan-asiad-night/ — 부산아시아드나이트 — 부산광역시 동래구 온천동 — 부산광역시 동래구 온천동 온천장로107번길 32 지하1~2층. 온천장역 도보 5분. 지역 안내 페이지.
-- https://changwond.pages.dev/night/suwon-chance-dome-night/ — 수원찬스돔나이트 — 경기도 수원시 권선구 — 경기도 수원시 권선구 권선로 673. 권선동 대로변. 지역 안내 페이지.
+- https://changwond.pages.dev/night/suwon-chance-dome-night-guide/ — 수원찬스돔나이트 — 경기도 수원시 권선구 — 경기도 수원시 권선구 권선로 673. 권선동 대로변. 지역 안내 페이지.
 - https://changwond.pages.dev/night/ansan-hit-night/ — 안산히트나이트 — 경기도 안산시 상록구 — 경기도 안산시 상록구 상록수로 34 아카데미타워 지층. 상록수역 인근. 지역 안내 페이지.
 - https://changwond.pages.dev/night/daejeon-seven-night/ — 대전세븐나이트 — 대전광역시 중구 유천동 — 대전광역시 중구 유천동 당디로 112. 홀과 별도 방 구성. 지역 안내 페이지.
-- https://changwond.pages.dev/night/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기도 고양시 일산동구 마두동 — 경기도 고양시 일산동구 마두동 805-1 오원빌딩(중앙로 1160). 마두역 8번 출구 도보 3분. 지역 안내 페이지.
+- https://changwond.pages.dev/night/ilsan-shampoo-night-guide/ — 일산샴푸나이트 — 경기도 고양시 일산동구 마두동 — 경기도 고양시 일산동구 마두동 805-1 오원빌딩(중앙로 1160). 마두역 8번 출구 도보 3분. 지역 안내 페이지.
 
 <!-- ACCESS:START -->
 
@@ -150,9 +150,9 @@ A. 같은 곳입니다. 정식 상호가 호박성인나이트이고, 주소는 
 
 - 허브: https://changwond.pages.dev/access/ — 전국 나이트 가는 길 40 (지역별 목록)
 - https://changwond.pages.dev/access/sillim-grandprix-night/ — 신림그랑프리나이트 — 서울특별시 관악구 신림로 340. 가까운 역: 신림역 (큰길가에 면한 위치까지만 확인). 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/sangbong-hangukgwan-night/ — 상봉동한국관나이트 — 서울특별시 중랑구 망우로 326, 2층. 가까운 역: 상봉역. 역에서 도보: 3~5분 (확인됨).
-- https://changwond.pages.dev/access/suyu-shampoo-night/ — 수유샴푸나이트 — 서울특별시 강북구 도봉로 308 지하. 가까운 역: 수유역 (대로변 인근까지 확인). 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/cheongdam-night/ — 청담나이트 — 서울특별시 강남구 영동대로 737 지하1층. 가까운 역: 청담역. 역에서 도보: 3~5분 (확인됨). 문의 펩시맨 010-5655-4866.
+- https://changwond.pages.dev/access/sangbong-hangukgwan-night-guide/ — 상봉동한국관나이트 — 서울특별시 중랑구 망우로 326, 2층. 가까운 역: 상봉역. 역에서 도보: 3~5분 (확인됨).
+- https://changwond.pages.dev/access/suyu-shampoo-night-guide/ — 수유샴푸나이트 — 서울특별시 강북구 도봉로 308 지하. 가까운 역: 수유역 (대로변 인근까지 확인). 역에서 도보: 확인 불가.
+- https://changwond.pages.dev/access/cheongdam-night-guide/ — 청담나이트 — 서울특별시 강남구 영동대로 737 지하1층. 가까운 역: 청담역. 역에서 도보: 3~5분 (확인됨). 문의 펩시맨 010-5655-4866.
 - https://changwond.pages.dev/access/bulgwang-hobak-night/ — 불광동호박나이트 — 서울특별시 은평구 통일로 730 지하. 가까운 역: 불광역 (3호선·6호선). 역에서 도보: 1분 안팎, 약 50m (확인됨). 문의 손흥민 010-2221-1937.
 - https://changwond.pages.dev/access/doksan-gukbingwan-night/ — 독산동국빈관나이트 — 서울특별시 금천구 범안로 1209, 협진식품빌딩 3층. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/dapsimni-miracle-night/ — 답십리미라클나이트 — 서울 동대문구 답십리 (상세 주소 확인 불가). 가까운 역: 확인 불가 (답십리 일대는 5호선 답십리역 구역). 역에서 도보: 확인 불가.
@@ -160,11 +160,11 @@ A. 같은 곳입니다. 정식 상호가 호박성인나이트이고, 주소는 
 - https://changwond.pages.dev/access/yeongdeungpo-terminal-night/ — 영등포터미널나이트 — 서울특별시 영등포구 영중로8길 6, 성남빌딩. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/nowon-hobak-night/ — 노원호박나이트 — 서울특별시 노원구 노해로 456, 동방빌딩. 가까운 역: 노원역 인근 (확인됨). 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/gildong-chance-night/ — 길동찬스나이트 — 서울특별시 강동구 천호대로 1135 지하1층. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/suwon-chance-dome-night/ — 수원찬스돔나이트 — 경기도 수원시 권선구 권선로 673. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
+- https://changwond.pages.dev/access/suwon-chance-dome-night-guide/ — 수원찬스돔나이트 — 경기도 수원시 권선구 권선로 673. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/ansan-hit-night/ — 안산히트나이트 — 경기도 안산시 상록구 상록수로 34, 상록수아카데미타워 지층. 가까운 역: 상록수역 인근 (확인됨). 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/ilsan-shampoo-night/ — 일산샴푸나이트 — 경기도 고양시 일산동구 중앙로 1160. 가까운 역: 마두역 8번 출구 (확인됨). 역에서 도보: 3분 (확인됨).
-- https://changwond.pages.dev/access/paju-yadang-skydome-night/ — 파주야당스카이돔나이트 — 경기도 파주시 야당동 유은타워 7차 B동 5층. 가까운 역: 야당역 인근 (확인됨). 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/guri-hobak-night/ — 구리호박나이트 — 경기도 구리시 (상세 주소 확인 불가). 가까운 역: 확인 불가 (구리 일대는 구리역·도농역 구역). 역에서 도보: 확인 불가.
+- https://changwond.pages.dev/access/ilsan-shampoo-night-guide/ — 일산샴푸나이트 — 경기도 고양시 일산동구 중앙로 1160. 가까운 역: 마두역 8번 출구 (확인됨). 역에서 도보: 3분 (확인됨).
+- https://changwond.pages.dev/access/paju-yadang-skydome-night-guide/ — 파주야당스카이돔나이트 — 경기도 파주시 야당동 유은타워 7차 B동 5층. 가까운 역: 야당역 인근 (확인됨). 역에서 도보: 확인 불가.
+- https://changwond.pages.dev/access/guri-hobak-night-guide/ — 구리호박나이트 — 경기도 구리시 (상세 주소 확인 불가). 가까운 역: 확인 불가 (구리 일대는 구리역·도농역 구역). 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/uijeongbu-hangukgwan-night/ — 의정부한국관나이트 — 경기도 의정부시 의정부동 157-7. 가까운 역: 의정부중앙역 (확인됨). 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/uijeongbu-baekakgwan-night/ — 의정부백악관나이트 — 경기도 의정부시 태평로 104, 경복빌딩. 가까운 역: 의정부중앙역 (확인됨). 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/suwon-korea-night/ — 수원코리아나이트 — 경기도 수원시 팔달구 경수대로 430. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
@@ -188,6 +188,6 @@ A. 같은 곳입니다. 정식 상호가 호박성인나이트이고, 주소는 
 - https://changwond.pages.dev/access/gumi-hobak-night/ — 구미호박나이트 — 경상북도 구미시 원동 (상세 주소 확인 불가). 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/gwangju-sangmu-night/ — 광주상무나이트 — 광주광역시 서구 상무번영로 30, 2~3층. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 - https://changwond.pages.dev/access/gwangju-cheomdan-night/ — 광주첨단나이트 — 광주광역시 광산구 임방울대로800번길 52. 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
-- https://changwond.pages.dev/access/jeju-do-night/ — 제주도나이트 — 제주특별자치도 제주시 (상세 주소 확인 불가). 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
+- https://changwond.pages.dev/access/jeju-do-night-guide/ — 제주도나이트 — 제주특별자치도 제주시 (상세 주소 확인 불가). 가까운 역: 확인 불가. 역에서 도보: 확인 불가.
 
 <!-- ACCESS:END -->

@@ -308,7 +308,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 일산샴푸나이트는 마두역 8번 출구 도보 3분에 중앙로 1160 오원빌딩이라 들어가는 길은 완전히 확인되지만, 서울로 나갈 때 환승 연결이 끊기는 시각은 따로 봐야 합니다.",
-    related: ["paju-yadang-skydome-night", "uijeongbu-baekakgwan-night", "bucheon-gorae-night"],
+    related: ["paju-yadang-skydome-night-guide", "uijeongbu-baekakgwan-night", "bucheon-gorae-night"],
     sources: [
       "업소 주소·출구·도보 시간 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -318,7 +318,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 15 ─────────────────────────────────────────────────────────────────
   {
-    slug: "paju-yadang-skydome-night",
+    slug: "paju-yadang-skydome-night-guide",
     name: "파주야당스카이돔나이트",
     nameSpaced: "파주 야당스카이돔나이트",
     cityKeyword: "야당동 나이트클럽",
@@ -410,7 +410,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 파주야당스카이돔나이트는 야당동 유은타워 7차 B동 5층이라 동과 층을 알고 가는 게 전부이고, 돌아올 때는 야당역 막차 시각을 미리 확인해 두는 게 안전합니다.",
-    related: ["ilsan-shampoo-night", "uijeongbu-baekakgwan-night", "guri-hobak-night"],
+    related: ["ilsan-shampoo-night", "uijeongbu-baekakgwan-night", "guri-hobak-night-guide"],
     sources: [
       "위치·입구·층 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 도로명 상세 번지는 공개 자료에서 확인되지 않음",
       GG_LAST_TRAIN,
@@ -420,7 +420,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 16 ─────────────────────────────────────────────────────────────────
   {
-    slug: "guri-hobak-night",
+    slug: "guri-hobak-night-guide",
     name: "구리호박나이트",
     nameSpaced: "구리 호박나이트",
     cityKeyword: "구리시 나이트클럽",
@@ -613,7 +613,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부한국관나이트는 의정부동 157-7이라는 지번과 의정부중앙역까지만 확정되고 건물 표기는 엇갈리니, 지번으로 위치를 잡고 입구는 도착 전에 확인하는 게 맞습니다.",
-    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night", "guri-hobak-night"],
+    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night", "guri-hobak-night-guide"],
     sources: [
       "지번·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인). 건물명·층 표기는 자료마다 상이해 확정하지 않음",
       GG_LAST_TRAIN,
@@ -716,7 +716,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부백악관나이트는 태평로 104 경복빌딩이고 의정부중앙역이 기준이라, 역 이름만이 아니라 태평로라는 도로명을 같이 기억하면 지상에서 헤맬 일이 없습니다.",
-    related: ["uijeongbu-hangukgwan-night", "guri-hobak-night", "paju-yadang-skydome-night"],
+    related: ["uijeongbu-hangukgwan-night", "guri-hobak-night-guide", "paju-yadang-skydome-night-guide"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
