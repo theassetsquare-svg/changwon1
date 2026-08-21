@@ -10,7 +10,7 @@ const GG_NIGHT_BUS =
 export const GYEONGGI: AccessVenue[] = [
   // ── 12 ─────────────────────────────────────────────────────────────────
   {
-    slug: "suwon-chance-dome-night-guide",
+    slug: "suwon-chance-dome-night-hall",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "권선동 나이트클럽",
@@ -205,7 +205,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 안산히트나이트는 상록수로 34 상록수아카데미타워 지층이라 건물 하나만 찾으면 도착이지만, 서울로 돌아갈 거면 상록수역 막차를 먼저 확인해 두는 게 맞습니다.",
-    related: ["suwon-chance-dome-night-guide", "bucheon-gorae-night", "incheon-arabian-night"],
+    related: ["suwon-chance-dome-night-hall", "bucheon-gorae-night", "incheon-arabian-night"],
     sources: [
       "업소 주소·건물 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -215,7 +215,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 14 ─────────────────────────────────────────────────────────────────
   {
-    slug: "ilsan-shampoo-night-guide",
+    slug: "ilsan-shampoo-night-hall",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "마두동 나이트클럽",
@@ -410,7 +410,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 파주야당스카이돔나이트는 야당동 유은타워 7차 B동 5층이라 동과 층을 알고 가는 게 전부이고, 돌아올 때는 야당역 막차 시각을 미리 확인해 두는 게 안전합니다.",
-    related: ["ilsan-shampoo-night-guide", "uijeongbu-baekakgwan-night", "guri-hobak-night-hall"],
+    related: ["ilsan-shampoo-night-hall", "uijeongbu-baekakgwan-night", "guri-hobak-night-hall"],
     sources: [
       "위치·입구·층 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 도로명 상세 번지는 공개 자료에서 확인되지 않음",
       GG_LAST_TRAIN,
@@ -511,7 +511,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 구리호박나이트는 돌다리 일대라는 표기 외에 주소가 확인 불가이니 위치는 직접 확인하셔야 하고, 대신 서울과 붙어 있어 막차 이후 귀가 부담은 작은 동네입니다.",
-    related: ["sangbong-hangukgwan-night-guide", "nowon-hobak-night", "uijeongbu-hangukgwan-night"],
+    related: ["sangbong-hangukgwan-night-hall", "nowon-hobak-night", "uijeongbu-hangukgwan-night"],
     sources: [
       "지역 표기 — 업소명과 함께 확인되는 구리시 돌다리 일대 정보. 도로명 주소·지번은 공개 자료에서 확인되지 않음 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -818,7 +818,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 수원코리아나이트는 경수대로 430에 수원역 택시 10분이라 걷는 거리가 아니고, 돌아갈 때는 택시 10분에 막차 시각을 더해 역산해야 합니다.",
-    related: ["suwon-chance-dome-night-guide", "osan-hobak-night", "seongnam-shampoo-night"],
+    related: ["suwon-chance-dome-night-hall", "osan-hobak-night", "seongnam-shampoo-night"],
     sources: [
       "업소 주소·수원역 택시 소요 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 영업 시간은 자료마다 요일별 표기가 달라 확정하지 않음",
       GG_LAST_TRAIN,

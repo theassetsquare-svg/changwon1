@@ -1,7 +1,7 @@
 [
   {
     "slug": "sillim-grandprix-night",
-    "file": "access-sillim-grandprix-night-guide-og.png",
+    "file": "access-sillim-grandprix-night-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 38522,
@@ -16,7 +16,7 @@
   },
   {
     "slug": "sangbong-hangukgwan-night",
-    "file": "access-sangbong-hangukgwan-night-guide-hall-og.png",
+    "file": "access-sangbong-hangukgwan-night-hall-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 44249,
@@ -31,7 +31,7 @@
   },
   {
     "slug": "suyu-shampoo-night",
-    "file": "access-suyu-shampoo-night-guide-hall-og.png",
+    "file": "access-suyu-shampoo-night-hall-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 37161,
@@ -46,7 +46,7 @@
   },
   {
     "slug": "cheongdam-night",
-    "file": "access-cheongdam-night-hall-og.png",
+    "file": "access-night-cheongdam-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 48956,
@@ -61,7 +61,7 @@
   },
   {
     "slug": "bulgwang-hobak-night",
-    "file": "access-bulgwang-hobak-guide-night-guide-og.png",
+    "file": "access-bulgwang-hobak-hall-night-guide-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 51140,
@@ -166,7 +166,7 @@
   },
   {
     "slug": "suwon-chance-dome-night",
-    "file": "access-suwon-chance-dome-night-guide-hall-og.png",
+    "file": "access-suwon-chance-dome-night-hall-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 40009,
@@ -196,7 +196,7 @@
   },
   {
     "slug": "ilsan-shampoo-night",
-    "file": "access-ilsan-shampoo-night-guide-hall-og.png",
+    "file": "access-ilsan-shampoo-night-hall-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 39416,
@@ -376,7 +376,7 @@
   },
   {
     "slug": "daejeon-seven-night",
-    "file": "access-daejeon-seven-night-og.png",
+    "file": "access-daejeon-seven-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 38373,
@@ -481,7 +481,7 @@
   },
   {
     "slug": "changwon-lululala-night",
-    "file": "access-changwon-lululala-night-guide-og.png",
+    "file": "access-changwon-lululala-night-hall-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 54640,
@@ -496,7 +496,7 @@
   },
   {
     "slug": "ulsan-champion-night",
-    "file": "access-ulsan-champion-night-guide-og.png",
+    "file": "access-ulsan-champion-night-hall-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 54634,
