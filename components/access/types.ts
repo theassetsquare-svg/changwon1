@@ -31,6 +31,8 @@ export type AccessVenue = {
   /** A = 광고주 있음(전화바), B = 광고주 없음(광고문의 바) */
   group: "A" | "B";
   contact?: { name: string; phone: string; tel: string };
+  /** 썸네일 파일명 뒤에 붙일 판 번호. 그림을 바꿨을 때 캐시를 피하려고 쓴다. 없으면 기존 그대로. */
+  ogV?: string;
   ageLabel?: string;
   /** 페이지별 교통 각도. 40개가 전부 다르다 */
   angle: { no: number; name: string };

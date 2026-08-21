@@ -98,7 +98,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
 
   const path = `${NIGHT_BASE}/${venue.slug}/`;
   const url = `${SITE.url}${path}`;
-  const ogImage = `${SITE.url}/og/${venue.slug}-og.png`;
+  const ogImage = `${SITE.url}/og/${venue.slug}-og${venue.ogV ?? ""}.png`;
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -204,7 +204,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
           </p>
         </div>
 
-        <PageThumb src={`/og/${venue.slug}-og.png`} alt={venue.ogAlt} />
+        <PageThumb src={`/og/${venue.slug}-og${venue.ogV ?? ""}.png`} alt={venue.ogAlt} />
 
         {venue.facts ? (
           <div className="night-facts">

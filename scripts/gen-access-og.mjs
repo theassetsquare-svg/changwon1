@@ -223,7 +223,7 @@ for (let i = 0; i < VENUES.length; i++) {
     fail++;
   }
 
-  const file = join(OUT, `access-${v.slug}-og.png`);
+  const file = join(OUT, `access-${v.slug}-og${v.ogV ?? ""}.png`);
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(file);
   const meta = await sharp(file).metadata();
   const bytes = (await stat(file)).size;

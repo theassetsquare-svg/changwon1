@@ -173,7 +173,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
   const path = `${ACCESS_BASE}/${venue.slug}/`;
   const url = `${SITE.url}${path}`;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
-  const thumbPath = `/og/access-${venue.slug}-og.png`;
+  const thumbPath = `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
   const ogImage = `${SITE.url}${thumbPath}`;
   const ogAlt = `${venue.nameSpaced} 가는 길·귀가 안내`;
 

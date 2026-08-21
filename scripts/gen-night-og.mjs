@@ -30,7 +30,7 @@ const BAND_TOP = 720; // 1200 * 0.60
 const raw = execSync(
   `node --experimental-strip-types -e ` +
     `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
-    `m.VENUES.map(v=>({slug:v.slug,name:v.name,cityKeyword:v.cityKeyword,og:v.og,alt:v.ogAlt,group:v.group,contact:v.contact})))))"`,
+    `m.VENUES.map(v=>({slug:v.slug,name:v.name,cityKeyword:v.cityKeyword,og:v.og,alt:v.ogAlt,group:v.group,contact:v.contact,ogV:v.ogV})))))"`,
   { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
 );
 const VENUES = JSON.parse(raw);
@@ -185,7 +185,7 @@ for (const v of VENUES) {
     fail++;
   }
 
-  const file = join(OUT, `${v.slug}-og.png`);
+  const file = join(OUT, `${v.slug}-og${v.ogV ?? ""}.png`);
   await sharp(Buffer.from(svg)).png({ compressionLevel: 9 }).toFile(file);
   const meta = await sharp(file).metadata();
 

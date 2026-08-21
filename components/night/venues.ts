@@ -35,6 +35,8 @@ export type NightVenue = {
   /** A = 광고주 있음(전화바), B = 광고주 없음(광고문의 바) */
   group: "A" | "B";
   contact?: { name: string; phone: string; tel: string };
+  /** 썸네일 파일명 뒤에 붙일 판 번호. 그림을 바꿨을 때 메신저·검색 캐시를 피하려고 쓴다. 없으면 기존 그대로. */
+  ogV?: string;
   /** 확정된 출입 연령. 항상 완전문("만 27세 이상")으로만 쓴다 */
   ageLabel?: string;
   angle: { no: number; name: string; suffix: string };
@@ -1338,7 +1340,9 @@ export const VENUES: NightVenue[] = [
     addressLocality: "대전광역시 중구",
     addressRegion: "대전광역시",
     streetAddress: "당디로 112",
-    group: "B",
+    group: "A",
+    contact: { name: "영탁", phone: "010-7770-0869", tel: "01077700869" },
+    ogV: "-v2",
     angle: { no: 6, name: "오해 깨기형", suffix: "예상과 다른 점" },
     title: "대전세븐나이트 유천동 당디로 큰길 예상과 다른 점",
     description:

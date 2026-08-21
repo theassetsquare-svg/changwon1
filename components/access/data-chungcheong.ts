@@ -19,7 +19,9 @@ export const CHUNGCHEONG: AccessVenue[] = [
     addressRegion: "대전광역시",
     streetAddress: "당디로 112",
     jibun: "대전광역시 중구 유천동 332-28",
-    group: "B",
+    group: "A",
+    contact: { name: "영탁", phone: "010-7770-0869", tel: "01077700869" },
+    ogV: "-v2",
     angle: { no: 26, name: "생활권 도로형" },
     title: "대전세븐나이트, 당디로에서 방향을 잡는 순서",
     description:
