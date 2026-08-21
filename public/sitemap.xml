@@ -51,11 +51,11 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/bulgwang-hobak/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/bulgwang-hobak-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/bulgwang-hobak/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/bulgwang-hobak-guide/" />
     <image:image>
       <image:loc>https://changwond.pages.dev/og-bulgwang.png</image:loc>
     </image:image>
@@ -67,7 +67,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/bulgwang-hobak-night/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/bulgwang-hobak-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/bulgwang-hobak-guide-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -77,27 +77,27 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/changwon-lululala-night/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/changwon-lululala-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/changwon-lululala-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/night/ulsan-champion-night/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/ulsan-champion-night/" />
-    <image:image>
-      <image:loc>https://changwond.pages.dev/og/ulsan-champion-night-og.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://changwond.pages.dev/night/cheongdam-night-guide/</loc>
+    <loc>https://changwond.pages.dev/night/ulsan-champion-night-guide/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/cheongdam-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/ulsan-champion-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/cheongdam-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/ulsan-champion-night-guide-og.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://changwond.pages.dev/night/cheongdam-night-hall/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/cheongdam-night-hall/" />
+    <image:image>
+      <image:loc>https://changwond.pages.dev/og/cheongdam-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -111,33 +111,33 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/night/sillim-grandprix-night/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/sillim-grandprix-night/" />
-    <image:image>
-      <image:loc>https://changwond.pages.dev/og/sillim-grandprix-night-og.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://changwond.pages.dev/night/sangbong-hangukgwan-night-guide/</loc>
+    <loc>https://changwond.pages.dev/night/sillim-grandprix-night-guide/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/sangbong-hangukgwan-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/sillim-grandprix-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/sangbong-hangukgwan-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/sillim-grandprix-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/night/suyu-shampoo-night-guide/</loc>
+    <loc>https://changwond.pages.dev/night/sangbong-hangukgwan-night-hall/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/suyu-shampoo-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/sangbong-hangukgwan-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/suyu-shampoo-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/sangbong-hangukgwan-night-guide-hall-og.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://changwond.pages.dev/night/suyu-shampoo-night-hall/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/suyu-shampoo-night-hall/" />
+    <image:image>
+      <image:loc>https://changwond.pages.dev/og/suyu-shampoo-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -151,13 +151,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/night/suwon-chance-dome-night-guide/</loc>
+    <loc>https://changwond.pages.dev/night/suwon-chance-dome-night-hall/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/suwon-chance-dome-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/suwon-chance-dome-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/suwon-chance-dome-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/suwon-chance-dome-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -181,13 +181,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/night/ilsan-shampoo-night-guide/</loc>
+    <loc>https://changwond.pages.dev/night/ilsan-shampoo-night-hall/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/ilsan-shampoo-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/ilsan-shampoo-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/ilsan-shampoo-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/ilsan-shampoo-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -261,13 +261,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/suwon-chance-dome-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/suwon-chance-dome-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/suwon-chance-dome-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/suwon-chance-dome-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-suwon-chance-dome-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-suwon-chance-dome-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -281,33 +281,33 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/ilsan-shampoo-night/</loc>
-    <lastmod>2026-08-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/ilsan-shampoo-night/" />
-    <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-ilsan-shampoo-night-guide-og.png</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://changwond.pages.dev/access/paju-yadang-skydome-night-guide/</loc>
+    <loc>https://changwond.pages.dev/access/ilsan-shampoo-night-guide/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/paju-yadang-skydome-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/ilsan-shampoo-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-paju-yadang-skydome-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-ilsan-shampoo-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/guri-hobak-night-guide/</loc>
+    <loc>https://changwond.pages.dev/access/paju-yadang-skydome-night-hall/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/guri-hobak-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/paju-yadang-skydome-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-guri-hobak-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-paju-yadang-skydome-night-hall-og.png</image:loc>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://changwond.pages.dev/access/guri-hobak-night-hall/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/guri-hobak-night-hall/" />
+    <image:image>
+      <image:loc>https://changwond.pages.dev/og/access-guri-hobak-night-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -421,13 +421,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/jeju-do-night-guide/</loc>
+    <loc>https://changwond.pages.dev/access/jeju-do-night-hall/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/jeju-do-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/jeju-do-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-jeju-do-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-jeju-do-night-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -437,47 +437,47 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/sillim-grandprix-night/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-sillim-grandprix-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-sillim-grandprix-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/sangbong-hangukgwan-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/sangbong-hangukgwan-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/sangbong-hangukgwan-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/sangbong-hangukgwan-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-sangbong-hangukgwan-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-sangbong-hangukgwan-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/suyu-shampoo-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/suyu-shampoo-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/suyu-shampoo-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/suyu-shampoo-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-suyu-shampoo-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-suyu-shampoo-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/cheongdam-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/cheongdam-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/cheongdam-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/cheongdam-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-cheongdam-night-guide-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-cheongdam-night-guide-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/bulgwang-hobak-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/bulgwang-hobak-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/bulgwang-hobak-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/bulgwang-hobak-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-bulgwang-hobak-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-bulgwang-hobak-guide-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -551,13 +551,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/changwon-lululala-night/</loc>
-    <lastmod>2026-08-18</lastmod>
+    <loc>https://changwond.pages.dev/access/changwon-lululala-night-guide/</loc>
+    <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/changwon-lululala-night/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/changwon-lululala-night-guide/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-changwon-lululala-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-changwon-lululala-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -567,7 +567,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/ulsan-champion-night/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-ulsan-champion-night-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-ulsan-champion-night-guide-og.png</image:loc>
     </image:image>
   </url>
   <url>

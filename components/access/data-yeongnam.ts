@@ -103,7 +103,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 부산아시아드나이트는 온천장로107번길 32 지하 1~2층에 온천장역 도보 5분이라, 본길이 아니라 107번길이라는 갈래 번호를 기억하는 게 전부입니다.",
-    related: ["changwon-lululala-night", "ulsan-champion-night", "daegu-hobak-night"],
+    related: ["changwon-lululala-night-guide", "ulsan-champion-night", "daegu-hobak-night"],
     sources: [
       "업소 주소·역 도보 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       YN_TRANSIT,
@@ -112,7 +112,7 @@ export const YEONGNAM: AccessVenue[] = [
 
   // ── 33 ─────────────────────────────────────────────────────────────────
   {
-    slug: "changwon-lululala-night",
+    slug: "changwon-lululala-night-guide",
     name: "창원룰루랄라나이트",
     nameSpaced: "창원 룰루랄라나이트",
     cityKeyword: "상남동 나이트클럽",
@@ -318,7 +318,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 울산챔피언나이트는 정동로 75 삼산동 1559-17이고 울산은 도시철도가 없으니, 간판이 아니라 번지로 좁히고 입구는 춘자 010-5653-0069으로 맞추면 됩니다.",
-    related: ["ulsan-newworld-night", "busan-asiad-night", "changwon-lululala-night"],
+    related: ["ulsan-newworld-night", "busan-asiad-night", "changwon-lululala-night-guide"],
     sources: [
       "업소 주소·담당 연락처 — 업소 안내 페이지 등재 정보 (2026년 8월 확인)",
       "울산 시내 대중교통 — 울산에는 도시철도 노선이 없어 시내버스·택시가 기본 이동 수단입니다",

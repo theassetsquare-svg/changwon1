@@ -10,7 +10,7 @@ const GG_NIGHT_BUS =
 export const GYEONGGI: AccessVenue[] = [
   // ── 12 ─────────────────────────────────────────────────────────────────
   {
-    slug: "suwon-chance-dome-night",
+    slug: "suwon-chance-dome-night-guide",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "권선동 나이트클럽",
@@ -205,7 +205,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 안산히트나이트는 상록수로 34 상록수아카데미타워 지층이라 건물 하나만 찾으면 도착이지만, 서울로 돌아갈 거면 상록수역 막차를 먼저 확인해 두는 게 맞습니다.",
-    related: ["suwon-chance-dome-night", "bucheon-gorae-night", "incheon-arabian-night"],
+    related: ["suwon-chance-dome-night-guide", "bucheon-gorae-night", "incheon-arabian-night"],
     sources: [
       "업소 주소·건물 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -215,7 +215,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 14 ─────────────────────────────────────────────────────────────────
   {
-    slug: "ilsan-shampoo-night",
+    slug: "ilsan-shampoo-night-guide",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "마두동 나이트클럽",
@@ -308,7 +308,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 일산샴푸나이트는 마두역 8번 출구 도보 3분에 중앙로 1160 오원빌딩이라 들어가는 길은 완전히 확인되지만, 서울로 나갈 때 환승 연결이 끊기는 시각은 따로 봐야 합니다.",
-    related: ["paju-yadang-skydome-night-guide", "uijeongbu-baekakgwan-night", "bucheon-gorae-night"],
+    related: ["paju-yadang-skydome-night-hall", "uijeongbu-baekakgwan-night", "bucheon-gorae-night"],
     sources: [
       "업소 주소·출구·도보 시간 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -318,7 +318,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 15 ─────────────────────────────────────────────────────────────────
   {
-    slug: "paju-yadang-skydome-night-guide",
+    slug: "paju-yadang-skydome-night-hall",
     name: "파주야당스카이돔나이트",
     nameSpaced: "파주 야당스카이돔나이트",
     cityKeyword: "야당동 나이트클럽",
@@ -410,7 +410,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 파주야당스카이돔나이트는 야당동 유은타워 7차 B동 5층이라 동과 층을 알고 가는 게 전부이고, 돌아올 때는 야당역 막차 시각을 미리 확인해 두는 게 안전합니다.",
-    related: ["ilsan-shampoo-night", "uijeongbu-baekakgwan-night", "guri-hobak-night-guide"],
+    related: ["ilsan-shampoo-night-guide", "uijeongbu-baekakgwan-night", "guri-hobak-night-hall"],
     sources: [
       "위치·입구·층 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 도로명 상세 번지는 공개 자료에서 확인되지 않음",
       GG_LAST_TRAIN,
@@ -420,7 +420,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 16 ─────────────────────────────────────────────────────────────────
   {
-    slug: "guri-hobak-night-guide",
+    slug: "guri-hobak-night-hall",
     name: "구리호박나이트",
     nameSpaced: "구리 호박나이트",
     cityKeyword: "구리시 나이트클럽",
@@ -511,7 +511,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 구리호박나이트는 돌다리 일대라는 표기 외에 주소가 확인 불가이니 위치는 직접 확인하셔야 하고, 대신 서울과 붙어 있어 막차 이후 귀가 부담은 작은 동네입니다.",
-    related: ["sangbong-hangukgwan-night", "nowon-hobak-night", "uijeongbu-hangukgwan-night"],
+    related: ["sangbong-hangukgwan-night-guide", "nowon-hobak-night", "uijeongbu-hangukgwan-night"],
     sources: [
       "지역 표기 — 업소명과 함께 확인되는 구리시 돌다리 일대 정보. 도로명 주소·지번은 공개 자료에서 확인되지 않음 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -613,7 +613,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부한국관나이트는 의정부동 157-7이라는 지번과 의정부중앙역까지만 확정되고 건물 표기는 엇갈리니, 지번으로 위치를 잡고 입구는 도착 전에 확인하는 게 맞습니다.",
-    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night", "guri-hobak-night-guide"],
+    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night", "guri-hobak-night-hall"],
     sources: [
       "지번·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인). 건물명·층 표기는 자료마다 상이해 확정하지 않음",
       GG_LAST_TRAIN,
@@ -716,7 +716,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부백악관나이트는 태평로 104 경복빌딩이고 의정부중앙역이 기준이라, 역 이름만이 아니라 태평로라는 도로명을 같이 기억하면 지상에서 헤맬 일이 없습니다.",
-    related: ["uijeongbu-hangukgwan-night", "guri-hobak-night-guide", "paju-yadang-skydome-night-guide"],
+    related: ["uijeongbu-hangukgwan-night", "guri-hobak-night-hall", "paju-yadang-skydome-night-hall"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -818,7 +818,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 수원코리아나이트는 경수대로 430에 수원역 택시 10분이라 걷는 거리가 아니고, 돌아갈 때는 택시 10분에 막차 시각을 더해 역산해야 합니다.",
-    related: ["suwon-chance-dome-night", "osan-hobak-night", "seongnam-shampoo-night"],
+    related: ["suwon-chance-dome-night-guide", "osan-hobak-night", "seongnam-shampoo-night"],
     sources: [
       "업소 주소·수원역 택시 소요 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 영업 시간은 자료마다 요일별 표기가 달라 확정하지 않음",
       GG_LAST_TRAIN,
@@ -1127,7 +1127,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 성남샴푸나이트는 광명로 21에 모란역이 기준이라 서울 어디서든 경로가 하나로 모이고, 돌아갈 때는 8호선과 수인분당선 막차 시각이 다르다는 점만 챙기면 됩니다.",
-    related: ["cheongdam-night", "suwon-korea-night", "gildong-chance-night"],
+    related: ["cheongdam-night-guide", "suwon-korea-night", "gildong-chance-night"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
