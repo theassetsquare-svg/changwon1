@@ -318,7 +318,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 4 ──────────────────────────────────────────────────────────────────
   {
-    slug: "cheongdam-night-guide",
+    slug: "cheongdam-night",
     name: "청담나이트",
     nameSpaced: "청담 나이트",
     cityKeyword: "청담동 나이트클럽",
@@ -1132,7 +1132,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 길동찬스나이트는 천호대로 1135 지하1층에 강동역 420m·길동역 460m로 거의 같으니 오는 방향으로 역을 고르고, 차를 가져가면 발렛 1만 원이 확인된 조건입니다.",
-    related: ["cheongdam-night-guide", "sangbong-hangukgwan-night-guide", "seongnam-shampoo-night"],
+    related: ["cheongdam-night", "sangbong-hangukgwan-night-guide", "seongnam-shampoo-night"],
     sources: [
       "업소 주소·출구별 거리·주차 — 업소 안내 페이지 등재 정보 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,

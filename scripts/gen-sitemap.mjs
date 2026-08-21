@@ -24,7 +24,7 @@ const PAGES = [
   { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-guide-night-guide-og.png" },
   { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-guide-og.png" },
   { path: "/night/ulsan-champion-night-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-night-guide-og.png" },
-  { path: "/night/cheongdam-night-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-night-guide-hall-og.png" },
+  { path: "/night/cheongdam-night-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-night-hall-og.png" },
   { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
   { path: "/night/sillim-grandprix-night-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-night-guide-og.png" },
   { path: "/night/sangbong-hangukgwan-night-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-night-guide-hall-og.png" },

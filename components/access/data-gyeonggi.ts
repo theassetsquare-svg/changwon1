@@ -1127,7 +1127,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 성남샴푸나이트는 광명로 21에 모란역이 기준이라 서울 어디서든 경로가 하나로 모이고, 돌아갈 때는 8호선과 수인분당선 막차 시각이 다르다는 점만 챙기면 됩니다.",
-    related: ["cheongdam-night-guide", "suwon-korea-night", "gildong-chance-night"],
+    related: ["cheongdam-night", "suwon-korea-night", "gildong-chance-night"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,

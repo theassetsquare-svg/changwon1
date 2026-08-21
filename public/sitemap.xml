@@ -97,7 +97,7 @@
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/night/cheongdam-night-hall/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/cheongdam-night-guide-hall-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/cheongdam-night-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
@@ -461,13 +461,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://changwond.pages.dev/access/cheongdam-night-guide/</loc>
+    <loc>https://changwond.pages.dev/access/cheongdam-night/</loc>
     <lastmod>2026-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/cheongdam-night-guide/" />
+    <xhtml:link rel="alternate" hreflang="ko-KR" href="https://changwond.pages.dev/access/cheongdam-night/" />
     <image:image>
-      <image:loc>https://changwond.pages.dev/og/access-cheongdam-night-guide-hall-og.png</image:loc>
+      <image:loc>https://changwond.pages.dev/og/access-cheongdam-night-hall-og.png</image:loc>
     </image:image>
   </url>
   <url>
