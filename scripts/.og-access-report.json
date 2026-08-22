@@ -1,7 +1,7 @@
 [
   {
     "slug": "sillim-grandprix-night",
-    "file": "access-sillim-grandprix-night-hall-og.png",
+    "file": "access-night-grandprix-sillim-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 38522,
@@ -16,7 +16,7 @@
   },
   {
     "slug": "sangbong-hangukgwan-night",
-    "file": "access-sangbong-hangukgwan-night-hall-hall-og.png",
+    "file": "access-night-hangukgwan-sangbong-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 44249,
@@ -31,7 +31,7 @@
   },
   {
     "slug": "suyu-shampoo-night",
-    "file": "access-suyu-shampoo-night-hall-hall-og.png",
+    "file": "access-night-shampoo-suyu-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 37161,
@@ -46,7 +46,7 @@
   },
   {
     "slug": "cheongdam-night",
-    "file": "access-night-cheongdam-og.png",
+    "file": "access-night-cheongdam-guide-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 48956,
@@ -61,7 +61,7 @@
   },
   {
     "slug": "bulgwang-hobak-night",
-    "file": "access-bulgwang-hobak-hall-night-guide-og.png",
+    "file": "access-hobak-bulgwang-night-guide-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 51140,
@@ -136,7 +136,7 @@
   },
   {
     "slug": "nowon-hobak-night",
-    "file": "access-nowon-hobak-night-og.png",
+    "file": "access-nowon-hobak-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 37142,
@@ -166,7 +166,7 @@
   },
   {
     "slug": "suwon-chance-dome-night",
-    "file": "access-suwon-chance-dome-night-hall-hall-og.png",
+    "file": "access-night-dome-chance-suwon-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 40009,
@@ -196,7 +196,7 @@
   },
   {
     "slug": "ilsan-shampoo-night",
-    "file": "access-ilsan-shampoo-night-hall-hall-og.png",
+    "file": "access-night-shampoo-ilsan-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 39416,
@@ -211,7 +211,7 @@
   },
   {
     "slug": "paju-yadang-skydome-night",
-    "file": "access-paju-yadang-skydome-night-hall-og.png",
+    "file": "access-night-skydome-yadang-paju-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 44242,
@@ -226,7 +226,7 @@
   },
   {
     "slug": "guri-hobak-night",
-    "file": "access-guri-hobak-night-hall-og.png",
+    "file": "access-night-hobak-guri-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 32919,
@@ -376,7 +376,7 @@
   },
   {
     "slug": "daejeon-seven-night",
-    "file": "access-daejeon-seven-night-guide-og.png",
+    "file": "access-daejeon-seven-night-hall-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 38373,
@@ -406,7 +406,7 @@
   },
   {
     "slug": "cheonan-stardome-night",
-    "file": "access-cheonan-stardome-night-og.png",
+    "file": "access-cheonan-stardome-night-guide-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 43257,
@@ -481,7 +481,7 @@
   },
   {
     "slug": "changwon-lululala-night",
-    "file": "access-changwon-lululala-night-hall-og.png",
+    "file": "access-night-lululala-changwon-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 54640,
@@ -496,7 +496,7 @@
   },
   {
     "slug": "ulsan-champion-night",
-    "file": "access-ulsan-champion-night-hall-og.png",
+    "file": "access-night-champion-ulsan-og.png",
     "group": "A",
     "size": "1200×1200",
     "bytes": 54634,
@@ -586,7 +586,7 @@
   },
   {
     "slug": "jeju-do-night",
-    "file": "access-jeju-do-night-hall-og.png",
+    "file": "access-night-do-jeju-og.png",
     "group": "B",
     "size": "1200×1200",
     "bytes": 35620,

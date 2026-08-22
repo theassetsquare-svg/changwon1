@@ -34,7 +34,7 @@ if (process.argv.includes("--all")) {
   urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]);
 } else {
   const xml = await readFile(join(ROOT, "public", "sitemap.xml"), "utf8");
-  urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => u.includes("/access/"));
+  urlList = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1]).filter((u) => u.includes("/access-guide/"));
   urlList.unshift(`${BASE}/`);
 }
 
