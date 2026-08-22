@@ -8,7 +8,7 @@
  * 읽어서 양쪽 다 손해를 본다.
  */
 export const BULGWANG = {
-  path: "/hobak-bulgwang/",
+  path: "/bulgwang-hobak-1/",
   name: "불광동호박나이트",
   legalName: "호박성인나이트",
   aliases: [

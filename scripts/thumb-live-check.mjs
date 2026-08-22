@@ -31,7 +31,7 @@ const PAGES = [
   ["/jjanggua/", "/og/page-jjanggua-og.png"],
   ["/location/", "/og/page-location-og.png"],
   ["/contacta/", "/og/page-contacta-og.png"],
-  ["/hobak-bulgwang/", "/og-bulgwang.png"],
+  ["/bulgwang-hobak-1/", "/og-bulgwang.png"],
   ["/access-guide/", "/og/page-access-og.png"],
   ...NIGHT.map((v) => [`/night/${v.slug}/`, `/og/${v.slug}-og.png`]),
   ...ACCESS.map((v) => [`/access/${v.slug}/`, `/og/access-${v.slug}-og.png`]),
