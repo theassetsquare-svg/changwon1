@@ -10,7 +10,7 @@ const GG_NIGHT_BUS =
 export const GYEONGGI: AccessVenue[] = [
   // ── 12 ─────────────────────────────────────────────────────────────────
   {
-    slug: "night-dome-chance-suwon",
+    slug: "night-dome-chance-suwon-guide",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "권선동 나이트클럽",
@@ -205,7 +205,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 안산히트나이트는 상록수로 34 상록수아카데미타워 지층이라 건물 하나만 찾으면 도착이지만, 서울로 돌아갈 거면 상록수역 막차를 먼저 확인해 두는 게 맞습니다.",
-    related: ["night-dome-chance-suwon", "bucheon-gorae-night", "incheon-arabian-night"],
+    related: ["night-dome-chance-suwon-guide", "bucheon-gorae-night", "incheon-arabian-night"],
     sources: [
       "업소 주소·건물 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -215,7 +215,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 14 ─────────────────────────────────────────────────────────────────
   {
-    slug: "night-shampoo-ilsan",
+    slug: "night-shampoo-ilsan-guide",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "마두동 나이트클럽",
@@ -410,7 +410,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 파주야당스카이돔나이트는 야당동 유은타워 7차 B동 5층이라 동과 층을 알고 가는 게 전부이고, 돌아올 때는 야당역 막차 시각을 미리 확인해 두는 게 안전합니다.",
-    related: ["night-shampoo-ilsan", "uijeongbu-baekakgwan-night", "night-hobak-guri"],
+    related: ["night-shampoo-ilsan-guide", "uijeongbu-baekakgwan-night", "night-hobak-guri-guide"],
     sources: [
       "위치·입구·층 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 도로명 상세 번지는 공개 자료에서 확인되지 않음",
       GG_LAST_TRAIN,
@@ -420,7 +420,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 16 ─────────────────────────────────────────────────────────────────
   {
-    slug: "night-hobak-guri",
+    slug: "night-hobak-guri-guide",
     name: "구리호박나이트",
     nameSpaced: "구리 호박나이트",
     cityKeyword: "구리시 나이트클럽",
@@ -511,7 +511,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 구리호박나이트는 돌다리 일대라는 표기 외에 주소가 확인 불가이니 위치는 직접 확인하셔야 하고, 대신 서울과 붙어 있어 막차 이후 귀가 부담은 작은 동네입니다.",
-    related: ["night-hangukgwan-sangbong", "nowon-hobak-night-guide", "uijeongbu-hangukgwan-night"],
+    related: ["night-hangukgwan-sangbong-guide", "nowon-hobak-night-hall", "uijeongbu-hangukgwan-night"],
     sources: [
       "지역 표기 — 업소명과 함께 확인되는 구리시 돌다리 일대 정보. 도로명 주소·지번은 공개 자료에서 확인되지 않음 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -613,7 +613,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부한국관나이트는 의정부동 157-7이라는 지번과 의정부중앙역까지만 확정되고 건물 표기는 엇갈리니, 지번으로 위치를 잡고 입구는 도착 전에 확인하는 게 맞습니다.",
-    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night-guide", "night-hobak-guri"],
+    related: ["uijeongbu-baekakgwan-night", "nowon-hobak-night-hall", "night-hobak-guri-guide"],
     sources: [
       "지번·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인). 건물명·층 표기는 자료마다 상이해 확정하지 않음",
       GG_LAST_TRAIN,
@@ -716,7 +716,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 의정부백악관나이트는 태평로 104 경복빌딩이고 의정부중앙역이 기준이라, 역 이름만이 아니라 태평로라는 도로명을 같이 기억하면 지상에서 헤맬 일이 없습니다.",
-    related: ["uijeongbu-hangukgwan-night", "night-hobak-guri", "night-skydome-yadang-paju"],
+    related: ["uijeongbu-hangukgwan-night", "night-hobak-guri-guide", "night-skydome-yadang-paju"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,
@@ -818,7 +818,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 수원코리아나이트는 경수대로 430에 수원역 택시 10분이라 걷는 거리가 아니고, 돌아갈 때는 택시 10분에 막차 시각을 더해 역산해야 합니다.",
-    related: ["night-dome-chance-suwon", "osan-hobak-night", "seongnam-shampoo-night"],
+    related: ["night-dome-chance-suwon-guide", "osan-hobak-night", "seongnam-shampoo-night"],
     sources: [
       "업소 주소·수원역 택시 소요 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 영업 시간은 자료마다 요일별 표기가 달라 확정하지 않음",
       GG_LAST_TRAIN,
@@ -1433,7 +1433,7 @@ export const GYEONGGI: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 평택호박나이트는 중앙로 16 2층에 평택역 도보 8분이라 들어갈 때는 걷거나 택시 중 고르면 되지만, 나갈 때는 서울 방면 막차에서 8분을 빼고 움직여야 합니다.",
-    related: ["osan-hobak-night", "cheonan-korea-night", "cheonan-stardome-night-guide"],
+    related: ["osan-hobak-night", "cheonan-korea-night", "cheonan-stardome-night-hall"],
     sources: [
       "업소 주소·도보 시간 — 지역 업체 정보 및 업소 소개 페이지 등재 (2026년 8월 확인)",
       GG_LAST_TRAIN,

@@ -23,17 +23,17 @@ const PAGES = [
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
   { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/hobak-bulgwang-night-guide-og.png" },
   { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-lululala-changwon-og.png" },
-  { path: "/night/night-champion-ulsan/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-champion-ulsan-og.png" },
+  { path: "/night/night-champion-ulsan-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-champion-ulsan-guide-og.png" },
   { path: "/night/night-cheongdam-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-cheongdam-guide-og.png" },
   { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
   { path: "/night/night-grandprix-sillim/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-grandprix-sillim-og.png" },
-  { path: "/night/night-hangukgwan-sangbong-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-hangukgwan-sangbong-hall-og.png" },
-  { path: "/night/night-shampoo-suyu-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-shampoo-suyu-hall-og.png" },
+  { path: "/night/night-hangukgwan-sangbong-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-hangukgwan-sangbong-guide-hall-og.png" },
+  { path: "/night/night-shampoo-suyu-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-shampoo-suyu-guide-hall-og.png" },
   { path: "/night/busan-asiad-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/busan-asiad-night-og.png" },
-  { path: "/night/night-dome-chance-suwon-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-dome-chance-suwon-hall-og.png" },
+  { path: "/night/night-dome-chance-suwon-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-dome-chance-suwon-guide-hall-og.png" },
   { path: "/night/ansan-hit-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-night-og.png" },
-  { path: "/night/daejeon-seven-night-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-night-hall-og.png" },
-  { path: "/night/night-shampoo-ilsan-guide/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-shampoo-ilsan-hall-og.png" },
+  { path: "/night/night-seven-daejeon/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-seven-daejeon-og.png" },
+  { path: "/night/night-shampoo-ilsan-hall/", priority: "0.8", changefreq: "weekly", thumb: "/og/night-shampoo-ilsan-guide-hall-og.png" },
   // /access/ 허브 — 전국 나이트 가는 길 40
   { path: "/access-guide/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
 ];

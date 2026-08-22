@@ -113,7 +113,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 2 ──────────────────────────────────────────────────────────────────
   {
-    slug: "night-hangukgwan-sangbong",
+    slug: "night-hangukgwan-sangbong-guide",
     name: "상봉동한국관나이트",
     nameSpaced: "상봉동 한국관나이트",
     cityKeyword: "상봉동 나이트클럽",
@@ -205,7 +205,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 상봉동한국관나이트는 상봉역 도보 3~5분, 망우로 326 2층이고 오전 6시까지 열기 때문에 돌아가는 길은 막차가 아니라 첫차 기준으로 계산하는 게 맞습니다.",
-    related: ["nowon-hobak-night-guide", "dapsimni-miracle-night", "night-hobak-guri"],
+    related: ["nowon-hobak-night-hall", "dapsimni-miracle-night", "night-hobak-guri-guide"],
     sources: [
       "업소 주소·영업 시간 — 업소 안내 페이지 및 전화번호 검색 서비스 등재 정보 (2026년 8월 확인)",
       "상봉역 도보 3~5분 — 업소 위치 안내 표기",
@@ -216,7 +216,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 3 ──────────────────────────────────────────────────────────────────
   {
-    slug: "night-shampoo-suyu",
+    slug: "night-shampoo-suyu-guide",
     name: "수유샴푸나이트",
     nameSpaced: "수유 샴푸나이트",
     cityKeyword: "수유동 나이트클럽",
@@ -308,7 +308,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 수유샴푸나이트는 도봉로 308 지하, 수유역 인근 대로변이라 찾기는 쉽지만 길 어느 편인지와 지하 계단 위치를 미리 정해 두는 게 실제로 시간을 줄입니다.",
-    related: ["nowon-hobak-night-guide", "night-hobak-bulgwang", "night-hangukgwan-sangbong"],
+    related: ["nowon-hobak-night-hall", "night-hobak-bulgwang", "night-hangukgwan-sangbong-guide"],
     sources: [
       "업소 주소·영업 시간 — 업소 안내 페이지 및 전화번호 검색 서비스 등재 정보 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,
@@ -516,7 +516,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 불광동호박나이트는 통일로 730 지하, 불광역에서 약 50m라 지상에서 통일로 방향만 맞추면 이동이 끝나고, 문의는 웨이터 손흥민 010-2221-1937입니다.",
-    related: ["night-shampoo-suyu", "nowon-hobak-night-guide", "gangseo-hobak-night"],
+    related: ["night-shampoo-suyu-guide", "nowon-hobak-night-hall", "gangseo-hobak-night"],
     sources: [
       "업소 주소·거리·담당 연락처 — 업소 안내 페이지 등재 정보 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,
@@ -720,7 +720,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 답십리미라클나이트는 동대문구 답십리 일대라는 지역 표기 외에 주소·역·도보 시간이 모두 확인 불가이니, 주소를 먼저 확보한 뒤에 이동 계획을 세우는 순서가 맞습니다.",
-    related: ["night-hangukgwan-sangbong", "gildong-chance-night", "nowon-hobak-night-guide"],
+    related: ["night-hangukgwan-sangbong-guide", "gildong-chance-night", "nowon-hobak-night-hall"],
     sources: [
       "지역 표기 — 업소명과 함께 확인되는 서울 동대문구 답십리 지역 정보. 도로명 주소·지번은 공개 자료에서 확인되지 않음 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,
@@ -936,7 +936,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 10 ─────────────────────────────────────────────────────────────────
   {
-    slug: "nowon-hobak-night-guide",
+    slug: "nowon-hobak-night-hall",
     name: "노원호박나이트",
     nameSpaced: "노원 호박나이트",
     cityKeyword: "상계동 나이트클럽",
@@ -1029,7 +1029,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 노원호박나이트는 노해로 456 동방빌딩에 노원역 인근이고 4·7호선 어느 쪽으로도 닿지만, 두 노선 막차 시각이 다르니 나가기 전에 탈 노선 기준으로 확인해야 합니다.",
-    related: ["night-shampoo-suyu", "night-hangukgwan-sangbong", "uijeongbu-hangukgwan-night"],
+    related: ["night-shampoo-suyu-guide", "night-hangukgwan-sangbong-guide", "uijeongbu-hangukgwan-night"],
     sources: [
       "업소 주소·건물 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,
@@ -1132,7 +1132,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 길동찬스나이트는 천호대로 1135 지하1층에 강동역 420m·길동역 460m로 거의 같으니 오는 방향으로 역을 고르고, 차를 가져가면 발렛 1만 원이 확인된 조건입니다.",
-    related: ["cheongdam-night", "night-hangukgwan-sangbong", "seongnam-shampoo-night"],
+    related: ["cheongdam-night", "night-hangukgwan-sangbong-guide", "seongnam-shampoo-night"],
     sources: [
       "업소 주소·출구별 거리·주차 — 업소 안내 페이지 등재 정보 (2026년 8월 확인)",
       SEOUL_LAST_TRAIN,

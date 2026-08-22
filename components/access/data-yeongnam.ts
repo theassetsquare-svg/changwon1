@@ -103,7 +103,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 부산아시아드나이트는 온천장로107번길 32 지하 1~2층에 온천장역 도보 5분이라, 본길이 아니라 107번길이라는 갈래 번호를 기억하는 게 전부입니다.",
-    related: ["night-lululala-changwon", "ulsan-champion-night", "daegu-hobak-night"],
+    related: ["night-lululala-changwon", "ulsan-champion-night-guide", "daegu-hobak-night"],
     sources: [
       "업소 주소·역 도보 — 업소 안내 페이지 및 지역 업체 정보 등재 (2026년 8월 확인)",
       YN_TRANSIT,
@@ -215,7 +215,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 창원룰루랄라나이트는 마디미로43번길 10 지하3층 상남동 22-4이고 만 27세 이상 출입이며, 창원은 도시철도가 없어 버스·택시로 오되 입구는 로또 010-7528-4936으로 맞추면 됩니다.",
-    related: ["busan-asiad-night", "ulsan-champion-night", "gwangju-sangmu-night"],
+    related: ["busan-asiad-night", "ulsan-champion-night-guide", "gwangju-sangmu-night"],
     sources: [
       "업소 주소·출입 기준·담당 연락처 — 업소 공식 안내 (2026년 8월 확인)",
       "창원 시내 대중교통 — 창원에는 도시철도 노선이 없어 시내버스·택시가 기본 이동 수단입니다",
@@ -224,7 +224,7 @@ export const YEONGNAM: AccessVenue[] = [
 
   // ── 34 ─────────────────────────────────────────────────────────────────
   {
-    slug: "ulsan-champion-night",
+    slug: "ulsan-champion-night-guide",
     name: "울산챔피언나이트",
     nameSpaced: "울산 챔피언나이트",
     cityKeyword: "삼산동 나이트클럽",
@@ -420,7 +420,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 울산뉴월드나이트는 삼산로 375 1층 삼산동 220-6이고 롯데백화점 뒤편으로 안내되니, 랜드마크로 방향을 잡고 번지로 확정하면 도착이 단순합니다.",
-    related: ["ulsan-champion-night", "busan-asiad-night", "gumi-hobak-night"],
+    related: ["ulsan-champion-night-guide", "busan-asiad-night", "gumi-hobak-night"],
     sources: [
       "업소 주소·위치 안내 — 지역 업체 정보 및 업소 소개 페이지 등재 (2026년 8월 확인)",
       "울산 시내 대중교통 — 울산에는 도시철도 노선이 없어 시내버스·택시가 기본 이동 수단입니다",
@@ -521,7 +521,7 @@ export const YEONGNAM: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 대구호박나이트는 북구 칠곡중앙대로 435 지하1층이고 같은 이름이 여러 지역에 있으니 주소로 구분해야 하며, 시내버스는 24시 20분에 끊긴다는 점을 계산에 넣으세요.",
-    related: ["gumi-hobak-night", "busan-asiad-night", "ulsan-champion-night"],
+    related: ["gumi-hobak-night", "busan-asiad-night", "ulsan-champion-night-guide"],
     sources: [
       "업소 주소 — 전화번호 검색 서비스의 유흥주점 등록 정보 및 지역 업체 정보 등재 (2026년 8월 확인)",
       YN_TRANSIT,
