@@ -19,23 +19,23 @@ const PAGES = [
   { path: "/location/", priority: "0.8", changefreq: "monthly", thumb: "/og/page-location-og.png" },
   { path: "/about/", priority: "0.7", changefreq: "monthly", thumb: "/og/page-about-og.png" },
   // 다른 지역 업소(불광동호박나이트) 안내 페이지
-  { path: "/bulgwang-hobak-2/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
+  { path: "/bulgwang-hobak-3/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
-  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-2-night-guide-og.png" },
+  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-3-night-guide-og.png" },
   { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-2-og.png" },
-  { path: "/night/ulsan-champion-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-2-og.png" },
-  { path: "/night/cheongdam-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-2-og.png" },
+  { path: "/night/ulsan-champion-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-3-og.png" },
+  { path: "/night/cheongdam-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-3-og.png" },
   { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
-  { path: "/night/sillim-grandprix-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-2-og.png" },
-  { path: "/night/sangbong-hangukgwan-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-2-hall-og.png" },
-  { path: "/night/suyu-shampoo-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/suyu-shampoo-2-hall-og.png" },
+  { path: "/night/sillim-grandprix-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-3-og.png" },
+  { path: "/night/sangbong-hangukgwan-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-3-hall-og.png" },
+  { path: "/night/suyu-shampoo-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/suyu-shampoo-3-hall-og.png" },
   { path: "/night/busan-asiad-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/busan-asiad-night-og.png" },
-  { path: "/night/suwon-chancedome-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/suwon-chancedome-2-hall-og.png" },
-  { path: "/night/ansan-hit-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-2-og.png" },
-  { path: "/night/daejeon-seven-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-2-og.png" },
-  { path: "/night/ilsan-shampoo-2/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-2-hall-og.png" },
+  { path: "/night/suwon-chancedome-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/suwon-chancedome-3-hall-og.png" },
+  { path: "/night/ansan-hit-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-3-og.png" },
+  { path: "/night/daejeon-seven-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-3-og.png" },
+  { path: "/night/ilsan-shampoo-3/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-3-hall-og.png" },
   // /access/ 허브 — 전국 나이트 가는 길 40
-  { path: "/access-guide/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
+  { path: "/access-1/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
 ];
 
 // /access/{slug}/ 40개는 데이터 파일에서 슬러그를 읽어 자동으로 붙인다.

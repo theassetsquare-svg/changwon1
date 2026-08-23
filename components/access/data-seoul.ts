@@ -205,7 +205,7 @@ export const SEOUL: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 상봉동한국관나이트는 상봉역 도보 3~5분, 망우로 326 2층이고 오전 6시까지 열기 때문에 돌아가는 길은 막차가 아니라 첫차 기준으로 계산하는 게 맞습니다.",
-    related: ["nowon-hobak-night-hall", "dapsimni-miracle-night", "night-hobak-guri-guide"],
+    related: ["nowon-hobak-night-hall", "dapsimni-miracle-night", "guri-hobak-1"],
     sources: [
       "업소 주소·영업 시간 — 업소 안내 페이지 및 전화번호 검색 서비스 등재 정보 (2026년 8월 확인)",
       "상봉역 도보 3~5분 — 업소 위치 안내 표기",

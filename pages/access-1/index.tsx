@@ -47,7 +47,7 @@ export default function AccessHub() {
     };
   }, []);
 
-  const path = "/access-guide/";
+  const path = "/access-1/";
   const url = `${SITE.url}${path}`;
   const thumbPath = "/og/page-access-og.png";
   const ogImage = `${SITE.url}${thumbPath}`;

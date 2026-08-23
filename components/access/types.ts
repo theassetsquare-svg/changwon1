@@ -58,4 +58,4 @@ export type AccessVenue = {
   sources: string[];
 };
 
-export const ACCESS_BASE = "/access-guide/";
+export const ACCESS_BASE = "/access-1/";
