@@ -22,7 +22,7 @@ export function loadAccessVenues() {
   return DATA.flatMap(([file, name]) => {
     const out = execSync(
       `node --experimental-strip-types -e ` +
-        `"import('${join(ROOT, "components/access-1/", file)}').then(m=>console.log(JSON.stringify(m.${name})))"`,
+        `"import('${join(ROOT, "components/access", file)}').then(m=>console.log(JSON.stringify(m.${name})))"`,
       { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], maxBuffer: 64 * 1024 * 1024 }
     );
     return JSON.parse(out);

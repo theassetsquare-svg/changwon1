@@ -636,7 +636,8 @@ export const SEOUL: AccessVenue[] = [
     region: "서울 동대문구 답십리",
     addressLocality: "서울특별시 동대문구",
     addressRegion: "서울특별시",
-    group: "B",
+    group: "A",
+    contact: { name: "유재석", phone: "010-8156-6558", tel: "01081566558" },
     angle: { no: 7, name: "주소 미확인 대응형" },
     title: "답십리미라클나이트, 주소가 확인 안 될 때 잡는 기준",
     description:
