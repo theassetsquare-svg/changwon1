@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "../site";
 import PageThumb from "../PageThumb";
-import { ACCESS_BASE, type AccessVenue } from "./types";
+import { ACCESS_BASE, ACCESS_VENUE_BASE, type AccessVenue } from "./types";
 import { VENUE_BY_SLUG } from "./venues";
 
 /**
@@ -170,7 +170,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
     };
   }, []);
 
-  const path = `${ACCESS_BASE}/${venue.slug}/`;
+  const path = `${ACCESS_VENUE_BASE}${venue.slug}/`;
   const url = `${SITE.url}${path}`;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
   const thumbPath = `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
@@ -215,7 +215,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
     "@id": `${url}#breadcrumb`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "홈", item: `${SITE.url}/` },
-      { "@type": "ListItem", position: 2, name: "가는 길", item: `${SITE.url}${ACCESS_BASE}/` },
+      { "@type": "ListItem", position: 2, name: "가는 길", item: `${SITE.url}${ACCESS_BASE}` },
       { "@type": "ListItem", position: 3, name: venue.name, item: url },
     ],
   };
@@ -260,7 +260,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
 
       <article className="acc-wrap">
         <p className="acc-crumb">
-          <Link href="/">홈</Link> › <Link href={`${ACCESS_BASE}/`}>가는 길</Link> › {venue.name}
+          <Link href="/">홈</Link> › <Link href={ACCESS_BASE}>가는 길</Link> › {venue.name}
         </p>
 
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
@@ -359,7 +359,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             if (!r) return null;
             return (
               <li key={slug}>
-                <Link href={`${ACCESS_BASE}/${slug}/`}>{r.name}</Link> — {r.region}
+                <Link href={`${ACCESS_VENUE_BASE}${slug}/`}>{r.name}</Link> — {r.region}
               </li>
             );
           })}

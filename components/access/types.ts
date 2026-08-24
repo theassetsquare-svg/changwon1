@@ -58,4 +58,12 @@ export type AccessVenue = {
   sources: string[];
 };
 
-export const ACCESS_BASE = "/access-2/";
+/* ★ 2026-08-24 — 목록(허브) 주소와 가게 페이지 상위 경로를 **반드시 나눠 둔다.**
+ *
+ * 주소교체로 목록이 /access/ → /access-2/ 로 옮겨졌는데, 가게 페이지는
+ * pages/access/[slug].tsx 라 여전히 /access/<슬러그>/ 다.
+ * 예전에는 한 상수로 묶여 있어서 가게 링크가 전부 /access-2/<슬러그>/ 가 됐고,
+ * 그 주소는 없으므로 **내부 링크 79개가 404** 였다(2026-08-24 실측).
+ * 목록 주소가 또 바뀌어도 가게 경로는 따라가면 안 된다. */
+export const ACCESS_BASE = "/access-2/";        // 목록(허브) 주소 — 끝에 / 가 이미 있다
+export const ACCESS_VENUE_BASE = "/access/";    // 가게 페이지 상위 = pages/access/[slug].tsx
