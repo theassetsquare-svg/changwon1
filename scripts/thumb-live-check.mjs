@@ -13,7 +13,7 @@ import { execSync } from "node:child_process";
 import { loadAccessVenues } from "./access-data.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const BASE = "https://changwond.pages.dev";
+const BASE = "https://j.nolcool.com";
 
 const NIGHT = JSON.parse(
   execSync(

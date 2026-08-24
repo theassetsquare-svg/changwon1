@@ -186,7 +186,7 @@ let simTop = [];
   for (const v of VENUES) {
     const hrefs = [...pages[v.slug].matchAll(/<a [^>]*href="([^"]+)"/g)].map((m) => m[1]);
     for (const href of hrefs) {
-      if (/^https?:\/\//.test(href) && !href.startsWith("https://changwond.pages.dev")) ext.push(`${v.slug}:${href}`);
+      if (/^https?:\/\//.test(href) && !href.startsWith("https://j.nolcool.com")) ext.push(`${v.slug}:${href}`);
       const m = href.match(/^\/night\/([^/]+)\//);
       if (m && !slugs.has(m[1])) broken.push(`${v.slug}→${href}`);
     }

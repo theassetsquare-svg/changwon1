@@ -8,7 +8,7 @@
 //
 // 사용법:
 //   GSC_KEY_FILE=/home/user/.config/gsc/theasset-gsc.json node scripts/gsc-report.mjs
-//   ... node scripts/gsc-report.mjs --days 28 --site https://changwond.pages.dev/
+//   ... node scripts/gsc-report.mjs --days 28 --site https://j.nolcool.com/
 //
 // 출력: 콘솔 요약 + (옵션) --json 으로 원본 JSON.
 

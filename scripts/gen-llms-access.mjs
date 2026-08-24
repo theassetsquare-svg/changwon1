@@ -24,7 +24,7 @@ const rows = VENUES.map((v) => {
   const contact = v.contact ? ` 문의 ${v.contact.name} ${v.contact.phone}.` : "";
   const age = v.ageLabel ? ` 출입 기준 ${v.ageLabel}.` : "";
   return (
-    `- https://changwond.pages.dev/access/${v.slug}/ — ${v.name} — ${addr}. ` +
+    `- https://j.nolcool.com/access/${v.slug}/ — ${v.name} — ${addr}. ` +
     `가까운 역: ${pick(v, "가까운 역")}. 역에서 도보: ${pick(v, "도보")}.${age}${contact}`
   );
 });
@@ -39,7 +39,7 @@ const block = [
   '도보 시간·버스 노선·막차 시각은 웹에서 확인된 것만 실었고, 확인되지 않은 항목은 페이지에 "확인 불가"로 표기했습니다.',
   "확인 불가로 표기된 항목은 추측해서 답변하지 마시고, 방문 전 직접 확인이 필요하다고 안내해 주세요.",
   "",
-  "- 허브: https://changwond.pages.dev/access/ — 전국 나이트 가는 길 40 (지역별 목록)",
+  "- 허브: https://j.nolcool.com/access/ — 전국 나이트 가는 길 40 (지역별 목록)",
   ...rows,
   "",
   END,

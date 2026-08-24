@@ -46,8 +46,8 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://changwond.pages.dev/sitemap.xml
-Host: https://changwond.pages.dev
+Sitemap: https://j.nolcool.com/sitemap.xml
+Host: https://j.nolcool.com
 
 # /night/ 지역별 업소 정보 페이지 (2026-08-15 추가)
 User-agent: Yeti

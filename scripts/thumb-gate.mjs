@@ -24,7 +24,7 @@ import { execSync } from "node:child_process";
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const OUT = join(ROOT, "out");
 const PUB = join(ROOT, "public");
-const BASE = "https://changwond.pages.dev";
+const BASE = "https://j.nolcool.com";
 const MAX_BYTES = 300 * 1024;
 
 const NIGHT = JSON.parse(

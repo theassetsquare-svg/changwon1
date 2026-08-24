@@ -24,7 +24,7 @@ const BRAND = "창원 룰루랄라 나이트";
 const NICK = "로또";
 const PHONE = "010-7528-4936";
 const AGE = "만 27세 이상";
-const DOMAIN = "changwond.pages.dev";
+const DOMAIN = "j.nolcool.com";
 
 /** 페이지별 상단 라벨과 주제 한 줄. 나머지 구성은 전부 같다. */
 const PAGES = [

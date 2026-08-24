@@ -4,14 +4,14 @@
 //   ④ OG 이미지 200 + 1200×1200
 //   ⑤ robots.txt / sitemap.xml 도달, 리다이렉트 체인, 응답 시간
 //
-// 사용법: node scripts/night-live-check.mjs https://changwond.pages.dev
+// 사용법: node scripts/night-live-check.mjs https://j.nolcool.com
 
 import sharp from "sharp";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 
-const BASE = (process.argv[2] || "https://changwond.pages.dev").replace(/\/$/, "");
+const BASE = (process.argv[2] || "https://j.nolcool.com").replace(/\/$/, "");
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 
 const raw = execSync(

@@ -5,7 +5,7 @@
 //     GSC_KEY_FILE=/home/user/.config/gsc/theasset-gsc.json node scripts/gsc-submit-sitemap.mjs
 //
 // 옵션:
-//   --site  <속성 URL>   기본값 https://changwond.pages.dev/
+//   --site  <속성 URL>   기본값 https://j.nolcool.com/
 //   --list               제출만 하지 않고 현재 등록된 사이트맵 상태만 봅니다
 
 import { readFile } from "node:fs/promises";
@@ -50,7 +50,7 @@ async function getAccessToken(creds) {
   return data.access_token;
 }
 
-const site = String(arg("site", "https://changwond.pages.dev/"));
+const site = String(arg("site", "https://j.nolcool.com/"));
 const sitemap = `${site.replace(/\/$/, "")}/sitemap.xml`;
 const enc = (s) => encodeURIComponent(s);
 

@@ -5,7 +5,7 @@ export const SITE = {
   contactName: "로또",
   phone: "010-7528-4936",
   phoneHref: "tel:01075284936",
-  url: "https://changwond.pages.dev",
+  url: "https://j.nolcool.com",
   region: "경상남도 창원시",
   // 사업장 정식 상호 — 지도·검색에 등록된 이름과 맞춘다.
   legalName: "창원 룰루랄라나이트클럽",

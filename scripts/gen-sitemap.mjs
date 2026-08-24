@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 import { join } from "node:path";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
-const BASE = "https://changwond.pages.dev";
+const BASE = "https://j.nolcool.com";
 const today = new Date().toISOString().slice(0, 10);
 
 const PAGES = [
