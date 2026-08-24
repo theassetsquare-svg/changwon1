@@ -11,7 +11,7 @@
 # 썸네일 — /og/ 아래는 전부 1200×1200 PNG다. 다른 형식을 넣지 말 것.
 /og/*
   Content-Type: image/png
-  Cache-Control: public, max-age=604800
+  Cache-Control: public, max-age=3600, must-revalidate
 
 /og-default.png
   Content-Type: image/png

@@ -33,6 +33,10 @@ const PAGES = [
   { key: "location", label: "성산구 마디미로43번길 10", topic: "찾아오는 길" },
   { key: "contacta", label: "전화로만 접수", topic: "전화 예약·문의" },
   { key: "access", label: "전국 나이트 가는 길", topic: "가는 길 40곳" },
+  /* ★ 2026-08-25 — 홈에 썸네일이 아예 없었다.
+     홈은 이 사이트에서 제일 중요한 페이지인데, 네이버가 미리보기 그림을 못 가져가고
+     검색 결과에도 그림 없이 나온다. 다른 페이지와 같은 규격으로 하나 만든다. */
+  { key: "home", label: `${BRAND}`, topic: "다시 시작한 기록" },
 ];
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

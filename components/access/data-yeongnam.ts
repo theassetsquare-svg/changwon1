@@ -21,6 +21,7 @@ export const YEONGNAM: AccessVenue[] = [
     jibun: "부산광역시 동래구 온천동 137",
     group: "A",
     contact: { name: "새우깡", phone: "010-3614-1056", tel: "01036141056" },
+    ogV: "-v2",   /* ★ 2026-08-25 그림을 바꿨다. 캐시된 옛 카드를 피하려고 판 번호를 올린다 */
     angle: { no: 32, name: "갈래 골목 5분형" },
     title: "부산아시아드나이트, 온천장역에서 5분 걷는 골목",
     description:
