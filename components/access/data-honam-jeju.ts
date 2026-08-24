@@ -103,7 +103,7 @@ export const HONAM_JEJU: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 광주상무나이트는 상무번영로 30 2~3층 치평동 1240-8이라, 비슷한 블록이 반복되는 상무지구에서는 도로명과 번지로 좁히는 게 가장 빠릅니다.",
-    related: ["gwangju-cheomdan-night", "night-do-jeju", "seosan-hobak-night"],
+    related: ["gwangju-cheomdan-night", "jeju-1", "seosan-hobak-night"],
     sources: [
       "업소 주소 — 부동산 정보 서비스 및 전국 관광·유흥업 등록 정보 등재 (2026년 8월 확인)",
       HJ_TRANSIT,
@@ -206,7 +206,7 @@ export const HONAM_JEJU: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 광주첨단나이트는 임방울대로800번길 52 월계동 887-7이라, 본길이 아니라 800번길이라는 갈래 번호까지 정확히 넣는 게 도착의 전부입니다.",
-    related: ["gwangju-sangmu-night", "night-do-jeju", "gumi-hobak-night"],
+    related: ["gwangju-sangmu-night", "jeju-1", "gumi-hobak-night"],
     sources: [
       "업소 주소 — 전화번호 검색 서비스 및 지역 업체 정보 등재 (2026년 8월 확인)",
       HJ_TRANSIT,
@@ -216,7 +216,7 @@ export const HONAM_JEJU: AccessVenue[] = [
 
   // ── 40 ─────────────────────────────────────────────────────────────────
   {
-    slug: "night-do-jeju",
+    slug: "jeju-1",
     name: "제주도나이트",
     nameSpaced: "제주도 나이트",
     cityKeyword: "제주시 나이트클럽",
@@ -307,7 +307,7 @@ export const HONAM_JEJU: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 제주도나이트는 상호로 특정되는 주소가 확인 불가이고 제주시 나이트클럽이 연동 일대에 몰려 있다는 점만 확인되니, 주소를 먼저 확인하고 그 구역에 숙소를 잡는 순서가 맞습니다.",
-    related: ["gwangju-sangmu-night", "gwangju-cheomdan-night", "busan-asiad-night"],
+    related: ["gwangju-sangmu-night", "gwangju-cheomdan-night", "busan-asiad-1"],
     sources: [
       "지역·밀집 구역 — 제주시 연동 일대 나이트클럽 관련 지역 업체 정보 및 언론 보도. '제주도나이트' 상호로 특정되는 도로명 주소는 공개 자료에서 확인되지 않음 (2026년 8월 확인)",
       "제주 교통 — 제주에는 철도 노선이 없어 시내버스·택시·렌터카가 기본 이동 수단입니다",

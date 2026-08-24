@@ -208,7 +208,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 대전원나이트는 용전동 대전복합터미널 인근이라 들어오기는 쉽지만 심야 버스가 없어 나가기는 어렵고, 만 38세 이상이라는 출입 기준을 먼저 확인해야 합니다.",
-    related: ["daejeon-seven-night", "cheonan-stardome-1", "cheongju-hobak-night"],
+    related: ["daejeon-seven-night", "cheonan-stardome-2", "cheongju-hobak-night"],
     sources: [
       "위치·출입 기준 — 업소 안내 페이지 등재 정보 (2026년 8월 확인). 도로명 상세 주소는 공개 자료에서 확인되지 않음",
       CC_TRANSIT,
@@ -218,7 +218,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
 
   // ── 28 ─────────────────────────────────────────────────────────────────
   {
-    slug: "cheonan-stardome-1",
+    slug: "cheonan-stardome-2",
     name: "천안스타돔나이트",
     nameSpaced: "천안 스타돔나이트",
     cityKeyword: "성정동 나이트클럽",
@@ -414,7 +414,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 천안코리아나이트는 차돌들길 7 쌍용동 210-8에 쌍용(나사렛대)역이 기준이니, 검색이 안 되면 다른 쪽 역명으로 바꿔 넣고 서울 방면은 막차 행선지까지 확인하세요.",
-    related: ["cheonan-stardome-1", "pyeongtaek-hobak-night", "daejeon-seven-night"],
+    related: ["cheonan-stardome-2", "pyeongtaek-hobak-night", "daejeon-seven-night"],
     sources: [
       "업소 주소·역 — 지역 업체 정보 및 전국 유흥업 등록 정보 등재 (2026년 8월 확인)역)",
       CC_TRANSIT,
@@ -516,7 +516,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 청주호박나이트는 향군로15번길 9이고 청주에는 도시철도가 없으니, 역이 아니라 도로명을 목적지로 넣고 버스는 여유를, 귀가는 택시를 기본으로 잡으면 됩니다.",
-    related: ["cheonan-stardome-1", "daejeon-seven-night", "seosan-hobak-night"],
+    related: ["cheonan-stardome-2", "daejeon-seven-night", "seosan-hobak-night"],
     sources: [
       "업소 주소 — 지역 업체 정보 및 업소 소개 페이지 등재 (2026년 8월 확인). 지번은 공개 자료에서 확인되지 않음",
       CC_BUS,
@@ -618,7 +618,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
     ],
     summary:
       "한 줄로 — 서산호박나이트는 읍내1로 35 서부상가 지하1층 101호로 도착점은 명확하지만, 새벽에 도시 밖으로 나가는 대중교통이 없으니 귀가 방법을 먼저 정하고 출발해야 합니다.",
-    related: ["cheongju-hobak-night", "cheonan-stardome-1", "daejeon-one-night"],
+    related: ["cheongju-hobak-night", "cheonan-stardome-2", "daejeon-one-night"],
     sources: [
       "업소 주소·건물·영업 시간 — 지역 업체 정보 및 업소 안내 페이지 등재 (2026년 8월 확인)",
       CC_BUS,
