@@ -7,7 +7,7 @@
 // 사용법: node scripts/thumb-live-check.mjs
 
 import { readdir } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 import { loadAccessVenues } from "./access-data.mjs";
@@ -18,7 +18,7 @@ const BASE = "https://j.nolcool.com";
 const NIGHT = JSON.parse(
   execSync(
     `node --experimental-strip-types -e ` +
-      `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
+      `"import('${pathToFileURL(join(ROOT, "components/night/venues.ts")).href}').then(m=>console.log(JSON.stringify(` +
       `m.VENUES.map(v=>({slug:v.slug,name:v.name})))))"`,
     { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
   )

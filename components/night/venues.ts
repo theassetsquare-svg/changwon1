@@ -998,7 +998,8 @@ export const VENUES: NightVenue[] = [
     addressLocality: "부산광역시 동래구",
     addressRegion: "부산광역시",
     streetAddress: "온천장로107번길 32 지하1~2층",
-    group: "B",
+    group: "A",
+    contact: { name: "새우깡", phone: "010-3614-1056", tel: "01036141056" },
     angle: { no: 3, name: "장면 묘사형", suffix: "테이블이 다 차는 밤" },
     title: "부산아시아드나이트 온천장 지하 테이블이 다 차는 밤",
     description:

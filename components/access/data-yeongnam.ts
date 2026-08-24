@@ -19,7 +19,8 @@ export const YEONGNAM: AccessVenue[] = [
     addressRegion: "부산광역시",
     streetAddress: "온천장로107번길 32, 지하 1~2층",
     jibun: "부산광역시 동래구 온천동 137",
-    group: "B",
+    group: "A",
+    contact: { name: "새우깡", phone: "010-3614-1056", tel: "01036141056" },
     angle: { no: 32, name: "갈래 골목 5분형" },
     title: "부산아시아드나이트, 온천장역에서 5분 걷는 골목",
     description:

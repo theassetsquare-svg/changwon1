@@ -4,7 +4,7 @@
 // 바로 못 읽는다. 데이터 파일을 순서대로 직접 읽어 합친다.
 // 순서는 components/access/venues.ts 의 ACCESS_VENUES 와 같다.
 
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 
@@ -22,7 +22,9 @@ export function loadAccessVenues() {
   return DATA.flatMap(([file, name]) => {
     const out = execSync(
       `node --experimental-strip-types -e ` +
-        `"import('${join(ROOT, "components/access", file)}').then(m=>console.log(JSON.stringify(m.${name})))"`,
+        /* ★ 윈도우에서는 절대경로를 그대로 import() 에 넣으면 "protocol 'c:'" 오류가 난다.
+           file:// URL 로 바꿔서 넘긴다. 리눅스에서도 그대로 동작한다(2026-08-24). */
+        `"import('${pathToFileURL(join(ROOT, "components/access", file)).href}').then(m=>console.log(JSON.stringify(m.${name})))"`,
       { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], maxBuffer: 64 * 1024 * 1024 }
     );
     return JSON.parse(out);

@@ -7,7 +7,7 @@
 // 사용법: node scripts/night-live-check.mjs https://j.nolcool.com
 
 import sharp from "sharp";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 
@@ -16,7 +16,7 @@ const ROOT = fileURLToPath(new URL("..", import.meta.url));
 
 const raw = execSync(
   `node --experimental-strip-types -e ` +
-    `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
+    `"import('${pathToFileURL(join(ROOT, "components/night/venues.ts")).href}').then(m=>console.log(JSON.stringify(` +
     `m.VENUES.map(v=>({slug:v.slug,name:v.name,group:v.group,age:v.ageLabel||''})))))"`,
   { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
 );

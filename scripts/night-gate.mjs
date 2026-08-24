@@ -6,7 +6,7 @@
 // 사용법: npm run build && node scripts/night-gate.mjs
 
 import { readFile } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 
@@ -15,7 +15,7 @@ const OUT = join(ROOT, "out", "night");
 
 const raw = execSync(
   `node --experimental-strip-types -e ` +
-    `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(m.VENUES)))"`,
+    `"import('${pathToFileURL(join(ROOT, "components/night/venues.ts")).href}').then(m=>console.log(JSON.stringify(m.VENUES)))"`,
   { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"], maxBuffer: 32 * 1024 * 1024 }
 );
 const VENUES = JSON.parse(raw);

@@ -15,7 +15,7 @@
 
 import sharp from "sharp";
 import { mkdir, writeFile, stat } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import { execSync } from "node:child_process";
 
@@ -29,7 +29,9 @@ const BAND_TOP = 720; // 1200 * 0.60
 
 const raw = execSync(
   `node --experimental-strip-types -e ` +
-    `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
+    /* ★ 윈도우에서는 절대경로를 그대로 import() 에 넣으면 "protocol 'c:'" 오류가 난다.
+       file:// URL 로 바꿔서 넘긴다. 리눅스에서도 그대로 동작한다(2026-08-24). */
+    `"import('${pathToFileURL(join(ROOT, "components/night/venues.ts")).href}').then(m=>console.log(JSON.stringify(` +
     `m.VENUES.map(v=>({slug:v.slug,name:v.name,cityKeyword:v.cityKeyword,og:v.og,alt:v.ogAlt,group:v.group,contact:v.contact,ogV:v.ogV})))))"`,
   { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
 );

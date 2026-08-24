@@ -15,7 +15,7 @@
     "clip": "-"
   },
   {
-    "slug": "sangbong-hangukgwan-2",
+    "slug": "sangbong-hangukgwan-3",
     "file": "access-sangbong-hangukgwan-3-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -30,7 +30,7 @@
     "clip": "-"
   },
   {
-    "slug": "suyu-shampoo-2",
+    "slug": "suyu-shampoo-3",
     "file": "access-suyu-shampoo-3-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -135,7 +135,7 @@
     "clip": "-"
   },
   {
-    "slug": "nowon-hobak-night-hall",
+    "slug": "nowon-hobak-1",
     "file": "access-nowon-hobak-1-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -165,7 +165,7 @@
     "clip": "-"
   },
   {
-    "slug": "suwon-chancedome-3",
+    "slug": "suwon-chancedome-4",
     "file": "access-suwon-chancedome-4-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -195,7 +195,7 @@
     "clip": "-"
   },
   {
-    "slug": "ilsan-shampoo-3",
+    "slug": "ilsan-shampoo-4",
     "file": "access-ilsan-shampoo-4-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -210,7 +210,7 @@
     "clip": "-"
   },
   {
-    "slug": "paju-skydome-1",
+    "slug": "paju-skydome-2",
     "file": "access-paju-skydome-2-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -225,7 +225,7 @@
     "clip": "-"
   },
   {
-    "slug": "guri-hobak-1",
+    "slug": "guri-hobak-2",
     "file": "access-guri-hobak-2-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -405,7 +405,7 @@
     "clip": "-"
   },
   {
-    "slug": "cheonan-stardome-1",
+    "slug": "cheonan-stardome-2",
     "file": "access-cheonan-stardome-2-og.png",
     "group": "B",
     "size": "1200×1200",
@@ -465,22 +465,22 @@
     "clip": "-"
   },
   {
-    "slug": "busan-asiad-night",
+    "slug": "busan-asiad-1",
     "file": "access-busan-asiad-1-og.png",
-    "group": "B",
+    "group": "A",
     "size": "1200×1200",
-    "bytes": 41981,
+    "bytes": 56135,
     "bg": "#1c4a25",
     "bgContrast": "10.2:1",
     "nameSize": 150,
     "alt": "부산 아시아드나이트 가는 길·귀가 안내",
-    "nick": "-",
-    "phone": "-",
-    "phoneGlyphH": "-",
-    "clip": "-"
+    "nick": "새우깡",
+    "phone": "010-3614-1056",
+    "phoneGlyphH": "116px",
+    "clip": "좌43px/우42px 여백"
   },
   {
-    "slug": "changwon-lululala-2",
+    "slug": "changwon-lululala-3",
     "file": "access-changwon-lululala-3-og.png",
     "group": "A",
     "size": "1200×1200",
@@ -495,7 +495,7 @@
     "clip": "좌43px/우42px 여백"
   },
   {
-    "slug": "ulsan-champion-2",
+    "slug": "ulsan-champion-3",
     "file": "access-ulsan-champion-3-og.png",
     "group": "A",
     "size": "1200×1200",
@@ -585,7 +585,7 @@
     "clip": "-"
   },
   {
-    "slug": "night-do-jeju",
+    "slug": "jeju-1",
     "file": "access-jeju-1-og.png",
     "group": "B",
     "size": "1200×1200",

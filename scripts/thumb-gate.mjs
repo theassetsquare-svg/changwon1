@@ -15,7 +15,7 @@
 // 사용법: npm run build && node scripts/thumb-gate.mjs
 
 import { readFile, readdir, stat } from "node:fs/promises";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { join } from "node:path";
 import sharp from "sharp";
 import { loadAccessVenues } from "./access-data.mjs";
@@ -30,7 +30,7 @@ const MAX_BYTES = 300 * 1024;
 const NIGHT = JSON.parse(
   execSync(
     `node --experimental-strip-types -e ` +
-      `"import('${join(ROOT, "components/night/venues.ts")}').then(m=>console.log(JSON.stringify(` +
+      `"import('${pathToFileURL(join(ROOT, "components/night/venues.ts")).href}').then(m=>console.log(JSON.stringify(` +
       `m.VENUES.map(v=>({slug:v.slug,name:v.name})))))"`,
     { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
   )
