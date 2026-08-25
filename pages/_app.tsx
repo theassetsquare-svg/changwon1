@@ -12,15 +12,26 @@ export default function App({ Component, pageProps }: AppProps) {
   // 뒤섞어 읽어서 양쪽 다 손해를 본다. 그래서 그 경로에서만 빼 둔다.
   const isBulgwang = pathname === BULGWANG.path.replace(/\/$/, "");
 
+  // ★2026-08-25 — 위 판단은 옳았는데 **불광동 한 곳에만** 적용돼 있었다.
+  // /access/[slug] · /night/[slug] 로 나가는 **전국 가게 페이지 52개 전부**가 같은 문제였다.
+  // 실측: 부산아시아드·대전세븐·답십리미라클 등 남의 가게 페이지에 창원 룰루랄라의
+  // 업소정보와 로또 번호(010-7528-4936)가 그대로 실려 있었다.
+  // 네이버가 그 페이지를 창원 룰루랄라 페이지로 오인하면 "가게이름 검색 상위노출"이 깨진다.
+  //
+  // 가게 페이지는 자기 업소 JSON-LD(telephone 포함)를 스스로 만든다
+  // (components/night/NightVenuePage.tsx · components/access/AccessVenuePage.tsx).
+  // 그래서 여기서 빼도 창원 룰루랄라 자기 가게 페이지는 자기 번호를 그대로 유지한다.
+  const isVenuePage = /^\/(access|access-2|night)(\/|$)/.test(pathname);
+
   // 홈(/)은 헤더·푸터·고정 전화바 없이 글만 나가는 단독 페이지다.
   // 공용 레이아웃과 업소 JSON-LD를 모두 태우지 않는다.
   if (pathname === "/") return <Component {...pageProps} />;
 
   return (
     <>
-      {!isBulgwang && <Jsonld data={buildLocalBusiness()} />}
+      {!isBulgwang && !isVenuePage && <Jsonld data={buildLocalBusiness()} />}
       <Jsonld data={buildWebsite()} />
-      <Layout>
+      <Layout sticky={!isVenuePage}>
         <Component {...pageProps} />
       </Layout>
     </>
