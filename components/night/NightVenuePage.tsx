@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "../site";
 import PageThumb from "../PageThumb";
-import { NIGHT_BASE, VENUE_BY_SLUG, type NightVenue } from "./venues";
+import { NIGHT_BASE, VENUE_BY_SLUG, nightVenuePath, type NightVenue } from "./venues";
 
 /**
  * /night/{slug}/ 업소 안내 페이지.
@@ -96,7 +96,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
     };
   }, []);
 
-  const path = `${NIGHT_BASE}/${venue.slug}/`;
+  const path = nightVenuePath(venue.slug);
   const url = `${SITE.url}${path}`;
   const ogImage = `${SITE.url}/og/${venue.slug}-og${venue.ogV ?? ""}.png`;
 
@@ -248,7 +248,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
             const r = VENUE_BY_SLUG[slug];
             return (
               <li key={slug}>
-                <Link href={`${NIGHT_BASE}/${slug}/`}>{r.name}</Link> — {r.region}
+                <Link href={nightVenuePath(slug)}>{r.name}</Link> — {r.region}
               </li>
             );
           })}

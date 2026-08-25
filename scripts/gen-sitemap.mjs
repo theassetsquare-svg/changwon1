@@ -6,6 +6,7 @@
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { join } from "node:path";
+import { ACCESS_URL } from "./venue-urls.mjs";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const BASE = "https://j.nolcool.com";
@@ -21,19 +22,19 @@ const PAGES = [
   // 다른 지역 업소(불광동호박나이트) 안내 페이지
   { path: "/bulgwang-hobak-4/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
-  { path: "/night/bulgwang-hobak-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-night-og.png" },
-  { path: "/night/changwon-lululala-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-og.png" },
-  { path: "/night/ulsan-champion-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-4-og.png" },
-  { path: "/night/cheongdam-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-4-og.png" },
+  { path: "/bulgwang-hobak-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-night-og.png" },
+  { path: "/changwon-lululala-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-og.png" },
+  { path: "/ulsan-champion-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-4-og.png" },
+  { path: "/cheongdam-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-4-og.png" },
   { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
-  { path: "/night/sillim-grandprix-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-4-og.png" },
-  { path: "/night/sangbong-hangukgwan-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-4-og.png" },
-  { path: "/night/suyu-shampoo-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/suyu-shampoo-4-og.png" },
-  { path: "/night/busan-asiad-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/busan-asiad-1-og.png" },
-  { path: "/night/suwon-chancedome-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/suwon-chancedome-4-og.png" },
-  { path: "/night/ansan-hit-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-4-og.png" },
-  { path: "/night/daejeon-seven-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-4-og.png" },
-  { path: "/night/ilsan-shampoo-4/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-4-og.png" },
+  { path: "/sillim-grandprix-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-4-og.png" },
+  { path: "/sangbong-hangukgwan-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/sangbong-hangukgwan-4-og.png" },
+  { path: "/suyu-shampoo-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/suyu-shampoo-4-og.png" },
+  { path: "/busan-asiad-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/busan-asiad-1-og.png" },
+  { path: "/suwon-chancedome-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/suwon-chancedome-4-og.png" },
+  { path: "/ansan-hit-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/ansan-hit-4-og.png" },
+  { path: "/daejeon-seven-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-4-og.png" },
+  { path: "/ilsan-shampoo-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-4-og.png" },
   // /access/ 허브 — 전국 나이트 가는 길 40
   { path: "/access-2/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
 ];
@@ -45,7 +46,7 @@ for (const file of (await readdir(ACCESS_DIR)).filter((f) => f.startsWith("data-
   const src = await readFile(join(ACCESS_DIR, file), "utf8");
   for (const m of src.matchAll(/^\s{4}slug: "([a-z0-9-]+)",$/gm)) {
     PAGES.push({
-      path: `/access/${m[1]}/`,
+      path: ACCESS_URL(m[1]),
       priority: "0.8",
       changefreq: "weekly",
       thumb: `/og/access-${m[1]}-og.png`,

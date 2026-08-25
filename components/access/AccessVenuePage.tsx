@@ -3,7 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { SITE } from "../site";
 import PageThumb from "../PageThumb";
-import { ACCESS_BASE, ACCESS_VENUE_BASE, type AccessVenue } from "./types";
+import { ACCESS_BASE, ACCESS_VENUE_BASE, accessVenuePath, type AccessVenue } from "./types";
 import { VENUE_BY_SLUG } from "./venues";
 
 /**
@@ -170,7 +170,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
     };
   }, []);
 
-  const path = `${ACCESS_VENUE_BASE}${venue.slug}/`;
+  const path = accessVenuePath(venue.slug);
   const url = `${SITE.url}${path}`;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
   const thumbPath = `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
@@ -359,7 +359,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             if (!r) return null;
             return (
               <li key={slug}>
-                <Link href={`${ACCESS_VENUE_BASE}${slug}/`}>{r.name}</Link> — {r.region}
+                <Link href={accessVenuePath(slug)}>{r.name}</Link> — {r.region}
               </li>
             );
           })}
