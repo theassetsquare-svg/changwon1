@@ -166,7 +166,13 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
     if (out.length >= 6) return out;
     const same = ACCESS_VENUES.filter((v) => v.slug !== venue.slug && !out.includes(v.slug) && v.region === venue.region);
     const rest = ACCESS_VENUES.filter((v) => v.slug !== venue.slug && !out.includes(v.slug) && v.region !== venue.region);
-    for (const v of [...same, ...rest]) { if (out.length >= 6) break; out.push(v.slug); }
+    /* ★ 자기 위치 다음부터 순환해 채운다 — 앞에서부터 채우면 뒤쪽 가게가 고립된다 */
+    const pool = [...same, ...rest];
+    const base = Math.max(0, ACCESS_VENUES.findIndex((x) => x.slug === venue.slug));
+    for (let i = 0; out.length < 6 && i < pool.length; i++) {
+      const p = pool[(base + i) % pool.length];
+      if (p && !out.includes(p.slug)) out.push(p.slug);
+    }
     return out;
   })();
   const barRef = useRef<HTMLDivElement>(null);
