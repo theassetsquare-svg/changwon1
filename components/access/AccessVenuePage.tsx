@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SITE } from "../site";
 import PageThumb from "../PageThumb";
 import { ACCESS_BASE, ACCESS_VENUE_BASE, accessVenuePath, type AccessVenue } from "./types";
+import { ACCESS_VENUES } from "./venues";
 import { VENUE_BY_SLUG } from "./venues";
 
 /**
@@ -157,6 +158,17 @@ function Ld({ data }: { data: Record<string, unknown> }) {
 }
 
 export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
+  /* ★ 2026-08-26 — 관련 링크가 적으면 네이버가 그 페이지를 "중요하지 않다"고 본다.
+   *   실측: 들어오는 링크 0~2개인 페이지가 색인이 안 됐다.
+   *   related 가 모자라면 같은 지역 → 그 외 순으로 6개까지 채운다. */
+  const relatedFilled: string[] = (() => {
+    const out: string[] = [...venue.related];
+    if (out.length >= 6) return out;
+    const same = ACCESS_VENUES.filter((v) => v.slug !== venue.slug && !out.includes(v.slug) && v.region === venue.region);
+    const rest = ACCESS_VENUES.filter((v) => v.slug !== venue.slug && !out.includes(v.slug) && v.region !== venue.region);
+    for (const v of [...same, ...rest]) { if (out.length >= 6) break; out.push(v.slug); }
+    return out;
+  })();
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -354,7 +366,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
       <aside className="acc-wrap acc-related" aria-label="가까운 지역 가는 길">
         <h2>가는 길이 비슷한 다른 지역</h2>
         <ul>
-          {venue.related.map((slug) => {
+          {relatedFilled.map((slug) => {
             const r = VENUE_BY_SLUG[slug];
             if (!r) return null;
             return (
