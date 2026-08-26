@@ -5,6 +5,7 @@ import { SITE } from "@/components/site";
 import PageThumb from "@/components/PageThumb";
 import { ACCESS_CSS, RouteLine } from "@/components/access/AccessVenuePage";
 import { ACCESS_GROUPS, ACCESS_VENUES } from "@/components/access/venues";
+import { accessVenuePath } from "@/components/access/types";
 
 /**
  * /access/ — "전국 나이트 가는 길 40" 허브.
@@ -66,7 +67,7 @@ export default function AccessHub() {
       "@type": "ListItem",
       position: i + 1,
       name: v.name,
-      url: `${SITE.url}/access/${v.slug}/`,
+      url: `${SITE.url}${accessVenuePath(v.slug)}`,
     })),
   };
 
@@ -181,7 +182,7 @@ export default function AccessHub() {
             <ul className="hub-grid">
               {g.venues.map((v) => (
                 <li key={v.slug}>
-                  <Link href={`/access/${v.slug}/`}>{v.name}</Link>
+                  <Link href={accessVenuePath(v.slug)}>{v.name}</Link>
                   <span className="meta">
                     {v.region} · {anchorOf(v)}
                   </span>
