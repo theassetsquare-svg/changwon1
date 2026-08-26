@@ -30,5 +30,5 @@ export const NAV = [
   { href: "/about/", label: "소개" },
   { href: "/jjanggua/", label: "담당" },
   { href: "/location/", label: "위치" },
-  { href: "/contacta/", label: "문의" },
+  { href: "/contacta-1/", label: "문의" },
 ] as const;

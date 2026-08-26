@@ -43,9 +43,9 @@ const PAGES = [
   ["/about/", "about/index.html", "/og/page-about-og.png", "창원 룰루랄라 나이트"],
   ["/jjanggua/", "jjanggua/index.html", "/og/page-jjanggua-og.png", "창원 룰루랄라 나이트"],
   ["/location/", "location/index.html", "/og/page-location-og.png", "창원 룰루랄라 나이트"],
-  ["/contacta/", "contacta/index.html", "/og/page-contacta-og.png", "창원 룰루랄라 나이트"],
-  ["/bulgwang-hobak-4/", "bulgwang-hobak/index.html", "/og-bulgwang.png", "불광동호박나이트"],
-  ["/access-2/", "access/index.html", "/og/page-access-og.png", "창원 룰루랄라 나이트"],
+  ["/contacta-1/", "contacta/index.html", "/og/page-contacta-og.png", "창원 룰루랄라 나이트"],
+  ["/bulgwang-hobak-5/", "bulgwang-hobak/index.html", "/og-bulgwang.png", "불광동호박나이트"],
+  ["/access-3/", "access/index.html", "/og/page-access-og.png", "창원 룰루랄라 나이트"],
   ["/404/", "404/index.html", "/og-default.png", "창원 룰루랄라 나이트"],
   ...NIGHT.map((v) => [
     `/night/${v.slug}/`,

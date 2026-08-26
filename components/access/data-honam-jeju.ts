@@ -10,7 +10,7 @@ const HJ_BUS =
 export const HONAM_JEJU: AccessVenue[] = [
   // ── 38 ─────────────────────────────────────────────────────────────────
   {
-    slug: "gwangju-sangmu-night",
+    slug: "gwangju-sangmu-night-1",
     name: "광주상무나이트",
     nameSpaced: "광주 상무나이트",
     cityKeyword: "치평동 나이트클럽",
@@ -113,7 +113,7 @@ export const HONAM_JEJU: AccessVenue[] = [
 
   // ── 39 ─────────────────────────────────────────────────────────────────
   {
-    slug: "gwangju-cheomdan-night",
+    slug: "gwangju-cheomdan-night-1",
     name: "광주첨단나이트",
     nameSpaced: "광주 첨단나이트",
     cityKeyword: "월계동 나이트클럽",

@@ -83,7 +83,7 @@ export const VENUES: NightVenue[] = [
   // 1. 불광동호박나이트 — 각도8 시간 흐름형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "bulgwang-hobak-night",
+    slug: "bulgwang-hobak-night-2",
     name: "불광동호박나이트",
     nameSpaced: "불광동 호박나이트",
     cityKeyword: "불광동 나이트클럽",
@@ -199,7 +199,7 @@ export const VENUES: NightVenue[] = [
   // 2. 창원룰루랄라나이트 — 각도9 비교 설명형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "changwon-lululala-night",
+    slug: "changwon-lululala-night-2",
     name: "창원룰루랄라나이트",
     nameSpaced: "창원 룰루랄라나이트",
     cityKeyword: "창원 나이트클럽",
@@ -551,7 +551,7 @@ export const VENUES: NightVenue[] = [
   // 5. 대전원나이트 — 각도12 실수 방지형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "daejeon-one-night",
+    slug: "daejeon-one-night-1",
     name: "대전원나이트",
     nameSpaced: "대전 원나이트",
     cityKeyword: "대전 나이트클럽",

@@ -329,7 +329,7 @@ export const YEONGNAM: AccessVenue[] = [
 
   // ── 35 ─────────────────────────────────────────────────────────────────
   {
-    slug: "ulsan-newworld-night",
+    slug: "ulsan-newworld-night-1",
     name: "울산뉴월드나이트",
     nameSpaced: "울산 뉴월드나이트",
     cityKeyword: "삼산로 나이트클럽",
@@ -431,7 +431,7 @@ export const YEONGNAM: AccessVenue[] = [
 
   // ── 36 ─────────────────────────────────────────────────────────────────
   {
-    slug: "daegu-hobak-night",
+    slug: "daegu-hobak-night-1",
     name: "대구호박나이트",
     nameSpaced: "대구 호박나이트",
     cityKeyword: "칠곡 나이트클럽",
