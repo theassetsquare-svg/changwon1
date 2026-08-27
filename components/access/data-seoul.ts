@@ -10,7 +10,7 @@ const SEOUL_NIGHT_BUS =
 export const SEOUL: AccessVenue[] = [
   // ── 1 ──────────────────────────────────────────────────────────────────
   {
-    slug: "sillim-grandprix-night-2",
+    slug: "sillim-grandprix-night",
     name: "신림그랑프리나이트",
     nameSpaced: "신림 그랑프리나이트",
     cityKeyword: "신림동 나이트클럽",
@@ -318,7 +318,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 4 ──────────────────────────────────────────────────────────────────
   {
-    slug: "cheongdam-night-2",
+    slug: "cheongdam-night",
     name: "청담나이트",
     nameSpaced: "청담 나이트",
     cityKeyword: "청담동 나이트클럽",
@@ -1040,7 +1040,7 @@ export const SEOUL: AccessVenue[] = [
 
   // ── 11 ─────────────────────────────────────────────────────────────────
   {
-    slug: "gildong-chance-night-1",
+    slug: "gildong-chance-night",
     name: "길동찬스나이트",
     nameSpaced: "길동 찬스나이트",
     cityKeyword: "길동 나이트클럽",

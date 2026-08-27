@@ -38,7 +38,7 @@ export default function Location() {
             <a className="btn btn--primary btn--lg" href={SITE.phoneHref}>
               📞 {SITE.contactName} {SITE.phone} 전화
             </a>
-            <Link className="btn btn--ghost btn--lg" href="/contacta-1/">예약 안내</Link>
+            <Link className="btn btn--ghost btn--lg" href="/contacta/">예약 안내</Link>
           </div>
         </div>
       </section>

@@ -113,7 +113,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 13 ─────────────────────────────────────────────────────────────────
   {
-    slug: "ansan-hit-night-1",
+    slug: "ansan-hit-night",
     name: "안산히트나이트",
     nameSpaced: "안산 히트나이트",
     cityKeyword: "상록구 나이트클럽",
@@ -521,7 +521,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 17 ─────────────────────────────────────────────────────────────────
   {
-    slug: "uijeongbu-hangukgwan-night-1",
+    slug: "uijeongbu-hangukgwan-night",
     name: "의정부한국관나이트",
     nameSpaced: "의정부 한국관나이트",
     cityKeyword: "의정부동 나이트클럽",
@@ -726,7 +726,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 19 ─────────────────────────────────────────────────────────────────
   {
-    slug: "suwon-korea-night-1",
+    slug: "suwon-korea-night",
     name: "수원코리아나이트",
     nameSpaced: "수원 코리아나이트",
     cityKeyword: "수원 나이트클럽",
@@ -931,7 +931,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 21 ─────────────────────────────────────────────────────────────────
   {
-    slug: "indeogwon-gukbingwan-night-1",
+    slug: "indeogwon-gukbingwan-night",
     name: "인덕원국빈관나이트",
     nameSpaced: "인덕원 국빈관나이트",
     cityKeyword: "인덕원 나이트클럽",
@@ -1034,7 +1034,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 22 ─────────────────────────────────────────────────────────────────
   {
-    slug: "seongnam-shampoo-night-1",
+    slug: "seongnam-shampoo-night",
     name: "성남샴푸나이트",
     nameSpaced: "성남 샴푸나이트",
     cityKeyword: "성남동 나이트클럽",
@@ -1239,7 +1239,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 24 ─────────────────────────────────────────────────────────────────
   {
-    slug: "bucheon-gorae-night-1",
+    slug: "bucheon-gorae-night",
     name: "부천고래나이트",
     nameSpaced: "부천 고래나이트",
     cityKeyword: "부천 나이트클럽",
@@ -1340,7 +1340,7 @@ export const GYEONGGI: AccessVenue[] = [
 
   // ── 25 ─────────────────────────────────────────────────────────────────
   {
-    slug: "pyeongtaek-hobak-night-1",
+    slug: "pyeongtaek-hobak-night",
     name: "평택호박나이트",
     nameSpaced: "평택 호박나이트",
     cityKeyword: "평택동 나이트클럽",
