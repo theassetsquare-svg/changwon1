@@ -552,6 +552,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "daejeon-one-night",
+    ogV: "-v3",
     name: "대전원나이트",
     nameSpaced: "대전 원나이트",
     cityKeyword: "대전 나이트클럽",
@@ -667,6 +668,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "sillim-grandprix-4",
+    ogV: "-v3",
     name: "신림그랑프리나이트",
     nameSpaced: "신림 그랑프리나이트",
     cityKeyword: "신림동 나이트클럽",
@@ -781,6 +783,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "sangbong-hangukgwan-4",
+    ogV: "-v3",
     name: "상봉동한국관나이트",
     nameSpaced: "상봉동 한국관나이트",
     cityKeyword: "상봉동 나이트클럽",
@@ -897,6 +900,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "suyu-shampoo-4",
+    ogV: "-v3",
     name: "수유샴푸나이트",
     nameSpaced: "수유 샴푸나이트",
     cityKeyword: "수유 나이트클럽",
@@ -1128,6 +1132,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "suwon-chancedome-4",
+    ogV: "-v3",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "수원 나이트클럽",
@@ -1242,6 +1247,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "ansan-hit-4",
+    ogV: "-v3",
     name: "안산히트나이트",
     nameSpaced: "안산 히트나이트",
     cityKeyword: "안산 나이트클럽",
@@ -1472,6 +1478,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "ilsan-shampoo-4",
+    ogV: "-v3",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "일산 나이트클럽",

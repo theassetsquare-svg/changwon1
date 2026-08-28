@@ -116,6 +116,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
   // ── 27 ─────────────────────────────────────────────────────────────────
   {
     slug: "daejeon-one-night",
+    ogV: "-v3",
     name: "대전원나이트",
     nameSpaced: "대전 원나이트",
     cityKeyword: "용전동 나이트클럽",
@@ -219,6 +220,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
   // ── 28 ─────────────────────────────────────────────────────────────────
   {
     slug: "cheonan-stardome-2",
+    ogV: "-v3",
     name: "천안스타돔나이트",
     nameSpaced: "천안 스타돔나이트",
     cityKeyword: "성정동 나이트클럽",
@@ -322,6 +324,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
   // ── 29 ─────────────────────────────────────────────────────────────────
   {
     slug: "cheonan-korea-night",
+    ogV: "-v3",
     name: "천안코리아나이트",
     nameSpaced: "천안 코리아나이트",
     cityKeyword: "쌍용동 나이트클럽",
@@ -425,6 +428,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
   // ── 30 ─────────────────────────────────────────────────────────────────
   {
     slug: "cheongju-hobak-night",
+    ogV: "-v3",
     name: "청주호박나이트",
     nameSpaced: "청주 호박나이트",
     cityKeyword: "청원구 나이트클럽",
@@ -526,6 +530,7 @@ export const CHUNGCHEONG: AccessVenue[] = [
   // ── 31 ─────────────────────────────────────────────────────────────────
   {
     slug: "seosan-hobak-night",
+    ogV: "-v3",
     name: "서산호박나이트",
     nameSpaced: "서산 호박나이트",
     cityKeyword: "읍내동 나이트클럽",

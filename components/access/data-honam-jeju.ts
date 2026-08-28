@@ -11,6 +11,7 @@ export const HONAM_JEJU: AccessVenue[] = [
   // ── 38 ─────────────────────────────────────────────────────────────────
   {
     slug: "gwangju-sangmu-night",
+    ogV: "-v3",
     name: "광주상무나이트",
     nameSpaced: "광주 상무나이트",
     cityKeyword: "치평동 나이트클럽",
@@ -114,6 +115,7 @@ export const HONAM_JEJU: AccessVenue[] = [
   // ── 39 ─────────────────────────────────────────────────────────────────
   {
     slug: "gwangju-cheomdan-night",
+    ogV: "-v3",
     name: "광주첨단나이트",
     nameSpaced: "광주 첨단나이트",
     cityKeyword: "월계동 나이트클럽",
@@ -217,6 +219,7 @@ export const HONAM_JEJU: AccessVenue[] = [
   // ── 40 ─────────────────────────────────────────────────────────────────
   {
     slug: "jeju-1",
+    ogV: "-v3",
     name: "제주도나이트",
     nameSpaced: "제주도 나이트",
     cityKeyword: "제주시 나이트클럽",

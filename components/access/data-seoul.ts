@@ -11,6 +11,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 1 ──────────────────────────────────────────────────────────────────
   {
     slug: "sillim-grandprix-night",
+    ogV: "-v3",
     name: "신림그랑프리나이트",
     nameSpaced: "신림 그랑프리나이트",
     cityKeyword: "신림동 나이트클럽",
@@ -114,6 +115,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 2 ──────────────────────────────────────────────────────────────────
   {
     slug: "sangbong-hangukgwan-3",
+    ogV: "-v3",
     name: "상봉동한국관나이트",
     nameSpaced: "상봉동 한국관나이트",
     cityKeyword: "상봉동 나이트클럽",
@@ -217,6 +219,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 3 ──────────────────────────────────────────────────────────────────
   {
     slug: "suyu-shampoo-3",
+    ogV: "-v3",
     name: "수유샴푸나이트",
     nameSpaced: "수유 샴푸나이트",
     cityKeyword: "수유동 나이트클럽",
@@ -527,6 +530,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 6 ──────────────────────────────────────────────────────────────────
   {
     slug: "doksan-gukbingwan-night",
+    ogV: "-v3",
     name: "독산동국빈관나이트",
     nameSpaced: "독산동 국빈관나이트",
     cityKeyword: "독산동 나이트클럽",
@@ -732,6 +736,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 8 ──────────────────────────────────────────────────────────────────
   {
     slug: "gangseo-hobak-night",
+    ogV: "-v3",
     name: "강서호박나이트",
     nameSpaced: "강서 호박나이트",
     cityKeyword: "화곡동 나이트클럽",
@@ -835,6 +840,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 9 ──────────────────────────────────────────────────────────────────
   {
     slug: "yeongdeungpo-terminal-night",
+    ogV: "-v3",
     name: "영등포터미널나이트",
     nameSpaced: "영등포 터미널나이트",
     cityKeyword: "영등포 나이트클럽",
@@ -938,6 +944,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 10 ─────────────────────────────────────────────────────────────────
   {
     slug: "nowon-hobak-1",
+    ogV: "-v3",
     name: "노원호박나이트",
     nameSpaced: "노원 호박나이트",
     cityKeyword: "상계동 나이트클럽",
@@ -1041,6 +1048,7 @@ export const SEOUL: AccessVenue[] = [
   // ── 11 ─────────────────────────────────────────────────────────────────
   {
     slug: "gildong-chance-night",
+    ogV: "-v3",
     name: "길동찬스나이트",
     nameSpaced: "길동 찬스나이트",
     cityKeyword: "길동 나이트클럽",

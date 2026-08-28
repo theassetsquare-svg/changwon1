@@ -11,6 +11,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 12 ─────────────────────────────────────────────────────────────────
   {
     slug: "suwon-chancedome-4",
+    ogV: "-v3",
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "권선동 나이트클럽",
@@ -114,6 +115,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 13 ─────────────────────────────────────────────────────────────────
   {
     slug: "ansan-hit-night",
+    ogV: "-v3",
     name: "안산히트나이트",
     nameSpaced: "안산 히트나이트",
     cityKeyword: "상록구 나이트클럽",
@@ -216,6 +218,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 14 ─────────────────────────────────────────────────────────────────
   {
     slug: "ilsan-shampoo-4",
+    ogV: "-v3",
     name: "일산샴푸나이트",
     nameSpaced: "일산 샴푸나이트",
     cityKeyword: "마두동 나이트클럽",
@@ -319,6 +322,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 15 ─────────────────────────────────────────────────────────────────
   {
     slug: "paju-skydome-2",
+    ogV: "-v3",
     name: "파주야당스카이돔나이트",
     nameSpaced: "파주 야당스카이돔나이트",
     cityKeyword: "야당동 나이트클럽",
@@ -421,6 +425,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 16 ─────────────────────────────────────────────────────────────────
   {
     slug: "guri-hobak-2",
+    ogV: "-v3",
     name: "구리호박나이트",
     nameSpaced: "구리 호박나이트",
     cityKeyword: "구리시 나이트클럽",
@@ -522,6 +527,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 17 ─────────────────────────────────────────────────────────────────
   {
     slug: "uijeongbu-hangukgwan-night",
+    ogV: "-v3",
     name: "의정부한국관나이트",
     nameSpaced: "의정부 한국관나이트",
     cityKeyword: "의정부동 나이트클럽",
@@ -624,6 +630,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 18 ─────────────────────────────────────────────────────────────────
   {
     slug: "uijeongbu-baekakgwan-night",
+    ogV: "-v3",
     name: "의정부백악관나이트",
     nameSpaced: "의정부 백악관나이트",
     cityKeyword: "의정부 나이트클럽",
@@ -727,6 +734,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 19 ─────────────────────────────────────────────────────────────────
   {
     slug: "suwon-korea-night",
+    ogV: "-v3",
     name: "수원코리아나이트",
     nameSpaced: "수원 코리아나이트",
     cityKeyword: "수원 나이트클럽",
@@ -829,6 +837,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 20 ─────────────────────────────────────────────────────────────────
   {
     slug: "osan-hobak-night",
+    ogV: "-v3",
     name: "오산호박나이트",
     nameSpaced: "오산 호박나이트",
     cityKeyword: "오산시 나이트클럽",
@@ -932,6 +941,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 21 ─────────────────────────────────────────────────────────────────
   {
     slug: "indeogwon-gukbingwan-night",
+    ogV: "-v3",
     name: "인덕원국빈관나이트",
     nameSpaced: "인덕원 국빈관나이트",
     cityKeyword: "인덕원 나이트클럽",
@@ -1035,6 +1045,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 22 ─────────────────────────────────────────────────────────────────
   {
     slug: "seongnam-shampoo-night",
+    ogV: "-v3",
     name: "성남샴푸나이트",
     nameSpaced: "성남 샴푸나이트",
     cityKeyword: "성남동 나이트클럽",
@@ -1138,6 +1149,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 23 ─────────────────────────────────────────────────────────────────
   {
     slug: "incheon-arabian-night",
+    ogV: "-v3",
     name: "인천아라비안나이트",
     nameSpaced: "인천 아라비안나이트",
     altNames: ["인천아라비아나이트", "아라비안나이트"],
@@ -1240,6 +1252,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 24 ─────────────────────────────────────────────────────────────────
   {
     slug: "bucheon-gorae-night",
+    ogV: "-v3",
     name: "부천고래나이트",
     nameSpaced: "부천 고래나이트",
     cityKeyword: "부천 나이트클럽",
@@ -1341,6 +1354,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 25 ─────────────────────────────────────────────────────────────────
   {
     slug: "pyeongtaek-hobak-night",
+    ogV: "-v3",
     name: "평택호박나이트",
     nameSpaced: "평택 호박나이트",
     cityKeyword: "평택동 나이트클럽",
