@@ -76,7 +76,7 @@ export const NIGHT_SLUG_BY_URL: Record<string, string> = Object.fromEntries(
   Object.entries(NIGHT_URL_MAP).map(([slug, url]) => [url, slug])
 );
 export const nightVenuePath = (slug: string) =>
-  NIGHT_KEEP_OLD.has(slug) ? `/night/${slug}/` : `/${NIGHT_URL_MAP[slug] ?? slug}/`;
+  `/club/${NIGHT_URL_MAP[slug] ?? slug}/`;   /* ★ /night/xxx-night 는 같은 단어가 두 번이라 club [[naver-url-no-duplicate-word]] */
 
 export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────

@@ -107,5 +107,8 @@ export const ACCESS_URL_MAP: Record<string, string> = {
 export const ACCESS_SLUG_BY_URL: Record<string, string> = Object.fromEntries(
   Object.entries(ACCESS_URL_MAP).map(([slug, url]) => [url, slug])
 );
+/* ★★ 2026-08-29 — 평면 주소는 색인이 안 된다(468개 중 1개, 0.2%).
+   폴더 주소는 39개 전부 색인됐다(100%). 가게 페이지를 모두 폴더 안으로 넣는다.
+   [[index-cause-flat-url-2026-08-28]] */
 export const accessVenuePath = (slug: string) =>
-  ACCESS_KEEP_OLD.has(slug) ? `/access/${slug}/` : `/${ACCESS_URL_MAP[slug] ?? slug}/`;
+  `/access/${ACCESS_URL_MAP[slug] ?? slug}/`;
