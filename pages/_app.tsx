@@ -21,7 +21,11 @@ export default function App({ Component, pageProps }: AppProps) {
   // 가게 페이지는 자기 업소 JSON-LD(telephone 포함)를 스스로 만든다
   // (components/night/NightVenuePage.tsx · components/access/AccessVenuePage.tsx).
   // 그래서 여기서 빼도 창원 룰루랄라 자기 가게 페이지는 자기 번호를 그대로 유지한다.
-  const isVenuePage = /^\/(access|access-2|night)(\/|$)/.test(pathname);
+  // ★2026-08-30 — /club 이 빠져 있었다. /club 가게 페이지 5쪽에 창원 룰루랄라(로또 010-7528-4936)
+  //   고정 전화바가 그대로 붙어, 한 페이지에 광고주 번호가 두 개 나왔다(불광동호박·부산아시아드·
+  //   청담·대전세븐·울산챔피언 페이지). 화면에서는 CSS 로 가려져 있었지만 HTML 에는 남아 검색엔진은 읽었다.
+  //   광고주 규칙: 한 페이지에 두 명 이상 금지 · 남의 번호 누출 금지.
+  const isVenuePage = /^\/(access|access-2|night|club)(\/|$)/.test(pathname);
 
   // 홈(/)은 헤더·푸터·고정 전화바 없이 글만 나가는 단독 페이지다.
   // 공용 레이아웃과 업소 JSON-LD를 모두 태우지 않는다.

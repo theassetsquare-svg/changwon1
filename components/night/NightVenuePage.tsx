@@ -241,7 +241,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
         </section>
       </article>
 
-      <aside className="night-wrap night-related" aria-label="같이 보면 좋은 업소">
+      <nav className="night-wrap night-related" aria-label="같이 보면 좋은 업소">
         <h2>{`${venue.name} 페이지와 같이 보면 좋은 업소 안내`}</h2>
         <ul>
           {venue.related.map((slug) => {
@@ -253,7 +253,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
             );
           })}
         </ul>
-      </aside>
+      </nav>
 
       <footer className="site-footer">
         <div className="ad-inquiry">

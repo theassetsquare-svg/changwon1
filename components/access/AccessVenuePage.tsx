@@ -369,7 +369,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         </ul>
       </aside>
 
-      <aside className="acc-wrap acc-related" aria-label="가까운 지역 가는 길">
+      <nav className="acc-wrap acc-related" aria-label="가까운 지역 가는 길">
         <h2>가는 길이 비슷한 다른 지역</h2>
         <ul>
           {relatedFilled.map((slug) => {
@@ -382,7 +382,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             );
           })}
         </ul>
-      </aside>
+      </nav>
 
       <footer className="acc-footer">
         <div className="acc-ad">
