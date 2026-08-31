@@ -4,6 +4,8 @@ export default function Document() {
   return (
     <Html lang="ko-KR">
       <Head>
+        {/* ★ 2026-08-31 — 파비콘 선언이 없어 검색 결과에 아이콘이 안 떴다(체크리스트 #58) */}
+        <link rel="icon" href="/favicon.svg" sizes="any" />
         <meta charSet="utf-8" />
         <meta name="google-site-verification" content="HJjm7MRxykCQ7d_9L7glaTeeaWrmJIzAKY0BcNcfm88" />
         {/* ★ 네이버 소유확인 — 새 도메인(j.nolcool.com) 속성용 (2026-08-24 발급).
