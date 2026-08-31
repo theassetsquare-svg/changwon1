@@ -267,7 +267,7 @@ export default function AccessHub() {
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/club/daejeon-seven-night-1/">대전세븐나이트</a></li>
           <li><a href="/access/daejeon-seven-night/">대전세븐나이트</a></li>
-          <li><a href="/club/club/daejeon-one-night/">대전원나이트</a></li>
+          <li><a href="/club/daejeon-one-night/">대전원나이트</a></li>
           <li><a href="/club/daejeon-one-night/">대전원나이트</a></li>
           <li><a href="/access/seosan-hobak-night/">서산호박나이트</a></li>
           <li><a href="/access/cheonan-stardome-night/">천안스타돔나이트</a></li>
