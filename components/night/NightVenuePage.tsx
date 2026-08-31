@@ -5,6 +5,58 @@ import { SITE } from "../site";
 import PageThumb from "../PageThumb";
 import { NIGHT_BASE, VENUE_BY_SLUG, nightVenuePath, type NightVenue } from "./venues";
 
+ /* ★ 2026-08-31 — 이 한 줄이 한 사이트 수십 쪽에 똑같이 박혀 있었다(설계도 5장).
+   쪽마다 다른 앞말을 고른다. 카카오톡 아이디는 사실이라 그대로 둔다. */
+const 문의앞말 = [
+  "문의는 카카오톡 오픈채팅 한 곳으로만 받습니다",
+  "문의 창구는 카카오톡 오픈채팅 한 곳입니다",
+  "연락은 카카오톡 오픈채팅으로만 받습니다",
+  "문의는 카카오톡 오픈채팅에서만 받고 있습니다",
+  "카카오톡 오픈채팅 한 곳에서만 문의를 받습니다",
+  "연락 창구는 카카오톡 오픈채팅뿐입니다",
+  "문의는 카카오톡 오픈채팅으로 부탁드립니다",
+  "카카오톡 오픈채팅에서만 연락을 받습니다",
+  "문의 접수는 카카오톡 오픈채팅 한 곳입니다",
+  "연락은 카카오톡 오픈채팅에서만 가능합니다",
+  "카카오톡 오픈채팅으로만 문의해 주세요",
+  "문의는 오직 카카오톡 오픈채팅으로 받습니다",
+  "연락 방법은 카카오톡 오픈채팅 하나입니다",
+  "문의 창구는 카카오톡 오픈채팅으로 단일화했습니다",
+  "광고·제휴 입점 문의 카톡",
+  "광고·제휴 문의는 카카오톡",
+  "입점·광고 문의 카톡",
+  "제휴 및 광고 문의 카카오톡",
+  "광고 제휴 문의는 카톡으로",
+  "입점 문의 카카오톡",
+  "광고·입점 상담 카톡",
+  "제휴 문의 카카오톡으로",
+  "광고 문의는 카톡",
+  "입점·제휴 상담 카카오톡",
+  "광고 및 제휴 문의 카톡",
+  "제휴·입점 문의는 카카오톡",
+  "광고 상담 카카오톡",
+  "업소 광고·제휴 입점 문의는 카카오톡",
+  "업소 광고와 제휴 문의는 카카오톡으로",
+  "업소 입점·광고 문의 카카오톡",
+  "광고·제휴 입점은 카카오톡으로 문의",
+  "업소 제휴 문의는 카톡으로 주세요",
+  "입점 및 광고 문의는 카카오톡",
+  "업소 광고 상담은 카카오톡으로",
+  "제휴·입점 문의는 카톡으로 부탁드립니다",
+  "업소 광고·입점 카카오톡 문의",
+  "광고와 제휴 문의는 카카오톡에서",
+  "업소 입점 상담은 카톡으로",
+  "광고·제휴 관련 문의는 카카오톡",
+  "업소 광고 문의는 카카오톡으로",
+];
+function 문의앞말고르기(씨: unknown) {
+  const s = String(씨 ?? "");
+  let n = 0;
+  for (let k = 0; k < s.length; k++) n = (n * 131 + s.charCodeAt(k)) % 1000003;
+  return 문의앞말[n % 문의앞말.length];
+}
+
+
 /**
  * /night/{slug}/ 업소 안내 페이지.
  *
@@ -47,7 +99,7 @@ body.has-sticky{ padding-bottom:calc(84px + env(safe-area-inset-bottom,0px)); }
 .answer-box{background:#171922;border:1px solid #2c303c;border-left:5px solid #ffd400;
   border-radius:10px;padding:16px 18px;margin:14px 0 26px;}
 .answer-box p{margin:0;font-size:1.05rem;line-height:1.75;}
-/* 본문 대표 이미지 — og:image·thumbnail 과 같은 파일 */
+/* 본문 대표 그림 — 미리보기 표와 같은 파일 */
 .night-wrap>img{display:block;border-radius:12px;margin:0 0 26px;}
 .night-facts{margin:0 0 26px;}
 .night-facts table{width:100%;border-collapse:collapse;border:1px solid #2c303c;border-radius:10px;}
@@ -257,7 +309,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
 
       <footer className="site-footer">
         <div className="ad-inquiry">
-          광고·제휴 입점 문의 &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
+          {문의앞말고르기(venue.slug)} &nbsp;|&nbsp; 카카오톡 ID <strong>besta12</strong>
         </div>
         <p className="footer-note">
           {`본 페이지는 ${venue.name} 업소 안내 페이지입니다.`}{" "} 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
