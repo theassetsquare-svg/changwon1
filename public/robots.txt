@@ -1,16 +1,14 @@
 User-agent: *
 Allow: /
 
-User-agent: Googlebot
-Allow: /
-
+# 아래는 각 회사 공식 문서에서 이름을 확인한 크롤러입니다 (2026-09-01 확인).
 User-agent: Yeti
 Allow: /
 
-User-agent: Naverbot
+User-agent: Googlebot
 Allow: /
 
-User-agent: Daumoa
+User-agent: Google-Extended
 Allow: /
 
 User-agent: bingbot
@@ -19,10 +17,19 @@ Allow: /
 User-agent: GPTBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -31,40 +38,4 @@ Allow: /
 User-agent: Perplexity-User
 Allow: /
 
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Claude-User
-Allow: /
-
-User-agent: Claude-SearchBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
 Sitemap: https://j.nolcool.com/sitemap.xml
-Host: https://j.nolcool.com
-
-# /night/ 지역별 업소 정보 페이지 (2026-08-15 추가)
-User-agent: Yeti
-Allow: /night/
-
-User-agent: Googlebot
-Allow: /night/
-
-# /access/ 전국 나이트 가는 길 40 (2026-08-17 추가)
-User-agent: Yeti
-Allow: /access/
-
-User-agent: Googlebot
-Allow: /access/
-
-User-agent: Naverbot
-Allow: /access/
-
-User-agent: Daumoa
-Allow: /access/
