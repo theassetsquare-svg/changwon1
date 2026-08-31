@@ -100,20 +100,10 @@ export default function AccessHub() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
-        <meta property="og:image" content={ogImage} />
-        <meta property="og:image:secure_url" content={ogImage} />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="1200" />
-        <meta property="og:image:alt" content={ogAlt} />
-        <link rel="image_src" href={ogImage} />
         {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
-        <meta name="thumbnail" content={ogImage} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:image:alt" content={ogAlt} />
         <style dangerouslySetInnerHTML={{ __html: ACCESS_CSS + HUB_CSS }} />
       </Head>
 
@@ -128,7 +118,6 @@ export default function AccessHub() {
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
         <h1>전국 나이트 가는 길 40</h1>
 
-        <PageThumb src={thumbPath} alt={ogAlt} />
 
         <div className="acc-intro">
           <p>

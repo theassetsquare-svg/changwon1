@@ -15,7 +15,6 @@ const DESC =
 
 export default function Home() {
   const url = `${SITE.url}/`;
-  const ogImage = `${SITE.url}/og/page-home-og.png`;
   return (
     <>
       <Head>
@@ -38,16 +37,6 @@ export default function Home() {
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESC} />
         <meta property="og:url" content={url} />
-        {/* ★ 2026-08-25 — 홈에 썸네일이 아예 없었다.
-            홈은 이 사이트에서 제일 중요한 페이지인데 네이버가 미리보기 그림을 못 가져갔다.
-            네이버는 상대경로 og:image 를 못 읽으므로 반드시 전체 주소로 넣는다. */}
-        {/* 네이버 썸네일 수집용 */}
-        <meta name="thumbnail" content={ogImage} />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={TITLE} />
-        <meta name="twitter:description" content={DESC} />
-        {/* ★ 2026-08-25 — 홈에 구조화데이터가 아예 없었다.
-            네이버·구글이 이 페이지가 무엇인지 알아볼 근거가 없는 상태였다. */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -57,7 +46,6 @@ export default function Home() {
               headline: TITLE,
               description: DESC,
               inLanguage: "ko-KR",
-              image: [ogImage],
               mainEntityOfPage: { "@type": "WebPage", "@id": url },
               publisher: {
                 "@type": "Organization",
