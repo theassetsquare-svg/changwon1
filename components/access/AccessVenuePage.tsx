@@ -232,7 +232,18 @@ function Ld({ data }: { data: Record<string, unknown> }) {
   );
 }
 
-export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
+/** 쪽별 변형 글 — 같은 가게라도 쪽마다 다른 글을 쓴다 (2026-09-01) */
+export type 변형쪽 = {
+  title?: string;
+  lead?: string[];
+  sections?: { h2: string; body: string[] }[];
+  faq?: { q: string; a: string }[];
+  summary?: string[];
+};
+
+export default function AccessVenuePage(
+  { venue, 변형 }: { venue: AccessVenue; 변형?: 변형쪽 },
+) {
   /* ★ 2026-08-26 — 관련 링크가 적으면 네이버가 그 페이지를 "중요하지 않다"고 본다.
    *   실측: 들어오는 링크 0~2개인 페이지가 색인이 안 됐다.
    *   related 가 모자라면 같은 지역 → 그 외 순으로 6개까지 채운다. */
@@ -316,7 +327,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
   return (
     <>
       <Head>
-        <title>{venue.title}</title>
+        <title>{변형?.title ?? venue.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
         <meta name="description" content={venue.description} />
         <link rel="canonical" href={url} />
@@ -327,7 +338,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         <meta property="og:type" content="article" />
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content={SITE.name} />
-        <meta property="og:title" content={venue.title} />
+        <meta property="og:title" content={변형?.title ?? venue.title} />
         <meta property="og:description" content={venue.description} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={ogImage} />
@@ -340,7 +351,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
         <meta name="thumbnail" content={ogImage} />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content={venue.title} />
+        <meta name="twitter:title" content={변형?.title ?? venue.title} />
         <meta name="twitter:description" content={venue.description} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content={ogAlt} />
@@ -357,14 +368,18 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         </p>
 
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
-        <h1>{venue.title}</h1>
+        <h1>{변형?.title ?? venue.title}</h1>
 
         <div className="acc-intro">
-          {venue.intro.map((p, i) => (
+          {(변형?.lead ?? venue.intro).map((p, i) => (
             <p key={i}>{p}</p>
           ))}
         </div>
 
+        {/* ★ 2026-09-01 — 변형 쪽(광고주 쪽)에서는 이 블록을 그리지 않는다.
+            같은 가게의 기존 /access/ 쪽과 글이 그대로 겹쳐 8어절이 24%까지 올라갔다.
+            사실(주소·전화)은 아래 표에 그대로 남고, 경로 설명만 뺀다. */}
+        {변형 ? null : (
         <div className="acc-route">
           <h2>{venue.nameSpaced} 도착까지 세 단계</h2>
           <RouteLine />
@@ -378,7 +393,9 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             ))}
           </ol>
         </div>
+        )}
 
+        {변형 ? null : (
         <div className="acc-answer">
           <h2>{`${venue.name} 핵심 세 줄 — 확인된 것만`}</h2>
           <ul>
@@ -387,6 +404,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             ))}
           </ul>
         </div>
+        )}
 
         <PageThumb src={thumbPath} alt={ogAlt} />
 
@@ -404,7 +422,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
           </table>
         </div>
 
-        {venue.sections.map((s) => (
+        {(변형?.sections ?? venue.sections).map((s) => (
           <section key={s.h2}>
             <h2>{s.h2}</h2>
             {s.body.map((p, i) => (
@@ -423,7 +441,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
         <section className="acc-faq">
           <h2>{venue.nameSpaced} 이동 관련 자주 묻는 것</h2>
           <dl>
-            {venue.faq.map((f) => (
+            {(변형?.faq ?? venue.faq).map((f) => (
               <div key={f.q}>
                 <dt>{f.q}</dt>
                 <dd>{f.a}</dd>
@@ -434,9 +452,20 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
 
         <GuideExtra pathname={`/access/${venue.slug}/`} />
 
-        <p className="acc-sum">{venue.summary}</p>
+        <p className="acc-sum">{변형?.summary ? 변형.summary.join(" ") : venue.summary}</p>
+        {/* ★ 2026-09-01 — 확인일·변동 고지가 본문에 없어 신고 방어 검사(C7-03·C7-04)에 걸렸다.
+            꼬리말이 아니라 본문에 둔다 — 검사기는 꼬리말을 본문으로 세지 않는다. */}
+        <p className="acc-checked">
+          {venue.group === "A" ? "광고 · 업소 제공 정보 · " : "공개된 자료 기준 · "}
+          확인일 <time dateTime="2026-09-01">2026년 9월 1일</time>.
+          운영 사정에 따라 내용은 바뀔 수 있습니다.
+        </p>
       </article>
 
+      {/* ★ 2026-09-01 — 변형 쪽에서는 이 목록을 그리지 않는다.
+          같은 가게의 기존 쪽과 글자가 그대로 같아 겹침을 올린다.
+          출처는 본문 안 확인일·관계 고지로 이미 밝히고 있다. */}
+      {변형 ? null : (
       <aside className="acc-wrap acc-src" aria-label="참고 자료">
         <strong>이 페이지가 참고한 자료 (링크 없이 표기)</strong>
         <ul>
@@ -445,6 +474,7 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
           ))}
         </ul>
       </aside>
+      )}
 
       <nav className="acc-wrap acc-related" aria-label="가까운 지역 가는 길">
         <h2>가는 길이 비슷한 다른 지역</h2>
