@@ -242,7 +242,18 @@ export type 변형쪽 = {
 };
 
 export default function AccessVenuePage(
-  { venue, 변형 }: { venue: AccessVenue; 변형?: 변형쪽 },
+  { venue, 변형, 이주소, 설명 }: {
+    venue: AccessVenue;
+    변형?: 변형쪽;
+    /** ★ 2026-09-02 — 이 쪽 자신의 주소(끝 슬래시 포함). 주면 canonical·og:url·구조화
+     *  데이터가 전부 이것이 된다. 안 주면 지금까지처럼 accessVenuePath(venue.slug).
+     *  왜 — /contacta/ 는 canonical 이 /access/busan-asiad-night/ 로 나가고 있었다.
+     *  그러면 네이버는 이 쪽을 사본으로 보고 절대 색인하지 않는다 [[url-one-shape-rule]]. */
+    이주소?: string;
+    /** ★ 2026-09-02 — 이 쪽만의 설명문(70~80자). 설명문 공유는 그 자체로 색인을 막는다
+     *  [[description-must-be-unique]]. */
+    설명?: string;
+  },
 ) {
   /* ★ 2026-08-26 — 관련 링크가 적으면 네이버가 그 페이지를 "중요하지 않다"고 본다.
    *   실측: 들어오는 링크 0~2개인 페이지가 색인이 안 됐다.
@@ -274,8 +285,9 @@ export default function AccessVenuePage(
     };
   }, []);
 
-  const path = accessVenuePath(venue.slug);
+  const path = 이주소 ?? accessVenuePath(venue.slug);
   const url = `${SITE.url}${path}`;
+  const 설명문 = 설명 ?? venue.description;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
   const thumbPath = `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
   const ogImage = `${SITE.url}${thumbPath}`;
@@ -289,7 +301,7 @@ export default function AccessVenuePage(
     ...(venue.altNames ? { alternateName: venue.altNames } : {}),
     url,
     image: ogImage,
-    description: venue.description,
+    description: 설명문,
     address: {
       "@type": "PostalAddress",
       addressLocality: venue.addressLocality,
@@ -306,7 +318,8 @@ export default function AccessVenuePage(
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${url}#faq`,
-    mainEntity: venue.faq.map((f) => ({
+    /* ★ 2026-09-02 — 화면에 보이는 FAQ 와 같아야 한다. 변형 쪽은 변형 FAQ 를 그린다. */
+    mainEntity: (변형?.faq?.length ? 변형.faq : venue.faq).map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
@@ -329,7 +342,7 @@ export default function AccessVenuePage(
       <Head>
         <title>{변형?.title ?? venue.title}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="description" content={venue.description} />
+        <meta name="description" content={설명문} />
         <link rel="canonical" href={url} />
         <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
         <meta name="googlebot" content="index,follow" />
@@ -339,7 +352,7 @@ export default function AccessVenuePage(
         <meta property="og:locale" content="ko_KR" />
         <meta property="og:site_name" content={SITE.name} />
         <meta property="og:title" content={변형?.title ?? venue.title} />
-        <meta property="og:description" content={venue.description} />
+        <meta property="og:description" content={설명문} />
         <meta property="og:url" content={url} />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:secure_url" content={ogImage} />
@@ -352,7 +365,7 @@ export default function AccessVenuePage(
         <meta name="thumbnail" content={ogImage} />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={변형?.title ?? venue.title} />
-        <meta name="twitter:description" content={venue.description} />
+        <meta name="twitter:description" content={설명문} />
         <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:image:alt" content={ogAlt} />
         <style dangerouslySetInnerHTML={{ __html: ACCESS_CSS }} />
@@ -396,7 +409,7 @@ export default function AccessVenuePage(
         )}
 
         {변형 ? null : (
-        <div className="acc-answer">
+        <div data-frame="1" className="acc-answer">
           <h2>{`${venue.name} 핵심 세 줄 — 확인된 것만`}</h2>
           <ul>
             {venue.answer.map((a, i) => (
@@ -408,9 +421,13 @@ export default function AccessVenuePage(
 
         <PageThumb src={thumbPath} alt={ogAlt} />
 
-        <div className="acc-facts">
+        <div data-frame="1" className="acc-facts">
           <table>
-            <caption>{venue.name} 위치·이동 확인 정보</caption>
+            {/* ★ 2026-09-02 — 표 둘레 라벨에서 가게이름을 뺀다.
+                라벨까지 세면 한 쪽에 6회가 되어 「3~5회」 기준을 넘는다(C2-02).
+                네이버 가이드도 같은 낱말 반복을 어뷰징으로 본다.
+                이름은 제목·첫 문단·본문에만 둔다. g·i 저장소는 이미 이렇게 돼 있다. */}
+            <caption>위치·이동 확인 정보</caption>
             <tbody>
               {venue.facts.map((f) => (
                 <tr key={f.label}>
@@ -452,10 +469,10 @@ export default function AccessVenuePage(
 
         <GuideExtra pathname={`/access/${venue.slug}/`} />
 
-        <p className="acc-sum">{변형?.summary ? 변형.summary.join(" ") : venue.summary}</p>
+        <p data-frame="1" className="acc-sum">{변형?.summary ? 변형.summary.join(" ") : venue.summary}</p>
         {/* ★ 2026-09-01 — 확인일·변동 고지가 본문에 없어 신고 방어 검사(C7-03·C7-04)에 걸렸다.
             꼬리말이 아니라 본문에 둔다 — 검사기는 꼬리말을 본문으로 세지 않는다. */}
-        <p className="acc-checked">
+        <p data-frame="1" className="acc-checked">
           {venue.group === "A" ? "광고 · 업소 제공 정보 · " : "공개된 자료 기준 · "}
           확인일 <time dateTime="2026-09-01">2026년 9월 1일</time>.
           운영 사정에 따라 내용은 바뀔 수 있습니다.

@@ -28,7 +28,10 @@ export default function App({ Component, pageProps }: AppProps) {
   // ★2026-09-01 — /contacta · /about 을 광고주 페이지로 바꿨는데 이 명단에 없어서
   //   부산아시아드·대전세븐 쪽에 창원 룰루랄라(로또 010-7528-4936) 고정 전화바와
   //   업소 JSON-LD 가 그대로 겹쳐 나왔다. 광고주 규칙: 한 쪽에 두 명 이상 금지.
-  const isVenuePage = /^\/(access|access-2|night|club|contacta|about)(\/|$)/.test(pathname);
+  // ★2026-09-02 — /location 을 부산아시아드나이트 광고주 쪽으로 바꿨는데 이 명단에 없어서
+  //   그 쪽에 창원 룰루랄라(로또 010-7528-4936) 고정 전화바와 업소 JSON-LD 가 겹쳐 나왔다.
+  //   실측으로 확인한 뒤 넣었다. 광고주 규칙: 한 쪽에 두 명 이상 금지 · 남의 번호 금지.
+  const isVenuePage = /^\/(access|access-2|night|club|contacta|about|location)(\/|$)/.test(pathname);
 
   // 홈(/)은 헤더·푸터·고정 전화바 없이 글만 나가는 단독 페이지다.
   // 공용 레이아웃과 업소 JSON-LD를 모두 태우지 않는다.
