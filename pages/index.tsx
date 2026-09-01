@@ -11,7 +11,7 @@ import { SITE } from "@/components/site";
 
 const TITLE = "무너진 자리에서 다시 시작한 사람의 기록";
 const DESC =
-  "바닥을 친 뒤 다시 올라온 사람의 이야기. 화려한 성공담이 아니라, 무너진 다음 날 아침에 무엇을 했는지에 대한 글입니다. 끝까지 읽고 나면 오늘 하루가 조금 달라집니다.";
+  "바닥을 친 뒤 다시 올라온 사람의 이야기. 화려한 성공담이 아니라, 무너진 다음 날 아침에 무엇을 했는지에 대한 글입니다. 끝까지 읽고 나면 오늘 달라집니다.";
 
 export default function Home() {
   const url = `${SITE.url}/`;

@@ -6,6 +6,7 @@ import PageThumb from "../PageThumb";
 import { ACCESS_BASE, ACCESS_VENUE_BASE, accessVenuePath, type AccessVenue } from "./types";
 import { ACCESS_VENUES } from "./venues";
 import { VENUE_BY_SLUG } from "./venues";
+import GuideExtra from '@/components/GuideExtra';
 
  /* ★ 2026-08-31 — 이 한 줄이 한 사이트 수십 쪽에 똑같이 박혀 있었다(설계도 5장).
    쪽마다 다른 앞말을 고른다. 카카오톡 아이디는 사실이라 그대로 둔다. */
@@ -430,6 +431,8 @@ export default function AccessVenuePage({ venue }: { venue: AccessVenue }) {
             ))}
           </dl>
         </section>
+
+        <GuideExtra pathname={`/access/${venue.slug}/`} />
 
         <p className="acc-sum">{venue.summary}</p>
       </article>

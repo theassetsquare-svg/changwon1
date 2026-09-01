@@ -55,7 +55,7 @@ export default function AccessHub() {
   const ogAlt = "창원 룰루랄라 나이트 · 전국 나이트 가는 길 40";
   const title = "전국 나이트 가는 길 40 — 역·도보·주차·새벽 귀가 정리";
   const description =
-    "전국 나이트클럽 40곳의 가는 길을 역 도보, 버스, 주차, 새벽 귀가 순으로 정리했습니다. 도보 시간과 출구는 확인된 것만 적고 나머지는 확인 불가로 남겼습니다.";
+    "전국 나이트클럽 40곳의 가는 길을 역 도보, 버스, 주차, 새벽 귀가 순으로 정리했습니다. 도보 시간과 출구는 확인된 것만 적고 나머지는 확인 남겼습니다.";
 
   const itemList = {
     "@context": "https://schema.org",
