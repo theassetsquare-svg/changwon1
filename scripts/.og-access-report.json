@@ -212,17 +212,17 @@
   {
     "slug": "paju-skydome-2",
     "file": "access-paju-skydome-2-og.png",
-    "group": "B",
+    "group": "A",
     "size": "1200×1200",
-    "bytes": 44382,
+    "bytes": 56510,
     "bg": "#4a1c38",
     "bgContrast": "13.9:1",
     "nameSize": 120,
     "alt": "파주 야당스카이돔나이트 가는 길·귀가 안내",
-    "nick": "-",
-    "phone": "-",
-    "phoneGlyphH": "-",
-    "clip": "-"
+    "nick": "딸기",
+    "phone": "010-3447-0963",
+    "phoneGlyphH": "117px",
+    "clip": "좌39px/우41px 여백"
   },
   {
     "slug": "guri-hobak-2",

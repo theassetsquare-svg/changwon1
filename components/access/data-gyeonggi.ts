@@ -330,7 +330,8 @@ export const GYEONGGI: AccessVenue[] = [
     addressLocality: "경기도 파주시",
     addressRegion: "경기도",
     streetAddress: "야당동 유은타워 7차 B동 5층",
-    group: "B",
+    group: "A",
+    contact: { name: "딸기", phone: "010-3447-0963", tel: "01034470963" },
     angle: { no: 15, name: "동·층 지정형" },
     title: "파주야당스카이돔나이트, 야당역에서 5층까지 가는 길",
     description:
