@@ -1,8 +1,6 @@
 import type { GetStaticProps } from "next";
-import Head from "next/head";
 import AccessVenuePage from "@/components/access/AccessVenuePage";
 import { VENUE_BY_SLUG, type AccessVenue } from "@/components/access/venues";
-import { SITE } from "@/components/site";
 import { 변형쪽들 } from "@/lib/variant-pages";
 
 /**
@@ -24,15 +22,19 @@ export const getStaticProps: GetStaticProps<{ venue: AccessVenue }> = async () =
   props: { venue: VENUE_BY_SLUG[VENUE_SLUG] },
 });
 
+/* ★★ 2026-09-02 (A2) — <Head> 로 뒤에서 덮어쓰는 방법은 **먹지 않았다.**
+   실측: 이 쪽의 canonical 이 https://j.nolcool.com/access/daejeon-seven-night/ 로 나가고 있었다.
+   이 주소는 **색인된 쪽**이라, 네이버가 사본으로 보고 색인에서 뺄 수 있었다.
+   /contacta/ 와 같은 사고였다. 컴포넌트에 주소를 직접 넘겨 한 곳에서만 만들게 바꾼다.
+   [[url-one-shape-rule]] */
 export default function AboutAdPage({ venue }: { venue: AccessVenue }) {
-  const url = `${SITE.url}${이주소}`;
+  const 변형 = 변형쪽들["/about"];
   return (
-    <>
-      <AccessVenuePage venue={venue} 변형={변형쪽들["/about"]} />
-      <Head>
-        <link key="canonical" rel="canonical" href={url} />
-        <meta key="og:url" property="og:url" content={url} />
-      </Head>
-    </>
+    <AccessVenuePage
+      venue={venue}
+      변형={변형}
+      이주소={이주소}
+      설명={변형.description}
+    />
   );
 }
