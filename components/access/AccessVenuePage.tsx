@@ -380,6 +380,20 @@ export default function AccessVenuePage(
           <Link href="/">홈</Link> › <Link href={ACCESS_BASE}>가는 길</Link> › {venue.name}
         </p>
 
+        {/* ★ 설계도 4장 — 광고주 쪽에는 상단에 「광고」 라벨을 단다.
+            담당자 세트(contact)가 실린 쪽이 곧 광고가 실린 쪽이다. */}
+        {venue.contact ? (
+          <p
+            className="ad-label"
+            style={{
+              display: 'inline-block', margin: '0 0 10px', padding: '3px 10px',
+              border: '1px solid #c9a227', borderRadius: 4,
+              fontSize: 12, color: '#c9a227', letterSpacing: '.04em',
+            }}
+          >
+            광고
+          </p>
+        ) : null}
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
         <h1>{변형?.title ?? venue.title}</h1>
 
