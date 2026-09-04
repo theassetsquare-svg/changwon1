@@ -29,10 +29,10 @@ export function buildLocalBusiness() {
     description: `${SITE.name}. 만 ${SITE.ageLimit}세 이상만 출입 가능한 합법 영업장. 예약·문의는 ${SITE.contactName} ${SITE.phone} 전화.`,
     image: [`${SITE.url}/og-default.png`, `${SITE.url}/og-cover.png`],
     logo: `${SITE.url}/favicon.svg`,
-    telephone: SITE.phone,
+    telephone: String(SITE.phone).replace(/^0(\d{1,2})-?(\d{3,4})-?(\d{4})$/, "+82-$1-$2-$3"), /* AI-088 +82 */
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: SITE.phone,
+      telephone: String(SITE.phone).replace(/^0(\d{1,2})-?(\d{3,4})-?(\d{4})$/, "+82-$1-$2-$3"), /* AI-088 +82 */
       contactType: "reservations",
       name: `웨이터 ${SITE.contactName}`,
       areaServed: "KR",

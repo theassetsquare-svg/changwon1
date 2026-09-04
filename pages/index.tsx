@@ -54,6 +54,8 @@ export default function Home() {
             }),
           }}
         />
+        {/* 2026-09-05 AI-100·AI-101 — 홈 head 에만 WebSite·Organization (홈 본문 불변) */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ '@context': 'https://schema.org', '@type': 'WebSite', '@id': `${SITE.url}/#website`, name: '무너진 자리에서 다시 시작한 사람의 기록', url: `${SITE.url}/`, inLanguage: 'ko-KR', publisher: { '@type': 'Organization', name: SITE.name, url: `${SITE.url}/` } }) }} />
       </Head>
 
       <main className="story" id="main">
