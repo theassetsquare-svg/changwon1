@@ -189,7 +189,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
     "@type": "BreadcrumbList",
     "@id": `${url}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "홈", item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 1, name: "무너진 자리에서 다시 시작한 사람의 기록", item: `${SITE.url}/` },
       { "@type": "ListItem", position: 2, name: "나이트", item: `${SITE.url}/#night` },
       { "@type": "ListItem", position: 3, name: venue.name, item: url },
     ],

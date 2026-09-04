@@ -28,8 +28,7 @@ export default function Home() {
         <meta name="naver-bot" content="index,follow" />
         <meta name="yeti" content="index,follow" />
         <link rel="canonical" href={url} />
-        <link rel="icon" type="image/svg+xml" href="https://j.nolcool.com/favicon.svg" />
-        <link rel="alternate icon" href="https://j.nolcool.com/favicon.ico" />
+        <link rel="icon" type="image/png" href="https://j.nolcool.com/favicon-64.png" />
         <link rel="alternate" hrefLang="ko-KR" href={url} />
         <link rel="alternate" hrefLang="x-default" href={url} />
         <meta property="og:type" content="article" />

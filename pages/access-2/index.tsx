@@ -76,7 +76,7 @@ export default function AccessHub() {
     "@type": "BreadcrumbList",
     "@id": `${url}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "홈", item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 1, name: "무너진 자리에서 다시 시작한 사람의 기록", item: `${SITE.url}/` },
       { "@type": "ListItem", position: 2, name: "가는 길", item: url },
     ],
   };
@@ -241,7 +241,7 @@ export default function AccessHub() {
           <li><a href="/access/suwon-chancedome-night/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-korea-night/">수원코리아나이트</a></li>
           <li><a href="/club/ansan-hit-night/">안산히트나이트</a></li>
-          <li><a href="/access/club/ansan-hit-night/">안산히트나이트</a></li>
+          <li><a href="/club/ansan-hit-night/">안산히트나이트</a></li>
           <li><a href="/access/osan-hobak-night/">오산호박나이트</a></li>
           <li><a href="/access/uijeongbu-baekakgwan-night/">의정부백악관나이트</a></li>
           <li><a href="/access/uijeongbu-hangukgwan-night/">의정부한국관나이트</a></li>

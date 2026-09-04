@@ -75,8 +75,7 @@ export default function SeoHead({
       )}
 
       <link rel="canonical" href={url} />
-      <link rel="icon" type="image/svg+xml" href="https://j.nolcool.com/favicon.svg" />
-      <link rel="alternate icon" href="https://j.nolcool.com/favicon.ico" />
+      <link rel="icon" type="image/png" href="https://j.nolcool.com/favicon-64.png" />
       <link rel="apple-touch-icon" href="https://j.nolcool.com/apple-touch-icon.svg" />
       <link rel="mask-icon" href="https://j.nolcool.com/favicon.svg" color="#FCD34D" />
       <link rel="manifest" href="/site.webmanifest" />

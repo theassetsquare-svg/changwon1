@@ -63,7 +63,7 @@ export default function BulgwangHobak() {
       />
       <Jsonld
         data={buildBreadcrumb([
-          { name: "홈", path: "/" },
+          { name: "무너진 자리에서 다시 시작한 사람의 기록", path: "/" },
           { name: B.name, path: B.path },
         ])}
       />

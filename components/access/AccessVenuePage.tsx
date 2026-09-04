@@ -331,7 +331,7 @@ export default function AccessVenuePage(
     "@type": "BreadcrumbList",
     "@id": `${url}#breadcrumb`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "홈", item: `${SITE.url}/` },
+      { "@type": "ListItem", position: 1, name: "무너진 자리에서 다시 시작한 사람의 기록", item: `${SITE.url}/` },
       { "@type": "ListItem", position: 2, name: "가는 길", item: `${SITE.url}${ACCESS_BASE}` },
       { "@type": "ListItem", position: 3, name: venue.name, item: url },
     ],
