@@ -1048,7 +1048,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 22 ─────────────────────────────────────────────────────────────────
   {
     slug: "seongnam-shampoo-night",
-    ogV: "-v3",
+    ogV: "-v4",
     name: "성남샴푸나이트",
     nameSpaced: "성남 샴푸나이트",
     cityKeyword: "성남동 나이트클럽",
@@ -1057,7 +1057,8 @@ export const GYEONGGI: AccessVenue[] = [
     addressRegion: "경기도",
     streetAddress: "광명로 21",
     jibun: "경기도 성남시 중원구 성남동 3182",
-    group: "B",
+    group: "A",
+    contact: { name: "이쁜이", phone: "010-3432-4758", tel: "01034324758" },
     angle: { no: 22, name: "환승 허브형" },
     title: "성남샴푸나이트, 모란역에서 시작하는 짧은 이동",
     description:
