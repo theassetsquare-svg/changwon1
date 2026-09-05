@@ -2,7 +2,7 @@ import Link from "next/link";
 import SeoHead from "@/components/SeoHead";
 import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
-import { Jsonld, buildBreadcrumb } from "@/components/Jsonld";
+import { Jsonld, buildBreadcrumb, buildLocalBusiness } from "@/components/Jsonld";
 
 export default function Jjanggu() {
   return (
@@ -14,6 +14,8 @@ export default function Jjanggu() {
         ogSquare="/og/page-jjanggua-og.png"
         ogAlt="창원 룰루랄라 나이트 담당 웨이터 로또 전화 안내"
       />
+      {/* S4 T-006(2026-09-05): 업소 JSON-LD image 를 이 쪽 og(/og/page-jjanggua-og.png)와 같게 — _app 전역 것은 이 쪽에서 뺐다 */}
+      <Jsonld data={{ ...buildLocalBusiness(), image: `${SITE.url}/og/page-jjanggua-og.png` }} />
       <Jsonld
         data={buildBreadcrumb([
           { name: "무너진 자리에서 다시 시작한 사람의 기록", path: "/" },
@@ -24,6 +26,8 @@ export default function Jjanggu() {
       <section className="hero">
         <div className="container">
           <span className="badge badge--gold">웨이터(담당) · {SITE.contactName}</span>
+          {/* 설계도 4장 — 광고주 쪽 상단 「광고」 라벨 (S4 2026-09-05) */}
+          <p className="ad-label" style={{ display: "inline-block", margin: "0 0 10px", padding: "3px 10px", border: "1px solid #c9a227", borderRadius: 4, fontSize: 12, color: "#c9a227", letterSpacing: ".04em" }}>광고</p>
           <h1 style={{ marginTop: 18 }}>
             저장해 두면 편한 번호.<br />
             <span className="accent">{SITE.contactName} {SITE.phone}</span>

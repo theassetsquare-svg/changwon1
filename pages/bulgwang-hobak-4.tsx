@@ -76,6 +76,8 @@ export default function BulgwangHobak() {
           <span className="badge badge--gold">
             서울 은평구 · {B.station.name} {B.station.walk}
           </span>
+          {/* 설계도 4장 — 광고주 쪽 상단 「광고」 라벨 (S4 2026-09-05) */}
+          <p className="ad-label" style={{ display: "inline-block", margin: "0 0 10px", padding: "3px 10px", border: "1px solid #c9a227", borderRadius: 4, fontSize: 12, color: "#c9a227", letterSpacing: ".04em" }}>광고</p>
           <h1 style={{ marginTop: 18 }}>
             불광동 <span className="accent">호박나이트</span>
             <br />

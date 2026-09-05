@@ -289,7 +289,10 @@ export default function AccessVenuePage(
   const url = `${SITE.url}${path}`;
   const 설명문 = 설명 ?? venue.description;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
-  const thumbPath = `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
+  /* S4(2026-09-05) T-117: 변형 쪽(이주소)은 그 주소 이름의 썸네일 — 한 그림을 여러 쪽이 나눠 쓰지 않는다 */
+  const thumbPath = 이주소
+    ? `/og/access-${이주소.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")}-og${venue.ogV ?? ""}.png`
+    : `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
   const ogImage = `${SITE.url}${thumbPath}`;
   const ogAlt = `${venue.nameSpaced} 가는 길·귀가 안내`;
 

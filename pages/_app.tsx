@@ -33,13 +33,15 @@ export default function App({ Component, pageProps }: AppProps) {
   //   실측으로 확인한 뒤 넣었다. 광고주 규칙: 한 쪽에 두 명 이상 금지 · 남의 번호 금지.
   const isVenuePage = /^\/(access|access-2|night|club|contacta|about|location)(\/|$)/.test(pathname);
 
+  /* S4(2026-09-05): /jjanggua/ 는 자기 og 와 같은 image 로 업소 JSON-LD 를 직접 싣는다 — 전역 것만 빼고 레이아웃·고정 바는 그대로 */
+  const isJjanggua = /^\/jjanggua(\/|$)/.test(pathname);
   // 홈(/)은 헤더·푸터·고정 전화바 없이 글만 나가는 단독 페이지다.
   // 공용 레이아웃과 업소 JSON-LD를 모두 태우지 않는다.
   if (pathname === "/") return <Component {...pageProps} />;
 
   return (
     <>
-      {!isBulgwang && !isVenuePage && <Jsonld data={buildLocalBusiness()} />}
+      {!isBulgwang && !isVenuePage && !isJjanggua && <Jsonld data={buildLocalBusiness()} />}
       <Jsonld data={buildWebsite()} />
       <Layout sticky={!isVenuePage}>
         <Component {...pageProps} />
