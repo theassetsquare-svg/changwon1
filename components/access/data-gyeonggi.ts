@@ -20,7 +20,8 @@ export const GYEONGGI: AccessVenue[] = [
     addressRegion: "경기도",
     streetAddress: "권선로 673",
     jibun: "경기도 수원시 권선구 권선동 1019-9",
-    group: "B",
+    group: "A",
+    contact: { name: "박찬호", phone: "010-7117-5077", tel: "01071175077" },
     angle: { no: 12, name: "역 없는 대로형" },
     title: "수원찬스돔나이트, 권선로 대로변을 기준으로 잡는 길",
     description:

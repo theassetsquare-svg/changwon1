@@ -490,7 +490,7 @@ export default function AccessVenuePage(
         {/* ★ 2026-09-01 — 확인일·변동 고지가 본문에 없어 신고 방어 검사(C7-03·C7-04)에 걸렸다.
             꼬리말이 아니라 본문에 둔다 — 검사기는 꼬리말을 본문으로 세지 않는다. */}
         <p data-frame="1" className="acc-checked">
-          {venue.group === "A" ? "광고 · 업소 제공 정보 · " : "공개된 자료 기준 · "}
+          {venue.group === "A" ? "광고 · 업소 제공 정보 · " : "공개된 자료 기준(미제휴) · "}
           확인일 <time dateTime="2026-09-01">2026년 9월 1일</time>.
           운영 사정에 따라 내용은 바뀔 수 있습니다.
         </p>

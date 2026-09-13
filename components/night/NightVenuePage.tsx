@@ -317,6 +317,9 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
           {`본 페이지는 ${venue.name} 업소 안내 페이지입니다.`}{" "} 출입 연령 및 이용 규정은 각 업소 방침을 따릅니다.
           최종 갱신 <time dateTime="2026-08-15">2026년 8월 15일</time>.
         </p>
+        {venue.group === "A" && venue.contact ? null : (
+          <p className="footer-note">업소와 제휴 관계가 없는 정보 페이지입니다(미제휴). 만 19세 이상 성인 대상입니다.</p>
+        )}
       </footer>
 
       {venue.group === "A" && venue.contact ? (
