@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { SITE } from "./site";
 import { BULGWANG } from "./bulgwang";
 
 /**
@@ -14,10 +13,20 @@ export default function StickyCTA() {
   const { pathname } = useRouter();
   const onBulgwang = pathname === BULGWANG.path.replace(/\/$/, "");
 
-  const label = onBulgwang ? BULGWANG.name : SITE.name;
-  const name = onBulgwang ? BULGWANG.contactName : SITE.contactName;
-  const phone = onBulgwang ? BULGWANG.phone : SITE.phone;
-  const href = onBulgwang ? BULGWANG.phoneHref : SITE.phoneHref;
+  /* 2026-09-13 창원룰루랄라 광고 해지 — 불광동호박 쪽이 아니면 광고 입점 문의 바 */
+  if (!onBulgwang) {
+    return (
+      <div className="sticky-cta" role="region" aria-label="광고 제휴 문의">
+        <span className="sticky-cta__label">
+          <strong>광고·제휴 입점 문의</strong> 카톡 besta12
+        </span>
+      </div>
+    );
+  }
+  const label = BULGWANG.name;
+  const name = BULGWANG.contactName;
+  const phone = BULGWANG.phone;
+  const href = BULGWANG.phoneHref;
   const btnText = `📞 ${name} ${phone}`;
 
   return (

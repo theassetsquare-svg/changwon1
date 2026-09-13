@@ -23,7 +23,7 @@ export default function SeoHead({
   title,
   description,
   path = "/",
-  ogSquare = "/og-default.png",
+  ogSquare,   /* 2026-09-14 — 기본 그림(og-default.png)이 로또 번호 카드였다. 표준: 가게 쪽만 썸네일 → 기본값 없음 */
   ogAlt,
   brand = SITE.name,
   geo = { region: "KR-48", place: "창원시", position: "35.2280;128.6817" },
@@ -90,21 +90,25 @@ export default function SeoHead({
       <meta property="og:url" content={url} />
       {/* 1:1 정사각 한 장만 내보낸다. 와이드(1200×630)를 두 번째 og:image 로 같이 걸면
           수집기마다 다른 장을 골라 가서 검색 썸네일이 정사각으로 고정되지 않는다. */}
-      <meta property="og:image" content={`${SITE.url}${ogSquare}`} />
-      <meta property="og:image:secure_url" content={`${SITE.url}${ogSquare}`} />
-      <meta property="og:image:type" content="image/png" />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="1200" />
-      <meta property="og:image:alt" content={alt} />
-      <link rel="image_src" href={`${SITE.url}${ogSquare}`} />
-      {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
-      <meta name="thumbnail" content={`${SITE.url}${ogSquare}`} />
+      {ogSquare ? (
+        <>
+          <meta property="og:image" content={`${SITE.url}${ogSquare}`} />
+          <meta property="og:image:secure_url" content={`${SITE.url}${ogSquare}`} />
+          <meta property="og:image:type" content="image/png" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="1200" />
+          <meta property="og:image:alt" content={alt} />
+          <link rel="image_src" href={`${SITE.url}${ogSquare}`} />
+          {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
+          <meta name="thumbnail" content={`${SITE.url}${ogSquare}`} />
+        </>
+      ) : null}
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${SITE.url}${ogSquare}`} />
-      <meta name="twitter:image:alt" content={alt} />
+      {ogSquare ? <meta name="twitter:image" content={`${SITE.url}${ogSquare}`} /> : null}
+      {ogSquare ? <meta name="twitter:image:alt" content={alt} /> : null}
     </Head>
   );
 }

@@ -6,7 +6,7 @@ import StickyCTA from "./StickyCTA";
 type Props = {
   children: React.ReactNode;
   /**
-   * 화면 아래 고정 전화바(창원 룰루랄라 · 로또 010-7528-4936)를 붙일지.
+   * 화면 아래 고정 전화바(창원 룰루랄라 · 2026-09-13 광고 해지)를 붙일지.
    *
    * ★2026-08-25 — 가게 페이지(/access·/night)는 자기 전화바를 스스로 만든다.
    *   광고주 가게면 그 가게 번호, 아니면 "광고문의 카톡 besta12".

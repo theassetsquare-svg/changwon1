@@ -2,9 +2,7 @@ export const SITE = {
   name: "창원 룰루랄라 나이트",
   shortName: "룰루랄라",
   role: "웨이터",
-  contactName: "로또",
-  phone: "010-7528-4936",
-  phoneHref: "tel:01075284936",
+  // 2026-09-13 창원룰루랄라나이트 광고 해지(비광고주) — 담당 닉네임·전화 필드를 지웠다.
   url: "https://j.nolcool.com",
   region: "경상남도 창원시",
   // 사업장 정식 상호 — 지도·검색에 등록된 이름과 맞춘다.
@@ -28,7 +26,7 @@ export const SITE = {
 export const NAV = [
   { href: "/", label: "홈" },
   { href: "/about/", label: "소개" },
-  { href: "/jjanggua/", label: "담당" },
+  { href: "/jjanggua/", label: "입장 안내" },
   { href: "/location/", label: "위치" },
   { href: "/contacta/", label: "문의" },
 ] as const;

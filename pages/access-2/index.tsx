@@ -50,9 +50,9 @@ export default function AccessHub() {
 
   const path = "/access-2/";
   const url = `${SITE.url}${path}`;
-  const thumbPath = "/og/page-access-og.png";
+  const thumbPath = "/og/page-access-og-v2.png";   /* 2026-09-14 — 옛 그림이 로또 번호 카드였다 → 안내 쪽 광고문의 카드 */
   const ogImage = `${SITE.url}${thumbPath}`;
-  const ogAlt = "창원 룰루랄라 나이트 · 전국 나이트 가는 길 40";
+  const ogAlt = "전국 나이트 가는 길 40 · 광고문의 · 카톡 besta12";
   const title = "전국 나이트 가는 길 40 — 역·도보·주차·새벽 귀가 정리";
   const description =
     "전국 나이트클럽 40곳의 가는 길을 역 도보, 버스, 주차, 새벽 귀가 순으로 정리했습니다. 도보 시간과 출구는 확인된 것만 적고 나머지는 확인 남겼습니다.";
@@ -158,7 +158,7 @@ export default function AccessHub() {
           <ul>
             <li>40곳 전부 이동 축(역 도보 → 버스 → 차·주차 → 새벽 귀가)으로만 정리했습니다.</li>
             <li>도보 시간·버스 노선·막차 시각은 확인된 것만 적고 나머지는 확인 불가로 남겼습니다.</li>
-            <li>창원 룰루랄라 나이트 예약·문의는 웨이터 {SITE.contactName} {SITE.phone} 전화입니다.</li>
+            <li>업소 연락처는 싣지 않습니다. 이 목록은 업소와 제휴 관계가 없는 이동 안내입니다.</li>
           </ul>
         </div>
 
@@ -196,7 +196,7 @@ export default function AccessHub() {
 
         <p className="acc-sum">
           한 줄로 — 전국 40곳의 가는 길을 역·도보·주차·새벽 귀가 순으로 정리했고, 확인되지 않은 숫자는 적지
-          않았습니다. 창원 룰루랄라 나이트 문의는 {SITE.contactName} {SITE.phone}입니다.
+          않았습니다. 업소 연락처는 싣지 않았습니다.
         </p>
       </article>
 
@@ -207,10 +207,10 @@ export default function AccessHub() {
         </p>
       </footer>
 
-      <div ref={barRef} className="callbar" role="complementary" aria-label="전화 연결">
-        <a href={SITE.phoneHref}>
-          📞 창원룰루랄라나이트 {SITE.contactName} {SITE.phone}
-        </a>
+      <div ref={barRef} className="callbar" role="complementary" aria-label="광고 제휴 문의">
+        <span>
+          광고·제휴 입점 문의 카톡 <b>besta12</b>
+        </span>
       </div>
       {/* ★ 전체 목록 — 허브가 모든 가게 페이지를 링크해야 네이버가 전부 찾아간다 */}
       <nav className="nl-all" aria-label="가는 길 전체 목록" style={{ maxWidth: 900, margin: "48px auto 40px", padding: "22px 18px", borderTop: "1px solid rgba(128,128,128,.28)" }}>
