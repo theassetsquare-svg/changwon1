@@ -25,7 +25,6 @@ export default function Layout({ children, sticky = true }: Props) {
   }, [sticky]);
   return (
     <>
-      <a href="#main" className="skip-link">본문 바로가기</a>
       <Header />
       <main id="main">{children}</main>
       <Footer />

@@ -1,201 +1,177 @@
+import Head from "next/head";
 import Link from "next/link";
-import SeoHead from "@/components/SeoHead";
 import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
-import { Jsonld, buildBreadcrumb, buildLocalBusiness } from "@/components/Jsonld";
+import { 장부찾기 } from "@/lib/ledger";
+import { saltOf, cssClasses, saltTree, SaltContext } from "@/lib/salt";
+
+/**
+ * /jjanggua/ — 창원룰루랄라나이트 광고주(담당 로또) 쪽.
+ *
+ * 2026-09-25 전부10 다시 씀 — 옛 판은 가게이름이 본문에 한 번도 없었고(띄어 쓴 이름만),
+ * 제목이 「광고·제휴 문의는 로또」라 사실과 달랐다(광고문의 창구는 카톡 besta12 · 로또는 가게 예약 담당).
+ * 확인되지 않은 말(카드 결제·담당제 운영 방식 등)도 빼고, 장부(data/shops verified) 값만 사실로 쓴다.
+ */
+const 이름 = "창원룰루랄라나이트";
+const 이주소 = "/jjanggua/";
+const 그림 = "/og/t-j-jjanggua-b5698e03.png";   /* lib/thumb-map.json 의 이 쪽 카드(본문 첫 그림과 같은 파일) */
+
+const CSS = `
+.jg-wrap{max-width:780px;margin:0 auto;padding:22px 20px 40px;color:#ECE7DF;}
+.jg-crumb{font-size:.86rem;color:#A59F95;margin:0 0 12px;}
+.jg-crumb a{color:#A59F95;}
+.jg-wrap h1{font-size:1.9rem;line-height:1.35;margin:6px 0 14px;color:#fff;letter-spacing:-.02em;}
+.jg-lead{background:#1D1A16;border:1px solid #3A342C;border-left:5px solid #D9A441;border-radius:12px;padding:16px 18px;margin:0 0 24px;}
+.jg-lead p{margin:0;line-height:1.8;}
+.jg-wrap>img{display:block;border-radius:12px;margin:0 0 24px;}
+.jg-facts table{width:100%;border-collapse:collapse;border:1px solid #3A342C;margin:0 0 26px;}
+.jg-facts th{width:30%;text-align:left;color:#C9C1B4;font-weight:600;padding:11px 14px;border-bottom:1px solid #3A342C;}
+.jg-facts td{padding:11px 14px;font-weight:700;border-bottom:1px solid #3A342C;}
+.jg-wrap h2{font-size:1.25rem;line-height:1.45;margin:32px 0 10px;color:#fff;}
+.jg-wrap section p{line-height:1.85;margin:0 0 14px;color:#DAD3C8;}
+.jg-qa h3{font-size:1.02rem;margin:18px 0 6px;color:#F2D38B;}
+.jg-close{background:#2A2218;border:1px solid #D9A441;border-radius:12px;padding:16px 18px;margin:30px 0 0;}
+.jg-close h2{margin:0 0 8px;font-size:1.05rem;}
+.jg-note{font-size:.88rem;color:#A59F95;margin:18px 0 0;line-height:1.7;}
+.jg-bar{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#111;border-top:1px solid #c9a227;padding:14px 16px;text-align:center;}
+.jg-bar a{color:#fff;text-decoration:none;font-weight:800;}
+`;
 
 export default function Jjanggu() {
-  return (
+  const L = 장부찾기(이름);
+  const 주소 = L?.address ?? "";
+  const 시간 = L?.openingHours ?? "";
+  const 번호 = L?.telephone ?? "";
+  const 담당 = L?.nickname ?? "";
+  const url = `${SITE.url}${이주소}`;
+  const z = { s: saltOf(이주소), 지역: cssClasses(CSS) };
+  const 제목 = `${이름} 예약 문의, 담당 로또 번호와 영업시간`;
+  const 설명 = `${이름} 예약 문의 담당 로또 안내. 상남동 22-4에서 매일 오후 7시부터 새벽 5시까지 열고, 전화 전에 정해 둘 것을 적었습니다.`;
+
+  const 문답 = [
+    { q: "예약 문의는 어디로 하나요?", a: `담당 ${담당}에게 전화로 합니다. 번호는 이 쪽 위 표와 화면 아래 전화바에 있는 번호 하나입니다.` },
+    { q: "영업시간은 어떻게 되나요?", a: `${시간}로 확인됩니다. 날짜에 따라 사정이 달라질 수 있으니 늦게 도착할 계획이면 전화로 먼저 확인하는 편이 안전합니다.` },
+    { q: "주소를 지도 앱에 뭐라고 넣나요?", a: "도로명 마디미로43번길 10이나 지번 상남동 22-4 가운데 하나를 넣으면 같은 자리가 나옵니다." },
+    { q: "광고나 제휴 문의도 같은 번호로 하나요?", a: "아닙니다. 담당 번호는 가게 예약 문의용이고, 이 사이트의 광고문의는 카카오톡 besta12 로 따로 받습니다." },
+  ];
+
+  const 트리 = (
     <>
-      <SeoHead
-        title="창원룰루랄라나이트 광고·제휴 문의는 로또 010-7528-4936"
-        description="창원 룰루랄라 나이트 손님 응대 담당 광고문의. 예약·문의는 로또 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 출입."
-        path="/jjanggua/"
-        ogSquare="/og/page-jjanggua-og-ad0924.png"
-        ogAlt="광고 · 창원룰루랄라나이트 · 로또 · 010-7528-4936"
-      />
-      {/* S4 T-006(2026-09-05): 업소 JSON-LD image 를 이 쪽 og 와 같게 — _app 전역 것은 이 쪽에서 뺐다 · 2026-09-24 광고주 복구: 로또 표준 4줄 카드 + telephone */}
-      <Jsonld data={{ ...buildLocalBusiness(), image: `${SITE.url}/og/page-jjanggua-og-ad0924.png`, telephone: "+82-10-7528-4936" }} />
-      <Jsonld
-        data={buildBreadcrumb([
-          { name: "무너진 자리에서 다시 시작한 사람의 기록", path: "/" },
-          { name: "담당", path: "/jjanggua/" },
-        ])}
-      />
+      <Head>
+        <title>{제목}</title>
+        <meta name="description" content={설명} />
+        <link rel="canonical" href={url} />
+        <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large" />
+        <meta property="og:type" content="article" />
+        <meta property="og:locale" content="ko_KR" />
+        <meta property="og:title" content={제목} />
+        <meta property="og:description" content={설명} />
+        <meta property="og:url" content={url} />
+        <meta property="og:image" content={`${SITE.url}${그림}`} />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="1200" />
+        <meta property="og:image:alt" content={`광고 · ${이름} · ${담당} · ${번호}`} />
+        <meta name="thumbnail" content={`${SITE.url}${그림}`} />
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+      </Head>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "NightClub", "@id": `${url}#venue`, name: 이름, url, image: `${SITE.url}${그림}`,
+        address: { "@type": "PostalAddress", streetAddress: 주소, addressLocality: "경상남도 창원시 성산구", addressRegion: "경상남도", addressCountry: "KR" },
+        telephone: 번호, openingHours: 시간,
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "FAQPage", mainEntity: 문답.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+      }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+          { "@type": "ListItem", position: 1, name: "무너진 자리에서 다시 시작한 사람의 기록", item: `${SITE.url}/` },
+          { "@type": "ListItem", position: 2, name: `${이름} 담당 로또`, item: url },
+        ],
+      }) }} />
 
-      <section className="hero">
-        <div className="container">
-          <span className="badge badge--gold">웨이터(담당) · {SITE.contactName}</span>
-          {/* 설계도 4장 — 광고주 쪽 상단 「광고」 라벨 (S4 2026-09-05) */}
-          <p className="ad-label" style={{ display: "inline-block", margin: "0 0 10px", padding: "3px 10px", border: "1px solid #c9a227", borderRadius: 4, fontSize: 12, color: "#c9a227", letterSpacing: ".04em" }}>광고</p>
-          <h1 style={{ marginTop: 18 }}>
-            저장해 두면 편한 번호.<br />
-            <span className="accent">{SITE.contactName} {SITE.phone}</span>
-          </h1>
-          <PageThumb src="/og/page-jjanggua-og-ad0924.png" alt="광고 · 창원룰루랄라나이트 · 로또 · 010-7528-4936" />
-          <p className="hero__sub">
-            창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터입니다.
-            처음 오신 분도, 자주 오시는 분도, 도착 전에 미리 알아 두면 자리부터 안내까지
-            수월합니다. 광고·제휴 문의는 카카오톡으로 받습니다.
-          </p>
-          <div className="hero__actions">
-            <span className="btn btn--primary btn--lg">
-              💬 광고문의 카카오톡 {SITE.kakaoId}
-            </span>
-            <Link className="btn btn--ghost btn--lg" href="/contacta/">예약 안내 보기</Link>
-          </div>
+      <article className="jg-wrap">
+        <nav className="jg-crumb" aria-label="현재 위치"><Link href="/">홈</Link> › 담당 안내</nav>
+        <p className="ad-label" style={{ display: "inline-block", margin: "0 0 10px", padding: "3px 10px", border: "1px solid #c9a227", borderRadius: 4, fontSize: 12, color: "#c9a227", letterSpacing: ".04em" }}>광고</p>
+        <h1>{이름} 담당 로또, 전화하기 전에 볼 것</h1>
+        <div className="jg-lead" data-r="lead">
+          <p>{이름} 예약 문의는 담당 {담당} {번호}로 받습니다. 가게는 창원시 성산구 상남동 22-4(마디미로43번길 10)에 있고, 영업시간은 {시간}입니다.</p>
         </div>
-      </section>
+        <PageThumb src={그림} alt={`광고 · ${이름} · ${담당} · ${번호}`} />
 
-      <section className="section--tight">
-        <div className="container">
-          <div className="card">
-            <dl className="kv">
-              <dt>닉네임</dt>
-              <dd>{SITE.contactName}</dd>
-            </dl>
-            <dl className="kv">
-              <dt>역할</dt>
-              <dd>웨이터(담당) — 손님 응대·자리 안내·예약 조율</dd>
-            </dl>
-            <dl className="kv">
-              <dt>예약·문의</dt>
-              <dd>
-                <span style={{ color: "var(--gold)", fontWeight: 800 }}>
-                  카카오톡 {SITE.kakaoId}
-                </span>{" "}
-                (광고·제휴 문의)
-              </dd>
-            </dl>
-            <dl className="kv">
-              <dt>소속</dt>
-              <dd>창원 룰루랄라 나이트</dd>
-            </dl>
-            <dl className="kv">
-              <dt>응대 언어</dt>
-              <dd>한국어</dd>
-            </dl>
-          </div>
+        <div className="jg-facts">
+          <table data-r="facts">
+            <tbody>
+              <tr><th scope="row">가게</th><td>{이름}</td></tr>
+              <tr><th scope="row">주소</th><td>{주소}</td></tr>
+              <tr><th scope="row">영업시간</th><td>{시간}</td></tr>
+              <tr><th scope="row">전화</th><td>{번호}</td></tr>
+              <tr><th scope="row">담당</th><td>{담당}</td></tr>
+            </tbody>
+          </table>
         </div>
-      </section>
 
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">왜 한 사람이 챙기는 게 다른가</span>
-          <h2>담당이 정해져 있으면 흐름이 안 끊깁니다.</h2>
-          <p className="lead" style={{ marginTop: 14 }}>
-            연락 받은 사람, 자리 잡은 사람, 입장 안내한 사람이 다 다르면
-            중간에 말이 꼬입니다. 담당이 한 명이면 그럴 일이 없습니다.
-          </p>
-          <div className="grid grid-3" style={{ marginTop: 28 }}>
-            <article className="card">
-              <h3>연락 → 자리</h3>
-              <p style={{ marginTop: 10 }}>
-                받은 즉시 인원수·시간 보고 자리 정리. 인원이 늘거나 시간이
-                늦어져도 다시 한 번이면 됩니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>입장 → 안내</h3>
-              <p style={{ marginTop: 10 }}>
-                입구에서 담당이라고만 말씀하시면 됩니다. 신분증 확인 후
-                바로 자리로 모십니다.
-              </p>
-            </article>
-            <article className="card">
-              <h3>마무리까지</h3>
-              <p style={{ marginTop: 10 }}>
-                중간에 필요한 게 생기면 그 자리에서 정리합니다. 어색하게
-                여기저기 부를 일 없습니다.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+        <section>
+          <h2>이 쪽은 어떤 쪽인가</h2>
+          <p>이 쪽은 {이름}의 예약 문의 담당 연락처를 싣는 광고 쪽입니다. 담당 닉네임과 번호는 광고로 실린 것이고, 주소와 영업시간은 공개 자료로 교차 확인된 값만 옮겼습니다. 가격이나 자리 배치처럼 날마다 달라지는 내용은 확인된 자료가 없어 적지 않았습니다.</p>
+          <p>그래서 이 쪽에서 얻을 수 있는 것은 세 가지로 좁습니다. 어디에 있는지, 몇 시에 여는지, 누구에게 물어보면 되는지입니다. 그 밖의 궁금한 점은 통화로 그날 기준을 듣는 편이 가장 정확합니다.</p>
+        </section>
 
-      <section className="section" style={{ background: "var(--bg-elev)", borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}>
-        <div className="container">
-          <span className="eyebrow">전화 문의 가이드</span>
-          <h2>이렇게만 말씀하시면 됩니다.</h2>
-          <ol className="steps" style={{ marginTop: 28 }}>
-            <li>
-              <strong>{SITE.phone}으로 전화 → "룰루랄라 나이트 예약 문의입니다."</strong>
-              가장 빠른 연결 방식입니다. 처음 전화하시는 분도 똑같이 말씀하시면 됩니다.
-            </li>
-            <li>
-              <strong>이름·인원·도착 예정 시간</strong>
-              세 가지면 충분합니다. 자세한 건 통화하면서 자연스럽게 정리됩니다.
-            </li>
-            <li>
-              <strong>변경이 생기면 다시 전화</strong>
-              인원이 늘거나, 시간이 미뤄지면 다시 한 통. 자리 다시 잡아 둡니다.
-            </li>
-          </ol>
-        </div>
-      </section>
+        <section>
+          <h2>전화 걸기 전에 정해 둘 세 가지</h2>
+          <p>통화가 길어지는 이유는 대개 정하지 않은 것이 많아서입니다. 몇 명이 가는지, 대략 몇 시쯤 도착하는지, 늦어질 때 누구 번호로 연락을 받을지. 이 세 가지를 미리 정해 두면 한 통으로 끝나는 경우가 많습니다.</p>
+          <p>인원이 아직 확정되지 않았다면 그렇다고 말하면 됩니다. 확정된 숫자와 늘어날 수 있는 숫자를 나눠 말해 두면, 도착했을 때 서로 헷갈릴 일이 줄어듭니다. 도착 시각이 바뀌면 같은 번호로 다시 알리면 됩니다.</p>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">담당이 하루 동안 챙기는 일</span>
-          <h2>저녁 한 타임 동안 이런 흐름이 돌아갑니다.</h2>
-          <ul className="bullets" style={{ marginTop: 22 }}>
-            <li>
-              <strong>오픈 한 시간 전 (오후 6시쯤)</strong> — 그날 자리 배치 확인,
-              미리 예약된 인원 체크.
-            </li>
-            <li>
-              <strong>오픈~밤 11시 (7시~11시)</strong> — 첫 손님 응대. 이 시간대는
-              응대도 빠르게 받을 수 있는 구간이에요.
-            </li>
-            <li>
-              <strong>피크 (자정~새벽 2시)</strong> — 자리 회전이 가장 빠른 시간.
-              답이 살짝 늦어질 수 있는 구간이라, 이 시간대 예약은 미리 잡아 두시는 게 안전합니다.
-            </li>
-            <li>
-              <strong>후반 (새벽 2시~5시)</strong> — 새벽 2시 이후 자리 회전이
-              다시 풀리는 시간. 새벽 5시 마감 직전까지 영업.
-            </li>
-          </ul>
-        </div>
-      </section>
+        <section>
+          <h2>상남동 주소로 찾아가는 순서</h2>
+          <p>주소는 두 가지 표기로 적힙니다. 지번은 상남동 22-4, 도로명은 마디미로43번길 10입니다. 둘은 같은 건물을 가리키니 지도 앱에는 어느 쪽을 넣어도 됩니다. 택시를 탈 때는 상호보다 주소를 먼저 말하는 편이 빨리 통합니다.</p>
+          <p>가까운 정류장 이름이나 걸어서 걸리는 시간은 확인된 자료가 없어 이 쪽에 숫자로 적지 않았습니다. 처음 가는 길이라면 도착 직전에 지도 앱을 한 번 더 켜 두는 편이 좋습니다.</p>
+        </section>
 
-      <section className="section">
-        <div className="container">
-          <span className="eyebrow">자주 받는 질문</span>
-          <h2>문의 전에 미리 답드릴 수 있는 것들.</h2>
-          <ul className="bullets" style={{ marginTop: 22 }}>
-            <li>
-              <strong>"담당만 따로 부를 수 있어요?"</strong> — 네, 그래서 담당제로
-              운영합니다. 들어오실 때 같은 멘트만 말씀하시면 바로 연결됩니다.
-            </li>
-            <li>
-              <strong>"혼자 가도 어색하지 않아요?"</strong> — 가능합니다. 혼자 오실 거면 도착
-              전에 한 통 주시면 그날 상황에 맞게 담당이 잡아 둡니다.
-            </li>
-            <li>
-              <strong>"가격이 어느 정도예요?"</strong> — 시간대·자리·인원에 따라
-              달라지는 부분이라, 직접 안내드리는 게 정확합니다.
-            </li>
-            <li>
-              <strong>"카드 결제 되나요?"</strong> — 카드 결제, 현금 영수증 정상 처리됩니다.
-            </li>
-          </ul>
-        </div>
-      </section>
+        <section>
+          <h2>영업시간 안에서 도착 시각 잡기</h2>
+          <p>문을 여는 시각은 오후 7시, 닫는 시각은 새벽 5시로 확인됩니다. 늦게 도착할수록 남은 시간이 짧아지니, 몇 시에 들어가서 몇 시쯤 나올지를 대략 정해 두면 귀가 방법을 고르기 쉽습니다. 새벽에는 대중교통이 끊기는 시간이 있으니 돌아갈 방법도 함께 정해 두는 편이 안전합니다.</p>
+        </section>
 
-      <section className="section--tight">
-        <div className="container">
-          <div className="notice">
-            예약·문의는 {SITE.contactName} {SITE.phone} 전화로만 받습니다.
-            만 {SITE.ageLimit}세 이상 출입 · 입장 시 신분증 확인.
-          </div>
-        </div>
-      </section>
-      {/* 2026-09-24 광고주 복구 — 가게 쪽 = 로또 전화바(화면 아래 고정) */}
-      <div aria-hidden="true" style={{ height: 64 }} />
-      <div className="callbar" role="complementary" aria-label="전화 연결" style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 99999, background: "#111", borderTop: "1px solid #c9a227", padding: "14px 16px", textAlign: "center" }}>
-        <a href="tel:01075284936" style={{ color: "#fff", textDecoration: "none", fontWeight: 800 }}>📞 로또 010-7528-4936 — 통화 문의</a>
+        <section>
+          <h2>검색할 때 이름이 헷갈리는 경우</h2>
+          <p>가게 이름은 붙여 쓰기도 하고 띄어 쓰기도 합니다. 창원 룰루랄라, 룰루랄라 나이트처럼 여러 모양으로 불리다 보니, 지도 앱에서 이름만 넣으면 다른 결과가 섞여 나올 수 있습니다. 이럴 때는 이름보다 주소를 기준으로 삼는 편이 확실합니다. 상남동 22-4라는 지번과 마디미로43번길 10이라는 도로명 가운데 하나만 맞으면 같은 건물입니다.</p>
+          <p>전화로 물어볼 때도 마찬가지입니다. 어느 가게를 말하는지 처음에 주소나 동네 이름을 한 번 짚어 주면, 통화하는 쪽도 헷갈리지 않고 바로 본론으로 넘어갈 수 있습니다.</p>
+        </section>
+
+        <section>
+          <h2>새벽에 나올 때를 먼저 생각해 두기</h2>
+          <p>마감이 새벽 5시라 늦게까지 머무를수록 돌아가는 길이 어려워집니다. 택시를 부를지, 첫차를 기다릴지, 일행 가운데 누가 운전하지 않고 함께 움직일지를 들어가기 전에 정해 두면 마지막 한 시간이 한결 편해집니다. 술자리가 이어진다면 차는 두고 오는 것이 기본입니다.</p>
+        </section>
+
+        <section>
+          <h2>통화 기록을 남겨 두면 좋은 이유</h2>
+          <p>담당과 통화한 날짜와 들은 내용을 두세 줄로 적어 두면, 당일에 무엇을 약속했는지 헷갈리지 않습니다. 일행 가운데 다른 사람이 대신 연락해야 하는 상황이 생겨도 그 메모를 보고 이어서 말할 수 있습니다.</p>
+          <p>특히 인원과 도착 시각은 자주 바뀝니다. 바뀔 때마다 메모도 함께 고쳐 두면, 마지막으로 알린 내용이 무엇인지 바로 확인할 수 있습니다. 문자로 주고받았다면 그 문자를 지우지 말고 두십시오.</p>
+        </section>
+
+        <section className="jg-qa" data-r="qa">
+          <h2>자주 묻는 질문</h2>
+          {문답.map((f) => (
+            <div key={f.q}>
+              <h3 data-r="q">{f.q}</h3>
+              <p data-r="a">{f.a}</p>
+            </div>
+          ))}
+        </section>
+
+        <section className="jg-close" data-r="closewrap">
+          <h2>한 줄 정리</h2>
+          <p data-r="close">{이름}는 상남동 22-4에서 오후 7시부터 새벽 5시까지 문을 열고, 예약 문의는 담당 {담당}에게 전화로 하면 됩니다.</p>
+        </section>
+        <p className="jg-note">광고 · 담당자 연락처는 광고로 실린 것입니다. 마지막 정리 <time dateTime="2026-09-25">2026년 9월 25일</time>. 운영 사정에 따라 바뀔 수 있으니 방문 전에 확인하십시오. 만 19세 이상 성인 대상이며 청소년 출입·고용은 금지입니다.</p>
+      </article>
+
+      <div className="jg-bar" role="complementary" aria-label="전화 연결">
+        <a href={`tel:${번호.replace(/\D/g, "")}`}>📞 {이름} {담당} {번호}</a>
       </div>
     </>
   );
+  return <SaltContext.Provider value={z}>{saltTree(트리, z)}</SaltContext.Provider>;
 }

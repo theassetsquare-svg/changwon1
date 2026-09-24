@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       {!isBulgwang && !isVenuePage && !isJjanggua && <Jsonld data={buildLocalBusiness()} />}
       <Jsonld data={buildWebsite()} />
-      <Layout sticky={!isVenuePage}>
+      <Layout sticky={!isVenuePage && !isJjanggua}>
         <Component {...pageProps} />
       </Layout>
     </>

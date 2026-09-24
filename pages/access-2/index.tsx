@@ -7,6 +7,7 @@ import PageThumb from "@/components/PageThumb";
 import { ACCESS_CSS, RouteLine } from "@/components/access/AccessVenuePage";
 import { ACCESS_GROUPS, ACCESS_VENUES } from "@/components/access/venues";
 import { accessVenuePath } from "@/components/access/types";
+import { saltOf, cssClasses, saltTree, SaltContext } from "@/lib/salt";
 
 /**
  * /access/ — "전국 나이트 가는 길 40" 허브.
@@ -85,7 +86,7 @@ export default function AccessHub() {
 
   const confirmed = ACCESS_VENUES.filter((v) => v.streetAddress || v.jibun).length;
 
-  return (
+  const 트리 = (
     <>
       <Head>
         <title>{title}</title>
@@ -196,6 +197,7 @@ export default function AccessHub() {
             페이지마다 적어 두었습니다. 막차는 서울교통공사·부산교통공사 같은 운영기관의 역별 시각표에서, 주소는
             방문 전 업소 확인이 가장 정확합니다.
           </p>
+          <p>이 목록의 마지막 정리 <time dateTime="2026-09-25">2026년 9월 25일</time>. 업소 사정에 따라 내용은 바뀔 수 있습니다.</p>
         </section>
 
         <p className="acc-sum">
@@ -294,4 +296,6 @@ export default function AccessHub() {
       </nav>
     </>
   );
+  const z = { s: saltOf("/access-2/"), 지역: cssClasses(ACCESS_CSS + HUB_CSS) };
+  return <SaltContext.Provider value={z}>{saltTree(트리, z)}</SaltContext.Provider>;
 }
