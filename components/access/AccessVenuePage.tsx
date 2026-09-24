@@ -1,3 +1,4 @@
+import { useThumb } from "@/lib/thumb";
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -290,12 +291,14 @@ export default function AccessVenuePage(
   const 설명문 = 설명 ?? venue.description;
   // 페이지마다 다른 1:1 썸네일. 본문 <img> 와 반드시 같은 파일을 쓴다.
   /* S4(2026-09-05) T-117: 변형 쪽(이주소)은 그 주소 이름의 썸네일 — 한 그림을 여러 쪽이 나눠 쓰지 않는다 */
-  const thumbPath = 이주소
+  let thumbPath = 이주소
     ? `/og/access-${이주소.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")}-og${venue.ogV ?? ""}.png`
     : `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 */
+  if (표) thumbPath = 표.file;
   const ogImage = `${SITE.url}${thumbPath}`;
   /* 2026-09-24 광고주 복구 — 광고주 쪽 카드 alt 는 광고 4줄 문구(카드 글자와 같게) */
-  const ogAlt = venue.contact ? ["광고", venue.name, venue.contact.name, venue.contact.phone].join(" · ") : `${venue.nameSpaced} 가는 길·귀가 안내`;
+  const ogAlt = 표 ? 표.alt : venue.contact ? ["광고", venue.name, venue.contact.name, venue.contact.phone].join(" · ") : `${venue.nameSpaced} 가는 길·귀가 안내`;
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",

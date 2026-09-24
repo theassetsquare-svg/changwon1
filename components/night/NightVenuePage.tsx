@@ -1,3 +1,4 @@
+import { useThumb } from "@/lib/thumb";
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -150,7 +151,10 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
 
   const path = nightVenuePath(venue.slug);
   const url = `${SITE.url}${path}`;
-  const ogImage = `${SITE.url}/og/${venue.slug}-og${venue.ogV ?? ""}.png`;
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 */
+  const thumbFile = 표 ? 표.file : `/og/${venue.slug}-og${venue.ogV ?? ""}.png`;
+  const thumbAlt = 표 ? 표.alt : venue.ogAlt;
+  const ogImage = `${SITE.url}${thumbFile}`;
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -223,7 +227,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="1200" />
-        <meta property="og:image:alt" content={venue.ogAlt} />
+        <meta property="og:image:alt" content={thumbAlt} />
         <link rel="image_src" href={ogImage} />
         {/* 네이버 수집기가 따로 보는 썸네일 지정 메타. 본문 <img> 와 같은 파일이어야 한다. */}
         <meta name="thumbnail" content={ogImage} />
@@ -231,7 +235,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
         <meta name="twitter:title" content={venue.title} />
         <meta name="twitter:description" content={venue.description} />
         <meta name="twitter:image" content={ogImage} />
-        <meta name="twitter:image:alt" content={venue.ogAlt} />
+        <meta name="twitter:image:alt" content={thumbAlt} />
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
       </Head>
 
@@ -258,7 +262,7 @@ export default function NightVenuePage({ venue }: { venue: NightVenue }) {
           </p>
         </div>
 
-        <PageThumb src={`/og/${venue.slug}-og${venue.ogV ?? ""}.png`} alt={venue.ogAlt} />
+        <PageThumb src={thumbFile} alt={thumbAlt} />
 
         {venue.facts ? (
           <div className="night-facts">

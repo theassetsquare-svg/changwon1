@@ -8,7 +8,10 @@
  * next/image 는 정적 export 에서 최적화 없이 그대로 나가므로 굳이 쓰지 않는다.
  * width·height 를 미리 박아 레이아웃 흔들림(CLS)을 없앤다.
  */
-export default function PageThumb({ src, alt }: { src: string; alt: string }) {
+export default function PageThumb({ src: src0, alt: alt0 }: { src: string; alt: string }) {
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 — og 와 같은 파일 */
+  if (표 && 표.ogOnly) return null;
+  const src = 표 ? 표.file : src0; const alt = 표 ? 표.alt : alt0;
   return (
     // eslint-disable-next-line @next/next/no-img-element
     <img
@@ -20,4 +23,5 @@ export default function PageThumb({ src, alt }: { src: string; alt: string }) {
       loading="eager"
     />
   );
-}
+}import { useThumb } from "@/lib/thumb";
+

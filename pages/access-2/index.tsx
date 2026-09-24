@@ -1,3 +1,4 @@
+import { useThumb, 이미지바꾸기 } from '@/lib/thumb';
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
@@ -35,6 +36,7 @@ function anchorOf(v: (typeof ACCESS_VENUES)[number]) {
 }
 
 export default function AccessHub() {
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 */
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -100,6 +102,7 @@ export default function AccessHub() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={url} />
+        {표 ? (<><meta property="og:image" content={SITE.url + 표.file} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="1200" /><meta property="og:image:type" content="image/png" /><meta property="og:image:alt" content={표.alt} /><meta name="twitter:image" content={SITE.url + 표.file} /></>) : null}
         {/* 네이버 수집기가 따로 보는 썸네일 지정 메타 */}
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={title} />
@@ -107,7 +110,7 @@ export default function AccessHub() {
         <style dangerouslySetInnerHTML={{ __html: ACCESS_CSS + HUB_CSS }} />
       </Head>
 
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(표 ? 이미지바꾸기(itemList, SITE.url + 표.file) : itemList) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
 
       <article className="acc-wrap">
@@ -117,6 +120,7 @@ export default function AccessHub() {
 
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
         <h1>전국 나이트 가는 길 40</h1>
+        {표 ? <PageThumb src={표.file} alt={표.alt} /> : null}
 
 
         <div className="acc-intro">

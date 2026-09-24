@@ -1,8 +1,11 @@
+import { useThumb, 이미지바꾸기 } from "@/lib/thumb";
 import { SITE } from "./site";
 
 type JsonldProps = { data: Record<string, unknown> };
 
 export function Jsonld({ data }: JsonldProps) {
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 — JSON-LD image = og */
+  if (표 && !표.ogOnly) data = 이미지바꾸기(data, SITE.url + 표.file);
   return (
     <script
       type="application/ld+json"

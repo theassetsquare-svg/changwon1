@@ -1,3 +1,4 @@
+import { useThumb } from "@/lib/thumb";
 import Head from "next/head";
 import { SITE } from "./site";
 
@@ -30,6 +31,8 @@ export default function SeoHead({
   noindex = false,
 }: Props) {
   const url = `${SITE.url}${path}`;
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 */
+  if (표) { ogSquare = 표.file; ogAlt = 표.alt; }
   // 제목에 이미 상호가 들어갔는지 볼 때 띄어쓰기는 무시한다.
   // "창원룰루랄라나이트"(검색어 표기)로 시작하는 제목 뒤에
   // "| 창원 룰루랄라 나이트"가 또 붙어 길어지는 걸 막는다.

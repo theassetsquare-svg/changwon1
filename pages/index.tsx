@@ -1,3 +1,4 @@
+import { useThumb } from '@/lib/thumb';
 import Head from "next/head";
 import { SITE } from "@/components/site";
 
@@ -14,6 +15,7 @@ const DESC =
   "바닥을 친 뒤 다시 올라온 사람의 이야기. 화려한 성공담이 아니라, 무너진 다음 날 아침에 무엇을 했는지에 대한 글입니다. 끝까지 읽고 나면 오늘 달라집니다.";
 
 export default function Home() {
+  const 표 = useThumb();   /* 2026-09-24 쪽마다 고유 카드 */
   const url = `${SITE.url}/`;
   return (
     <>
@@ -36,6 +38,7 @@ export default function Home() {
         <meta property="og:title" content={TITLE} />
         <meta property="og:description" content={DESC} />
         <meta property="og:url" content={url} />
+        {표 ? (<><meta property="og:image" content={SITE.url + 표.file} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="1200" /><meta property="og:image:type" content="image/png" /><meta property="og:image:alt" content={표.alt} /><meta name="twitter:image" content={SITE.url + 표.file} /></>) : null}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
