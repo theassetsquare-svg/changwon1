@@ -1,4 +1,5 @@
 import Head from "next/head";
+import 카드표 from "@/lib/thumb-map.json";
 import Link from "next/link";
 import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
@@ -15,7 +16,7 @@ import { saltOf, cssClasses, saltTree, SaltContext } from "@/lib/salt";
  */
 const 이름 = B.name;
 const 이주소 = B.path;
-const 그림 = "/og/t-j-bulgwang-hobak-4-c0a68cd2.png";   /* lib/thumb-map.json 의 이 쪽 카드 */
+const 그림: string = (카드표 as { 쪽: Record<string, { file: string }> }).쪽[이주소]?.file ?? "/og/t-j-bulgwang-hobak-4-c0a68cd2.png";   /* [전부10] lib/thumb-map.json 에서 읽는다 — 박아 두면 카드를 새로 고칠 때 본문(PageThumb)과 og 가 갈린다 */
 
 const CSS = `
 .bh-wrap{max-width:800px;margin:0 auto;padding:22px 20px 40px;color:#E8EEF3;}

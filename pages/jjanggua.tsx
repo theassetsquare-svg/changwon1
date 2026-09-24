@@ -1,4 +1,5 @@
 import Head from "next/head";
+import 카드표 from "@/lib/thumb-map.json";
 import Link from "next/link";
 import PageThumb from "@/components/PageThumb";
 import { SITE } from "@/components/site";
@@ -14,7 +15,7 @@ import { saltOf, cssClasses, saltTree, SaltContext } from "@/lib/salt";
  */
 const 이름 = "창원룰루랄라나이트";
 const 이주소 = "/jjanggua/";
-const 그림 = "/og/t-j-jjanggua-b5698e03.png";   /* lib/thumb-map.json 의 이 쪽 카드(본문 첫 그림과 같은 파일) */
+const 그림: string = (카드표 as { 쪽: Record<string, { file: string }> }).쪽[이주소]?.file ?? "/og/t-j-jjanggua-b5698e03.png";   /* [전부10] lib/thumb-map.json 에서 읽는다 — 박아 두면 카드를 새로 고칠 때 본문(PageThumb)과 og 가 갈린다 */
 
 const CSS = `
 .jg-wrap{max-width:780px;margin:0 auto;padding:22px 20px 40px;color:#ECE7DF;}
