@@ -294,7 +294,8 @@ export default function AccessVenuePage(
     ? `/og/access-${이주소.replace(/^\/+|\/+$/g, "").replace(/\//g, "-")}-og${venue.ogV ?? ""}.png`
     : `/og/access-${venue.slug}-og${venue.ogV ?? ""}.png`;
   const ogImage = `${SITE.url}${thumbPath}`;
-  const ogAlt = `${venue.nameSpaced} 가는 길·귀가 안내`;
+  /* 2026-09-24 광고주 복구 — 광고주 쪽 카드 alt 는 광고 4줄 문구(카드 글자와 같게) */
+  const ogAlt = venue.contact ? ["광고", venue.name, venue.contact.name, venue.contact.phone].join(" · ") : `${venue.nameSpaced} 가는 길·귀가 안내`;
 
   const nightClub: Record<string, unknown> = {
     "@context": "https://schema.org",
@@ -399,6 +400,8 @@ export default function AccessVenuePage(
         ) : null}
         <span className="acc-tagline">가는 길 · 귀가 내비</span>
         <h1>{변형?.title ?? venue.title}</h1>
+        {/* 2026-09-24: 카드를 h1 바로 아래로 올림 — 본문 맨 위 그림이어야 한다(광고주 세트 ① · 첫 h2 앞) */}
+        <PageThumb src={thumbPath} alt={ogAlt} />
 
         <div className="acc-intro">
           {(변형?.lead ?? venue.intro).map((p, i) => (
@@ -435,8 +438,6 @@ export default function AccessVenuePage(
           </ul>
         </div>
         )}
-
-        <PageThumb src={thumbPath} alt={ogAlt} />
 
         <div data-frame="1" className="acc-facts">
           <table>

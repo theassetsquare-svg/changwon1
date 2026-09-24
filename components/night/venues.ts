@@ -1132,7 +1132,7 @@ export const VENUES: NightVenue[] = [
   // ──────────────────────────────────────────────────────────────────────
   {
     slug: "suwon-chancedome-4",
-    ogV: "-v3",
+    ogV: "-ad0924", // 2026-09-24 광고주 복구 — 박찬호 표준 4줄 카드(새 파일 이름)
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "수원 나이트클럽",
@@ -1140,12 +1140,13 @@ export const VENUES: NightVenue[] = [
     addressLocality: "수원시 권선구",
     addressRegion: "경기도",
     streetAddress: "권선로 673",
-    group: "B",
+    group: "A",
+    contact: { name: "박찬호", phone: "010-7117-5077", tel: "01071175077" },
     angle: { no: 4, name: "처음 가는 사람 시점", suffix: "초보가 놓치는 것" },
     title: "수원찬스돔나이트 권선로 대로변 초보가 놓치는 것",
     description:
       "수원찬스돔나이트 문 앞에서 뭘 해야 할지 모르겠다면 이 순서대로 하면 됩니다. 도착 직후 할 일, 자리 고르는 기준, 부킹이 도는 방식을 처음 가는 적었습니다.",
-    ogAlt: "수원찬스돔나이트 경기 수원시 권선구 권선로 지역 안내 썸네일",
+    ogAlt: "광고 · 수원찬스돔나이트 · 박찬호 · 010-7117-5077",
     og: {
       bg: "#4A1F5E",
       accent: "#E4B8FF",

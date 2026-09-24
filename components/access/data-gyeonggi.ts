@@ -11,7 +11,7 @@ export const GYEONGGI: AccessVenue[] = [
   // ── 12 ─────────────────────────────────────────────────────────────────
   {
     slug: "suwon-chancedome-4",
-    ogV: "-v3",
+    ogV: "-ad0924", // 2026-09-24 광고주 복구 — 박찬호 표준 4줄 카드(새 파일 이름)
     name: "수원찬스돔나이트",
     nameSpaced: "수원 찬스돔나이트",
     cityKeyword: "권선동 나이트클럽",

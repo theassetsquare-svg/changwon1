@@ -11,11 +11,11 @@ export default function Jjanggu() {
         title="창원룰루랄라나이트 광고·제휴 문의는 로또 010-7528-4936"
         description="창원 룰루랄라 나이트 손님 응대 담당 광고문의. 예약·문의는 로또 010-7528-4936 전화 한 통. 처음이든 단골이든 같은 흐름, 같은 사람. 만 출입."
         path="/jjanggua/"
-        ogSquare="/og/page-jjanggua-og.png"
-        ogAlt="창원 룰루랄라 나이트 담당 광고문의 안내"
+        ogSquare="/og/page-jjanggua-og-ad0924.png"
+        ogAlt="광고 · 창원룰루랄라나이트 · 로또 · 010-7528-4936"
       />
-      {/* S4 T-006(2026-09-05): 업소 JSON-LD image 를 이 쪽 og(/og/page-jjanggua-og.png)와 같게 — _app 전역 것은 이 쪽에서 뺐다 */}
-      <Jsonld data={{ ...buildLocalBusiness(), image: `${SITE.url}/og/page-jjanggua-og.png` }} />
+      {/* S4 T-006(2026-09-05): 업소 JSON-LD image 를 이 쪽 og 와 같게 — _app 전역 것은 이 쪽에서 뺐다 · 2026-09-24 광고주 복구: 로또 표준 4줄 카드 + telephone */}
+      <Jsonld data={{ ...buildLocalBusiness(), image: `${SITE.url}/og/page-jjanggua-og-ad0924.png`, telephone: "+82-10-7528-4936" }} />
       <Jsonld
         data={buildBreadcrumb([
           { name: "무너진 자리에서 다시 시작한 사람의 기록", path: "/" },
@@ -32,7 +32,7 @@ export default function Jjanggu() {
             저장해 두면 편한 번호.<br />
             <span className="accent">{SITE.contactName} {SITE.phone}</span>
           </h1>
-          <PageThumb src="/og/page-jjanggua-og.png" alt="창원 룰루랄라 나이트 담당 광고문의 안내" />
+          <PageThumb src="/og/page-jjanggua-og-ad0924.png" alt="광고 · 창원룰루랄라나이트 · 로또 · 010-7528-4936" />
           <p className="hero__sub">
             창원 룰루랄라 나이트에서 손님 응대를 맡고 있는 웨이터입니다.
             처음 오신 분도, 자주 오시는 분도, 도착 전에 미리 알아 두면 자리부터 안내까지
@@ -191,6 +191,11 @@ export default function Jjanggu() {
           </div>
         </div>
       </section>
+      {/* 2026-09-24 광고주 복구 — 가게 쪽 = 로또 전화바(화면 아래 고정) */}
+      <div aria-hidden="true" style={{ height: 64 }} />
+      <div className="callbar" role="complementary" aria-label="전화 연결" style={{ position: "fixed", left: 0, right: 0, bottom: 0, zIndex: 99999, background: "#111", borderTop: "1px solid #c9a227", padding: "14px 16px", textAlign: "center" }}>
+        <a href="tel:01075284936" style={{ color: "#fff", textDecoration: "none", fontWeight: 800 }}>📞 로또 010-7528-4936 — 통화 문의</a>
+      </div>
     </>
   );
 }
