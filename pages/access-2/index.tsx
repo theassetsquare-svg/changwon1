@@ -255,7 +255,7 @@ export default function AccessHub() {
           <li><a href="/access/incheon-arabian-night/">인천아라비안나이트</a></li>
           <li><a href="/club/ilsan-shampoo-night-1/">일산샴푸나이트</a></li>
           <li><a href="/access/ilsan-shampoo-night/">일산샴푸나이트</a></li>
-          <li><a href="/access/paju-skydome-night/">파주야당스카이돔나이트</a></li>
+          <li><a href="/access/paju-skydome-night-3/">파주야당스카이돔나이트</a></li>
           <li><a href="/access/pyeongtaek-hobak-night/">평택호박나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>충청</h3>

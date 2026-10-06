@@ -80,7 +80,7 @@ export const ACCESS_URL_MAP: Record<string, string> = {
   "seosan-hobak-night": "seosan-hobak-night",
   "suwon-chancedome-4": "suwon-chancedome-night",
   "ilsan-shampoo-4": "ilsan-shampoo-night",
-  "paju-skydome-2": "paju-skydome-night",
+  "paju-skydome-2": "paju-skydome-night-3",
   "guri-hobak-2": "guri-hobak-night",
   "uijeongbu-hangukgwan-night": "uijeongbu-hangukgwan-night",
   "suwon-korea-night": "suwon-korea-night",
