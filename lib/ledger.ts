@@ -87,9 +87,7 @@ export const 장부: Record<string, 장부값> = {
   "id": "dapsimni-miracle",
   "address": "서울 동대문구 고미술로 99",
   "openingHours": "매일 오후 7시~새벽 5시",
-  "isAdvertiser": true,
-  "telephone": "010-8156-6558",
-  "nickname": "유재석"
+  "isAdvertiser": false
  },
  "독산동국빈관나이트": {
   "id": "doksan-gukbingwan",

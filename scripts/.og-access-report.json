@@ -92,16 +92,16 @@
   {
     "slug": "dapsimni-miracle-night",
     "file": "access-dapsimni-miracle-night-og.png",
-    "group": "A",
+    "group": "B",
     "size": "1200×1200",
     "bytes": 54096,
     "bg": "#4a1c45",
     "bgContrast": "13.6:1",
     "nameSize": 150,
     "alt": "답십리 미라클나이트 가는 길·귀가 안내",
-    "nick": "유재석",
-    "phone": "010-8156-6558",
-    "phoneGlyphH": "116px",
+    "nick": "-",
+    "phone": "-",
+    "phoneGlyphH": "-",
     "clip": "좌43px/우43px 여백"
   },
   {
