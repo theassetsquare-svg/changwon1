@@ -246,8 +246,8 @@ export default function AccessHub() {
           <li><a href="/club/suwon-chancedome-night-1/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-chancedome-night/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-korea-night/">수원코리아나이트</a></li>
-          <li><a href="/club/ansan-hit-night/">안산히트나이트</a></li>
-          <li><a href="/club/ansan-hit-night/">안산히트나이트</a></li>
+          <li><a href="/club/ansan-hit-night-4/">안산히트나이트</a></li>
+          <li><a href="/club/ansan-hit-night-4/">안산히트나이트</a></li>
           <li><a href="/access/osan-hobak-night/">오산호박나이트</a></li>
           <li><a href="/access/uijeongbu-baekakgwan-night/">의정부백악관나이트</a></li>
           <li><a href="/access/uijeongbu-hangukgwan-night/">의정부한국관나이트</a></li>

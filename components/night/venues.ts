@@ -68,7 +68,7 @@ export const NIGHT_URL_MAP: Record<string, string> = {
   "suyu-shampoo-4": "suyu-shampoo-night-1",
   "busan-asiad-1": "busan-asiad-night-1",
   "suwon-chancedome-4": "suwon-chancedome-night-1",
-  "ansan-hit-4": "ansan-hit-night",
+  "ansan-hit-4": "ansan-hit-night-4",
   "daejeon-seven-4": "daejeon-seven-night-1",
   "ilsan-shampoo-4": "ilsan-shampoo-night-1",
 };
