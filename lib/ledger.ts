@@ -23,9 +23,7 @@ export const 장부: Record<string, 장부값> = {
  "부평키스나이트": {
   "id": "bupyeong-kiss",
   "address": "인천광역시 부평구 시장로 47, 3층(부평동)",
-  "isAdvertiser": true,
-  "telephone": "010-8497-3072",
-  "nickname": "오빠"
+  "isAdvertiser": false
  },
  "부산아시아드나이트": {
   "id": "busan-asiad",
@@ -218,9 +216,7 @@ export const 장부: Record<string, 장부값> = {
  "울산챔피언나이트": {
   "id": "ulsan-champion",
   "address": "울산 남구 정동로 75 (삼산동 1559-17) 1층",
-  "isAdvertiser": true,
-  "telephone": "010-5653-0069",
-  "nickname": "춘자"
+  "isAdvertiser": false
  },
  "울산뉴월드나이트": {
   "id": "ulsan-newworld",

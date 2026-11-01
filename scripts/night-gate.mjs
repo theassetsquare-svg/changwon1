@@ -347,7 +347,7 @@ const firstSentences = VENUES.map((v) => v.sections[0].body[0].split(/(?<=[.?!])
   const A = ogReport.filter((r) => r.group === "A");
   const heightOk = A.every((r) => parseInt(r.phoneGlyphH) >= 100);
   const clipOk = A.every((r) => /좌\d+px\/우\d+px/.test(r.clip));
-  const map = { "bulgwang-hobak-night": "010-2221-1937", "changwon-lululala-night": "010-7528-4936", "ulsan-champion-night": "010-5653-0069", "cheongdam-night": "010-5655-4866" };
+  const map = { "bulgwang-hobak-night": "010-2221-1937", "changwon-lululala-night": "010-7528-4936", "cheongdam-night": "010-5655-4866" };
   const numOk = A.every((r) => r.phone === map[r.slug]);
   add(
     "G31",

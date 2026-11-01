@@ -495,21 +495,6 @@
     "clip": "좌43px/우42px 여백"
   },
   {
-    "slug": "ulsan-champion-3",
-    "file": "access-ulsan-champion-3-og.png",
-    "group": "A",
-    "size": "1200×1200",
-    "bytes": 57548,
-    "bg": "#4a401c",
-    "bgContrast": "10.3:1",
-    "nameSize": 150,
-    "alt": "울산 챔피언나이트 가는 길·귀가 안내",
-    "nick": "춘자",
-    "phone": "010-5653-0069",
-    "phoneGlyphH": "116px",
-    "clip": "좌43px/우44px 여백"
-  },
-  {
     "slug": "ulsan-newworld-night",
     "file": "access-ulsan-newworld-night-og.png",
     "group": "B",

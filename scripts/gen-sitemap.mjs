@@ -24,7 +24,7 @@ const PAGES = [
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
   { path: "/bulgwang-hobak-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-night-og.png" },
   { path: "/changwon-lululala-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-og.png" },
-  { path: "/ulsan-champion-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/ulsan-champion-4-og.png" },
+  { path: "/ulsan-champion-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/t-j-club-ulsan-champion-night-1-abcfccfe.png" },
   { path: "/cheongdam-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/cheongdam-4-og.png" },
   { path: "/night/daejeon-one-night/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-one-night-og.png" },
   { path: "/sillim-grandprix-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/sillim-grandprix-4-og.png" },
