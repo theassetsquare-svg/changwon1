@@ -29,7 +29,7 @@ export const ACCESS_URL_MAP = {
   "jeju-1": "jeju-night",
   "sillim-grandprix-night": "sillim-grandprix-night",
   "sangbong-hangukgwan-3": "sangbong-hangukgwan-night-4",
-  "suyu-shampoo-3": "suyu-shampoo-night",
+  "suyu-shampoo-3": "suyu-shampoo-night-3",
   "cheongdam-night": "cheongdam-night",
   "bulgwang-hobak-2": "bulgwang-hobak-night",
   "nowon-hobak-1": "nowon-hobak-night-4",
@@ -37,7 +37,7 @@ export const ACCESS_URL_MAP = {
   "busan-asiad-1": "busan-asiad-night",
   "changwon-lululala-3": "changwon-lululala-night",
   "ulsan-champion-3": "ulsan-champion-night",
-  "ulsan-newworld-night": "ulsan-newworld-night",
+  "ulsan-newworld-night": "ulsan-newworld-night-3",
   "daegu-hobak-night": "daegu-hobak-night-4"
 };
 

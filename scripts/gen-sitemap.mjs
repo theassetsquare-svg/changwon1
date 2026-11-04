@@ -20,7 +20,7 @@ const PAGES = [
   { path: "/location/", priority: "0.8", changefreq: "monthly", thumb: "/og/page-location-og.png" },
   { path: "/about/", priority: "0.7", changefreq: "monthly", thumb: "/og/page-about-og.png" },
   // 다른 지역 업소(불광동호박나이트) 안내 페이지
-  { path: "/bulgwang-hobak-4/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
+  { path: "/bulgwang-hobak-6/", priority: "0.9", changefreq: "weekly", thumb: "/og-bulgwang.png" },
   // /night/{slug}/ 지역별 업소 정보 페이지 13개 (append)
   { path: "/bulgwang-hobak-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/bulgwang-hobak-night-og.png" },
   { path: "/changwon-lululala-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/changwon-lululala-night-og.png" },

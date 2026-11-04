@@ -59,18 +59,18 @@ export const NIGHT_BASE = "/night";
 /* ★ 2026-08-26 — 메인주소 뒤에 가게이름. 네이버에 나오는 것만 옛 경로 유지 */
 export const NIGHT_KEEP_OLD = new Set<string>(["daejeon-one-night"]);
 export const NIGHT_URL_MAP: Record<string, string> = {
-  "bulgwang-hobak-night": "bulgwang-hobak-night-1",
+  "bulgwang-hobak-night": "bulgwang-hobak-night-3",
   "changwon-lululala-night": "changwon-lululala-night-1",
   "ulsan-champion-4": "ulsan-champion-night-1",
   "cheongdam-4": "cheongdam-night-1",
-  "sillim-grandprix-4": "sillim-grandprix-night-1",
-  "sangbong-hangukgwan-4": "sangbong-hangukgwan-night-1",
-  "suyu-shampoo-4": "suyu-shampoo-night-1",
+  "sillim-grandprix-4": "sillim-grandprix-night-2",
+  "sangbong-hangukgwan-4": "sangbong-hangukgwan-night-2",
+  "suyu-shampoo-4": "suyu-shampoo-night-2",
   "busan-asiad-1": "busan-asiad-night-3",
-  "suwon-chancedome-4": "suwon-chancedome-night-1",
+  "suwon-chancedome-4": "suwon-chancedome-night-2",
   "ansan-hit-4": "ansan-hit-night-4",
-  "daejeon-seven-4": "daejeon-seven-night-1",
-  "ilsan-shampoo-4": "ilsan-shampoo-night-1",
+  "daejeon-seven-4": "daejeon-seven-night-2",
+  "ilsan-shampoo-4": "ilsan-shampoo-night-2",
 };
 export const NIGHT_SLUG_BY_URL: Record<string, string> = Object.fromEntries(
   Object.entries(NIGHT_URL_MAP).map(([slug, url]) => [url, slug])
