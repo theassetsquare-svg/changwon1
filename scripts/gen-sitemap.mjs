@@ -15,7 +15,7 @@ const today = new Date().toISOString().slice(0, 10);
 const PAGES = [
   // 홈(/)은 단독 글 페이지 — 썸네일 없음
   { path: "/", priority: "1.0", changefreq: "weekly" },
-  { path: "/jjanggua/", priority: "0.95", changefreq: "weekly", thumb: "/og/page-jjanggua-og.png" },
+  { path: "/jjanggua-1/", priority: "0.95", changefreq: "weekly", thumb: "/og/page-jjanggua-og.png" },
   { path: "/contacta/", priority: "0.85", changefreq: "monthly", thumb: "/og/page-contacta-og.png" },
   { path: "/location/", priority: "0.8", changefreq: "monthly", thumb: "/og/page-location-og.png" },
   { path: "/about/", priority: "0.7", changefreq: "monthly", thumb: "/og/page-about-og.png" },

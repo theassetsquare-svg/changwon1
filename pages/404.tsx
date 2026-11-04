@@ -29,7 +29,7 @@ export default function NotFound() {
       <section className="section--tight">
         <div className="container">
           <div className="grid grid-3">
-            <Link className="card card--link" href="/jjanggua/">
+            <Link className="card card--link" href="/jjanggua-1/">
               <span className="eyebrow">입장 안내</span>
               <h3 style={{ marginTop: 6 }}>입장 전 확인</h3>
               <p style={{ marginTop: 10 }}>

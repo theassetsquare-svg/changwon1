@@ -276,7 +276,7 @@ export default function AccessHub() {
           <li><a href="/club/busan-asiad-night-3/">부산아시아드나이트</a></li>
           <li><a href="/access/busan-asiad-night/">부산아시아드나이트</a></li>
           <li><a href="/access/ulsan-newworld-night-3/">울산뉴월드나이트</a></li>
-          <li><a href="/club/ulsan-champion-night-1/">울산챔피언나이트</a></li>
+          <li><a href="/club/ulsan-champion-night-2/">울산챔피언나이트</a></li>
           <li><a href="/access/ulsan-champion-night/">울산챔피언나이트</a></li>
           <li><a href="/club/changwon-lululala-night-1/">창원룰루랄라나이트</a></li>
           <li><a href="/access/changwon-lululala-night/">창원룰루랄라나이트</a></li>

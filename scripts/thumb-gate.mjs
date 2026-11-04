@@ -41,7 +41,7 @@ const ACCESS = loadAccessVenues();
 const PAGES = [
   // 홈(/)은 헤더·푸터·썸네일 없이 글만 나가는 단독 페이지라 검사 대상이 아니다.
   ["/about/", "about/index.html", "/og/page-about-og.png", "창원 룰루랄라 나이트"],
-  ["/jjanggua/", "jjanggua/index.html", "/og/page-jjanggua-og.png", "창원 룰루랄라 나이트"],
+  ["/jjanggua-1/", "jjanggua/index.html", "/og/page-jjanggua-og.png", "창원 룰루랄라 나이트"],
   ["/location/", "location/index.html", "/og/page-location-og.png", "창원 룰루랄라 나이트"],
   ["/contacta/", "contacta/index.html", "/og/page-contacta-og.png", "창원 룰루랄라 나이트"],
   ["/bulgwang-hobak-6/", "bulgwang-hobak/index.html", "/og-bulgwang.png", "불광동호박나이트"],

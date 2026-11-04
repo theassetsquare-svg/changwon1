@@ -28,7 +28,7 @@ const ACCESS = loadAccessVenues();
 const PAGES = [
   // 홈(/)은 썸네일 없는 단독 글 페이지 — 제외
   ["/about/", "/og/page-about-og.png"],
-  ["/jjanggua/", "/og/page-jjanggua-og.png"],
+  ["/jjanggua-1/", "/og/page-jjanggua-og.png"],
   ["/location/", "/og/page-location-og.png"],
   ["/contacta/", "/og/page-contacta-og.png"],
   ["/bulgwang-hobak-6/", "/og-bulgwang.png"],

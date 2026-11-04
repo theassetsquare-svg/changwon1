@@ -61,7 +61,7 @@ export const NIGHT_KEEP_OLD = new Set<string>(["daejeon-one-night"]);
 export const NIGHT_URL_MAP: Record<string, string> = {
   "bulgwang-hobak-night": "bulgwang-hobak-night-3",
   "changwon-lululala-night": "changwon-lululala-night-1",
-  "ulsan-champion-4": "ulsan-champion-night-1",
+  "ulsan-champion-4": "ulsan-champion-night-2",
   "cheongdam-4": "cheongdam-night-1",
   "sillim-grandprix-4": "sillim-grandprix-night-2",
   "sangbong-hangukgwan-4": "sangbong-hangukgwan-night-2",

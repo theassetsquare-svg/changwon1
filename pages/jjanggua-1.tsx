@@ -14,7 +14,7 @@ import { saltOf, cssClasses, saltTree, SaltContext } from "@/lib/salt";
  * 확인되지 않은 말(카드 결제·담당제 운영 방식 등)도 빼고, 장부(data/shops verified) 값만 사실로 쓴다.
  */
 const 이름 = "창원룰루랄라나이트";
-const 이주소 = "/jjanggua/";
+const 이주소 = "/jjanggua-1/";
 const 그림: string = (카드표 as { 쪽: Record<string, { file: string }> }).쪽[이주소]?.file ?? "/og/t-j-jjanggua-b5698e03.png";   /* [전부10] lib/thumb-map.json 에서 읽는다 — 박아 두면 카드를 새로 고칠 때 본문(PageThumb)과 og 가 갈린다 */
 
 const CSS = `
