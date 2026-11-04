@@ -36,7 +36,7 @@ const PAGES = [
   { path: "/daejeon-seven-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/daejeon-seven-4-og.png" },
   { path: "/ilsan-shampoo-night-1/", priority: "0.8", changefreq: "weekly", thumb: "/og/ilsan-shampoo-4-og.png" },
   // /access/ 허브 — 전국 나이트 가는 길 40
-  { path: "/access-2/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
+  { path: "/access-6/", priority: "0.9", changefreq: "weekly", thumb: "/og/page-access-og.png" },
 ];
 
 // /access/{slug}/ 40개는 데이터 파일에서 슬러그를 읽어 자동으로 붙인다.

@@ -51,7 +51,7 @@ export default function AccessHub() {
     };
   }, []);
 
-  const path = "/access-2/";
+  const path = "/access-6/";
   const url = `${SITE.url}${path}`;
   const thumbPath = "/og/page-access-og-v2.png";   /* 2026-09-14 — 옛 그림이 로또 번호 카드였다 → 안내 쪽 광고문의 카드 */
   const ogImage = `${SITE.url}${thumbPath}`;
@@ -224,7 +224,7 @@ export default function AccessHub() {
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>서울</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/gangseo-hobak-night/">강서호박나이트</a></li>
-          <li><a href="/access/gildong-chance-night/">길동찬스나이트</a></li>
+          <li><a href="/access/gildong-chance-night-4/">길동찬스나이트</a></li>
           <li><a href="/access/nowon-hobak-night/">노원호박나이트</a></li>
           <li><a href="/access/dapsimni-miracle-night/">답십리미라클나이트</a></li>
           <li><a href="/access/doksan-gukbingwan-night/">독산동국빈관나이트</a></li>
@@ -242,7 +242,7 @@ export default function AccessHub() {
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>경기·인천</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/guri-hobak-night-8/">구리호박나이트</a></li>
-          <li><a href="/access/bucheon-gorae-night/">부천고래나이트</a></li>
+          <li><a href="/access/bucheon-gorae-night-4/">부천고래나이트</a></li>
           <li><a href="/club/suwon-chancedome-night-1/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-chancedome-night/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-korea-night/">수원코리아나이트</a></li>
@@ -266,14 +266,14 @@ export default function AccessHub() {
           <li><a href="/club/daejeon-one-night/">대전원나이트</a></li>
           <li><a href="/access/seosan-hobak-night/">서산호박나이트</a></li>
           <li><a href="/access/cheonan-stardome-night/">천안스타돔나이트</a></li>
-          <li><a href="/access/cheonan-korea-night/">천안코리아나이트</a></li>
+          <li><a href="/access/cheonan-korea-night-4/">천안코리아나이트</a></li>
           <li><a href="/access/cheongju-hobak-night/">청주호박나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>영남</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/gumi-hobak-night/">구미호박나이트</a></li>
-          <li><a href="/access/daegu-hobak-night/">대구호박나이트</a></li>
-          <li><a href="/club/busan-asiad-night-1/">부산아시아드나이트</a></li>
+          <li><a href="/access/daegu-hobak-night-4/">대구호박나이트</a></li>
+          <li><a href="/club/busan-asiad-night-3/">부산아시아드나이트</a></li>
           <li><a href="/access/busan-asiad-night/">부산아시아드나이트</a></li>
           <li><a href="/access/ulsan-newworld-night/">울산뉴월드나이트</a></li>
           <li><a href="/club/ulsan-champion-night-1/">울산챔피언나이트</a></li>
@@ -283,8 +283,8 @@ export default function AccessHub() {
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>호남·제주</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
-          <li><a href="/access/gwangju-sangmu-night/">광주상무나이트</a></li>
-          <li><a href="/access/gwangju-cheomdan-night/">광주첨단나이트</a></li>
+          <li><a href="/access/gwangju-sangmu-night-4/">광주상무나이트</a></li>
+          <li><a href="/access/gwangju-cheomdan-night-4/">광주첨단나이트</a></li>
           <li><a href="/access/jeju-night/">제주도나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>그 밖의 지역</h3>
@@ -296,6 +296,6 @@ export default function AccessHub() {
       </nav>
     </>
   );
-  const z = { s: saltOf("/access-2/"), 지역: cssClasses(ACCESS_CSS + HUB_CSS) };
+  const z = { s: saltOf("/access-6/"), 지역: cssClasses(ACCESS_CSS + HUB_CSS) };
   return <SaltContext.Provider value={z}>{saltTree(트리, z)}</SaltContext.Provider>;
 }
