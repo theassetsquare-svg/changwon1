@@ -9,20 +9,20 @@ export const ACCESS_KEEP_OLD = new Set(["ansan-hit-night","dapsimni-miracle-nigh
 
 export const ACCESS_URL_MAP = {
   "daejeon-seven-night": "daejeon-seven-night",
-  "daejeon-one-night": "daejeon-one-night-4",
+  "daejeon-one-night": "daejeon-one-night-5",
   "cheonan-stardome-2": "cheonan-stardome-night",
-  "cheonan-korea-night": "cheonan-korea-night-4",
+  "cheonan-korea-night": "cheonan-korea-night-5",
   "cheongju-hobak-night": "cheongju-hobak-night",
   "seosan-hobak-night": "seosan-hobak-night-3",
   "suwon-chancedome-4": "suwon-chancedome-night-3",
   "ilsan-shampoo-4": "ilsan-shampoo-night",
-  "paju-skydome-2": "paju-skydome-night-3",
+  "paju-skydome-2": "paju-skydome-night-4",
   "guri-hobak-2": "guri-hobak-night-8",
   "uijeongbu-hangukgwan-night": "uijeongbu-hangukgwan-night-7",
   "suwon-korea-night": "suwon-korea-night",
   "indeogwon-gukbingwan-night": "indeogwon-gukbingwan-night-5",
   "seongnam-shampoo-night": "seongnam-shampoo-night",
-  "bucheon-gorae-night": "bucheon-gorae-night-4",
+  "bucheon-gorae-night": "bucheon-gorae-night-5",
   "pyeongtaek-hobak-night": "pyeongtaek-hobak-night-4",
   "gwangju-sangmu-night": "gwangju-sangmu-night-4",
   "gwangju-cheomdan-night": "gwangju-cheomdan-night-4",
@@ -33,12 +33,12 @@ export const ACCESS_URL_MAP = {
   "cheongdam-night": "cheongdam-night",
   "bulgwang-hobak-2": "bulgwang-hobak-night",
   "nowon-hobak-1": "nowon-hobak-night-4",
-  "gildong-chance-night": "gildong-chance-night-4",
+  "gildong-chance-night": "gildong-chance-night-5",
   "busan-asiad-1": "busan-asiad-night",
   "changwon-lululala-3": "changwon-lululala-night",
   "ulsan-champion-3": "ulsan-champion-night",
   "ulsan-newworld-night": "ulsan-newworld-night-3",
-  "daegu-hobak-night": "daegu-hobak-night-4"
+  "daegu-hobak-night": "daegu-hobak-night-5"
 };
 
 export const ACCESS_URL = (slug) =>

@@ -51,7 +51,7 @@ export default function AccessHub() {
     };
   }, []);
 
-  const path = "/access-6/";
+  const path = "/access-7/";
   const url = `${SITE.url}${path}`;
   const thumbPath = "/og/page-access-og-v2.png";   /* 2026-09-14 — 옛 그림이 로또 번호 카드였다 → 안내 쪽 광고문의 카드 */
   const ogImage = `${SITE.url}${thumbPath}`;
@@ -224,7 +224,7 @@ export default function AccessHub() {
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>서울</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/gangseo-hobak-night/">강서호박나이트</a></li>
-          <li><a href="/access/gildong-chance-night-4/">길동찬스나이트</a></li>
+          <li><a href="/access/gildong-chance-night-5/">길동찬스나이트</a></li>
           <li><a href="/access/nowon-hobak-night-4/">노원호박나이트</a></li>
           <li><a href="/access/dapsimni-miracle-night/">답십리미라클나이트</a></li>
           <li><a href="/access/doksan-gukbingwan-night/">독산동국빈관나이트</a></li>
@@ -236,13 +236,13 @@ export default function AccessHub() {
           <li><a href="/club/sillim-grandprix-night-2/">신림그랑프리나이트</a></li>
           <li><a href="/access/sillim-grandprix-night/">신림그랑프리나이트</a></li>
           <li><a href="/access/yeongdeungpo-terminal-night/">영등포터미널나이트</a></li>
-          <li><a href="/club/cheongdam-night-1/">청담나이트</a></li>
+          <li><a href="/club/cheongdam-night-3/">청담나이트</a></li>
           <li><a href="/access/cheongdam-night/">청담나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>경기·인천</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/guri-hobak-night-8/">구리호박나이트</a></li>
-          <li><a href="/access/bucheon-gorae-night-4/">부천고래나이트</a></li>
+          <li><a href="/access/bucheon-gorae-night-5/">부천고래나이트</a></li>
           <li><a href="/club/suwon-chancedome-night-2/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-chancedome-night-3/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-korea-night/">수원코리아나이트</a></li>
@@ -255,24 +255,24 @@ export default function AccessHub() {
           <li><a href="/access/incheon-arabian-night/">인천아라비안나이트</a></li>
           <li><a href="/club/ilsan-shampoo-night-2/">일산샴푸나이트</a></li>
           <li><a href="/access/ilsan-shampoo-night/">일산샴푸나이트</a></li>
-          <li><a href="/access/paju-skydome-night-3/">파주야당스카이돔나이트</a></li>
+          <li><a href="/access/paju-skydome-night-4/">파주야당스카이돔나이트</a></li>
           <li><a href="/access/pyeongtaek-hobak-night-4/">평택호박나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>충청</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/club/daejeon-seven-night-2/">대전세븐나이트</a></li>
           <li><a href="/access/daejeon-seven-night/">대전세븐나이트</a></li>
-          <li><a href="/club/daejeon-one-night/">대전원나이트</a></li>
-          <li><a href="/club/daejeon-one-night/">대전원나이트</a></li>
+          <li><a href="/club/daejeon-one-night-2/">대전원나이트</a></li>
+          <li><a href="/club/daejeon-one-night-2/">대전원나이트</a></li>
           <li><a href="/access/seosan-hobak-night-3/">서산호박나이트</a></li>
           <li><a href="/access/cheonan-stardome-night/">천안스타돔나이트</a></li>
-          <li><a href="/access/cheonan-korea-night-4/">천안코리아나이트</a></li>
+          <li><a href="/access/cheonan-korea-night-5/">천안코리아나이트</a></li>
           <li><a href="/access/cheongju-hobak-night/">청주호박나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>영남</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/gumi-hobak-night/">구미호박나이트</a></li>
-          <li><a href="/access/daegu-hobak-night-4/">대구호박나이트</a></li>
+          <li><a href="/access/daegu-hobak-night-5/">대구호박나이트</a></li>
           <li><a href="/club/busan-asiad-night-3/">부산아시아드나이트</a></li>
           <li><a href="/access/busan-asiad-night/">부산아시아드나이트</a></li>
           <li><a href="/access/ulsan-newworld-night-3/">울산뉴월드나이트</a></li>
@@ -296,6 +296,6 @@ export default function AccessHub() {
       </nav>
     </>
   );
-  const z = { s: saltOf("/access-6/"), 지역: cssClasses(ACCESS_CSS + HUB_CSS) };
+  const z = { s: saltOf("/access-7/"), 지역: cssClasses(ACCESS_CSS + HUB_CSS) };
   return <SaltContext.Provider value={z}>{saltTree(트리, z)}</SaltContext.Provider>;
 }

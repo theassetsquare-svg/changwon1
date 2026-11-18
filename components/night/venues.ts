@@ -57,12 +57,12 @@ export type NightVenue = {
 export const NIGHT_BASE = "/night";
 
 /* ★ 2026-08-26 — 메인주소 뒤에 가게이름. 네이버에 나오는 것만 옛 경로 유지 */
-export const NIGHT_KEEP_OLD = new Set<string>(["daejeon-one-night"]);
+export const NIGHT_KEEP_OLD = new Set<string>(["daejeon-one-night-2"]);
 export const NIGHT_URL_MAP: Record<string, string> = {
   "bulgwang-hobak-night": "bulgwang-hobak-night-3",
   "changwon-lululala-night": "changwon-lululala-night-1",
   "ulsan-champion-4": "ulsan-champion-night-2",
-  "cheongdam-4": "cheongdam-night-1",
+  "cheongdam-4": "cheongdam-night-3",
   "sillim-grandprix-4": "sillim-grandprix-night-2",
   "sangbong-hangukgwan-4": "sangbong-hangukgwan-night-2",
   "suyu-shampoo-4": "suyu-shampoo-night-2",
@@ -426,7 +426,7 @@ export const VENUES: NightVenue[] = [
       "자리를 원하면 열 시 전, 분위기를 원하면 열두 시 전후입니다.",
       "네 명이 가장 무난합니다. 예약은 가게에 직접, 광고 문의만 이 쪽에서 받습니다.",
     ],
-    related: ["busan-asiad-1", "changwon-lululala-night", "daejeon-one-night"],
+    related: ["busan-asiad-1", "changwon-lululala-night", "daejeon-one-night-2"],
     llms: "울산광역시 남구 삼산동 정동로 75. 삼산동 번화가 대형 홀. 광고문의 카카오톡 besta12.",
   },
 
@@ -550,7 +550,7 @@ export const VENUES: NightVenue[] = [
   // 5. 대전원나이트 — 각도12 실수 방지형
   // ──────────────────────────────────────────────────────────────────────
   {
-    slug: "daejeon-one-night",
+    slug: "daejeon-one-night-2",
     ogV: "-v3",
     name: "대전원나이트",
     nameSpaced: "대전 원나이트",
@@ -1122,7 +1122,7 @@ export const VENUES: NightVenue[] = [
       "열한 시에 선곡이 올라가고 자정 무렵 테이블이 다 찹니다.",
       "온천장로107번길 32. 온천장역에서 걸어서 5분 거리입니다.",
     ],
-    related: ["changwon-lululala-night", "ulsan-champion-4", "daejeon-one-night"],
+    related: ["changwon-lululala-night", "ulsan-champion-4", "daejeon-one-night-2"],
     llms: "부산광역시 동래구 온천동 온천장로107번길 32 지하1~2층. 온천장역 도보 5분. 지역 안내 페이지.",
   },
 
@@ -1353,7 +1353,7 @@ export const VENUES: NightVenue[] = [
       "선곡 폭이 넓어 오는 사람의 나이대도 함께 넓어집니다.",
       "상록수로 34 아카데미타워 지층. 주말은 열한 시 전 도착이 기준입니다.",
     ],
-    related: ["suwon-chancedome-4", "ilsan-shampoo-4", "daejeon-one-night"],
+    related: ["suwon-chancedome-4", "ilsan-shampoo-4", "daejeon-one-night-2"],
     llms: "경기도 안산시 상록구 상록수로 34 아카데미타워 지층. 상록수역 인근. 지역 안내 페이지.",
   },
 
@@ -1469,7 +1469,7 @@ export const VENUES: NightVenue[] = [
       "옷보다 신분증이 먼저입니다. 실물이 없으면 입장이 막힙니다.",
       "당디로 112. 홀과 방 중 어느 쪽인지 미리 정하면 자리가 빨리 잡힙니다.",
     ],
-    related: ["daejeon-one-night", "changwon-lululala-night", "ansan-hit-4"],
+    related: ["daejeon-one-night-2", "changwon-lululala-night", "ansan-hit-4"],
     llms: "대전광역시 중구 유천동 당디로 112. 홀과 별도 방 구성. 지역 안내 페이지.",
   },
 
