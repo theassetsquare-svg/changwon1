@@ -225,14 +225,14 @@ export default function AccessHub() {
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
           <li><a href="/access/gangseo-hobak-night/">강서호박나이트</a></li>
           <li><a href="/access/gildong-chance-night-5/">길동찬스나이트</a></li>
-          <li><a href="/access/nowon-hobak-night-4/">노원호박나이트</a></li>
+          <li><a href="/access/nowon-hobak-night-5/">노원호박나이트</a></li>
           <li><a href="/access/dapsimni-miracle-night/">답십리미라클나이트</a></li>
           <li><a href="/access/doksan-gukbingwan-night/">독산동국빈관나이트</a></li>
           <li><a href="/club/sangbong-hangukgwan-night-2/">상봉동한국관나이트</a></li>
-          <li><a href="/access/sangbong-hangukgwan-night-4/">상봉동한국관나이트</a></li>
+          <li><a href="/access/sangbong-hangukgwan-night-5/">상봉동한국관나이트</a></li>
           <li><a href="/access/seongnam-shampoo-night/">성남샴푸나이트</a></li>
           <li><a href="/club/suyu-shampoo-night-2/">수유샴푸나이트</a></li>
-          <li><a href="/access/suyu-shampoo-night-3/">수유샴푸나이트</a></li>
+          <li><a href="/access/suyu-shampoo-night-4/">수유샴푸나이트</a></li>
           <li><a href="/club/sillim-grandprix-night-2/">신림그랑프리나이트</a></li>
           <li><a href="/access/sillim-grandprix-night/">신림그랑프리나이트</a></li>
           <li><a href="/access/yeongdeungpo-terminal-night/">영등포터미널나이트</a></li>
@@ -244,19 +244,19 @@ export default function AccessHub() {
           <li><a href="/access/guri-hobak-night-8/">구리호박나이트</a></li>
           <li><a href="/access/bucheon-gorae-night-5/">부천고래나이트</a></li>
           <li><a href="/club/suwon-chancedome-night-2/">수원찬스돔나이트</a></li>
-          <li><a href="/access/suwon-chancedome-night-3/">수원찬스돔나이트</a></li>
+          <li><a href="/access/suwon-chancedome-night-4/">수원찬스돔나이트</a></li>
           <li><a href="/access/suwon-korea-night/">수원코리아나이트</a></li>
           <li><a href="/club/ansan-hit-night-4/">안산히트나이트</a></li>
           <li><a href="/club/ansan-hit-night-4/">안산히트나이트</a></li>
           <li><a href="/access/osan-hobak-night/">오산호박나이트</a></li>
           <li><a href="/access/uijeongbu-baekakgwan-night/">의정부백악관나이트</a></li>
           <li><a href="/access/uijeongbu-hangukgwan-night-7/">의정부한국관나이트</a></li>
-          <li><a href="/access/indeogwon-gukbingwan-night-5/">인덕원국빈관나이트</a></li>
+          <li><a href="/access/indeogwon-gukbingwan-night-6/">인덕원국빈관나이트</a></li>
           <li><a href="/access/incheon-arabian-night/">인천아라비안나이트</a></li>
           <li><a href="/club/ilsan-shampoo-night-2/">일산샴푸나이트</a></li>
           <li><a href="/access/ilsan-shampoo-night/">일산샴푸나이트</a></li>
           <li><a href="/access/paju-skydome-night-4/">파주야당스카이돔나이트</a></li>
-          <li><a href="/access/pyeongtaek-hobak-night-4/">평택호박나이트</a></li>
+          <li><a href="/access/pyeongtaek-hobak-night-5/">평택호박나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>충청</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
@@ -264,7 +264,7 @@ export default function AccessHub() {
           <li><a href="/access/daejeon-seven-night/">대전세븐나이트</a></li>
           <li><a href="/club/daejeon-one-night-2/">대전원나이트</a></li>
           <li><a href="/club/daejeon-one-night-2/">대전원나이트</a></li>
-          <li><a href="/access/seosan-hobak-night-3/">서산호박나이트</a></li>
+          <li><a href="/access/seosan-hobak-night-4/">서산호박나이트</a></li>
           <li><a href="/access/cheonan-stardome-night/">천안스타돔나이트</a></li>
           <li><a href="/access/cheonan-korea-night-5/">천안코리아나이트</a></li>
           <li><a href="/access/cheongju-hobak-night/">청주호박나이트</a></li>
@@ -283,8 +283,8 @@ export default function AccessHub() {
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>호남·제주</h3>
         <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(190px,1fr))", gap: "8px 16px", fontSize: ".92rem" }}>
-          <li><a href="/access/gwangju-sangmu-night-4/">광주상무나이트</a></li>
-          <li><a href="/access/gwangju-cheomdan-night-4/">광주첨단나이트</a></li>
+          <li><a href="/access/gwangju-sangmu-night-5/">광주상무나이트</a></li>
+          <li><a href="/access/gwangju-cheomdan-night-5/">광주첨단나이트</a></li>
           <li><a href="/access/jeju-night/">제주도나이트</a></li>
         </ul>
         <h3 style={{ fontSize: ".95rem", margin: "16px 0 8px", opacity: .75 }}>그 밖의 지역</h3>
