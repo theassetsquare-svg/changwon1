@@ -37,7 +37,7 @@ export const ACCESS_URL_MAP = {
   "busan-asiad-1": "busan-asiad-night",
   "changwon-lululala-3": "changwon-lululala-night",
   "ulsan-champion-3": "ulsan-champion-night",
-  "ulsan-newworld-night": "ulsan-newworld-night-3",
+  "ulsan-newworld-night": "ulsan-newworld-night-4",
   "daegu-hobak-night": "daegu-hobak-night-5"
 };
 
